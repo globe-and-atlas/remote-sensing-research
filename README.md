@@ -16,9 +16,23 @@ Here, we document novel satellite band combinations that can be computed from fr
 - **Spectral Physics**: Physical explanation of the surface interactions and band mechanics.
 - **Confounder Rejection**: Domain gates and masks used to isolate clean anomalies.
 - **Validation Status**: Empirically verified metrics against confirmed ground-truth events.
-- **Novelty Tier**: Demarcated based on literature gaps (T1 Unclaimed / T2 Underspecified / T3 Sensor-Enabled).
+- **Novelty Tier**: Contribution category based on the literature gap and what Globe & Atlas adds (T1 Original Formula / T2 Standardized Formula / T3 Sensor-Enabled Formula).
 
 *This is a living, public-good reference. Validated indices have been run against regional ground truth; proposed indices are grounded in published physics and awaiting field verification.*
+
+---
+
+## 🧭 Novelty & Contribution Tiers
+
+The tier labels describe the specific contribution made here. They do not claim invention of the underlying electromagnetic physics, individual spectral bands, or environmental phenomena.
+
+| Tier | What it means | Daniel Bally / Globe & Atlas contribution |
+|------|---------------|----------------------------|
+| **T1 — Original Formula** | No equivalent named, standardized formula for this screening purpose was found in the surveyed literature. | Originated the index name, wrote the formula, defined the workflow, and documented the public-good use case. |
+| **T2 — Standardized Formula** | The detection concept exists in papers, reports, or practice, but remains qualitative, fragmented, unnamed, or lacking a clear reproducible formula. | Formalized the concept into a named index with explicit inputs, formula logic, gates, limitations, and decision context. |
+| **T3 — Sensor-Enabled Formula** | The physics or analytic approach has been written about before, but it was not previously practical as an open, operational satellite index until newer sensors made the needed bands, cadence, or resolution available. | Translates the known physics into a computable open-sensor workflow and names the operational formula. |
+
+In short: **T1 is original formulation, T2 is formalization, and T3 is operationalization made possible by new sensor capability.**
 
 ---
 
@@ -42,7 +56,11 @@ Here, we document novel satellite band combinations that can be computed from fr
 
 ---
 
-## 🏆 Top 10 Priority Novel Indices
+## 🏆 Top 25 Priority Novel Indices
+
+This priority list is a qualitative triage, not a validation leaderboard.
+
+**Selection criteria:** the ordering favors indices that combine four traits: likely unclaimed or under-formalized novelty, global applicability, policy-actionable output, and feasibility on currently available open sensors. In practice, the highest-priority indices are the ones that could turn existing satellite physics into a named, replicable public-good workflow with near-term operational value.
 
 | Rank | Acronym | Name | Operational Significance |
 |------|---------|------|--------------------------|
@@ -56,6 +74,21 @@ Here, we document novel satellite band combinations that can be computed from fr
 | 8 | **BSMTI** | Burn Severity Mineralogy Transition Index | Post-fire debris flow risk via EMIT soil mineralogy changes |
 | 9 | **PWTDI** | Peatland Water Table Depth Index | Critical unmeasured variable in wetland carbon accounting |
 | 10 | **RDOCI** | River Dissolved Organic Carbon Index | PACE OCI UV channels make this orbital for the first time |
+| 11 | **AMDPHI** | Acid Mine Drainage pH Proxy Index | Mine-drainage acidity triage from open optical and hyperspectral data |
+| 12 | **TPERI** | Thermokarst Pond Expansion Rate Index | Permafrost pond expansion velocity for carbon-release risk models |
+| 13 | **MEPSI** | CH₄ Ebullition Pond Spectral Proxy | Screens thaw ponds for methane ebullition risk where field flux data is sparse |
+| 14 | **ALSI** | Active Layer Depth Thermal-Spectral Index | Active-layer depth proxy for Arctic infrastructure and carbon vulnerability |
+| 15 | **PSHRI** | Post-Fire Soil Hydrophobicity Risk Index | Post-rain hydrophobic soil screening for debris-flow and runoff hazards |
+| 16 | **UBCDI** | Understory vs. Canopy Burn Discrimination Index | Separates hidden understory burns from canopy-level fire damage |
+| 17 | **ISSAI** | ICESat-2 + Sentinel-1 Subsidence Attribution Index | Cross-checks lidar and InSAR deformation for infrastructure risk triage |
+| 18 | **GEAWSI** | GRACE-FO + ECOSTRESS Agricultural Water Stress Index | Links basin groundwater depletion to crop water stress and food-security alerts |
+| 19 | **SCFGOSI** | Soil Carbon Functional Group Oxidation State Index | Hyperspectral soil-carbon quality proxy for degradation and accounting workflows |
+| 20 | **AFCDI** | Asbestos Fiber Chrysotile Detection Index | Public-health mineral hazard screening using diagnostic SWIR absorptions |
+| 21 | **CCRBI** | Coal Combustion Residue Bioaccumulation Index | Coal ash exposure screening for wetlands, rivers, and nearby communities |
+| 22 | **SPSRI** | Solar Panel Soiling Remote Index | Utility-scale solar soiling triage for clean-energy operations |
+| 23 | **SBCI** | Sabkha Brine Chemistry Index | Hyperspectral arid-brine chemistry mapping in salt-flat environments |
+| 24 | **CSCAI** | Caliche Surface Carbonate Accumulation Index | Dryland carbonate accumulation proxy for soil, water, and restoration planning |
+| 25 | **DLPEHI** | Desert Locust Pre-Emergence Habitat Index | Early-warning habitat screen for locust emergence and food-security response |
 
 ---
 
@@ -78,25 +111,24 @@ The following indices have been tested against the Texas Railroad Commission (TR
 
 ## 🛡️ Claim Philosophy
 
-All indices in this atlas are built from published spectral physics. To establish defensive prior art for the community and protect these composites from predatory patenting, the claim for each novel composite is structured as:
+All indices in this atlas are built from published spectral physics. The contribution is the named formula, the multi-gate workflow, the confounder rejection, and the public-good decision framing. To establish defensive prior art for the community and protect these composites from predatory patenting, the claim for each novel composite is structured as:
 
 > *A named, transparent, decision-ready composite built from established spectral mechanisms, domain gates, and confounder rejection — applied to a specific public-good screening workflow.*
 
-- **We Claim**: The specific workflow, the multi-gate logic, the confounder rejection, and the civic framing.  
-- **We Do Not Claim**: Invention of the underlying band physics, the individual ratios, or the environmental problem itself.
+- **We Claim**: The index name, formula/workflow, multi-gate logic, confounder rejection, limitations, and civic framing described for each T1/T2/T3 contribution.
+- **We Do Not Claim**: Invention of the underlying band physics, individual spectral ratios, satellite sensors, or environmental problem itself.
 
 ---
 
-## 📚 Supporting Research & Data
+## 📚 Registry & Reference Files
+
+The former `surveys/` and `catalogs/` documents have been consolidated into the current `registry/` files below.
 
 | Resource | Contents |
 |----------|----------|
-| [Global Novel Index Survey](surveys/global-novel-index-survey.md) | Deep research document covering 74 global novel indices with full citations. |
-| [Permian Basin Platform Survey](surveys/permian-basin-platform-survey.md) | 31-platform free satellite survey with integration roadmap. |
-| [Global Public Good Atlas](surveys/global-public-good-atlas.md) | Scholarly synthesis of public-good band combinations. |
-| [Limn Index Catalog](catalogs/limn-index-catalog.md) | 53-index catalog with TRRC validation rates. |
-| [Civic Sentinel Composite Slate](catalogs/civic-sentinel-composite-slate.md) | 24-composite civic sentinel slate. |
-| [Civic Sentinel Composite Atlas](catalogs/civic-sentinel-composite-atlas.md) | 18 ranked composites with full formulas. |
+| [Master Index Catalog](registry/master_index_catalog.md) | Unified 116-index registry with formulas, physics, novelty tiers, and claim posture. |
+| [Sensor Platforms Reference](registry/sensor_platforms.md) | Consolidated 31-platform open-sensor guide with public-benefit rankings and integration notes. |
+| [Remote Sensing Science & Policy Guide](registry/scholarly_synthesis.md) | Scholarly synthesis, prior-art posture, ethical safeguards, and validation roadmap. |
 | [Formula Quick Reference](formulas/formula-quick-reference.md) | Every formula across all projects, consolidated into a single file. |
 
 ---
