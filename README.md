@@ -70,8 +70,8 @@ This priority list is a qualitative triage, not a validation leaderboard.
 |------|---------|------|--------------------------|
 | 1 | **[TSEAI](ATLAS.md#tseai)** | TROPOMI–Sentinel-2 Emission Attribution Index | CH₄ source attribution at field scale — climate monitoring's most urgent gap |
 | 2 | **[HABSDI](ATLAS.md#habsdi)** | HAB Species-Level Discrimination Index | Toxic vs. non-toxic cyanobacteria — PACE OCI UV bands make this globally possible |
-| 3 | **[NPDDI](ATLAS.md#npddi)** | N vs. P Deficiency Discrimination Index | Precision fertilizer prescription and runoff management from orbit |
-| 4 | **[SMADI](ATLAS.md#smadi)** | Sargassum vs. Microplastic Discrimination Index | Disentangles global marine debris crises; current indices conflate them |
+| 3 | **[NPDefI](ATLAS.md#npdefi)** | N vs. P Deficiency Discrimination Index | Precision fertilizer prescription and runoff management from orbit |
+| 4 | **[SMPDI](ATLAS.md#smpdi)** | Sargassum vs. Microplastic Discrimination Index | Disentangles global marine debris crises; current indices conflate them |
 | 5 | **[FGDCI](ATLAS.md#fgdci)** | Frozen Ground Dielectric Change Index | Pan-Arctic freeze/thaw dynamics from Sentinel-1 SAR |
 | 6 | **[CBSDI](ATLAS.md#cbsdi)** | Coral Bleaching Stage Discrimination Index | Classifies bleaching severity stages vs. binary surface detection |
 | 7 | **[REESAI](ATLAS.md#reesai)** | Rare Earth Element Surface Anomaly Index | EnMAP bastnäsite/monazite Nd detection for clean energy supply chains |

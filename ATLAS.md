@@ -63,7 +63,7 @@ This atlas fills that gap. It covers indices that are operational (used in produ
 | 42 | [GMCPI](#gmcpi) | Glacial Meltwater Chemistry Proxy Index | Water Quality | S2, PACE | T1 |
 | 43 | [FCLI](#fcli) | Floodplain Contamination Legacy Index | Water Quality | S2 bi-temporal | T1 |
 | 44 | [HABSDI](#habsdi) | HAB Species-Level Discrimination Index | Marine/Coastal | PACE, DESIS | T1 |
-| 45 | [SMADI](#smadi) | Sargassum vs. Microplastic Discrimination Index | Marine/Coastal | S2, EMIT | T1 |
+| 45 | [SMPDI](#smpdi) | Sargassum vs. Microplastic Discrimination Index | Marine/Coastal | S2, EMIT | T1 |
 | 46 | [CBSDI](#cbsdi) | Coral Bleaching Stage Discrimination Index | Marine/Coastal | S2, PRISMA | T1 |
 | 47 | [KCDSI](#kcdsi) | Kelp Canopy Density and Stress Index | Marine/Coastal | S2+S3 | T2 |
 | 48 | [OWSI](#owsi) | Oil Spill Weathering Stage Index | Marine/Coastal | EMIT, S2 | T2 |
@@ -72,7 +72,7 @@ This atlas fills that gap. It covers indices that are operational (used in produ
 | 51 | [SPEI](#spei) | Seagrass Photosynthetic Efficiency Index | Marine/Coastal | S2, DESIS | T2 |
 | 52 | [CD-UAI](#cduai) | Coastal Dredging & Marine Siltation Plume Index | Marine/Coastal | S2 | T1 |
 | 53 | [MP-PDI](#mppdi) | Marine Plastisphere & Polymer Differentiation Index | Marine/Coastal | S2 | T1 |
-| 54 | [NPDDI](#npddi) | Nitrogen vs. Phosphorus Deficiency Discrimination Index | Agriculture | S2, EnMAP | T1 |
+| 54 | [NPDefI](#npdefi) | Nitrogen vs. Phosphorus Deficiency Discrimination Index | Agriculture | S2, EnMAP | T1 |
 | 55 | [SCSPI](#scspi) | Soil Compaction Spectral Proxy Index | Agriculture | S2 | T1 |
 | 56 | [APRI](#apri) | Aflatoxin Pre-Harvest Risk Index | Agriculture | ECOSTRESS+S2 | T1 |
 | 57 | [PDSDI](#pdsdi) | Pesticide vs. Drought Stress Discrimination Index | Agriculture | S2 | T1 |
@@ -807,12 +807,12 @@ PC_index = (560nm - 705nm); FX_index = (490nm - 560nm).
 
 ---
 
-### <a id="smadi"></a>SMADI — Sargassum vs. Microplastic Discrimination Index
+### <a id="smpdi"></a>SMPDI — Sargassum vs. Microplastic Discrimination Index
 **Domain:** Marine pollution | **Platform:** Sentinel-2, EMIT | **Novelty:** T1
 
 **Formula:**
 ```
-SMADI = FAI - [(B8A - B11) / (B8A + B11)]
+SMPDI = FAI - [(B8A - B11) / (B8A + B11)]
 ```
 
 **Physics:** Sargassum has active photosynthesis — strong 680 nm chlorophyll absorption. Microplastics (PE/PP) have C-H stretch overtones at 1730 nm, suppressed NIR, and no chlorophyll. FAI/SWIR1 combination isolates the vegetation component absent from plastic.
@@ -899,14 +899,14 @@ MP - PDI = FDI_base * (1 - Sargassum_rejection) * (1 - vegetation_rejection) * (
 
 ---
 
-### <a id="npddi"></a>NPDDI — Nitrogen vs. Phosphorus Deficiency Discrimination Index
+### <a id="npdefi"></a>NPDefI — Nitrogen vs. Phosphorus Deficiency Discrimination Index
 **Domain:** Precision agriculture | **Platform:** Sentinel-2, EnMAP | **Novelty:** T1
 
 **Formula:**
 ```
-NPDDI = [(B4 - B5) / (B4 + B5)] - [(B12 - B11) / (B12 + B11)]
+NPDefI = [(B4 - B5) / (B4 + B5)] - [(B12 - B11) / (B12 + B11)]
 ```
-Positive NPDDI = N deficiency. Negative = P deficiency.
+Positive NPDefI = N deficiency. Negative = P deficiency.
 
 **Physics:** N deficiency → chlorophyll degradation → red-edge shift (B5/B4 signal). P deficiency → anthocyanin accumulation → SWIR2 change (B12 signal). Index subtracts P signal from N signal, yielding signed nutrient discriminator.
 

@@ -330,12 +330,12 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 20: SMADI (Sargassum vs. Microplastic Discrimination Index)
+## Index 20: SMPDI (Sargassum vs. Microplastic Discrimination Index)
 
 > **Description**: Separates synthetic marine microplastic polymer rafts from living photosynthesizing Sargassum seaweed.
 
 ```yaml
-short_name: SMADI
+short_name: SMPDI
 long_name: Sargassum vs. Microplastic Discrimination Index
 formula: "(N - S1) - ((RE4 - S1) / (RE4 + S1))"
 reference: "https://github.com/globe-and-atlas/remote-sensing-research"
@@ -442,12 +442,12 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 27: NPDDI (Nitrogen vs. Phosphorus Deficiency Discrimination Index)
+## Index 27: NPDefI (Nitrogen vs. Phosphorus Deficiency Discrimination Index)
 
 > **Description**: Signed macro-nutrient deficiency discriminator: positive maps Nitrogen deficiency, negative maps Phosphorus deficiency.
 
 ```yaml
-short_name: NPDDI
+short_name: NPDefI
 long_name: Nitrogen vs. Phosphorus Deficiency Discrimination Index
 formula: "((R - RE1) / (R + RE1)) - ((S2 - S1) / (S2 + S1))"
 reference: "https://github.com/globe-and-atlas/remote-sensing-research"

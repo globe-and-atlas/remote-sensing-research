@@ -14,9 +14,9 @@ This guide provides the technical and scientific comparison between the novel sp
 | **[VSI](#vsi)** | Sub-Lethal Vegetation Stress | `NDVI` | - NDVI only measures bulk biomass decline<br>- Fails to detect stress before leaf loss or necrosis | Probes Sentinel-2 narrow red-edge bands to capture the sub-lethal blue-shift of the red-edge position (REP). | Early warning: detects osmotic brine stress 2–4 weeks before visible chlorosis or biomass death. |
 | **[HABSDI](#habsdi)** | Toxic vs. Benign Algal Blooms | `NDCI` or Cyanobacteria Index (`CI`) | - NDCI only maps total chlorophyll-a (presence)<br>- Cannot separate toxic from benign algae species | Utilizes PACE OCI 5 nm bands to differentiate phycocyanin (cyanobacteria) from fucoxanthin (diatoms). | Moves water monitoring from binary bloom alerts to direct toxin-producing species risk profiling. |
 | **[TSEAI](#tseai)** | Methane Emission Attribution | Raw `XCH4` (TROPOMI) | - Coarse resolution (5.5 × 7 km)<br>- Cannot attribute plume to specific facilities | Fuses coarse TROPOMI anomalies with high-resolution (10 m) land cover fractional source models. | Pinpoints super-emitting infrastructure within a single TROPOMI pixel footprint. |
-| **[NPDDI](#npddi)** | N vs. P Crop Deficiency | `MCARI` or `REIP` | - Conflates general crop chlorosis<br>- Farmers apply wrong, wasteful fertilizers | Subtracts anthocyanin SWIR2 absorption (P stress) from red-edge chlorophyll degradation (N stress). | Signed index: positive maps nitrogen deficiency, negative maps phosphorus deficiency. |
+| **[NPDefI](#npdefi)** | N vs. P Crop Deficiency | `MCARI` or `REIP` | - Conflates general crop chlorosis<br>- Farmers apply wrong, wasteful fertilizers | Subtracts anthocyanin SWIR2 absorption (P stress) from red-edge chlorophyll degradation (N stress). | Signed index: positive maps nitrogen deficiency, negative maps phosphorus deficiency. |
 | **[FGDCI](#fgdci)** | Arctic Freeze/Thaw Phase State | `MODIS LST` | - Completely blocked by near-constant clouds<br>- Measures skin temperature, not phase state | Sentinel-1 SAR C-band dielectric sensitivity normalizes vegetation scattering (`VV - VH` difference). | Cloud-independent, all-weather physical soil state monitoring for permafrost carbon modeling. |
-| **[SMADI](#smadi)** | Marine Sargassum vs. Plastic | `FAI` or `FDI` | - FDI fires on sea foam, sunglint, and algae<br>- Cannot distinguish synthetic polymers | Subtracts active chlorophyll red-edge absorption from SWIR C-H stretch polymer absorption overtones. | Isolates macroalgal blooms from synthetic microplastic rafts in global ocean accumulation zones. |
+| **[SMPDI](#smpdi)** | Marine Sargassum vs. Plastic | `FAI` or `FDI` | - FDI fires on sea foam, sunglint, and algae<br>- Cannot distinguish synthetic polymers | Subtracts active chlorophyll red-edge absorption from SWIR C-H stretch polymer absorption overtones. | Isolates macroalgal blooms from synthetic microplastic rafts in global ocean accumulation zones. |
 | **[AMDPHI](#amdphi)** | Acid Mine Drainage pH Proxy | Standard iron mineral indexes | - Map overall iron mineralization<br>- Do not indicate water acidity/pH | Sequences spectral absorption features of pH-diagnostic iron oxides (jarosite vs. goethite). | Non-invasive, basin-scale triage of mine drainage acidity without lab sampling at every stream. |
 | **[LFGVI](#lfgvi)** | Landfill Gas Root Asphyxiation | Standard `NDVI` | - NDVI flags general vegetation stress<br>- Cannot link stress to landfill gas migration | Fuses narrow-band crop stress indicators with a spatial concentric ring-pattern edge algorithm. | Identifies sub-surface methane/CO₂ migration pathways and potential explosion zones. |
 | **[CBSDI](#cbsdi)** | Coral Bleaching Stages | Lyzenga water column corrected indexes | - Conflates sand, dead algae-colonized coral, and fully bleached coral | Multi-stage ratio tracking paleing (`CBSDI_pale`), full white skeleton reflection (`CBSDI_full`), and dead algae colonization (`CBSDI_dead`). | Classifies the exact physiological stage of reef degradation rather than binary coral loss. |
@@ -170,21 +170,21 @@ TSEAI resolves the scale attribution problem, transforming coarse satellite gas 
 
 ---
 
-### <a id="npddi"></a>6. NPDDI — Nitrogen vs. Phosphorus Deficiency Discrimination Index
-*   **Novel Index**: `NPDDI = [(B4 - B5) / (B4 + B5)] - [(B12 - B11) / (B12 + B11)]`
+### <a id="npdefi"></a>6. NPDefI — Nitrogen vs. Phosphorus Deficiency Discrimination Index
+*   **Novel Index**: `NPDefI = [(B4 - B5) / (B4 + B5)] - [(B12 - B11) / (B12 + B11)]`
 *   **Established Baselines**: `MCARI` (Modified Chlorophyll Absorption in Reflectance Index) or `REIP` (Red-Edge Inflection Point).
 
 #### The Confounding Problem
 Nitrogen (N) and Phosphorus (P) are the two primary macro-nutrients required by crops. A deficiency in either nutrient restricts growth and triggers chlorosis (leaf yellowing). Standard agricultural indices like MCARI measure overall chlorophyll suppression but cannot distinguish between N and P stress. Consequently, farmers frequently apply nitrogen-heavy fertilizers in response to any yellowing, even when the actual constraint is phosphorus, leading to high fertilizer costs, persistent crop failure, and massive downstream nitrogen runoff.
 
-#### What NPDDI Adds
-NPDDI isolates the distinct physiological responses triggered by N and P deficiencies using Sentinel-2 and EnMAP bands:
+#### What NPDefI Adds
+NPDefI isolates the distinct physiological responses triggered by N and P deficiencies using Sentinel-2 and EnMAP bands:
 1.  **Nitrogen Deficiency (Chlorophyll Decay)**: Triggers severe chlorophyll degradation, shifting the red-edge reflection point. This is captured by the narrow VNIR red-edge ratio: `(B4 - B5) / (B4 + B5)` (665 nm vs. 705 nm).
 2.  **Phosphorus Deficiency (Anthocyanin & Water Stress)**: Causes plants to accumulate red anthocyanin pigments to protect light-harvesting complexes, while reducing vascular water transport. This alters the SWIR2-to-SWIR1 absorption ratio: `(B12 - B11) / (B12 + B11)` (2190 nm vs. 1610 nm).
 3.  **Signed Subtraction**: Subtracting the SWIR P-stress signature from the red-edge N-stress signature yields a signed discriminator.
 
 #### Why It Is Better
-NPDDI is a **signed, bi-directional nutrient discriminator**:
+NPDefI is a **signed, bi-directional nutrient discriminator**:
 *   **Positive values** indicate clear **Nitrogen deficiency** (chlorophyll loss dominates).
 *   **Negative values** indicate clear **Phosphorus deficiency** (anthocyanin/SWIR stress dominates).
 
@@ -212,15 +212,15 @@ FGDCI provides **cloud-independent, all-weather, physical soil phase state track
 
 ---
 
-### <a id="smadi"></a>8. SMADI — Sargassum vs. Microplastic Discrimination Index
-*   **Novel Index**: `SMADI = FAI - [(B8A - B11) / (B8A + B11)]`
+### <a id="smpdi"></a>8. SMPDI — Sargassum vs. Microplastic Discrimination Index
+*   **Novel Index**: `SMPDI = FAI - [(B8A - B11) / (B8A + B11)]`
 *   **Established Baselines**: `FAI` (Floating Algae Index) or `FDI` (Floating Debris Index).
 
 #### The Confounding Problem
 Floating macro-debris, sea foam, sunglint, and massive *Sargassum* seaweed blooms all increase NIR and Red-Edge reflectance relative to the dark ocean background. Consequently, standard indices like FAI and FDI spike indiscriminately over both organic algae and synthetic microplastic rafts. This makes it impossible to map plastic pollution in the open ocean without massive manual image-interpretation efforts to filter out seaweed.
 
-#### What SMADI Adds
-SMADI exploits the fundamental biochemical difference between living plants and synthetic polymers using Sentinel-2 and EMIT bands:
+#### What SMPDI Adds
+SMPDI exploits the fundamental biochemical difference between living plants and synthetic polymers using Sentinel-2 and EMIT bands:
 1.  **Photosynthetic Pigments**: Sargassum is living, photosynthesizing brown algae containing chlorophyll-a and accessory pigments. It exhibits extremely deep red chlorophyll absorption (680 nm) and high NIR red-edge scattering.
 2.  **Synthetic Polymers**: Microplastic rafts (composed of polyethylene, polypropylene, and polystyrene) exhibit no chlorophyll signature. Instead, they display diagnostic hydrocarbon C-H bond stretch overtones in the SWIR spectrum (specifically at 1730 nm and 2310 nm), which suppress NIR reflectance.
 3.  **Algorithmic Subtraction**: Subtracting the SWIR1 polymer index from the FAI baseline isolates the vegetative component.
@@ -238,7 +238,7 @@ Reflectance %
 ```
 
 #### Why It Is Better
-SMADI provides **automated, pixel-level discrimination** between ocean plastic accumulation and organic seaweed. Marine conservation groups and municipal cleanup operations can use it to track real-time plastic pollution rafts globally without false-triggering on natural ecological blooms.
+SMPDI provides **automated, pixel-level discrimination** between ocean plastic accumulation and organic seaweed. Marine conservation groups and municipal cleanup operations can use it to track real-time plastic pollution rafts globally without false-triggering on natural ecological blooms.
 
 ---
 

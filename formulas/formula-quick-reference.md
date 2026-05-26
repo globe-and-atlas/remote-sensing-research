@@ -160,7 +160,7 @@ Full formulas in [`civic-sentinel-composite-atlas.md`](../catalogs/civic-sentine
 | **CBSDI_dead** | `(B3 / B4) - (B2 / B4)` | S2 |
 | **HABSDI_cyano** | `[(B3 - B5) / (B3 + B5)] - [(B2 - B3) / (B2 + B3)]` | PACE OCI |
 | **HABSDI_diatom** | `[(B2 - B3) / (B2 + B3)] - [(B3 - B5) / (B3 + B5)]` | PACE OCI |
-| **SMADI** | `FAI - [(B8A - B11) / (B8A + B11)]` | S2, EMIT |
+| **SMPDI** | `FAI - [(B8A - B11) / (B8A + B11)]` | S2, EMIT |
 | **KCDSI** | `(B8 / B11) * [(B5 - B4) / (B5 + B4)]` | S2 + S3 |
 | **OWSI** | `[(B12 - B11) / (B12 + B11)] / [(B2 + B3) / (B8 + B11) + 0.01]` | EMIT, S2 |
 | **MDSPI** | `texture(NDVI, 5×5) / mean(NDVI, 5×5)` | S2 |
@@ -173,7 +173,7 @@ Full formulas in [`civic-sentinel-composite-atlas.md`](../catalogs/civic-sentine
 
 | Acronym | Formula | Platform |
 |---------|---------|----------|
-| **NPDDI** | `[(B4 - B5) / (B4 + B5)] - [(B12 - B11) / (B12 + B11)]` | S2, EnMAP |
+| **NPDefI** | `[(B4 - B5) / (B4 + B5)] - [(B12 - B11) / (B12 + B11)]` | S2, EnMAP |
 | **SCSPI** | `[1 - (B11 / B12)] * (B3 / B2)` | S2 bare soil |
 | **APRI** | `(LST_anomaly / σ) * [1 - NDWI] * heat_accumulation_days` | ECOSTRESS + S2 + ERA5 |
 | **PDSDI** | `texture_cv(NDVI, 3×3) / [(B5 - B4) / (B5 + B4)]` | S2 |
