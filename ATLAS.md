@@ -1585,4 +1585,4 @@ This atlas is released as a public-good research document. All formulas are grou
 
 ---
 
-*Document last updated: 2026-05-25 | Sources: limn (Permian Basin), civic-sentinel, globe-and-atlas research vault*
+*Document last updated: 2026-05-25 | Originated by Daniel Bally · [Limn](https://github.com/globe-and-atlas) · [Globe & Atlas](https://globeandatlas.substack.com)*
