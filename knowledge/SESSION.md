@@ -13,11 +13,14 @@
   3. Integrated `registry/comparative_analysis.md` into `README.md` and `knowledge/INDEX.md`.
   4. Created a procedural guide at `knowledge/procedural/validate_registry.md` detailing automated registry validation workflows.
   5. Successfully ran `verify_registry.py` and validated all registry files (100% pass on code safety, uniqueness, and links).
+  6. Staged, committed, and successfully pushed the expanded guide, integrations, and procedural files to public main.
 - **Commands**:
   * `python3 /Users/danielbally/.gemini/antigravity-ide/brain/898abd31-4cc6-4638-825a-e09efd6b9a94/scratch/verify_registry.py` (exit 0)
+  * `git push public main` (exit 0)
 - **Issues found**: None, math and links validated perfectly.
 - **Left undone**: None, task completed.
 - **Next**: Run the night capture script if ending session.
+
 
 ## Checkpoints
 - 2026-05-26 09:47 - Expanded comparative analysis guide to cover the full Top 25 Priority Novel Indices, validated all files perfectly.
@@ -33,3 +36,4 @@
 - 2026-05-25 21:32 — commit: refactor: unify draft surveys and catalogs into structured registry/ folder | ATLAS.md,catalogs/civic-sentinel-composite-atlas.md,catalogs/civic-sentinel-composite-slate.md,catalogs/limn-index-catalog.md,knowledge/DECISIONS.md
 - 2026-05-25 21:59 — commit: docs: clarify atlas priority and novelty tiers | README.md
 - 2026-05-26 09:40 — commit: docs: compile spectral index comparative analysis guide against baselines | README.md,knowledge/INDEX.md,knowledge/SESSION.md,knowledge/procedural/validate_registry.md,registry/comparative_analysis.md
+- 2026-05-26 09:47 — commit: docs: expand comparative analysis guide to cover full Top 25 priority novel indices | knowledge/SESSION.md,registry/comparative_analysis.md
