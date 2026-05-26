@@ -6,10 +6,10 @@
 **Agent:** Antigravity AI (Gemini)
 **Status:** Completed
 
-## Handoff — 2026-05-26 09:41
+## Handoff — 2026-05-26 09:48
 - **Completed**:
-  1. Researched and authored `registry/comparative_analysis.md`, mapping 10 priority novel indices (**PWCI, ASAI, VSI, HABSDI, TSEAI, NPDDI, FGDCI, SMADI, AMDPHI, LFGVI**) to the standard baselines they improve upon.
-  2. Documented exact formulas, physical/chemical/physiological mechanisms, and clear operational advantages (including empirical validation metrics).
+  1. Researched, authored, and fully expanded `registry/comparative_analysis.md`, mapping all **Top 25 Priority Novel Indices** in the repository to the standard baselines they improve upon.
+  2. Documented exact formulas, physical/chemical/physiological/geological mechanisms, and clear operational advantages (including empirical validation metrics) for all 25 priorities.
   3. Integrated `registry/comparative_analysis.md` into `README.md` and `knowledge/INDEX.md`.
   4. Created a procedural guide at `knowledge/procedural/validate_registry.md` detailing automated registry validation workflows.
   5. Successfully ran `verify_registry.py` and validated all registry files (100% pass on code safety, uniqueness, and links).
@@ -20,7 +20,8 @@
 - **Next**: Run the night capture script if ending session.
 
 ## Checkpoints
-- 2026-05-26 09:40 - Created comparative analysis guide, integrated references, created procedural guide, validated all files perfectly.
+- 2026-05-26 09:47 - Expanded comparative analysis guide to cover the full Top 25 Priority Novel Indices, validated all files perfectly.
+
 
 
 ---
@@ -31,3 +32,4 @@
 
 - 2026-05-25 21:32 — commit: refactor: unify draft surveys and catalogs into structured registry/ folder | ATLAS.md,catalogs/civic-sentinel-composite-atlas.md,catalogs/civic-sentinel-composite-slate.md,catalogs/limn-index-catalog.md,knowledge/DECISIONS.md
 - 2026-05-25 21:59 — commit: docs: clarify atlas priority and novelty tiers | README.md
+- 2026-05-26 09:40 — commit: docs: compile spectral index comparative analysis guide against baselines | README.md,knowledge/INDEX.md,knowledge/SESSION.md,knowledge/procedural/validate_registry.md,registry/comparative_analysis.md
