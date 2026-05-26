@@ -14,12 +14,14 @@
   4. Created a procedural guide at `knowledge/procedural/validate_registry.md` detailing automated registry validation workflows.
   5. Successfully ran `verify_registry.py` and validated all registry files (100% pass on code safety, uniqueness, and links).
   6. Staged, committed, and successfully pushed the expanded guide, integrations, and procedural files to public main.
+  7. Created and pushed the Awesome Spectral Indices contribution template at `registry/Awesome_EE_Spectral_Indices_Contribution.md` mapping the novel formulas to standard Google Earth Engine band notations.
 - **Commands**:
   * `python3 /Users/danielbally/.gemini/antigravity-ide/brain/898abd31-4cc6-4638-825a-e09efd6b9a94/scratch/verify_registry.py` (exit 0)
   * `git push public main` (exit 0)
 - **Issues found**: None, math and links validated perfectly.
 - **Left undone**: None, task completed.
 - **Next**: Run the night capture script if ending session.
+
 
 
 ## Checkpoints
@@ -38,3 +40,4 @@
 - 2026-05-26 09:40 — commit: docs: compile spectral index comparative analysis guide against baselines | README.md,knowledge/INDEX.md,knowledge/SESSION.md,knowledge/procedural/validate_registry.md,registry/comparative_analysis.md
 - 2026-05-26 09:47 — commit: docs: expand comparative analysis guide to cover full Top 25 priority novel indices | knowledge/SESSION.md,registry/comparative_analysis.md
 - 2026-05-26 09:49 — commit: docs: document successful push in session log | knowledge/SESSION.md
+- 2026-05-26 10:09 — commit: docs: add Awesome Spectral Indices contribution template | knowledge/SESSION.md,registry/Awesome_EE_Spectral_Indices_Contribution.md
