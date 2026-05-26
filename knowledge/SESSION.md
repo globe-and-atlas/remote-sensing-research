@@ -20,7 +20,7 @@
 
 ---
 ## Checkpoints
-- 2026-05-26 14:13 - Excised entire Oilfield & Produced Water domain to establish 100% corporate IP protection.
-- 2026-05-26 13:39 - Integrated Zenodo DOI badge and preprint data citations.
-- 2026-05-26 13:14 - Applied peer-review improvements to preprint draft.
-- 2026-05-26 12:57 - Resolved global acronym conflicts (SMADI -> SMPDI, NPDDI -> NPDefI).
+- None. Ready for next session.
+
+## Checkpoint Log
+- None. Ready for next session.
