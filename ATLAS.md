@@ -19,122 +19,122 @@ This atlas fills that gap. It covers indices that are operational (used in produ
 
 | # | Acronym | Full Name | Domain | Platform | Novelty |
 |---|---------|-----------|--------|----------|---------|
-| 1 | PWCI | Produced Water Chemical Index | Oilfield | S2 | T1 |
-| 2 | ASAI | Arid Salinity Anomaly Index | Oilfield | S2 | T1 |
-| 3 | VSI | Vegetation Stress Index | Oilfield | S2 | T1 |
-| 4 | OBEC | Oil-Brine Emulsion Composite | Oilfield | S2 | T1 |
-| 5 | FBC | Ferrugination-Brine Composite | Oilfield | S2 | T1 |
-| 6 | LBI | Liquid Brine Index | Oilfield | S2 | T1 |
-| 7 | TRI | Toxic Residue Index | Oilfield | S2 | T1 |
-| 8 | BPI | Brine-Pavement Index | Oilfield | S2 | T1 |
-| 9 | REAI | Red Edge Alteration Index | Oilfield | S2 | T1 |
-| 10 | VCBI | Vegetation-Confirmed Brine Index | Oilfield | S2 | T1 |
-| 11 | CMA | Clay-Mineral Alteration | Oilfield | S2 | T1 |
-| 12 | PHI | Petro-Hydrocarbon Index | Oilfield | S2 | T1 |
-| 13 | HMI | Heavy Metal Interaction | Oilfield | S2 | T1 |
-| 14 | EHC | Evaporite Halo Composite | Oilfield | S2 | T1 |
-| 15 | SCRI | Salt Crust Roughness Index | Oilfield | S1 SAR | T1 |
-| 16 | MVPI | Methane Venting Plume Index | Oilfield | S2 | T1 |
-| 17 | PBMEI | Permian Basin Methane Emission Index | Oilfield/Atm | TROPOMI+VIIRS | T1 |
-| 18 | EMIT-BMIN | EMIT Brine Mineral Index | Oilfield | EMIT | T1 |
-| 19 | EMIT-HC | EMIT Hydrocarbon Staining Index | Oilfield | EMIT | T1 |
-| 20 | PW-ETA | Produced Water ET Anomaly | Oilfield | ECOSTRESS | T1 |
-| 21 | ASTER-GSI | ASTER Gypsum Emissivity Index | Oilfield | ASTER TIR | T1 |
-| 22 | GOES-FCI | GOES Flare Combustion Index | Oilfield | GOES ABI | T1 |
-| 23 | OLCI-PWWCI | OLCI Produced Water Chemistry Index | Oilfield | S3 OLCI | T1 |
-| 24 | GRACE-PWI | GRACE Produced Water Injection Index | Oilfield | GRACE-FO | T1 |
-| 25 | PB-CDI | Permian Basin Coherence Disturbance Index | Oilfield | S1 InSAR | T1 |
-| 26 | BH-DFSI | Burnt Hillside Debris-Flow Susceptibility Index | Wildfire | S2 | T1 |
-| 27 | SF-EII | Wildfire Fuel Hazard & Canopy Dehydration Index | Wildfire | S2 | T1 |
-| 28 | LFMPI | Live Fuel Moisture Pre-Ignition Index | Wildfire | S2 | T2 |
-| 29 | PSHRI | Post-Fire Soil Hydrophobicity Risk Index | Wildfire | S2+ERA5 | T1 |
-| 30 | BSMTI | Burn Severity Mineralogy Transition Index | Wildfire | EMIT | T1 |
-| 31 | SACI | Smoke Aerosol Composition Index | Wildfire | TROPOMI | T1 |
-| 32 | PCSII | Pyroconvection Detection Index | Wildfire | GOES+TROPOMI | T1 |
-| 33 | PETI | Phycocyanin Eutrophication Toxicity Index | Water Quality | S2 | T2 |
-| 34 | CSRC | Cyanotoxin Scum Risk Composite | Water Quality | S2 | T2 |
-| 35 | SWRI | Sewage-Water Release Index | Water Quality | S2 | T2 |
-| 36 | DWCI | Drinking Water Catchment Injury Index | Water Quality | S2 | T1 |
-| 37 | RRFI | Riparian Refuge Failure Index | Water Quality | S2 | T1 |
-| 38 | EPDI | Erosion Pulse Delivery Index | Water Quality | S2 | T1 |
-| 39 | RDOCI | River Dissolved Organic Carbon Index | Water Quality | PACE OCI | T1 |
-| 40 | CTPSTI | Cyanobacterial Toxin Proxy Spectral Index | Water Quality | PACE, DESIS | T1 |
-| 41 | DTPSI | Dam Thermal Plume Stratification Index | Water Quality | Landsat TIRS | T1 |
-| 42 | GMCPI | Glacial Meltwater Chemistry Proxy Index | Water Quality | S2, PACE | T1 |
-| 43 | FCLI | Floodplain Contamination Legacy Index | Water Quality | S2 bi-temporal | T1 |
-| 44 | HABSDI | HAB Species-Level Discrimination Index | Marine/Coastal | PACE, DESIS | T1 |
-| 45 | SMADI | Sargassum vs. Microplastic Discrimination Index | Marine/Coastal | S2, EMIT | T1 |
-| 46 | CBSDI | Coral Bleaching Stage Discrimination Index | Marine/Coastal | S2, PRISMA | T1 |
-| 47 | KCDSI | Kelp Canopy Density and Stress Index | Marine/Coastal | S2+S3 | T2 |
-| 48 | OWSI | Oil Spill Weathering Stage Index | Marine/Coastal | EMIT, S2 | T2 |
-| 49 | MDSPI | Mangrove Dieback Spatial Pattern Index | Marine/Coastal | S2+S1 | T1 |
-| 50 | SGDCI | Submarine Groundwater Discharge Chemistry Index | Marine/Coastal | PACE+ECOSTRESS | T1 |
-| 51 | SPEI | Seagrass Photosynthetic Efficiency Index | Marine/Coastal | S2, DESIS | T2 |
-| 52 | CD-UAI | Coastal Dredging & Marine Siltation Plume Index | Marine/Coastal | S2 | T1 |
-| 53 | MP-PDI | Marine Plastisphere & Polymer Differentiation Index | Marine/Coastal | S2 | T1 |
-| 54 | NPDDI | Nitrogen vs. Phosphorus Deficiency Index | Agriculture | S2, EnMAP | T1 |
-| 55 | SCSPI | Soil Compaction Spectral Proxy Index | Agriculture | S2 | T1 |
-| 56 | APRI | Aflatoxin Pre-Harvest Risk Index | Agriculture | ECOSTRESS+S2 | T1 |
-| 57 | PDSDI | Pesticide vs. Drought Stress Index | Agriculture | S2 | T1 |
-| 58 | CCTTI | Cover Crop Termination Timing Index | Agriculture | S2 time series | T2 |
-| 59 | IWUEI | Irrigation Water Use Efficiency Index | Agriculture | ECOSTRESS+S1 | T2 |
-| 60 | WDA-CSI | Wetland Encroachment & Agricultural Intrusion | Agriculture/Wetland | S2 | T1 |
-| 61 | TRSI | Tailings River Shock Index | Mining | S2 | T2 |
-| 62 | TDR-ASI | Tailings Dam Runout & Acid Silt Index | Mining | S2 | T1 |
-| 63 | AMDPHI | Acid Mine Drainage pH Proxy Index | Mining | S2, EMIT | T1 |
-| 64 | TDSII | Tailings Dam Structural Integrity Index | Mining | S2+S1 InSAR | T1 |
-| 65 | REESAI | Rare Earth Element Surface Anomaly Index | Mining | EnMAP, EMIT | T1 |
-| 66 | CCRBI | Coal Combustion Residue Bioaccumulation Index | Mining | S2 | T1 |
-| 67 | HLPII | Heap Leach Pad Integrity Index | Mining | S2, EMIT | T1 |
-| 68 | IERPI | Industrial Effluent River Plume Index | Mining | Landsat | T2 |
-| 69 | EC-ACI | Evapotranspirative Canopy & Asphalt Contrast | Urban | S2+ECOSTRESS | T2 |
-| 70 | HSAI | Heat-Shelter Absence Index | Urban | S2 | T2 |
-| 71 | SPSRI | Solar Panel Soiling Remote Index | Urban | S2, Planet | T1 |
-| 72 | UCIEI | Urban Cool Infrastructure Effectiveness Index | Urban | S2+ECOSTRESS | T1 |
-| 73 | PCADI | Pavement Condition and Albedo Decay Index | Urban | S2 | T1 |
-| 74 | CSDEI | Construction Site Silica Dust Emission Index | Urban | TROPOMI+GIS | T1 |
-| 75 | LFGVI | Landfill Gas Vegetation Intrusion Index | Urban/Waste | S2 | T1 |
-| 76 | LRD-VSI | Landfill Leachate & Runoff Degradation Index | Urban/Waste | S2 | T1 |
-| 77 | TT-API | Thermokarst Thaw & Anoxic Peat Index | Permafrost | S2 | T1 |
-| 78 | TPERI | Thermokarst Pond Expansion Rate Index | Permafrost | S2 bi-temporal | T1 |
-| 79 | PCEI | Peat Carbon Exposure Index | Permafrost | S2 | T1 |
-| 80 | SABSI | Snow/Ice Algae Bloom Severity Index | Permafrost | S2, Planet | T2 |
-| 81 | FGDCI | Frozen Ground Dielectric Change Index | Permafrost | S1 SAR | T1 |
-| 82 | MEPSI | CH4 Ebullition Pond Spectral Proxy | Permafrost | S2, Planet | T1 |
-| 83 | ALSI | Active Layer Depth Thermal-Spectral Index | Permafrost | ECOSTRESS+S2 | T1 |
-| 84 | PDCSI | Pre-Deforestation Canopy Stress Index | Tropical Forest | S2 | T2 |
-| 85 | LISI | Liana Infestation Structural Index | Tropical Forest | S2 | T2 |
-| 86 | UBCDI | Understory vs. Canopy Burn Discrimination Index | Tropical Forest | S2 bi-temporal | T1 |
-| 87 | FEDGI | Forest Edge Degradation Gradient Index | Tropical Forest | S2 | T1 |
-| 88 | SLSDI | Selective Logging Scar Detection Index | Tropical Forest | S2, Planet | T2 |
-| 89 | ETCSI | Emergent Tree Crown Stress Index | Tropical Forest | Planet+S2 | T1 |
-| 90 | BSCMCI | Biological Soil Crust Multi-Condition Index | Dryland | PRISMA, DESIS | T1 |
-| 91 | SBCI | Sabkha Brine Chemistry Index | Dryland | EMIT | T1 |
-| 92 | CSCAI | Caliche Surface Carbonate Accumulation Index | Dryland | EnMAP, PRISMA | T1 |
-| 93 | DEFPI | Dust Emission Flux Proxy Index | Dryland | EMIT+S2+SMAP | T1 |
-| 94 | DLPEHI | Desert Locust Pre-Emergence Habitat Index | Dryland | S2+GPM | T1 |
-| 95 | AIBEAI | Arroyo Incision and Bank Erosion Activity Index | Dryland | S2, Planet | T1 |
-| 96 | PWTDI | Peatland Water Table Depth Index | Wetland | S2+S1 | T2 |
-| 97 | MHSSP | Methane Hotspot Surface Spectral Predictor | Wetland | S2+TROPOMI | T1 |
-| 98 | TFIDI | Tidal Flat Inundation Dynamics Index | Wetland | S2 monthly | T1 |
-| 99 | WDPTZI | Wet-Dry Peatland Transition Zone Index | Wetland | S2 | T1 |
-| 100 | IPVSI | Invasive Phragmites vs. Native Vegetation | Wetland | S2 seasonal | T2 |
-| 101 | WVTDI | Wetland Vegetation Type Discrimination Index | Wetland | S2 time series | T2 |
-| 102 | CMSTI | Clay Mineral Stress Transition Index | Hyperspectral | EMIT | T1 |
-| 103 | MPSSFI | Methane Plume Spectral Shape Feature Index | Hyperspectral | EMIT | T2 |
-| 104 | AFCDI | Asbestos Fiber Chrysotile Detection Index | Hyperspectral | EMIT, PRISMA | T1 |
-| 105 | SCFGOSI | Soil Carbon Functional Group Oxidation Index | Hyperspectral | EMIT, EnMAP | T1 |
-| 106 | REENBI | REE Neodymium Band Depth Index | Hyperspectral | EnMAP | T1 |
-| 107 | EPCASE | EnMAP Porphyry Cu Alteration Sequence Index | Hyperspectral | EnMAP | T1 |
-| 108 | DPCCI | DESIS Phycocyanin Column Concentration Index | Hyperspectral | DESIS, PACE | T2 |
-| 109 | PFTIB | Phytoplankton Functional Type Index Battery | Hyperspectral | PACE OCI | T1 |
-| 110 | TSEAI | TROPOMI–Sentinel-2 Emission Attribution Index | Cross-sensor | S5P+S2 | T1 |
-| 111 | ISSAI | ICESat-2+Sentinel-1 Subsidence Attribution Index | Cross-sensor | ICESat-2+S1+S2 | T1 |
-| 112 | GEAWSI | GRACE-FO+ECOSTRESS Agricultural Water Stress | Cross-sensor | GRACE+ECOSTRESS | T1 |
-| 113 | EMSMMI | EMIT Mineral+Sentinel-1 Soil Moisture Index | Cross-sensor | EMIT+S1 | T1 |
-| 114 | NFCAI | NISAR+Sentinel-2 Forest Carbon Accumulation | Cross-sensor | NISAR+S2 | T3 |
-| 115 | SNUVQI | NO2+Sentinel-2 Urban Vegetation Air Quality | Cross-sensor | TROPOMI+S2 | T1 |
-| 116 | PUENPI | PACE+ECOSTRESS Coastal Wetland NEP Index | Cross-sensor | PACE+ECOSTRESS | T1 |
+| 1 | [PWCI](#pwci) | Produced Water Chemical Index | Oilfield | S2 | T1 |
+| 2 | [ASAI](#asai) | Arid Salinity Anomaly Index | Oilfield | S2 | T1 |
+| 3 | [VSI](#vsi) | Vegetation Stress Index | Oilfield | S2 | T1 |
+| 4 | [OBEC](#obec) | Oil-Brine Emulsion Composite | Oilfield | S2 | T1 |
+| 5 | [FBC](#fbc) | Ferrugination-Brine Composite | Oilfield | S2 | T1 |
+| 6 | [LBI](#lbi) | Liquid Brine Index | Oilfield | S2 | T1 |
+| 7 | [TRI](#tri) | Toxic Residue Index | Oilfield | S2 | T1 |
+| 8 | [BPI](#bpi) | Brine-Pavement Index | Oilfield | S2 | T1 |
+| 9 | [REAI](#reai) | Red Edge Alteration Index | Oilfield | S2 | T1 |
+| 10 | [VCBI](#vcbi) | Vegetation-Confirmed Brine Index | Oilfield | S2 | T1 |
+| 11 | [CMA](#cma) | Clay-Mineral Alteration | Oilfield | S2 | T1 |
+| 12 | [PHI](#phi) | Petro-Hydrocarbon Index | Oilfield | S2 | T1 |
+| 13 | [HMI](#hmi) | Heavy Metal Interaction | Oilfield | S2 | T1 |
+| 14 | [EHC](#ehc) | Evaporite Halo Composite | Oilfield | S2 | T1 |
+| 15 | [SCRI](#scri) | Salt Crust Roughness Index | Oilfield | S1 SAR | T1 |
+| 16 | [MVPI](#mvpi) | Methane Venting Plume Index | Oilfield | S2 | T1 |
+| 17 | [PBMEI](#pbmei) | Permian Basin Methane Emission Index | Oilfield/Atm | TROPOMI+VIIRS | T1 |
+| 18 | [EMIT-BMIN](#emitbmin) | EMIT Brine Mineral Index | Oilfield | EMIT | T1 |
+| 19 | [EMIT-HC](#emithc) | EMIT Hydrocarbon Staining Index | Oilfield | EMIT | T1 |
+| 20 | [PW-ETA](#pweta) | Produced Water ET Anomaly | Oilfield | ECOSTRESS | T1 |
+| 21 | [ASTER-GSI](#astergsi) | ASTER Gypsum Emissivity Index | Oilfield | ASTER TIR | T1 |
+| 22 | [GOES-FCI](#goesfci) | GOES Flare Combustion Index | Oilfield | GOES ABI | T1 |
+| 23 | [OLCI-PWWCI](#olcipwwci) | OLCI Produced Water Chemistry Index | Oilfield | S3 OLCI | T1 |
+| 24 | [GRACE-PWI](#gracepwi) | GRACE Produced Water Injection Index | Oilfield | GRACE-FO | T1 |
+| 25 | [PB-CDI](#pbcdi) | Permian Basin Coherence Disturbance Index | Oilfield | S1 InSAR | T1 |
+| 26 | [BH-DFSI](#bhdfsi) | Burnt Hillside Debris-Flow Susceptibility Index | Wildfire | S2 | T1 |
+| 27 | [SF-EII](#sfeii) | Wildfire Fuel Hazard & Canopy Dehydration Index | Wildfire | S2 | T1 |
+| 28 | [LFMPI](#lfmpi) | Live Fuel Moisture Pre-Ignition Index | Wildfire | S2 | T2 |
+| 29 | [PSHRI](#pshri) | Post-Fire Soil Hydrophobicity Risk Index | Wildfire | S2+ERA5 | T1 |
+| 30 | [BSMTI](#bsmti) | Burn Severity Mineralogy Transition Index | Wildfire | EMIT | T1 |
+| 31 | [SACI](#saci) | Smoke Aerosol Composition Index | Wildfire | TROPOMI | T1 |
+| 32 | [PCSII](#pcsii) | Pyroconvection Detection Index | Wildfire | GOES+TROPOMI | T1 |
+| 33 | [PETI](#peti) | Phycocyanin Eutrophication Toxicity Index | Water Quality | S2 | T2 |
+| 34 | [CSRC](#csrc) | Cyanotoxin Scum Risk Composite | Water Quality | S2 | T2 |
+| 35 | [SWRI](#swri) | Sewage-Water Release Index | Water Quality | S2 | T2 |
+| 36 | [DWCI](#dwci) | Drinking Water Catchment Injury Index | Water Quality | S2 | T1 |
+| 37 | [RRFI](#rrfi) | Riparian Refuge Failure Index | Water Quality | S2 | T1 |
+| 38 | [EPDI](#epdi) | Erosion Pulse Delivery Index | Water Quality | S2 | T1 |
+| 39 | [RDOCI](#rdoci) | River Dissolved Organic Carbon Index | Water Quality | PACE OCI | T1 |
+| 40 | [CTPSTI](#ctpsti) | Cyanobacterial Toxin Proxy Spectral Index | Water Quality | PACE, DESIS | T1 |
+| 41 | [DTPSI](#dtpsi) | Dam Thermal Plume Stratification Index | Water Quality | Landsat TIRS | T1 |
+| 42 | [GMCPI](#gmcpi) | Glacial Meltwater Chemistry Proxy Index | Water Quality | S2, PACE | T1 |
+| 43 | [FCLI](#fcli) | Floodplain Contamination Legacy Index | Water Quality | S2 bi-temporal | T1 |
+| 44 | [HABSDI](#habsdi) | HAB Species-Level Discrimination Index | Marine/Coastal | PACE, DESIS | T1 |
+| 45 | [SMADI](#smadi) | Sargassum vs. Microplastic Discrimination Index | Marine/Coastal | S2, EMIT | T1 |
+| 46 | [CBSDI](#cbsdi) | Coral Bleaching Stage Discrimination Index | Marine/Coastal | S2, PRISMA | T1 |
+| 47 | [KCDSI](#kcdsi) | Kelp Canopy Density and Stress Index | Marine/Coastal | S2+S3 | T2 |
+| 48 | [OWSI](#owsi) | Oil Spill Weathering Stage Index | Marine/Coastal | EMIT, S2 | T2 |
+| 49 | [MDSPI](#mdspi) | Mangrove Dieback Spatial Pattern Index | Marine/Coastal | S2+S1 | T1 |
+| 50 | [SGDCI](#sgdci) | Submarine Groundwater Discharge Chemistry Index | Marine/Coastal | PACE+ECOSTRESS | T1 |
+| 51 | [SPEI](#spei) | Seagrass Photosynthetic Efficiency Index | Marine/Coastal | S2, DESIS | T2 |
+| 52 | [CD-UAI](#cduai) | Coastal Dredging & Marine Siltation Plume Index | Marine/Coastal | S2 | T1 |
+| 53 | [MP-PDI](#mppdi) | Marine Plastisphere & Polymer Differentiation Index | Marine/Coastal | S2 | T1 |
+| 54 | [NPDDI](#npddi) | Nitrogen vs. Phosphorus Deficiency Discrimination Index | Agriculture | S2, EnMAP | T1 |
+| 55 | [SCSPI](#scspi) | Soil Compaction Spectral Proxy Index | Agriculture | S2 | T1 |
+| 56 | [APRI](#apri) | Aflatoxin Pre-Harvest Risk Index | Agriculture | ECOSTRESS+S2 | T1 |
+| 57 | [PDSDI](#pdsdi) | Pesticide vs. Drought Stress Discrimination Index | Agriculture | S2 | T1 |
+| 58 | [CCTTI](#cctti) | Cover Crop Termination Timing Index | Agriculture | S2 time series | T2 |
+| 59 | [IWUEI](#iwuei) | Irrigation Water Use Efficiency Index | Agriculture | ECOSTRESS+S1 | T2 |
+| 60 | [WDA-CSI](#wdacsi) | Wetland Encroachment & Agricultural Intrusion Composite | Agriculture/Wetland | S2 | T1 |
+| 61 | [TRSI](#trsi) | Tailings River Shock Index | Mining | S2 | T2 |
+| 62 | [TDR-ASI](#tdrasi) | Tailings Dam Runout & Acid Silt Index | Mining | S2 | T1 |
+| 63 | [AMDPHI](#amdphi) | Acid Mine Drainage pH Proxy Index | Mining | S2, EMIT | T1 |
+| 64 | [TDSII](#tdsii) | Tailings Dam Structural Integrity Index | Mining | S2+S1 InSAR | T1 |
+| 65 | [REESAI](#reesai) | Rare Earth Element Surface Anomaly Index | Mining | EnMAP, EMIT | T1 |
+| 66 | [CCRBI](#ccrbi) | Coal Combustion Residue Bioaccumulation Index | Mining | S2 | T1 |
+| 67 | [HLPII](#hlpii) | Heap Leach Pad Integrity Index | Mining | S2, EMIT | T1 |
+| 68 | [IERPI](#ierpi) | Industrial Effluent River Plume Index | Mining | Landsat | T2 |
+| 69 | [EC-ACI](#ecaci) | Evapotranspirative Canopy & Asphalt Contrast | Urban | S2+ECOSTRESS | T2 |
+| 70 | [HSAI](#hsai) | Heat-Shelter Absence Index | Urban | S2 | T2 |
+| 71 | [SPSRI](#spsri) | Solar Panel Soiling Remote Index | Urban | S2, Planet | T1 |
+| 72 | [UCIEI](#uciei) | Urban Cool Infrastructure Effectiveness Index | Urban | S2+ECOSTRESS | T1 |
+| 73 | [PCADI](#pcadi) | Pavement Condition and Albedo Decay Index | Urban | S2 | T1 |
+| 74 | [CSDEI](#csdei) | Construction Site Silica Dust Emission Index | Urban | TROPOMI+GIS | T1 |
+| 75 | [LFGVI](#lfgvi) | Landfill Gas Vegetation Intrusion Index | Urban/Waste | S2 | T1 |
+| 76 | [LRD-VSI](#lrdvsi) | Landfill Leachate & Runoff Degradation Index | Urban/Waste | S2 | T1 |
+| 77 | [TT-API](#ttapi) | Thermokarst Thaw & Anoxic Peat Index | Permafrost | S2 | T1 |
+| 78 | [TPERI](#tperi) | Thermokarst Pond Expansion Rate Index | Permafrost | S2 bi-temporal | T1 |
+| 79 | [PCEI](#pcei) | Peat Carbon Exposure Index | Permafrost | S2 | T1 |
+| 80 | [SABSI](#sabsi) | Snow/Ice Algae Bloom Severity Index | Permafrost | S2, Planet | T2 |
+| 81 | [FGDCI](#fgdci) | Frozen Ground Dielectric Change Index | Permafrost | S1 SAR | T1 |
+| 82 | [MEPSI](#mepsi) | CH4 Ebullition Pond Spectral Proxy | Permafrost | S2, Planet | T1 |
+| 83 | [ALSI](#alsi) | Active Layer Depth Thermal-Spectral Index | Permafrost | ECOSTRESS+S2 | T1 |
+| 84 | [PDCSI](#pdcsi) | Pre-Deforestation Canopy Stress Index | Tropical Forest | S2 | T2 |
+| 85 | [LISI](#lisi) | Liana Infestation Structural Index | Tropical Forest | S2 | T2 |
+| 86 | [UBCDI](#ubcdi) | Understory vs. Canopy Burn Discrimination Index | Tropical Forest | S2 bi-temporal | T1 |
+| 87 | [FEDGI](#fedgi) | Forest Edge Degradation Gradient Index | Tropical Forest | S2 | T1 |
+| 88 | [SLSDI](#slsdi) | Selective Logging Scar Detection Index | Tropical Forest | S2, Planet | T2 |
+| 89 | [ETCSI](#etcsi) | Emergent Tree Crown Stress Index | Tropical Forest | Planet+S2 | T1 |
+| 90 | [BSCMCI](#bscmci) | Biological Soil Crust Multi-Condition Index | Dryland | PRISMA, DESIS | T1 |
+| 91 | [SBCI](#sbci) | Sabkha Brine Chemistry Index | Dryland | EMIT | T1 |
+| 92 | [CSCAI](#cscai) | Caliche Surface Carbonate Accumulation Index | Dryland | EnMAP, PRISMA | T1 |
+| 93 | [DEFPI](#defpi) | Dust Emission Flux Proxy Index | Dryland | EMIT+S2+SMAP | T1 |
+| 94 | [DLPEHI](#dlpehi) | Desert Locust Pre-Emergence Habitat Index | Dryland | S2+GPM | T1 |
+| 95 | [AIBEAI](#aibeai) | Arroyo Incision and Bank Erosion Activity Index | Dryland | S2, Planet | T1 |
+| 96 | [PWTDI](#pwtdi) | Peatland Water Table Depth Index | Wetland | S2+S1 | T2 |
+| 97 | [MHSSP](#mhssp) | Methane Hotspot Surface Spectral Predictor | Wetland | S2+TROPOMI | T1 |
+| 98 | [TFIDI](#tfidi) | Tidal Flat Inundation Dynamics Index | Wetland | S2 monthly | T1 |
+| 99 | [WDPTZI](#wdptzi) | Wet-Dry Peatland Transition Zone Index | Wetland | S2 | T1 |
+| 100 | [IPVSI](#ipvsi) | Invasive Phragmites vs. Native Vegetation | Wetland | S2 seasonal | T2 |
+| 101 | [WVTDI](#wvtdi) | Wetland Vegetation Type Discrimination Index | Wetland | S2 time series | T2 |
+| 102 | [CMSTI](#cmsti) | Clay Mineral Stress Transition Index | Hyperspectral | EMIT | T1 |
+| 103 | [MPSSFI](#mpssfi) | Methane Plume Spectral Shape Feature Index | Hyperspectral | EMIT | T2 |
+| 104 | [AFCDI](#afcdi) | Asbestos Fiber Chrysotile Detection Index | Hyperspectral | EMIT, PRISMA | T1 |
+| 105 | [SCFGOSI](#scfgosi) | Soil Carbon Functional Group Oxidation Index | Hyperspectral | EMIT, EnMAP | T1 |
+| 106 | [REENBI](#reenbi) | REE Neodymium Band Depth Index | Hyperspectral | EnMAP | T1 |
+| 107 | [EPCASE](#epcase) | EnMAP Porphyry Cu Alteration Sequence Index | Hyperspectral | EnMAP | T1 |
+| 108 | [DPCCI](#dpcci) | DESIS Phycocyanin Column Concentration Index | Hyperspectral | DESIS, PACE | T2 |
+| 109 | [PFTIB](#pftib) | Phytoplankton Functional Type Index Battery | Hyperspectral | PACE OCI | T1 |
+| 110 | [TSEAI](#tseai) | TROPOMI–Sentinel-2 Emission Attribution Index | Cross-sensor | S5P+S2 | T1 |
+| 111 | [ISSAI](#issai) | ICESat-2+Sentinel-1 Subsidence Attribution Index | Cross-sensor | ICESat-2+S1+S2 | T1 |
+| 112 | [GEAWSI](#geawsi) | GRACE-FO+ECOSTRESS Agricultural Water Stress | Cross-sensor | GRACE+ECOSTRESS | T1 |
+| 113 | [EMSMMI](#emsmmi) | EMIT Mineral+Sentinel-1 Soil Moisture Index | Cross-sensor | EMIT+S1 | T1 |
+| 114 | [NFCAI](#nfcai) | NISAR+Sentinel-2 Forest Carbon Accumulation | Cross-sensor | NISAR+S2 | T3 |
+| 115 | [SNUVQI](#snuvqi) | NO2+Sentinel-2 Urban Vegetation Air Quality | Cross-sensor | TROPOMI+S2 | T1 |
+| 116 | [PUENPI](#puenpi) | PACE+ECOSTRESS Coastal Wetland NEP Index | Cross-sensor | PACE+ECOSTRESS | T1 |
 
 ---
 
@@ -144,16 +144,22 @@ This atlas fills that gap. It covers indices that are operational (used in produ
 
 ---
 
-### PWCI — Produced Water Chemical Index
+### <a id="pwci"></a>PWCI — Produced Water Chemical Index
 **Domain:** Oilfield contamination | **Platform:** Sentinel-2 (B02–B12) | **Novelty:** T1
 
 **Problem:** Oilfield produced water contains salt, hydrocarbons, and heavy metals simultaneously. No standard index addresses this three-chemical co-occurrence.
 
 **Formula:**
 ```
-PWCI = NDSI³ × HCAI × HMRI
+PWCI = NDSI**3 * HCAI * HMRI
 ```
-Where: `NDSI = (B08−B11)/(B08+B11)` | `HCAI = (B11−B12)/(B11+B12)` | `HMRI = (B03−B02)/(B03+B02)`
+
+| Component | Expression | Physical Target |
+|-----------|------------|-----------------|
+| **NDSI** | `(B08 - B11) / (B08 + B11)` | Salt crust / water-salt interaction (1610 nm) |
+| **HCAI** | `(B11 - B12) / (B11 + B12)` | Hydrocarbon absorption shoulder (2190 nm) |
+| **HMRI** | `(B03 - B02) / (B03 + B02)` | Heavy metals (Fe/Ba blue-green reflectance shift) |
+Where: `NDSI = (B08 - B11) / (B08 + B11)` | `HCAI = (B11 - B12) / (B11 + B12)` | `HMRI = (B03 - B02) / (B03 + B02)`
 
 **Physics:** Three-way AND gate requiring simultaneous salt (NDSI at 1610 nm water-salt interaction), hydrocarbon (HCAI SWIR shoulder at 2190 nm vs. 1610 nm), and heavy metal (HMRI blue-green ratio from Fe/Ba reflectance shift) signals. Cubic scaling of NDSI suppresses caliche (natural carbonate crust) which produces high NDSI but not HCAI or HMRI signals.
 
@@ -163,15 +169,21 @@ Where: `NDSI = (B08−B11)/(B08+B11)` | `HCAI = (B11−B12)/(B11+B12)` | `HMRI =
 
 ---
 
-### ASAI — Arid Salinity Anomaly Index
+### <a id="asai"></a>ASAI — Arid Salinity Anomaly Index
 **Domain:** Oilfield contamination | **Platform:** Sentinel-2 (B03, B11, B12) | **Novelty:** T1
 
 **Problem:** Produced water leaves both wet brine pools and dry evaporated salt crusts. Indices optimized for one mode miss the other.
 
 **Formula:**
 ```
-ASAI = max(NDSI_dry_mode, NDWI_specular_proxy) × (1 − NDVI)
+ASAI = max(NDSI_dry_mode, NDWI_specular_proxy) * (1 - NDVI)
 ```
+
+| Mode | Expression | Target Feature |
+|------|------------|----------------|
+| **Dry Mode** | `(B11 - B12) / (B11 + B12)` | Evaporated NaCl/gypsum crust |
+| **Specular Mode** | `B03` (Green brightness) | Smooth liquid brine pool reflectance |
+| **Vegetation Rejection** | `(1 - NDVI)` | Excludes healthy vegetation false positives |
 Dry mode: high B11/B12 absorption ratio. Specular mode: high B03 brightness from brine pond reflectance.
 
 **Physics:** Dry brine evaporation concentrates NaCl/gypsum, elevating SWIR1/SWIR2 ratio relative to background arid soils. Active brine pools produce specular reflectance in the green band (B03) from smooth liquid surface. Taking the maximum of both modes extends detection across the full life cycle of a spill.
@@ -182,15 +194,21 @@ Dry mode: high B11/B12 absorption ratio. Specular mode: high B03 brightness from
 
 ---
 
-### VSI — Vegetation Stress Index
+### <a id="vsi"></a>VSI — Vegetation Stress Index
 **Domain:** Oilfield contamination | **Platform:** Sentinel-2 (B05, B07, B8A, B11) | **Novelty:** T1
 
 **Problem:** Brine toxicity stress in surviving vegetation is invisible to NDVI until biomass decline is severe. Red-edge bands capture sub-lethal chlorophyll suppression weeks earlier.
 
 **Formula:**
 ```
-VSI = [(B8A − B07)/(B8A + B07)] − [(B07 − B05)/(B07 + B05)]
+VSI = [(B8A - B07)/(B8A + B07)] - [(B07 - B05)/(B07 + B05)]
 ```
+
+| Ratio | Expression | Physiological Signal |
+|-------|------------|----------------------|
+| **Red-Edge Broader** | `(B8A - B07) / (B8A + B07)` | Leaf mesophyll water & cellular structure |
+| **Red-Edge Narrow** | `(B07 - B05) / (B07 + B05)` | Sub-lethal chlorophyll suppression |
+| **Bare Soil Gate** | `B11` | SWIR1 gate to exclude bare soil false positives |
 with B11 gate to exclude dry bare soil.
 
 **Physics:** Brine osmotic stress and sodium toxicity suppress chlorophyll production before causing visible yellowing. The red-edge position shifts from ~720 nm toward ~705 nm as chlorophyll declines, detectable as a differential between the B8A/B07 ratio and the B07/B05 ratio. B11 gate removes false positives from dry soil.
@@ -201,15 +219,21 @@ with B11 gate to exclude dry bare soil.
 
 ---
 
-### OBEC — Oil-Brine Emulsion Composite
+### <a id="obec"></a>OBEC — Oil-Brine Emulsion Composite
 **Domain:** Oilfield contamination | **Platform:** Sentinel-2 (B02–B12) | **Novelty:** T1
 
 **Problem:** Oil-brine emulsions (produced water mixed with crude) have a mixed spectral signature that neither NDOI (oil) nor NDSI (brine) captures independently.
 
 **Formula:**
 ```
-OBEC = optical_smoothness × NDOI × NDSI
+OBEC = optical_smoothness * NDOI * NDSI
 ```
+
+| Factor | Expression | Target Property |
+|--------|------------|-----------------|
+| **Smoothness** | Low spectral variance (B02–B08) | Suppressed scattering from surface oil emulsion |
+| **NDOI** | `(B11 - B12) / (B11 + B12)` | Surface crude oil film signature |
+| **NDSI** | `(B08 - B11) / (B08 + B11)` | Saturated brine water salinity |
 Optical smoothness = low variance across B02–B08 (emulsion surface is spectrally flat).
 
 **Physics:** Oil-brine emulsions suppress scattering at all wavelengths due to oil coating on brine droplets, creating an anomalously smooth, low-variance spectrum across visible/NIR. NDOI targets the oil film signal at 1610 nm; NDSI targets the brine signal. The three-way product isolates the co-occurrence.
@@ -220,16 +244,22 @@ Optical smoothness = low variance across B02–B08 (emulsion surface is spectral
 
 ---
 
-### FBC — Ferrugination-Brine Composite
+### <a id="fbc"></a>FBC — Ferrugination-Brine Composite
 **Domain:** Oilfield contamination | **Platform:** Sentinel-2 (B02–B12) | **Novelty:** T1
 
 **Problem:** Deep Permian brine carries elevated Fe²⁺ that oxidizes to Fe³⁺ on surfacing, leaving a rust-brown iron stain. This signal is distinct from hydrocarbon and salt signals but equally persistent.
 
 **Formula:**
 ```
-FBC = AOI × NDSI × HMRI
+FBC = AOI * NDSI * HMRI
 ```
-Where `AOI = (B04−B02)/(B04+B02)` encodes Fe³⁺ / anoxic iron oxidation.
+
+| Index | Expression | Target Property |
+|-------|-----------|-----------------|
+| **AOI** | `(B04 - B02) / (B04 + B02)` | Fe³⁺ anoxic iron oxidation (red-blue contrast) |
+| **NDSI** | `(B08 - B11) / (B08 + B11)` | Evaporated brine salts |
+| **HMRI** | `(B03 - B02) / (B03 + B02)` | Surfacing heavy metal signature |
+Where `AOI = (B04 - B02) / (B04 + B02)` encodes Fe³⁺ / anoxic iron oxidation.
 
 **Physics:** Fe²⁺ oxidizes to goethite/hematite on contact with atmospheric oxygen, producing absorption features at 480 nm and 535 nm (red/orange coloration). The AOI captures this red-to-blue contrast. Multiplying by NDSI and HMRI requires co-occurrence with salt and heavy metals, specific to oilfield brine vs. natural iron-rich soils.
 
@@ -239,16 +269,23 @@ Where `AOI = (B04−B02)/(B04+B02)` encodes Fe³⁺ / anoxic iron oxidation.
 
 ---
 
-### LBI — Liquid Brine Index
+### <a id="lbi"></a>LBI — Liquid Brine Index
 **Domain:** Oilfield contamination | **Platform:** Sentinel-2 (B03, B08, B11, B12) | **Novelty:** T1
 
 **Problem:** Active standing brine pools must be distinguished from other water bodies. Standard NDWI does not exclude salt from fresh water or vegetation-adjacent water.
 
 **Formula:**
 ```
-LBI = NDSI × adj_NDWI × (1 − NDVI) × BSI
+LBI = NDSI * adj_NDWI * (1 - NDVI) * BSI
 ```
-Where `adj_NDWI = (B03 − B11)/(B03 + B11)` (Gao 1996 variant, more sensitive to saline water).
+
+| Gate | Expression | Operational Purpose |
+|------|------------|---------------------|
+| **Salinity** | `NDSI` | Confirms salt concentration |
+| **Water Saturated** | `adj_NDWI = (B03 - B11) / (B03 + B11)` | Gao (1996) variant sensitive to saline water |
+| **Tundra Rejection** | `(1 - NDVI)` | Removes vegetation false positives |
+| **Bare Soil Context** | `BSI` | Restricts detection to bare/disturbed soil context |
+Where `adj_NDWI = (B03 - B11) / (B03 + B11)` (Gao 1996 variant, more sensitive to saline water).
 
 **Physics:** The four-factor product requires: (1) salt signal (NDSI), (2) liquid water (adj_NDWI), (3) absence of vegetation (1−NDVI, excluding marshes and green ponds), and (4) bare/disturbed soil context (BSI, excluding natural lakes surrounded by vegetation). Highly specific to industrial brine pools.
 
@@ -258,14 +295,14 @@ Where `adj_NDWI = (B03 − B11)/(B03 + B11)` (Gao 1996 variant, more sensitive t
 
 ---
 
-### TRI — Toxic Residue Index
+### <a id="tri"></a>TRI — Toxic Residue Index
 **Domain:** Oilfield contamination | **Platform:** Sentinel-2 (B02–B12) | **Novelty:** T1
 
 **Problem:** After brine evaporates, a mineral scar persists for 12+ months. Standard water/salt indices return to background when liquid is gone.
 
 **Formula:**
 ```
-TRI = NDSI × HMRI × AOI
+TRI = NDSI * HMRI * AOI
 ```
 Three-way AND gate detecting the dry mineral residue signature.
 
@@ -275,14 +312,14 @@ Three-way AND gate detecting the dry mineral residue signature.
 
 ---
 
-### REAI — Red Edge Alteration Index
+### <a id="reai"></a>REAI — Red Edge Alteration Index
 **Domain:** Oilfield contamination | **Platform:** Sentinel-2 (B05, B06) | **Novelty:** T1
 
 **Problem:** Iron staining from brine alters the red-edge slope of vegetation before causing visible stress or SWIR changes.
 
 **Formula:**
 ```
-REAI = (B06 − B05) / (B06 + B05)
+REAI = (B06 - B05) / (B06 + B05)
 ```
 B05 = 705 nm, B06 = 740 nm — the two narrowest red-edge bands in Sentinel-2.
 
@@ -292,14 +329,14 @@ B05 = 705 nm, B06 = 740 nm — the two narrowest red-edge bands in Sentinel-2.
 
 ---
 
-### SCRI — Salt Crust Roughness Index
+### <a id="scri"></a>SCRI — Salt Crust Roughness Index
 **Domain:** Oilfield contamination | **Platform:** Sentinel-1 SAR (VV, VH) | **Novelty:** T1
 
 **Problem:** Optical indices cannot see through dust, smoke, or clouds. SAR penetrates all conditions but general SAR moisture indices don't specifically target salt crystallization.
 
 **Formula:**
 ```
-SCRI = low_variance[(VV − VH) / (VV + VH)] within salt_mask
+SCRI = low_variance[(VV - VH) / (VV + VH)] within salt_mask
 ```
 Smooth salt crystallization on the surface produces anomalously low VV/VH variance compared to rough natural soils.
 
@@ -309,14 +346,14 @@ Smooth salt crystallization on the surface produces anomalously low VV/VH varian
 
 ---
 
-### MVPI — Methane Venting Plume Index
+### <a id="mvpi"></a>MVPI — Methane Venting Plume Index
 **Domain:** Oilfield / atmospheric | **Platform:** Sentinel-2 (B11, B12) | **Novelty:** T1
 
 **Problem:** Produced water impoundments outgas dissolved methane. Sentinel-2 cannot detect methane directly, but its SWIR bands can provide a deterministic surface-context gate for atmospheric detections.
 
 **Formula:**
 ```
-MVPI = high_albedo_pad_gate × (1 − NDVI) × (1 − NDWI) × HCAI_anomaly
+MVPI = high_albedo_pad_gate * (1 - NDVI) * (1 - NDWI) * HCAI_anomaly
 ```
 Surface context: high-albedo pad surfaces (caliche roads, tank battery areas) + absence of vegetation/water + SWIR-2 hydrocarbon contrast.
 
@@ -326,12 +363,12 @@ Surface context: high-albedo pad surfaces (caliche roads, tank battery areas) + 
 
 ---
 
-### PBMEI — Permian Basin Methane Emission Index
+### <a id="pbmei"></a>PBMEI — Permian Basin Methane Emission Index
 **Domain:** Oilfield / atmospheric | **Platform:** Sentinel-5P TROPOMI + VIIRS | **Novelty:** T1
 
 **Formula:**
 ```
-PBMEI = (XCH4_obs − XCH4_background) / (FRP_VIIRS + 1)
+PBMEI = (XCH4_obs - XCH4_background) / (FRP_VIIRS + 1)
 ```
 
 **Physics:** High XCH4 with low fire radiative power (low flaring) = fugitive methane from produced water outgassing or equipment leaks. High XCH4 with high FRP = flare-associated combustion. The division normalizes for flare contribution to distinguish the two sources.
@@ -340,12 +377,12 @@ PBMEI = (XCH4_obs − XCH4_background) / (FRP_VIIRS + 1)
 
 ---
 
-### OLCI-PWWCI — OLCI Produced Water Chemistry Index
+### <a id="olcipwwci"></a>OLCI-PWWCI — OLCI Produced Water Chemistry Index
 **Domain:** Oilfield | **Platform:** Sentinel-3 OLCI (300 m) | **Novelty:** T1
 
 **Formula:**
 ```
-OLCI-PWWCI = (B4/B3) × (B8/B6)
+OLCI-PWWCI = (B4/B3) * (B8/B6)
 ```
 B3=560 nm, B4=665 nm, B6=709 nm, B8=779 nm.
 
@@ -355,12 +392,12 @@ B3=560 nm, B4=665 nm, B6=709 nm, B8=779 nm.
 
 ---
 
-### GRACE-PWI — GRACE Produced Water Injection Index
+### <a id="gracepwi"></a>GRACE-PWI — GRACE Produced Water Injection Index
 **Domain:** Oilfield / subsurface | **Platform:** GRACE-FO (gravity ranging) | **Novelty:** T1
 
 **Formula:**
 ```
-GRACE-PWI = TWS_anomaly − (agriculture_signal + precipitation_signal + natural_groundwater_trend)
+GRACE-PWI = TWS_anomaly - (agriculture_signal + precipitation_signal + natural_groundwater_trend)
 ```
 
 **Physics:** Total Water Storage anomalies from GRACE-FO integrate all mass changes including injected produced water in disposal wells. After removing agricultural extraction, precipitation, and natural groundwater signals, the residual reflects subsurface fluid injection volumes. The only independent cross-check on state regulatory injection reports.
@@ -369,7 +406,7 @@ GRACE-PWI = TWS_anomaly − (agriculture_signal + precipitation_signal + natural
 
 ---
 
-### EMIT-BMIN — EMIT Brine Mineral Index
+### <a id="emitbmin"></a>EMIT-BMIN — EMIT Brine Mineral Index
 **Domain:** Oilfield | **Platform:** EMIT (60 m, 285 bands, 380–2500 nm) | **Novelty:** T1
 
 **Formula:** Spectral Angle Mapping distance from a brine-altered soil endmember (gypsum + halite + iron oxide mixture) vs. background evaporite desert soil.
@@ -380,12 +417,12 @@ GRACE-PWI = TWS_anomaly − (agriculture_signal + precipitation_signal + natural
 
 ---
 
-### ASTER-GSI — ASTER Gypsum Emissivity Index
+### <a id="astergsi"></a>ASTER-GSI — ASTER Gypsum Emissivity Index
 **Domain:** Oilfield | **Platform:** ASTER TIR (90 m, 5 bands, 8–12 µm) | **Novelty:** T1
 
 **Formula:**
 ```
-ASTER-GSI = (B11 − B12) / (B11 + B12)
+ASTER-GSI = (B11 - B12) / (B11 + B12)
 ```
 B11 = ~8.6 µm, B12 = ~9.1 µm.
 
@@ -395,12 +432,12 @@ B11 = ~8.6 µm, B12 = ~9.1 µm.
 
 ---
 
-### GOES-FCI — GOES Flare Combustion Index
+### <a id="goesfci"></a>GOES-FCI — GOES Flare Combustion Index
 **Domain:** Oilfield / regulatory | **Platform:** GOES-16/18 ABI | **Novelty:** T1
 
 **Formula:**
 ```
-GOES-FCI = (B7 − B6) / (B7 + B6)
+GOES-FCI = (B7 - B6) / (B7 + B6)
 ```
 B7 = 3.9 µm (mid-wave IR), B6 = 2.25 µm (near-SWIR).
 
@@ -410,12 +447,12 @@ B7 = 3.9 µm (mid-wave IR), B6 = 2.25 µm (near-SWIR).
 
 ---
 
-### PB-CDI — Permian Basin Coherence Disturbance Index
+### <a id="pbcdi"></a>PB-CDI — Permian Basin Coherence Disturbance Index
 **Domain:** Oilfield | **Platform:** Sentinel-1 InSAR | **Novelty:** T1
 
 **Formula:**
 ```
-PB-CDI = coherence_current − coherence_multi-year_baseline
+PB-CDI = coherence_current - coherence_multi-year_baseline
 ```
 
 **Physics:** New surface disturbance (well pad construction, spill excavation, road grading) causes loss of coherence in repeat-pass InSAR relative to a multi-year baseline. The archive extends from 2014, enabling retroactive detection of disturbances that predate regulatory reports.
@@ -428,14 +465,14 @@ PB-CDI = coherence_current − coherence_multi-year_baseline
 
 ---
 
-### BH-DFSI — Burnt Hillside Debris-Flow Susceptibility Index
+### <a id="bhdfsi"></a>BH-DFSI — Burnt Hillside Debris-Flow Susceptibility Index
 **Domain:** Post-fire hydrological hazard | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Catastrophic mudslides and debris flows occur in burned mountainous terrain 1–3 years post-fire. Existing indices detect burn severity but not combined post-fire hazard readiness.
 
 **Formula:**
 ```
-BH-DFSI = BurnGate × SoilGate × MoistureSignal × ChromaticSlopeProxy
+BH-DFSI = BurnGate * SoilGate * MoistureSignal * ChromaticSlopeProxy
 ```
 | Component | Expression |
 |-----------|------------|
@@ -452,15 +489,15 @@ BH-DFSI = BurnGate × SoilGate × MoistureSignal × ChromaticSlopeProxy
 
 ---
 
-### SF-EII — Wildfire Fuel Hazard & Canopy Dehydration Index
+### <a id="sfeii"></a>SF-EII — Wildfire Fuel Hazard & Canopy Dehydration Index
 **Domain:** Pre-fire fuel assessment | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Pre-fire fuel moisture content and canopy dehydration determine fire behavior intensity but are difficult to monitor continuously at landscape scale.
 
 **Formula:**
 ```
-SF-EII = canopy_moisture_deficit × cell_wall_collapse_proxy
-       = [(B8A − B11)/(B8A + B11)] × [1 − (B08/B12)]
+SF-EII = canopy_moisture_deficit * cell_wall_collapse_proxy
+       = [(B8A - B11)/(B8A + B11)] * [1 - (B08/B12)]
 ```
 
 **Physics:** SWIR1 (B11) absorption reflects bulk canopy water content (Ceccato et al. 2001). B12/B08 ratio encodes cell wall integrity — as cells desiccate, the SWIR2/NIR ratio increases. The product of water deficit and structural collapse gives a compound fuel dehydration signal.
@@ -469,14 +506,14 @@ SF-EII = canopy_moisture_deficit × cell_wall_collapse_proxy
 
 ---
 
-### LFMPI — Live Fuel Moisture Pre-Ignition Index
+### <a id="lfmpi"></a>LFMPI — Live Fuel Moisture Pre-Ignition Index
 **Domain:** Pre-fire | **Platform:** Sentinel-2, Landsat-9 | **Novelty:** T2
 
 **Problem:** Existing LFMC approaches (NDMI, NDWI) confound soil background with vegetation fuel signal in heterogeneous shrublands.
 
 **Formula:**
 ```
-LFMPI = 2.5 × [(B8A − B11) / (B8A + B11 + 6×B4 − 7.5×B2 + 1)] − (B12 / B11)
+LFMPI = 2.5 * [(B8A - B11) / (B8A + B11 + 6*B4 - 7.5*B2 + 1)] - (B12 / B11)
 ```
 EVI-weighted SWIR moisture index with SWIR2/SWIR1 structural penalty.
 
@@ -484,14 +521,14 @@ EVI-weighted SWIR moisture index with SWIR2/SWIR1 structural penalty.
 
 ---
 
-### PSHRI — Post-Fire Soil Hydrophobicity Risk Index
+### <a id="pshri"></a>PSHRI — Post-Fire Soil Hydrophobicity Risk Index
 **Domain:** Post-fire | **Platform:** Sentinel-2 + ERA5 | **Novelty:** T1
 
 **Problem:** Post-fire soil hydrophobicity (water repellency from volatilized organic compounds) drives debris flows in the 1–3 years after fire. No satellite index detects hydrophobicity from space.
 
 **Formula:**
 ```
-PSHRI = NDWI_post-rain − NDWI_pre-rain
+PSHRI = NDWI_post-rain - NDWI_pre-rain
 ```
 Applied in a confirmed post-precipitation window from ERA5. Negative PSHRI after rain = hydrophobic soil.
 
@@ -501,7 +538,7 @@ Applied in a confirmed post-precipitation window from ERA5. Negative PSHRI after
 
 ---
 
-### BSMTI — Burn Severity Mineralogy Transition Index
+### <a id="bsmti"></a>BSMTI — Burn Severity Mineralogy Transition Index
 **Domain:** Post-fire | **Platform:** EMIT (5 nm resolution) | **Novelty:** T1
 
 **Problem:** Fire temperature history determines soil mineralogy: moderate fire creates magnetite from goethite reduction; high fire creates periclase from carbonate decomposition. These predict subsequent erosion but are undetectable by standard NBR/dNBR.
@@ -518,7 +555,7 @@ Applied to EMIT L2A reflectance over burned bare soil.
 
 ---
 
-### SACI — Smoke Aerosol Composition Index
+### <a id="saci"></a>SACI — Smoke Aerosol Composition Index
 **Domain:** Wildfire | **Platform:** Sentinel-5P TROPOMI | **Novelty:** T1
 
 **Problem:** Wildfire smoke from flaming (black carbon, acutely harmful) and smoldering (organic carbon, smaller particles, more toxic PM2.5) requires different public health responses. AOD quantity measurements do not distinguish source type.
@@ -535,14 +572,14 @@ High ratio (>1.5) = smoldering/OC-dominated smoke. Low ratio (~1.0) = flaming/BC
 
 ---
 
-### PCSII — Pyroconvection Detection Index
+### <a id="pcsii"></a>PCSII — Pyroconvection Detection Index
 **Domain:** Wildfire / atmosphere | **Platform:** GOES-16/18 + TROPOMI | **Novelty:** T1
 
 **Problem:** PyroCb events inject smoke to the stratosphere, where it persists for months and affects global climate. Current detection requires meteorological analyst interpretation.
 
 **Formula:**
 ```
-PCSII = (BT_3.7µm − BT_11µm > 0) AND (AOD_TROPOMI > 1.0)
+PCSII = (BT_3.7µm - BT_11µm > 0) AND (AOD_TROPOMI > 1.0)
 ```
 
 **Physics:** PyroCb cloud tops contain absorbing black carbon aerosols mixed with small ice crystals. The small ice particle + absorbing aerosol combination creates anomalously high mid-wave IR (3.7 µm) brightness temperature relative to long-wave IR (11 µm) — the opposite of clean cumulonimbus.
@@ -555,14 +592,14 @@ PCSII = (BT_3.7µm − BT_11µm > 0) AND (AOD_TROPOMI > 1.0)
 
 ---
 
-### PETI — Phycocyanin Eutrophication Toxicity Index
+### <a id="peti"></a>PETI — Phycocyanin Eutrophication Toxicity Index
 **Domain:** Water quality | **Platform:** Sentinel-2 | **Novelty:** T2
 
 **Problem:** Cyanobacterial blooms producing toxins (microcystin, cylindrospermopsin) are a public health crisis. Standard chlorophyll indices cannot distinguish cyanobacteria from green algae.
 
 **Formula:**
 ```
-PETI = [(B04 − B05) / (B04 + B05)] × turbidity_gate × persistence_gate
+PETI = [(B04 - B05) / (B04 + B05)] * turbidity_gate * persistence_gate
 ```
 Virtual phycocyanin band model utilizing the red/red-edge differential slope.
 
@@ -572,14 +609,14 @@ Virtual phycocyanin band model utilizing the red/red-edge differential slope.
 
 ---
 
-### CSRC — Cyanotoxin Scum Risk Composite
+### <a id="csrc"></a>CSRC — Cyanotoxin Scum Risk Composite
 **Domain:** Water quality | **Platform:** Sentinel-2 | **Novelty:** T2
 
 **Problem:** Floating scum at the water surface — where cyanotoxin concentrations are highest — requires different detection than subsurface blooms.
 
 **Formula:**
 ```
-CSRC = NDCI × NIR_scum_boost × (1 − turbidity_rejection) × (1 − floating_veg_rejection) × persistence_gate
+CSRC = NDCI * NIR_scum_boost * (1 - turbidity_rejection) * (1 - floating_veg_rejection) * persistence_gate
 ```
 Where `NDCI = (B05 − B04) / (B05 + B04)` and NIR boost = B07/B08 ratio (floating scum has high NIR from cell clumping).
 
@@ -589,14 +626,14 @@ Where `NDCI = (B05 − B04) / (B05 + B04)` and NIR boost = B07/B08 ratio (floati
 
 ---
 
-### DWCI — Drinking Water Catchment Injury Index
+### <a id="dwci"></a>DWCI — Drinking Water Catchment Injury Index
 **Domain:** Water quality / public health | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Upstream contamination threats to drinking water intakes (from spills, algal blooms, or sediment events) may reach intakes hours to days after the originating event.
 
 **Formula:**
 ```
-DWCI = turbidity_anomaly × upstream_flow_path_weight × persistence
+DWCI = turbidity_anomaly * upstream_flow_path_weight * persistence
 ```
 Turbidity anomaly relative to seasonal baseline, weighted by DEM-derived flow path distance to intake.
 
@@ -606,14 +643,14 @@ Turbidity anomaly relative to seasonal baseline, weighted by DEM-derived flow pa
 
 ---
 
-### RDOCI — River Dissolved Organic Carbon Index
+### <a id="rdoci"></a>RDOCI — River Dissolved Organic Carbon Index
 **Domain:** Water quality / carbon cycle | **Platform:** PACE OCI | **Novelty:** T1
 
 **Problem:** Dissolved organic carbon (DOC) in rivers drives aquatic carbon fluxes and water treatability. Lab measurement is expensive; no satellite index has been feasible before PACE's UV channels.
 
 **Formula:**
 ```
-RDOCI = ln(ρ_320nm / ρ_412nm) / (412 − 320) × (−1)
+RDOCI = ln(ρ_320nm / ρ_412nm) / (412 - 320) * (-1)
 ```
 Approximating the CDOM spectral slope coefficient S275-295 from PACE UV channels.
 
@@ -623,14 +660,14 @@ Approximating the CDOM spectral slope coefficient S275-295 from PACE UV channels
 
 ---
 
-### CTPSTI — Cyanobacterial Toxin Proxy Spectral Index
+### <a id="ctpsti"></a>CTPSTI — Cyanobacterial Toxin Proxy Spectral Index
 **Domain:** Water quality | **Platform:** PACE OCI, DESIS | **Novelty:** T1
 
 **Problem:** Harmful algal bloom detection cannot distinguish microcystin-producing Microcystis (toxic) from non-toxic Aphanizomenon. Health advisories need toxin estimation, not just bloom presence.
 
 **Formula:**
 ```
-CTPSTI = [ρ(560nm) − ρ(620nm)] / [ρ(560nm) + ρ(620nm)]
+CTPSTI = [ρ(560nm) - ρ(620nm)] / [ρ(560nm) + ρ(620nm)]
 ```
 
 **Physics:** Microcystis is non-gas-vacuolate; dominant biliprotein is phycocyanin (absorption at 620 nm). Gas-vacuolate non-toxic Aphanizomenon has phycoerythrin contribution at 565 nm with relatively less phycocyanin. The 560 nm/620 nm ratio encodes relative phycoerythrin vs. phycocyanin loading, which correlates with toxin-producer species composition.
@@ -639,14 +676,14 @@ CTPSTI = [ρ(560nm) − ρ(620nm)] / [ρ(560nm) + ρ(620nm)]
 
 ---
 
-### DTPSI — Dam Thermal Plume Stratification Index
+### <a id="dtpsi"></a>DTPSI — Dam Thermal Plume Stratification Index
 **Domain:** Water quality / ecology | **Platform:** Landsat-9 TIRS | **Novelty:** T1
 
 **Problem:** Dams releasing cold hypolimnetic water (bottom release) vs. warm epilimnetic water (top release) have dramatically different downstream ecological impacts, but this cannot be distinguished from upstream imagery alone.
 
 **Formula:**
 ```
-DTPSI = (LST_downstream_1km − LST_reservoir_surface) / (LST_upstream_1km − LST_reservoir_surface)
+DTPSI = (LST_downstream_1km - LST_reservoir_surface) / (LST_upstream_1km - LST_reservoir_surface)
 ```
 <0 = cold hypolimnetic release; >0 = warm surface release.
 
@@ -656,14 +693,14 @@ DTPSI = (LST_downstream_1km − LST_reservoir_surface) / (LST_upstream_1km − L
 
 ---
 
-### FCLI — Floodplain Contamination Legacy Index
+### <a id="fcli"></a>FCLI — Floodplain Contamination Legacy Index
 **Domain:** Water quality / environmental justice | **Platform:** Sentinel-2 bi-temporal | **Novelty:** T1
 
 **Problem:** Post-flood floodplain soils retain metal and organic contaminants from upstream industrial sources. These legacy deposits create ongoing risk after floodwaters recede but are invisible after vegetation re-establishes.
 
 **Formula:**
 ```
-FCLI = (B12_post-flood − B12_pre-flood) × (1 − NDVI_next-season)
+FCLI = (B12_post-flood - B12_pre-flood) * (1 - NDVI_next-season)
 ```
 
 **Physics:** Metal-contaminated sediments deposited during flooding alter SWIR2 reflectance (sulfate mineral precipitation, iron hydroxide deposition). Low next-season NDVI indicates phytotoxic suppression of vegetation recovery. Both signals must co-occur — SWIR2 change without vegetation suppression is natural sediment; vegetation suppression without SWIR2 change is drought.
@@ -676,17 +713,17 @@ FCLI = (B12_post-flood − B12_pre-flood) × (1 − NDVI_next-season)
 
 ---
 
-### HABSDI — HAB Species-Level Discrimination Index
+### <a id="habsdi"></a>HABSDI — HAB Species-Level Discrimination Index
 **Domain:** Marine water quality | **Platform:** PACE OCI, DESIS | **Novelty:** T1
 
 **Problem:** Existing HAB indices detect bloom presence and chlorophyll quantity. They cannot distinguish cyanobacteria (with phycocyanin, potentially toxic) from diatoms (non-toxic) or dinoflagellates — critical for toxin risk assessment and shellfish closure decisions.
 
 **Formula:**
 ```
-PC_index    = (B3 − B5) / (B3 + B5)          # phycocyanin: 560 nm − 705 nm
-FX_index    = (B2 − B3) / (B2 + B3)          # fucoxanthin: 490 nm − 560 nm
-HABSDI_cyano  = PC_index − FX_index           # positive = cyanobacteria dominant
-HABSDI_diatom = FX_index − PC_index           # positive = diatom dominant
+PC_index    = (B3 - B5) / (B3 + B5)          # phycocyanin: 560 nm - 705 nm
+FX_index    = (B2 - B3) / (B2 + B3)          # fucoxanthin: 490 nm - 560 nm
+HABSDI_cyano  = PC_index - FX_index           # positive = cyanobacteria dominant
+HABSDI_diatom = FX_index - PC_index           # positive = diatom dominant
 ```
 
 **Physics:** Cyanobacteria contain phycocyanin (620 nm) and phycoerythrin (565 nm) — both absent in other phytoplankton groups. Diatoms contain fucoxanthin (510–540 nm absorption). Dinoflagellates have peridinin (~490 nm). These pigment packages create distinct spectral shapes in the 490–720 nm range, resolvable at 5 nm (PACE) or 2.55 nm (DESIS) spectral sampling.
@@ -695,14 +732,14 @@ HABSDI_diatom = FX_index − PC_index           # positive = diatom dominant
 
 ---
 
-### SMADI — Sargassum vs. Microplastic Discrimination Index
+### <a id="smadi"></a>SMADI — Sargassum vs. Microplastic Discrimination Index
 **Domain:** Marine pollution | **Platform:** Sentinel-2, EMIT | **Novelty:** T1
 
 **Problem:** Sargassum seaweed and surface microplastic aggregates both trigger positive FAI (Floating Algae Index) detections. Coastlines need discrimination for cleanup targeting — different response for each material.
 
 **Formula:**
 ```
-SMADI = FAI − [(B8A − B11) / (B8A + B11)]
+SMADI = FAI - [(B8A - B11) / (B8A + B11)]
 ```
 High SMADI with positive FAI = living Sargassum.
 Low SMADI with positive FAI = microplastic aggregate.
@@ -713,16 +750,16 @@ Low SMADI with positive FAI = microplastic aggregate.
 
 ---
 
-### CBSDI — Coral Bleaching Stage Discrimination Index
+### <a id="cbsdi"></a>CBSDI — Coral Bleaching Stage Discrimination Index
 **Domain:** Marine ecology | **Platform:** Sentinel-2 (10–20 m), PRISMA | **Novelty:** T1
 
 **Problem:** Sentinel-2 can detect bleached vs. healthy coral (binary) but cannot stage bleaching severity — critical because intervention options differ by stage.
 
 **Formula:**
 ```
-CBSDI_pale = (B3 − B4) / (B3 + B4)           # high = pale bleached (stage 1)
+CBSDI_pale = (B3 - B4) / (B3 + B4)           # high = pale bleached (stage 1)
 CBSDI_full = B2 / (B3 + B4 + B1)             # high = fully bleached white skeleton
-CBSDI_dead = (B3 / B4) − (B2 / B4)           # positive = algae-colonized dead
+CBSDI_dead = (B3 / B4) - (B2 / B4)           # positive = algae-colonized dead
 ```
 
 **Physics:**
@@ -735,14 +772,14 @@ CBSDI_dead = (B3 / B4) − (B2 / B4)           # positive = algae-colonized dead
 
 ---
 
-### SGDCI — Submarine Groundwater Discharge Chemistry Index
+### <a id="sgdci"></a>SGDCI — Submarine Groundwater Discharge Chemistry Index
 **Domain:** Coastal hydrology | **Platform:** PACE OCI + ECOSTRESS | **Novelty:** T1
 
 **Problem:** Submarine groundwater discharge brings nutrients and dissolved carbon to coastal zones. Thermal detection finds discharge locations but cannot characterize water chemistry type.
 
 **Formula:**
 ```
-SGDCI = (ρ_412 / ρ_550) − CDOM_regional_mean
+SGDCI = (ρ_412 / ρ_550) - CDOM_regional_mean
 ```
 Applied within thermal anomaly mask from ECOSTRESS.
 
@@ -752,15 +789,15 @@ Applied within thermal anomaly mask from ECOSTRESS.
 
 ---
 
-### MP-PDI — Marine Plastisphere & Polymer Differentiation Index
+### <a id="mppdi"></a>MP-PDI — Marine Plastisphere & Polymer Differentiation Index
 **Domain:** Marine pollution | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Floating marine debris detected by FAI-type indices conflates plastic, Sargassum, sea foam, timber, and turbidity. Cleanup operations need polymer-specific detection.
 
 **Formula:**
 ```
-MP-PDI = FDI_base × (1 − Sargassum_rejection) × (1 − vegetation_rejection)
-                   × (1 − foam_rejection) × (1 − turbidity_rejection)
+MP-PDI = FDI_base * (1 - Sargassum_rejection) * (1 - vegetation_rejection)
+                   * (1 - foam_rejection) * (1 - turbidity_rejection)
 ```
 FDI_base = floating debris index using NIR-SWIR brightness anomaly.
 
@@ -770,14 +807,14 @@ FDI_base = floating debris index using NIR-SWIR brightness anomaly.
 
 ---
 
-### CD-UAI — Coastal Dredging & Marine Siltation Plume Index
+### <a id="cduai"></a>CD-UAI — Coastal Dredging & Marine Siltation Plume Index
 **Domain:** Coastal ecology | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Dredging operations release turbid plumes that smother coral and seagrass. Standard NDWI cannot quantify silt plume extent or discriminate dredge plumes from natural turbidity.
 
 **Formula:**
 ```
-CD-UAI = turbidity_ratio × green_red_plume × (1 − cloud_SWIR_mask)
+CD-UAI = turbidity_ratio * green_red_plume * (1 - cloud_SWIR_mask)
 ```
 Where turbidity_ratio = `B04/B03` elevated above local baseline.
 
@@ -791,14 +828,14 @@ Where turbidity_ratio = `B04/B03` elevated above local baseline.
 
 ---
 
-### NPDDI — Nitrogen vs. Phosphorus Deficiency Discrimination Index
+### <a id="npddi"></a>NPDDI — Nitrogen vs. Phosphorus Deficiency Discrimination Index
 **Domain:** Precision agriculture | **Platform:** Sentinel-2 (B4, B5, B11, B12), EnMAP | **Novelty:** T1
 
 **Problem:** N and P deficiencies cause billions in crop losses annually. Satellite sensing detects crop stress but cannot tell a farmer whether to apply N or P — two different and expensive interventions.
 
 **Formula:**
 ```
-NPDDI = [(B4 − B5) / (B4 + B5)] − [(B12 − B11) / (B12 + B11)]
+NPDDI = [(B4 - B5) / (B4 + B5)] - [(B12 - B11) / (B12 + B11)]
 ```
 Positive NPDDI = N deficiency dominant. Negative = P deficiency dominant.
 
@@ -812,14 +849,14 @@ The index subtracts the SWIR2-dominant (P) signal from the red-edge-dominant (N)
 
 ---
 
-### APRI — Aflatoxin Pre-Harvest Risk Index
+### <a id="apri"></a>APRI — Aflatoxin Pre-Harvest Risk Index
 **Domain:** Food security | **Platform:** ECOSTRESS + Sentinel-2 + ERA5 | **Novelty:** T1
 
 **Problem:** Aflatoxin-producing Aspergillus fungi infect drought-stressed maize during grain fill. Lab detection requires post-harvest sampling. Pre-harvest satellite-based risk mapping could trigger preventative management.
 
 **Formula:**
 ```
-APRI = (LST_anomaly / σ) × [1 − NDWI] × heat_accumulation_days
+APRI = (LST_anomaly / σ) * [1 - NDWI] * heat_accumulation_days
 ```
 
 **Physics:** Aspergillus infection risk is highest when combined heat stress (elevated ECOSTRESS LST anomaly) and moisture deficit (low NDWI) coincide during the critical flowering-to-grain-fill window, and heat accumulation (GDD from ERA5) has been elevated. This three-factor proxy captures the drought-heat combination that creates aflatoxin-susceptible tissue.
@@ -828,14 +865,14 @@ APRI = (LST_anomaly / σ) × [1 − NDWI] × heat_accumulation_days
 
 ---
 
-### PDSDI — Pesticide vs. Drought Stress Discrimination Index
+### <a id="pdsdi"></a>PDSDI — Pesticide vs. Drought Stress Discrimination Index
 **Domain:** Precision agriculture | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Pesticide phytotoxicity and drought stress both reduce NDVI. Misdiagnosis causes either over-application of pesticides or unnecessary irrigation.
 
 **Formula:**
 ```
-PDSDI = texture_cv(NDVI, 3×3 kernel) / [(B5 − B4) / (B5 + B4)]
+PDSDI = texture_cv(NDVI, 3*3 kernel) / [(B5 - B4) / (B5 + B4)]
 ```
 High texture variation with moderate red-edge stress = pesticide (patchy necrosis).
 Low texture with uniform red-edge stress = drought.
@@ -846,14 +883,14 @@ Low texture with uniform red-edge stress = drought.
 
 ---
 
-### SCSPI — Soil Compaction Spectral Proxy Index
+### <a id="scspi"></a>SCSPI — Soil Compaction Spectral Proxy Index
 **Domain:** Agriculture / soil health | **Platform:** Sentinel-2 (bare soil windows) | **Novelty:** T1
 
 **Problem:** Compacted soils restrict root growth, increase runoff, and reduce yields. Compaction creates detectable changes in surface reflectance but no standardized index targets it.
 
 **Formula:**
 ```
-SCSPI = [1 − (B11 / B12)] × (B3 / B2)
+SCSPI = [1 - (B11 / B12)] * (B3 / B2)
 ```
 Applied during bare-field windows (post-harvest, pre-planting).
 
@@ -863,14 +900,14 @@ Applied during bare-field windows (post-harvest, pre-planting).
 
 ---
 
-### WDA-CSI — Wetland Encroachment & Agricultural Intrusion Composite
+### <a id="wdacsi"></a>WDA-CSI — Wetland Encroachment & Agricultural Intrusion Composite Composite
 **Domain:** Wetland / agriculture interface | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Agricultural drainage into wetland margins is a major driver of global wetland loss. No index captures the spectral signal of the encroachment front.
 
 **Formula:**
 ```
-WDA-CSI = nitrogen_chlorophyll_spike × peat_drainage_signal × NDWI_loss
+WDA-CSI = nitrogen_chlorophyll_spike * peat_drainage_signal * NDWI_loss
 ```
 Nitrogen chlorophyll spike = anomalously high NDVI at wetland margin (fertilizer runoff into nutrient-poor peat). Peat drainage = SWIR2 increase from drying peat surface.
 
@@ -884,14 +921,14 @@ Nitrogen chlorophyll spike = anomalously high NDVI at wetland margin (fertilizer
 
 ---
 
-### AMDPHI — Acid Mine Drainage pH Proxy Index
+### <a id="amdphi"></a>AMDPHI — Acid Mine Drainage pH Proxy Index
 **Domain:** Mining contamination | **Platform:** Sentinel-2 (10 m), EMIT | **Novelty:** T1
 
 **Problem:** Acid mine drainage destroys aquatic ecosystems. pH monitoring requires in-situ sensors. A satellite-derived pH proxy would enable continental-scale triage of at-risk streams.
 
 **Formula:**
 ```
-AMDPHI = [(B4 − B3) / (B4 + B3)] / [(B2 − B3) / (B2 + B3 + 0.001)]
+AMDPHI = [(B4 - B3) / (B4 + B3)] / [(B2 - B3) / (B2 + B3 + 0.001)]
 ```
 
 **Physics:** AMD iron mineral precipitates are pH-diagnostic:
@@ -905,14 +942,14 @@ The index ratio of red-green to blue-green contrasts encodes the iron mineral as
 
 ---
 
-### REESAI — Rare Earth Element Surface Anomaly Index
+### <a id="reesai"></a>REESAI — Rare Earth Element Surface Anomaly Index
 **Domain:** Mining prospecting | **Platform:** EnMAP (30 m, 224 bands) | **Novelty:** T1
 
 **Problem:** Rare earth elements are critical for clean energy technology (EV motors, wind turbines). Conventional prospecting requires expensive field campaigns. EnMAP now enables REE detection from orbit.
 
 **Formula:**
 ```
-REESAI = 1 − ρ(803nm) / [ρ(780nm) + (803−780)/(830−780) × (ρ(830nm) − ρ(780nm))]
+REESAI = 1 - ρ(803nm) / [ρ(780nm) + (803-780)/(830-780) * (ρ(830nm) - ρ(780nm))]
 ```
 Linear interpolation continuum depth at the 803 nm Nd³⁺ absorption feature.
 
@@ -922,14 +959,14 @@ Linear interpolation continuum depth at the 803 nm Nd³⁺ absorption feature.
 
 ---
 
-### TDSII — Tailings Dam Structural Integrity Index
+### <a id="tdsii"></a>TDSII — Tailings Dam Structural Integrity Index
 **Domain:** Mining safety | **Platform:** Sentinel-2 + Sentinel-1 InSAR | **Novelty:** T1
 
 **Problem:** Tailings dam collapses (Brumadinho 2019: 270 deaths; Jagersfontein 2022) are catastrophic. Precursor signals are present in open satellite data weeks before failure.
 
 **Formula:**
 ```
-TDSII = w1 × NDWI_anomaly + w2 × (−InSAR_subsidence_rate) + w3 × NDVI_decline_rate
+TDSII = w1 * NDWI_anomaly + w2 * (-InSAR_subsidence_rate) + w3 * NDVI_decline_rate
 ```
 
 **Physics:** Three independent precursor signals: (1) downstream face seepage creates moisture anomalies (NDWI increase on dam face), (2) structural settling appears as mm/year InSAR subsidence anomaly, (3) vegetation stress on dam face from leachate/seepage (NDVI decline). Any single component above threshold triggers alert.
@@ -938,14 +975,14 @@ TDSII = w1 × NDWI_anomaly + w2 × (−InSAR_subsidence_rate) + w3 × NDVI_decli
 
 ---
 
-### CCRBI — Coal Combustion Residue Bioaccumulation Index
+### <a id="ccrbi"></a>CCRBI — Coal Combustion Residue Bioaccumulation Index
 **Domain:** Mining / environmental justice | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Fly ash impoundments leach selenium, arsenic, and heavy metals into surrounding vegetation. Communities near these sites have elevated cancer rates. Satellite detection of bioaccumulation would enable environmental accountability.
 
 **Formula:**
 ```
-CCRBI = [(B4 − B8) / (B4 + B8)] × [B3 / (B11 + 0.01)]
+CCRBI = [(B4 - B8) / (B4 + B8)] * [B3 / (B11 + 0.01)]
 ```
 
 **Physics:** Grass over CCR impoundments shows elevated red reflectance from anthocyanin accumulation (As/Se stress response in grasses — "grass is a tattletale," Harkness et al. 2025 *PMC*), reduced NIR from leaf structure disruption, and altered SWIR1 from leaf water content change. The index encodes both the visible stress (red-NIR ratio) and the SWIR structural signature.
@@ -954,14 +991,14 @@ CCRBI = [(B4 − B8) / (B4 + B8)] × [B3 / (B11 + 0.01)]
 
 ---
 
-### TDR-ASI — Tailings Dam Runout & Acid Silt Index
+### <a id="tdrasi"></a>TDR-ASI — Tailings Dam Runout & Acid Silt Index
 **Domain:** Mining contamination | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Tailings dam failures release highly acidic silicate slurry downstream. Detection downstream of failure events informs emergency response extent.
 
 **Formula:**
 ```
-TDR-ASI = jarosite_signal × sulfate_absorption × mine_proximity_weight
+TDR-ASI = jarosite_signal * sulfate_absorption * mine_proximity_weight
 ```
 Jarosite signal from AOI (iron oxidation at red-blue ratio); sulfate from HCAI (SWIR hydrocarbon/sulfate shoulder).
 
@@ -971,14 +1008,14 @@ Jarosite signal from AOI (iron oxidation at red-blue ratio); sulfate from HCAI (
 
 ---
 
-### LFGVI — Landfill Gas Vegetation Intrusion Index
+### <a id="lfgvi"></a>LFGVI — Landfill Gas Vegetation Intrusion Index
 **Domain:** Urban waste / environmental justice | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Landfill gas (methane + CO2 + volatile organics) migrating laterally through soil kills vegetation in a distinctive radial ring pattern around landfill boundaries.
 
 **Formula:**
 ```
-LFGVI = red_edge_stress × moisture_loss × chlorosis_signal × ring_pattern_score
+LFGVI = red_edge_stress * moisture_loss * chlorosis_signal * ring_pattern_score
 ```
 Ring pattern score = spatial filter detecting annular NDVI depression around known landfill footprint.
 
@@ -992,14 +1029,14 @@ Ring pattern score = spatial filter detecting annular NDVI depression around kno
 
 ---
 
-### SPSRI — Solar Panel Soiling Remote Index
+### <a id="spsri"></a>SPSRI — Solar Panel Soiling Remote Index
 **Domain:** Renewable energy / infrastructure | **Platform:** Sentinel-2, Planet | **Novelty:** T1
 
 **Problem:** Dust on utility-scale PV arrays reduces output by 30–45% in arid regions. Manual inspection is expensive. Satellite-scale soiling mapping would enable priority cleaning deployment.
 
 **Formula:**
 ```
-SPSRI = (ρ_B2 − ρ_clean_baseline_B2) / ρ_clean_baseline_B2 × (B11 / B12)
+SPSRI = (ρ_B2 - ρ_clean_baseline_B2) / ρ_clean_baseline_B2 * (B11 / B12)
 ```
 
 **Physics:** Clean PV panels have very low reflectance (high absorption, ~5% reflectance). Dust-coated panels have elevated reflectance shifting toward the dust mineralogy signature. The B11/B12 ratio encodes the dust mineral type (clay vs. carbonate vs. silicate dust), providing a soiling-not-shadow discriminator.
@@ -1008,14 +1045,14 @@ SPSRI = (ρ_B2 − ρ_clean_baseline_B2) / ρ_clean_baseline_B2 × (B11 / B12)
 
 ---
 
-### UCIEI — Urban Cool Infrastructure Effectiveness Index
+### <a id="uciei"></a>UCIEI — Urban Cool Infrastructure Effectiveness Index
 **Domain:** Urban climate | **Platform:** Sentinel-2 + ECOSTRESS | **Novelty:** T1
 
 **Problem:** Cities invest in cool roofs, green roofs, and permeable pavements. No satellite index quantifies mitigation effectiveness of specific interventions at the parcel scale.
 
 **Formula:**
 ```
-UCIEI = (1 − albedo_satellite) × LST_anomaly
+UCIEI = (1 - albedo_satellite) * LST_anomaly
 ```
 Where broadband albedo = `0.356×B2 + 0.130×B4 + 0.373×B8 + 0.085×B11 + 0.072×B12 − 0.0018`
 
@@ -1025,14 +1062,14 @@ Where broadband albedo = `0.356×B2 + 0.130×B4 + 0.373×B8 + 0.085×B11 + 0.072
 
 ---
 
-### SNUVQI — NO₂ + Sentinel-2 Urban Vegetation Air Quality Index
+### <a id="snuvqi"></a>SNUVQI — NO₂ + Sentinel-2 Urban Vegetation Air Quality Index
 **Domain:** Urban health | **Platform:** TROPOMI + Sentinel-2 + ERA5 | **Novelty:** T1
 
 **Problem:** Urban NO₂ pollution is unevenly distributed. Urban trees and parks reduce near-surface NO₂ by 10–20%, but no index quantifies this effect from satellite data at the parcel scale.
 
 **Formula:**
 ```
-SNUVQI = NO2_TROPOMI_downscaled − f(NDVI_S2, wind_ERA5)
+SNUVQI = NO2_TROPOMI_downscaled - f(NDVI_S2, wind_ERA5)
 ```
 
 **Physics:** Downscaled TROPOMI NO₂ column concentrations (1 km → 100 m via S2 land cover disaggregation) minus the predicted NO₂ reduction from local urban canopy cover (NDVI × wind-speed-dependent deposition velocity). Negative residual = green infrastructure performing above baseline; positive residual = ineffective or insufficient vegetation canopy.
@@ -1045,14 +1082,14 @@ SNUVQI = NO2_TROPOMI_downscaled − f(NDVI_S2, wind_ERA5)
 
 ---
 
-### TT-API — Thermokarst Thaw & Anoxic Peat Index
+### <a id="ttapi"></a>TT-API — Thermokarst Thaw & Anoxic Peat Index
 **Domain:** Permafrost / climate | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** Permafrost thaw releases centuries of stored carbon as methane and CO2. Detecting thaw-related peat exposure and anoxic conditions from space is the first step to quantifying this feedback.
 
 **Formula:**
 ```
-TT-API = PeatExposure × WetAnoxic × EdgeCollapse
+TT-API = PeatExposure * WetAnoxic * EdgeCollapse
 ```
 Peat exposure: SWIR2 increase + NIR decrease from exposed dark peat. Wet anoxic: low NDWI (not pure open water, but saturated peat). Edge collapse: NDVI depression at thaw-slump margins.
 
@@ -1062,14 +1099,14 @@ Peat exposure: SWIR2 increase + NIR decrease from exposed dark peat. Wet anoxic:
 
 ---
 
-### TPERI — Thermokarst Pond Expansion Rate Index
+### <a id="tperi"></a>TPERI — Thermokarst Pond Expansion Rate Index
 **Domain:** Permafrost | **Platform:** Sentinel-2 bi-temporal | **Novelty:** T1
 
 **Problem:** MNDWI detects standing water presence but cannot encode active thermokarst expansion velocity vs. stable pond margins. The rate signal, not presence, drives carbon release projections.
 
 **Formula:**
 ```
-TPERI = Δ(B11_t1 − B11_t2) / Δ(B3_t1 − B3_t2)
+TPERI = Δ(B11_t1 - B11_t2) / Δ(B3_t1 - B3_t2)
 ```
 Positive values = active thaw margin expansion.
 
@@ -1079,14 +1116,14 @@ Positive values = active thaw margin expansion.
 
 ---
 
-### FGDCI — Frozen Ground Dielectric Change Index
+### <a id="fgdci"></a>FGDCI — Frozen Ground Dielectric Change Index
 **Domain:** Permafrost | **Platform:** Sentinel-1 SAR | **Novelty:** T1
 
 **Problem:** C-band SAR backscatter changes at freeze/thaw transitions but no standardized formula separates dielectric change from surface roughness or vegetation effects.
 
 **Formula:**
 ```
-FGDCI = (VV_dB − VH_dB) − seasonal_mean(VV_dB − VH_dB)
+FGDCI = (VV_dB - VH_dB) - seasonal_mean(VV_dB - VH_dB)
 ```
 Time-series anomaly from local climatological mean.
 
@@ -1096,14 +1133,14 @@ Time-series anomaly from local climatological mean.
 
 ---
 
-### ALSI — Active Layer Depth Thermal-Spectral Composite Index
+### <a id="alsi"></a>ALSI — Active Layer Depth Thermal-Spectral Composite Index
 **Domain:** Permafrost | **Platform:** ECOSTRESS + Sentinel-2 | **Novelty:** T1
 
 **Problem:** Active layer depth (ALD) is the primary control on permafrost carbon vulnerability. Currently requires in-situ probing at sparse monitoring stations.
 
 **Formula:**
 ```
-ALSI = 0.6 × (LST_anomaly / σ_LST) + 0.4 × [(B12 − B11) / (B12 + B11)]
+ALSI = 0.6 * (LST_anomaly / σ_LST) + 0.4 * [(B12 - B11) / (B12 + B11)]
 ```
 
 **Physics:** Deeper active layers correlate with warmer surface temperatures (longer heat penetration path), drier surface vegetation (reduced NDWI), and greater clay mineral signal exposure at 2200 nm (frost churning brings clay-rich subsoil to surface). ECOSTRESS LST anomaly captures the thermal signal; S2 SWIR ratio captures the mineralogy signal.
@@ -1116,7 +1153,7 @@ ALSI = 0.6 × (LST_anomaly / σ_LST) + 0.4 × [(B12 − B11) / (B12 + B11)]
 
 ---
 
-### UBCDI — Understory vs. Canopy Burn Discrimination Index
+### <a id="ubcdi"></a>UBCDI — Understory vs. Canopy Burn Discrimination Index
 **Domain:** Tropical fire ecology | **Platform:** Sentinel-2 bi-temporal | **Novelty:** T1
 
 **Problem:** In tropical forests, ground/understory fires create very different recovery trajectories than crown fires. dNBR cannot distinguish vertical fire structure — a critical gap for post-fire management decisions.
@@ -1133,14 +1170,14 @@ Near −1 = canopy fire (large NIR loss, moderate red gain). Near 0 = surface fi
 
 ---
 
-### PDCSI — Pre-Deforestation Canopy Stress Index
+### <a id="pdcsi"></a>PDCSI — Pre-Deforestation Canopy Stress Index
 **Domain:** Tropical deforestation monitoring | **Platform:** Sentinel-2 red-edge | **Novelty:** T2
 
 **Problem:** Logging operators often selectively thin canopies 6–18 months before clear-cutting. This pre-visual stress is spectrally detectable but no standardized index formalizes it.
 
 **Formula:**
 ```
-PDCSI = [(B6 − B5) / (B6 + B5)] − [(B8A − B8) / (B8A + B8)]
+PDCSI = [(B6 - B5) / (B6 + B5)] - [(B8A - B8) / (B8A + B8)]
 ```
 B5=705 nm, B6=740 nm, B8=842 nm, B8A=865 nm.
 
@@ -1150,14 +1187,14 @@ B5=705 nm, B6=740 nm, B8=842 nm, B8A=865 nm.
 
 ---
 
-### LISI — Liana Infestation Structural Index
+### <a id="lisi"></a>LISI — Liana Infestation Structural Index
 **Domain:** Tropical forest health | **Platform:** Sentinel-2 | **Novelty:** T2
 
 **Problem:** Lianas (woody vines) are increasing with climate change, suppressing timber value and biodiversity. No operational satellite index maps infestation intensity at the landscape scale.
 
 **Formula:**
 ```
-LISI = 2.5 × [(B8 − B11) / (B8 + 6×B4 − 7.5×B2 + 1)] × (B8 / B11)
+LISI = 2.5 * [(B8 - B11) / (B8 + 6*B4 - 7.5*B2 + 1)] * (B8 / B11)
 ```
 EVI-modified by SWIR penalty for leaf structure discrimination.
 
@@ -1171,7 +1208,7 @@ EVI-modified by SWIR penalty for leaf structure discrimination.
 
 ---
 
-### SBCI — Sabkha Brine Chemistry Index
+### <a id="sbci"></a>SBCI — Sabkha Brine Chemistry Index
 **Domain:** Dryland / arid geomorphology | **Platform:** EMIT | **Novelty:** T1
 
 **Problem:** Sabkhas (coastal/inland salt flats) contain distinctive mineral assemblages (halite, gypsum, anhydrite, carnallite) that vary with brine concentration and hydroperiod. No standardized index maps sabkha chemistry from orbit.
@@ -1188,14 +1225,14 @@ Gypsum-to-anhydrite absorption depth ratio.
 
 ---
 
-### BSCMCI — Biological Soil Crust Multi-Condition Index
+### <a id="bscmci"></a>BSCMCI — Biological Soil Crust Multi-Condition Index
 **Domain:** Dryland ecology | **Platform:** PRISMA, DESIS | **Novelty:** T1
 
 **Problem:** Biological soil crusts (BSCs) protect dryland soil from erosion and fix nitrogen. Existing detection is binary (crust present/absent). A staging index enables condition monitoring.
 
 **Formula:**
 ```
-BSCMCI = [(ρ680 − ρ720) / (ρ680 + ρ720)] × [(ρ550 / ρ670) − 1]
+BSCMCI = [(ρ680 - ρ720) / (ρ680 + ρ720)] * [(ρ550 / ρ670) - 1]
 ```
 
 **Physics:** BSC development stages have distinctive pigment signatures:
@@ -1210,14 +1247,14 @@ The chlorophyll edge ratio × green peak combination separates these stages.
 
 ---
 
-### DLPEHI — Desert Locust Pre-Emergence Habitat Index
+### <a id="dlpehi"></a>DLPEHI — Desert Locust Pre-Emergence Habitat Index
 **Domain:** Food security / early warning | **Platform:** Sentinel-2 + GPM | **Novelty:** T1
 
 **Problem:** Desert locust upsurges require early warning in remote areas. Current monitoring detects breeding habitat only after vegetation flush — too late for preventative response.
 
 **Formula:**
 ```
-DLPEHI = NDWI × (0.1 < NDVI < 0.3) × (NDTI > −0.2) × rainfall_binary
+DLPEHI = NDWI * (0.1 < NDVI < 0.3) * (NDTI > -0.2) * rainfall_binary
 ```
 Logical conjunction: moist sandy soil + sparse greening vegetation + post-rainfall confirmation.
 
@@ -1227,7 +1264,7 @@ Logical conjunction: moist sandy soil + sparse greening vegetation + post-rainfa
 
 ---
 
-### CSCAI — Caliche Surface Carbonate Accumulation Index
+### <a id="cscai"></a>CSCAI — Caliche Surface Carbonate Accumulation Index
 **Domain:** Dryland pedology | **Platform:** EnMAP | **Novelty:** T1
 
 **Problem:** Caliche (pedogenic calcite) crusts indicate paleoclimate, limit root penetration, and affect agricultural suitability. No standardized satellite index maps caliche distribution.
@@ -1244,7 +1281,7 @@ Calcite CO3²⁻ absorption at 2335 nm vs. weaker feature at 2160 nm.
 
 ---
 
-### AIBEAI — Arroyo Incision and Bank Erosion Activity Index
+### <a id="aibeai"></a>AIBEAI — Arroyo Incision and Bank Erosion Activity Index
 **Domain:** Dryland geomorphology | **Platform:** Sentinel-2, Planet | **Novelty:** T1
 
 **Problem:** Arroyo incision in arid systems causes gully headward erosion threatening infrastructure and accelerating desertification. No index distinguishes active incision from stable legacy channels.
@@ -1265,14 +1302,14 @@ Where `BSI = (B11 + B4 − B8 − B2) / (B11 + B4 + B8 + B2)`.
 
 ---
 
-### PWTDI — Peatland Water Table Depth Index
+### <a id="pwtdi"></a>PWTDI — Peatland Water Table Depth Index
 **Domain:** Wetland / carbon | **Platform:** Sentinel-2 + Sentinel-1 | **Novelty:** T2
 
 **Problem:** Peatland water table depth (WTD) is the primary control on methane vs. CO2 emissions. Currently unmeasured globally from satellite — the most important gap in wetland carbon accounting.
 
 **Formula:**
 ```
-PWTDI = 0.65 × NDWI_1020 + 0.35 × (VV_dB − VH_dB)
+PWTDI = 0.65 * NDWI_1020 + 0.35 * (VV_dB - VH_dB)
 ```
 Where `NDWI_1020 = (B8A − B9) / (B8A + B9)` (B9=945 nm, the 970 nm Sphagnum water feature).
 
@@ -1282,14 +1319,14 @@ Where `NDWI_1020 = (B8A − B9) / (B8A + B9)` (B9=945 nm, the 970 nm Sphagnum wa
 
 ---
 
-### MHSSP — Methane Hotspot Surface Spectral Predictor
+### <a id="mhssp"></a>MHSSP — Methane Hotspot Surface Spectral Predictor
 **Domain:** Wetland / climate | **Platform:** Sentinel-2 + TROPOMI | **Novelty:** T1
 
 **Problem:** Wetland CH4 emissions are spatially highly heterogeneous — "hotspot-dominated." TROPOMI sees plumes but cannot identify individual m²-scale emission hotspots. Surface optical features predict hotspot locations.
 
 **Formula:**
 ```
-MHSSP = NDWI × (1 − NDVI) × (1 − CI_rededge / max_CI_rededge_local)
+MHSSP = NDWI * (1 - NDVI) * (1 - CI_rededge / max_CI_rededge_local)
 ```
 
 **Physics:** CH4 hotspots in wetlands occur where: (1) organic-rich anoxic zones (open water, NDWI high) coincide with (2) no emergent vegetation (low NDVI, so ebullition is unobstructed) and (3) low macrophyte biomass (low red-edge chlorophyll index). Open sediment-covered shallow water is the characteristic habitat.
@@ -1298,14 +1335,14 @@ MHSSP = NDWI × (1 − NDVI) × (1 − CI_rededge / max_CI_rededge_local)
 
 ---
 
-### TFIDI — Tidal Flat Inundation Dynamics Index
+### <a id="tfidi"></a>TFIDI — Tidal Flat Inundation Dynamics Index
 **Domain:** Coastal wetland | **Platform:** Sentinel-2 monthly | **Novelty:** T1
 
 **Problem:** Intertidal flats are among the most ecologically productive habitats but their satellite monitoring is complicated by rapid tidal cycling. No index captures the full inundation gradient across a tidal cycle.
 
 **Formula:**
 ```
-TFIDI = (NDWI_p90 − NDWI_p10) / NDWI_mean   [monthly composite]
+TFIDI = (NDWI_p90 - NDWI_p10) / NDWI_mean   [monthly composite]
 ```
 
 **Physics:** Inundation stage determines spectral signature: open water (NDWI >> 0), saturated mudflat (dark, low NDWI), moist mudflat (moderate SWIR), dry upper flat (clay signature). Monthly composites from Sentinel-2's 5-day revisit sample multiple tidal states. High NDWI percentile spread = high inundation dynamics = full tidal flat habitat; low spread = always-wet or always-dry.
@@ -1314,14 +1351,14 @@ TFIDI = (NDWI_p90 − NDWI_p10) / NDWI_mean   [monthly composite]
 
 ---
 
-### WDPTZI — Wet-Dry Peatland Transition Zone Index
+### <a id="wdptzi"></a>WDPTZI — Wet-Dry Peatland Transition Zone Index
 **Domain:** Peatland carbon | **Platform:** Sentinel-2 | **Novelty:** T1
 
 **Problem:** The transition from wet (methane-emitting) to dry (CO2-emitting, fire-vulnerable) peatland is a carbon management priority. The transition zone width and position are unmapped globally.
 
 **Formula:**
 ```
-WDPTZI = spatial_gradient_magnitude[(B11 − B8A) / (B11 + B8A)]
+WDPTZI = spatial_gradient_magnitude[(B11 - B8A) / (B11 + B8A)]
 ```
 Applied as a Sobel edge detector to the SWIR1/NIR ratio raster.
 
@@ -1337,7 +1374,7 @@ Applied as a Sobel edge detector to the SWIR1/NIR ratio raster.
 
 ---
 
-### PFTIB — Phytoplankton Functional Type Index Battery
+### <a id="pftib"></a>PFTIB — Phytoplankton Functional Type Index Battery
 **Domain:** Ocean ecology / carbon cycle | **Platform:** PACE OCI | **Novelty:** T1
 
 **Problem:** PACE OCI (launched February 2024) provides the first operational UV-to-NIR hyperspectral ocean color at global coverage. This enables phytoplankton functional type (PFT) discrimination beyond chlorophyll — critical for fisheries, carbon cycling, and HAB forecasting.
@@ -1356,14 +1393,14 @@ PFT_crypto  = absorption(565nm) / absorption(490nm)  # high = phycoerythrin
 
 ---
 
-### CMSTI — Clay Mineral Stress Transition Index
+### <a id="cmsti"></a>CMSTI — Clay Mineral Stress Transition Index
 **Domain:** Soil degradation | **Platform:** EMIT (EMIT only) | **Novelty:** T1
 
 **Problem:** Under drought and weathering stress, clay mineral assemblages transition from smectite (expandable, water-retaining) to illite (non-expanding). This transition indicates irreversible soil degradation — but requires 8 nm spectral resolution to detect.
 
 **Formula:**
 ```
-CMSTI = position_minimum(2190−2220nm) − 2200
+CMSTI = position_minimum(2190-2220nm) - 2200
 ```
 Negative shift toward 2195 nm = smectite. Positive toward 2208 nm = illite.
 
@@ -1373,7 +1410,7 @@ Negative shift toward 2195 nm = smectite. Positive toward 2208 nm = illite.
 
 ---
 
-### AFCDI — Asbestos Fiber Chrysotile Detection Index
+### <a id="afcdi"></a>AFCDI — Asbestos Fiber Chrysotile Detection Index
 **Domain:** Environmental health | **Platform:** EMIT, PRISMA | **Novelty:** T1
 
 **Problem:** Chrysotile asbestos in building materials, naturally occurring asbestos zones, and abandoned mine sites poses extreme health risk. Landscape-scale detection requires spectral resolution previously unavailable from orbit.
@@ -1390,14 +1427,14 @@ Secondary confirmation: `depth(1390nm) / continuum`
 
 ---
 
-### REENBI — REE Neodymium Band Depth Index
+### <a id="reenbi"></a>REENBI — REE Neodymium Band Depth Index
 **Domain:** Critical minerals | **Platform:** EnMAP | **Novelty:** T1
 
 **Problem:** REE deposits are critical for clean energy transition. Nd-bearing minerals are detectable at 803 nm from EnMAP — but no formula standardizes this detection.
 
 **Formula:**
 ```
-REENBI = 1 − ρ(803nm) / [ρ(780nm) + (803−780)/(830−780) × (ρ(830nm) − ρ(780nm))]
+REENBI = 1 - ρ(803nm) / [ρ(780nm) + (803-780)/(830-780) * (ρ(830nm) - ρ(780nm))]
 ```
 Linear interpolation continuum depth at the 803 nm Nd³⁺ absorption.
 
@@ -1407,14 +1444,14 @@ Linear interpolation continuum depth at the 803 nm Nd³⁺ absorption.
 
 ---
 
-### SCFGOSI — Soil Carbon Functional Group Oxidation State Index
+### <a id="scfgosi"></a>SCFGOSI — Soil Carbon Functional Group Oxidation State Index
 **Domain:** Carbon accounting | **Platform:** EMIT, EnMAP | **Novelty:** T1
 
 **Problem:** Existing satellite SOC estimates measure total carbon quantity. Carbon quality (labile vs. recalcitrant) determines whether it will rapidly mineralize to CO2 when disturbed — equally important for climate modeling.
 
 **Formula:**
 ```
-SCFGOSI = depth(1730nm) / (1 − mean_reflectance_400−2500nm)
+SCFGOSI = depth(1730nm) / (1 - mean_reflectance_400-2500nm)
 ```
 
 **Physics:** Labile carbon (lipids, proteins) has C-H overtone absorptions at 1730 nm. Recalcitrant carbon (aromatic humus, char) has broad low-reflectance ("darkness") from 400–2500 nm without sharp features. The ratio of specific C-H band depth to overall spectral darkness encodes labile vs. recalcitrant carbon proportion.
@@ -1423,14 +1460,14 @@ SCFGOSI = depth(1730nm) / (1 − mean_reflectance_400−2500nm)
 
 ---
 
-### MPSSFI — Methane Plume Spectral Shape Feature Index
+### <a id="mpssfi"></a>MPSSFI — Methane Plume Spectral Shape Feature Index
 **Domain:** Climate / methane | **Platform:** EMIT | **Novelty:** T2
 
 **Problem:** EMIT detects methane plumes via matched filter algorithms. A simple physics-based formula would enable deterministic source attribution without machine learning.
 
 **Formula:**
 ```
-MPSSFI = 1 − ρ(1667nm) / [0.5 × (ρ(1640nm) + ρ(1700nm))]
+MPSSFI = 1 - ρ(1667nm) / [0.5 * (ρ(1640nm) + ρ(1700nm))]
 ```
 Band depth at the 1667 nm CH4 absorption feature relative to linear continuum from 1640–1700 nm.
 
@@ -1444,14 +1481,14 @@ Band depth at the 1667 nm CH4 absorption feature relative to linear continuum fr
 
 ---
 
-### TSEAI — TROPOMI–Sentinel-2 Emission Attribution Index
+### <a id="tseai"></a>TSEAI — TROPOMI–Sentinel-2 Emission Attribution Index
 **Domain:** Climate / methane accountability | **Platform:** S5P TROPOMI + Sentinel-2 | **Novelty:** T1
 
 **Problem:** TROPOMI detects CH4 column enhancements at 5.5×7 km pixels — too coarse to attribute to specific emission sources (landfills, wetlands, livestock facilities, oil fields) that co-exist within one pixel.
 
 **Formula:**
 ```
-TSEAI = XCH4_TROPOMI_anomaly / Σ(source_fraction_i × emission_factor_i)
+TSEAI = XCH4_TROPOMI_anomaly / Σ(source_fraction_i * emission_factor_i)
 ```
 Where source_fraction_i = fractional area of each emission source type within the TROPOMI pixel, derived from Sentinel-2 land cover classification.
 
@@ -1461,14 +1498,14 @@ Where source_fraction_i = fractional area of each emission source type within th
 
 ---
 
-### GEAWSI — GRACE-FO + ECOSTRESS Agricultural Water Stress Index
+### <a id="geawsi"></a>GEAWSI — GRACE-FO + ECOSTRESS Agricultural Water Stress Index
 **Domain:** Food security / water | **Platform:** GRACE-FO + ECOSTRESS + ERA5 | **Novelty:** T1
 
 **Problem:** GRACE-FO detects total water storage (TWS) anomalies at ~300 km; ECOSTRESS detects field-scale ET. Neither alone confirms that crops are experiencing actual root-zone water stress that will cause yield loss.
 
 **Formula:**
 ```
-GEAWSI = (ET_ecostress / PET_estimate) × TWS_anomaly_sign
+GEAWSI = (ET_ecostress / PET_estimate) * TWS_anomaly_sign
 ```
 Actual-to-potential ET ratio (crop water stress coefficient) signed by regional groundwater depletion direction.
 
@@ -1478,14 +1515,14 @@ Actual-to-potential ET ratio (crop water stress coefficient) signed by regional 
 
 ---
 
-### ISSAI — ICESat-2 + Sentinel-1 Subsidence Attribution Index
+### <a id="issai"></a>ISSAI — ICESat-2 + Sentinel-1 Subsidence Attribution Index
 **Domain:** Infrastructure / geology | **Platform:** ICESat-2 + Sentinel-1 + Sentinel-2 | **Novelty:** T1
 
 **Problem:** Urban and coastal subsidence is monitored by either InSAR (area-wide, relative, mm precision) or ICESat-2 lidar (sparse tracks, absolute elevation). Neither alone determines cause.
 
 **Formula:**
 ```
-ISSAI = (ICESat2_dZ/dt − InSAR_LOS_vertical) / ICESat2_dZ/dt
+ISSAI = (ICESat2_dZ/dt - InSAR_LOS_vertical) / ICESat2_dZ/dt
 ```
 Discrepancy flags non-coherent subsidence invisible to InSAR phase.
 
@@ -1495,14 +1532,14 @@ Discrepancy flags non-coherent subsidence invisible to InSAR phase.
 
 ---
 
-### EMSMMI — EMIT Mineral + Sentinel-1 Soil Moisture Index
+### <a id="emsmmi"></a>EMSMMI — EMIT Mineral + Sentinel-1 Soil Moisture Index
 **Domain:** Hydrology | **Platform:** EMIT + Sentinel-1 | **Novelty:** T1
 
 **Problem:** Sentinel-1 soil moisture retrievals assume constant soil dielectric properties. High-clay vs. sandy soils give different dielectric responses to the same water content — creating systematic biases in moisture estimates.
 
 **Formula:**
 ```
-EMSMMI = VWC_S1_raw / (1 + clay_fraction_EMIT × clay_dielectric_correction)
+EMSMMI = VWC_S1_raw / (1 + clay_fraction_EMIT * clay_dielectric_correction)
 ```
 
 **Physics:** Soil dielectric constant is a function of both water content AND clay mineralogy — clay minerals (smectite especially) have elevated ionic conductivity that inflates C-band backscatter-to-moisture retrieval. EMIT's mineral fraction maps (operational from 2022) provide the clay fraction that enables a mineralogy-specific correction to Sentinel-1 volumetric water content.
@@ -1511,14 +1548,14 @@ EMSMMI = VWC_S1_raw / (1 + clay_fraction_EMIT × clay_dielectric_correction)
 
 ---
 
-### PUENPI — PACE + ECOSTRESS Coastal Wetland Net Ecosystem Production Index
+### <a id="puenpi"></a>PUENPI — PACE + ECOSTRESS Coastal Wetland Net Ecosystem Production Index
 **Domain:** Carbon accounting | **Platform:** PACE OCI + ECOSTRESS + ERA5 | **Novelty:** T1
 
 **Problem:** Coastal wetlands are net CO2 sinks but their net ecosystem production is poorly constrained globally. Terrestrial and aquatic production components have never been fused into one satellite index.
 
 **Formula:**
 ```
-PUENPI = GPP_ECOSTRESS_proxy − NPP_PACE_aquatic − R_temperature_model
+PUENPI = GPP_ECOSTRESS_proxy - NPP_PACE_aquatic - R_temperature_model
 ```
 NEP = terrestrial GPP (from ET proxy) − aquatic phytoplankton NPP (from PACE OCI chlorophyll) − autotrophic respiration (modeled from ECOSTRESS LST).
 
@@ -1528,14 +1565,14 @@ NEP = terrestrial GPP (from ET proxy) − aquatic phytoplankton NPP (from PACE O
 
 ---
 
-### NFCAI — NISAR + Sentinel-2 Forest Carbon Accumulation Index
+### <a id="nfcai"></a>NFCAI — NISAR + Sentinel-2 Forest Carbon Accumulation Index
 **Domain:** Forest carbon | **Platform:** NISAR + Sentinel-2 | **Novelty:** T3
 
 **Problem:** Forest carbon accumulation requires both structural biomass information (L-band SAR) and canopy age/composition context (optical time series). No single sensor provides both.
 
 **Formula:**
 ```
-NFCAI = L-band_HV × (1 − canopy_cover_S2) + L-band_HH × age_proxy_NDVI_trend
+NFCAI = L-band_HV * (1 - canopy_cover_S2) + L-band_HH * age_proxy_NDVI_trend
 ```
 HV penetrates canopy and encodes woody volume; HH+NDVI trend provides age context.
 
