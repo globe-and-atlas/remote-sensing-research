@@ -2,45 +2,25 @@
 
 ## Current Session
 
-**Goal:** Research and compile a technical comparative analysis of 10 novel indices/composites against established baselines.
+**Goal:** Conduct scholarly peer-review, apply manuscript revisions, resolve acronym naming collisions, and synchronize GEE library contribution blocks.
 **Agent:** Antigravity AI (Gemini)
 **Status:** Completed
 
-## Handoff — 2026-05-26 09:48
+## Last Known State
+
 - **Completed**:
-  1. Researched, authored, and fully expanded `registry/comparative_analysis.md`, mapping all **Top 25 Priority Novel Indices** in the repository to the standard baselines they improve upon.
-  2. Documented exact formulas, physical/chemical/physiological/geological mechanisms, and clear operational advantages (including empirical validation metrics) for all 25 priorities.
-  3. Integrated `registry/comparative_analysis.md` into `README.md` and `knowledge/INDEX.md`.
-  4. Created a procedural guide at `knowledge/procedural/validate_registry.md` detailing automated registry validation workflows.
-  5. Successfully ran `verify_registry.py` and validated all registry files (100% pass on code safety, uniqueness, and links).
-  6. Staged, committed, and successfully pushed the expanded guide, integrations, and procedural files to public main.
-  7. Created and pushed the Awesome Spectral Indices contribution template at `registry/Awesome_EE_Spectral_Indices_Contribution.md` mapping the novel formulas to standard Google Earth Engine band notations.
-- **Commands**:
-  * `python3 /Users/danielbally/.gemini/antigravity-ide/brain/898abd31-4cc6-4638-825a-e09efd6b9a94/scratch/verify_registry.py` (exit 0)
-  * `git push public main` (exit 0)
-- **Issues found**: None, math and links validated perfectly.
+  1. **Comparative Analysis**: Researched, authored, and fully expanded `registry/comparative_analysis.md`, mapping all **Top 25 Priority Novel Indices** to the standard baselines they improve upon.
+  2. **Awesome Spectral Indices Contribution Guide**: Created `registry/Awesome_EE_Spectral_Indices_Contribution.md` containing GEE-aligned YAML submission blocks for all 46 eligible multi-spectral/radar indices.
+  3. **Naming Conflict Audit & Refactoring**: Conducted a systematic remote sensing naming collision audit. Globally refactored `SMADI` $\rightarrow$ `SMPDI` and `NPDDI` $\rightarrow$ `NPDefI` across all directories, registries, formula cheat sheets, and active drafts (including the private `ATLAS.private.md` to maintain parity).
+  4. **Preprint Review & Revisions**: Peer-reviewed `preprint/gsia_preprint_v1.md`, generating `peer_review_report.md`. Revised the preprint manuscript to inject TRRC empirical validation metrics, integrate high-priority Permafrost and Wetlands indices (PWTDI, FGDCI, TPERI), and document the global acronym naming audit.
+  5. **Quality Assurance**: Ran the automated validation suite `verify_registry.py` locally against all updated reference markdown files, achieving a **100% pass rate** (no broken links, zero duplicate headers, safe ASCII math).
+  6. **Git Sync**: Staged, committed, and successfully pushed all revisions to the public remote repository `main` branch.
+- **Issues found**: None. Math and links validated perfectly.
 - **Left undone**: None, task completed.
-- **Next**: Run the night capture script if ending session.
-
-
-
-## Checkpoints
-- 2026-05-26 09:47 - Expanded comparative analysis guide to cover the full Top 25 Priority Novel Indices, validated all files perfectly.
-
-
 
 ---
 ## Checkpoints
-- 2026-05-26 02:24 - Completed private atlas upgrade, verified gitignore state, updated task checklists, finalized session log.
-
-## Checkpoint Log
-
-- 2026-05-25 21:32 — commit: refactor: unify draft surveys and catalogs into structured registry/ folder | ATLAS.md,catalogs/civic-sentinel-composite-atlas.md,catalogs/civic-sentinel-composite-slate.md,catalogs/limn-index-catalog.md,knowledge/DECISIONS.md
-- 2026-05-25 21:59 — commit: docs: clarify atlas priority and novelty tiers | README.md
-- 2026-05-26 09:40 — commit: docs: compile spectral index comparative analysis guide against baselines | README.md,knowledge/INDEX.md,knowledge/SESSION.md,knowledge/procedural/validate_registry.md,registry/comparative_analysis.md
-- 2026-05-26 09:47 — commit: docs: expand comparative analysis guide to cover full Top 25 priority novel indices | knowledge/SESSION.md,registry/comparative_analysis.md
-- 2026-05-26 09:49 — commit: docs: document successful push in session log | knowledge/SESSION.md
-- 2026-05-26 10:09 — commit: docs: add Awesome Spectral Indices contribution template | knowledge/SESSION.md,registry/Awesome_EE_Spectral_Indices_Contribution.md
-- 2026-05-26 10:09 — commit: docs: finalize session log with contribution template | knowledge/SESSION.md
-- 2026-05-26 10:11 — commit: docs: compile 46 novel spectral indices for Awesome Spectral Indices registry contribution | knowledge/SESSION.md,registry/Awesome_EE_Spectral_Indices_Contribution.md
-- 2026-05-26 12:57 — commit: refactor: rename SMADI -> SMPDI and NPDDI -> NPDefI to resolve registry conflicts | ATLAS.md,README.md,formulas/formula-quick-reference.md,knowledge/SESSION.md,registry/Awesome_EE_Spectral_Indices_Contribution.md
+- 2026-05-26 13:14 - Applied peer-review improvements to preprint draft including validation rates and permafrost indices.
+- 2026-05-26 12:57 - Resolved global acronym registry conflicts (SMADI -> SMPDI, NPDDI -> NPDefI).
+- 2026-05-26 10:11 - Compiled 46 novel GEE-compatible indices for Awesome Spectral Indices registry.
+- 2026-05-26 09:47 - Expanded comparative analysis guide to cover the full Top 25 Priority Novel Indices.
