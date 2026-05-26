@@ -8,9 +8,10 @@ Free satellite data covers the planet. The physics to read environmental signals
 This atlas fills that gap. It covers indices that are operational (used in production tools), proposed (grounded in published physics but awaiting field validation), and newly enabled (known spectral mechanisms now actionable on sensors launched 2019–2024: EMIT, PACE, EnMAP, PRISMA, NISAR).
 
 **How to read the novelty tiers:**
-- **T1 — Unclaimed:** No formula with this name or purpose exists in the Index DataBase or major review literature
-- **T2 — Underspecified:** Detection approach described in literature, no standardized formula or acronym published
-- **T3 — Sensor-enabled:** Known physics, newly actionable on post-2019 sensors
+
+- **T1 — First formula:** The detection purpose exists, but no named, standardized formula has been published. This atlas proposes the first one — use it, adapt it, build on it.
+- **T2 — First standardized formula:** The concept appears in the literature, but only as a qualitative description. No formula with a name and defined inputs had been written down. This atlas writes it out.
+- **T3 — Newly computable:** The spectral physics has been published for years, but the sensor needed to compute it only launched between 2019 and 2024 (EMIT, PACE, EnMAP, NISAR). These formulas are now operational for the first time.
 
 ---
 
