@@ -1,4 +1,4 @@
-# The Global Spectral Index Atlas: A Systematic Framework of Novel Spectral Indices for Environmental Monitoring Across Thirteen Domains
+# The Global Spectral Index Atlas: A Systematic Framework of Novel Spectral Indices for Environmental Monitoring Across Twelve Domains
 
 **Daniel Bally**  
 Globe & Atlas, Spring, Texas, USA  
@@ -91,7 +91,7 @@ Space permits only brief characterization of the remaining twelve domains. Full 
 
 ---
 
-## 4. Discussion
+## 3. Discussion
 
 ### 5.1 What the Atlas Is Not
 
@@ -118,7 +118,7 @@ Key validation questions arising from this atlas:
 
 ---
 
-## 5. Conclusion
+## 4. Conclusion
 
 The Global Spectral Index Atlas v1.0 introduces 91 novel spectral indices across 12 environmental domains, organized under a three-tier novelty taxonomy that distinguishes first-formula proposals from first standardized formulations and newly computable sensor-enabled indices.
 

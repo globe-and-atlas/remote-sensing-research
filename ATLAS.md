@@ -1,7 +1,7 @@
 # Global Spectral Index Atlas
 ### A Public-Good Reference for Novel Satellite Band Combinations
 
-*Version 1.0 — May 2026 | 91 novel indices across 13 domains*
+*Version 1.0 — May 2026 | 91 novel indices across 12 domains*
 
 Free satellite data covers the planet. The physics to read environmental signals from it is well-documented in peer-reviewed literature. What has been missing is one organized place that names the formulas, explains the spectral reasoning, and states the public benefit clearly.
 
