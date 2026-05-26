@@ -24,3 +24,8 @@
 - 2026-05-26 12:57 - Resolved global acronym registry conflicts (SMADI -> SMPDI, NPDDI -> NPDefI).
 - 2026-05-26 10:11 - Compiled 46 novel GEE-compatible indices for Awesome Spectral Indices registry.
 - 2026-05-26 09:47 - Expanded comparative analysis guide to cover the full Top 25 Priority Novel Indices.
+
+## Checkpoint Log
+
+- 2026-05-26 13:15 — commit: docs: finalize session knowledge, decisions, and acronym audit procedures | knowledge/DECISIONS.md,knowledge/INDEX.md,knowledge/SESSION.md,knowledge/procedural/acronym_conflict_audit.md
+- 2026-05-26 13:22 — commit: docs: explicitly document standard index exclusions in preprint scope | preprint/gsia_preprint_v1.md

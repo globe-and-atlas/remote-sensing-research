@@ -1,5 +1,7 @@
 # Remote Sensing Research
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20400744.svg)](https://doi.org/10.5281/zenodo.20400744)
+
 **Globe & Atlas** | Public-good spectral index research for environmental monitoring.
 
 This repository is the technical **Atlas** counterpart to the [Globe & Atlas](https://globeandatlas.substack.com) publication. It catalogs the electromagnetic physics, raw band formulas, confounder gates, and validation status behind public-good satellite screening workflows.

@@ -197,7 +197,8 @@ The atlas is publicly available at https://github.com/globe-and-atlas/remote-sen
 
 ## Data Availability
 
-All index formulas, physical descriptions, and limit clauses are available in the project repository at https://github.com/globe-and-atlas/remote-sensing-research. Sentinel-2 data was accessed through the Copernicus Open Access Hub (https://scihub.copernicus.eu). TRRC produced water incident records are publicly available through the Texas Railroad Commission Oil and Gas Division at https://www.rrc.texas.gov. EMIT data can be accessed through the NASA DAAC at https://lpdaac.usgs.gov.
+All index formulas, physical descriptions, and limit clauses are available in the project repository at https://github.com/globe-and-atlas/remote-sensing-research, archived under DOI: [10.5281/zenodo.20400744](https://doi.org/10.5281/zenodo.20400744). Sentinel-2 data was accessed through the Copernicus Open Access Hub (https://scihub.copernicus.eu). TRRC produced water incident records are publicly available through the Texas Railroad Commission Oil and Gas Division at https://www.rrc.texas.gov. EMIT data can be accessed through the NASA DAAC at https://lpdaac.usgs.gov.
+
 
 ---
 
