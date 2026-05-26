@@ -32,7 +32,8 @@ The Global Spectral Index Atlas (GSIA) addresses both gaps. It is a systematic c
 
 ### 2.1 Scope
 
-The GSIA v1.0 (May 2026) contains 116 named indices across 13 environmental domains (Table 1). Each entry specifies: a short acronym, a full name, the spectral formula using standardized Sentinel-2 band notation (B01–B12, B8A) or equivalent sensor-specific notation, the physical mechanism targeted, the satellite platform(s) required, and a limit clause stating what the index does not detect.
+The GSIA v1.0 (May 2026) contains 116 named indices across 13 environmental domains (Table 1). Each entry specifies: a short acronym, a full name, the spectral formula using standardized Sentinel-2 band notation (B01–B12, B8A) or equivalent sensor-specific notation, the physical mechanism targeted, the satellite platform(s) required, and a limit clause stating what the index does not detect. To avoid redundancy and maintain a sharp focus on under-addressed environmental hazards, the GSIA explicitly excludes long-established, standard index families (such as NDVI, NDWI, NBR, and NDSI) that are already comprehensively documented and cataloged in community libraries (e.g., Montero et al., 2023).
+
 
 Index coverage spans three classes of sensor: (1) multispectral indices computable from Sentinel-2, Sentinel-1, Landsat-9, GOES ABI, ECOSTRESS, or TROPOMI; (2) hyperspectral indices requiring EMIT, PACE OCI, EnMAP, DESIS, or PRISMA; and (3) cross-sensor fusion indices that combine signals from multiple platforms in a single expression.
 
