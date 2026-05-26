@@ -9,9 +9,6 @@ This guide provides the technical and scientific comparison between the novel sp
 
 | Novel Index | Target Domain | Commonly Established Baseline | Primary Failures / Blind Spots of Baselines | Novel Composite Physical Mechanism | Operational Benefit / Advantage |
 |:---|:---|:---|:---|:---|:---|
-| **[PWCI](#pwci)** | Produced Water / Brine Spills | `NDSI`, `HCAI`, `HMRI` (used individually) | - High false-alarm rates in arid soils<br>- NDSI fires on dry desert caliche<br>- HCAI misidentifies dry clays or pavements | Three-way cubic AND gate requiring concurrent salts (`NDSI**3`), hydrocarbons (`HCAI`), and heavy metals (`HMRI`). | 81.5% detection rate against TRRC dataset; eliminates caliche and bare soil false positives. |
-| **[ASAI](#asai)** | Dynamic Arid Salinity | `NDSI` or `NDWI` alone | - NDSI misses active liquid brine pools<br>- NDWI misses dry evaporated salt crusts | Integrates active brine green specular reflectance and dry-mode gypsum/salt absorption (`max` function), gated by NDVI. | Doubles the spill detection window across the entire lifecycle (active pooling to dry crust). |
-| **[VSI](#vsi)** | Sub-Lethal Vegetation Stress | `NDVI` | - NDVI only measures bulk biomass decline<br>- Fails to detect stress before leaf loss or necrosis | Probes Sentinel-2 narrow red-edge bands to capture the sub-lethal blue-shift of the red-edge position (REP). | Early warning: detects osmotic brine stress 2–4 weeks before visible chlorosis or biomass death. |
 | **[HABSDI](#habsdi)** | Toxic vs. Benign Algal Blooms | `NDCI` or Cyanobacteria Index (`CI`) | - NDCI only maps total chlorophyll-a (presence)<br>- Cannot separate toxic from benign algae species | Utilizes PACE OCI 5 nm bands to differentiate phycocyanin (cyanobacteria) from fucoxanthin (diatoms). | Moves water monitoring from binary bloom alerts to direct toxin-producing species risk profiling. |
 | **[TSEAI](#tseai)** | Methane Emission Attribution | Raw `XCH4` (TROPOMI) | - Coarse resolution (5.5 × 7 km)<br>- Cannot attribute plume to specific facilities | Fuses coarse TROPOMI anomalies with high-resolution (10 m) land cover fractional source models. | Pinpoints super-emitting infrastructure within a single TROPOMI pixel footprint. |
 | **[NPDefI](#npdefi)** | N vs. P Crop Deficiency | `MCARI` or `REIP` | - Conflates general crop chlorosis<br>- Farmers apply wrong, wasteful fertilizers | Subtracts anthocyanin SWIR2 absorption (P stress) from red-edge chlorophyll degradation (N stress). | Signed index: positive maps nitrogen deficiency, negative maps phosphorus deficiency. |
@@ -37,88 +34,7 @@ This guide provides the technical and scientific comparison between the novel sp
 
 ---
 
-## Technical Deep Dives (Top 25 Priority Indices)
-
-### <a id="pwci"></a>1. PWCI — Produced Water Chemical Index
-*   **Novel Index**: `PWCI = NDSI**3 * HCAI * HMRI`
-*   **Established Baselines**: `NDSI` (Normalized Difference Salinity Index), `HCAI` (Hydrocarbon Absorption Index), or `HMRI` (Heavy Metal Reflectance Index) evaluated in isolation.
-
-#### The Confounding Problem
-In arid shale plays like the Permian Basin, the background soil is highly complex. Caliche (calcium carbonate deposits), dry saline lake beds, and paved roads produce highly elevated NDSI signatures. Similarly, organic-rich dry soils and coal dust can produce false hydrocarbon anomalies (HCAI), while weathered clay minerals mimic heavy metal shifts. Applying any single standard index results in severe false-alarm rates, rendering basin-wide automated monitoring impossible.
-
-#### What PWCI Adds
-PWCI acts as a mathematical **three-way spectral AND gate**. It demands that a pixel simultaneously exhibit:
-1.  **Concentrated Brine Salts**: Captured by `NDSI = (B08 - B11) / (B08 + B11)` (the 1610 nm water-salt interaction). The cubic exponent (`NDSI**3`) acts as a non-linear threshold gate, suppressing marginal natural soil salinity while dramatically amplifying concentrated industrial brine signatures.
-2.  **Petroleum Hydrocarbons**: Captured by `HCAI = (B11 - B12) / (B11 + B12)` (the SWIR2 hydrocarbon absorption shoulder at 2190 nm).
-3.  **Surfacing Heavy Metals**: Captured by `HMRI = (B03 - B02) / (B03 + B02)` (the green-blue reflectance slope shift driven by dissolved Fe, Ba, and Sr chlorides).
-
-```
-  [NDSI > 0.35] (Salinity) ───┐
-                              ├─── Cubic Scaling (NDSI**3) ───┐
-  [HCAI > 0.15] (Petroleum) ──┤                               ├───► [PWCI Spill Alert]
-                              ├───────────────────────────────┘
-  [HMRI > 0.05] (Heavy Metal) ┘
-```
-
-#### Why It Is Better
-By requiring the physical co-occurrence of all three chemical components, PWCI filters out natural caliche, clean water reservoirs, and dry bare soils. Tested against the Texas Railroad Commission (TRRC) 27-site produced water dataset, it achieved an **81.5% detection rate** with near-zero false-positive rates on surrounding oil pads and access roads.
-
----
-
-### <a id="asai"></a>2. ASAI — Arid Salinity Anomaly Index
-*   **Novel Index**: `ASAI = max(NDSI_dry_mode, NDWI_specular_proxy) * (1 - NDVI)`
-*   **Established Baselines**: `NDSI` or `NDWI` (Normalized Difference Water Index) calculated alone.
-
-#### The Confounding Problem
-Produced water spills represent a highly dynamic physical lifecycle:
-*   **Phase 1 (Active Spill)**: A pooling liquid brine pond. Saline water has high green/blue reflectance but strongly absorbs NIR and SWIR, rendering NDSI near-zero or negative.
-*   **Phase 2 (Post-Spill/Evaporation)**: The water evaporates within days under arid sun, leaving behind a highly reflective dry salt crust (NaCl, gypsum, anhydrite). The dry crust has elevated SWIR reflectance, triggering NDSI but showing zero liquid water signal.
-
-Using NDWI alone misses the dry crust phase; using NDSI alone misses the active, liquid phase.
-
-#### What ASAI Adds
-ASAI solves the temporal gap by unifying both states using a logical `max` function combined with vegetation masking:
-1.  **Dry Mode**: `NDSI_dry_mode = (B11 - B12) / (B11 + B12)` targets the evaporated halite/gypsum crust signature.
-2.  **Specular/Liquid Mode**: `NDWI_specular_proxy = B03` utilizes green-band brightness to capture the specular surface reflectance of active brine pools.
-3.  **Vegetation Gating**: `(1 - NDVI)` rejects false positives from healthy agricultural or scrub vegetation.
-
-#### Why It Is Better
-ASAI provides a **continuous detection window** across the entire lifecycle of a spill. In the first 48 hours, it captures the liquid specular green reflection. After day 5, it transitions automatically to dry crust SWIR detection as the pool dries. This lifecycle-spanning integration achieved a **77.8% empirical detection rate** on TRRC sites.
-
----
-
-### <a id="vsi"></a>3. VSI — Vegetation Stress Index
-*   **Novel Index**: `VSI = [(B8A - B07) / (B8A + B07)] - [(B07 - B05) / (B07 + B05)]` (with a B11 SWIR bare soil gate).
-*   **Established Baselines**: `NDVI` (Normalized Difference Vegetation Index).
-
-#### The Confounding Problem
-NDVI measures bulk green biomass by comparing red chlorophyll absorption (B04) to NIR mesophyll scattering (B08). However, when vegetation is exposed to high-salinity produced water, osmotic shock and sodium toxicity occur rapidly. Stomata close, photosynthesis halts, and chlorophyll-a begins degrading long before the leaves dry up, drop, or cause a significant decline in bulk canopy biomass. By the time NDVI shows a drop, the root zone is completely sterilized and the damage is irreversible.
-
-#### What VSI Adds
-VSI leverages Sentinel-2's narrow **red-edge bands** (B05=705 nm, B07=783 nm, B8A=865 nm) to detect sub-lethal physiological changes:
-1.  **Chlorophyll Absorption Shift**: Leaf stress causes a systematic blue-shift of the red-edge inflection point (shifting from ~720 nm toward ~705 nm).
-2.  **Slope Slope Contrast**: The index calculates the difference between the broad red-edge slope (`B8A - B07`) and the narrow red-edge slope (`B07 - B05`). Healthy leaves exhibit a steep, uniform slope (low VSI); stressed leaves exhibit a collapsed, bi-phasic slope (high VSI).
-3.  **SWIR Bare Soil Gate**: An active `B11` gate prevents dry, bare mineral soils from mimicking vegetative stress.
-
-```
-Reflectance %
-   │
-   │                                   /─► Healthy Canopy (Steep red-edge slope)
-   │                                  /
-   │                                 /──► Stressed Canopy (Suppressed red-edge inflection)
-   │                                /
-   │                               /
-   └───────────────────────────────┴────────► Wavelength (nm)
-                                  705    783
-                                 (B05)  (B07)
-```
-
-#### Why It Is Better
-VSI detects sub-lethal crop and scrub stress **2–4 weeks earlier** than NDVI. This early detection capability (validated at **74.1% detection rate** against TRRC historical records) enables pipeline operators and farmers to identify subsurface produced water leaks before catastrophic soil sterilization occurs.
-
----
-
-### <a id="habsdi"></a>4. HABSDI — Harmful Algal Bloom Species-Level Discrimination Index
+### <a id="habsdi"></a>1. HABSDI — Harmful Algal Bloom Species-Level Discrimination Index
 *   **Novel Index**:
     *   `HABSDI_cyano  = PC_index - FX_index` (Cyanobacteria dominant)
     *   `HABSDI_diatom = FX_index - PC_index` (Diatom dominant)
@@ -139,7 +55,7 @@ HABSDI transforms satellite water monitoring from binary biomass tracking to **s
 
 ---
 
-### <a id="tseai"></a>5. TSEAI — TROPOMI-Sentinel-2 Emission Attribution Index
+### <a id="tseai"></a>2. TSEAI — TROPOMI-Sentinel-2 Emission Attribution Index
 *   **Novel Index**: `TSEAI = XCH4_TROPOMI_anomaly / Σ(source_fraction_i * emission_factor_i)`
 *   **Established Baselines**: Raw `XCH4` (dry-air methane column mixing ratio) from TROPOMI.
 
@@ -170,7 +86,7 @@ TSEAI resolves the scale attribution problem, transforming coarse satellite gas 
 
 ---
 
-### <a id="npdefi"></a>6. NPDefI — Nitrogen vs. Phosphorus Deficiency Discrimination Index
+### <a id="npdefi"></a>3. NPDefI — Nitrogen vs. Phosphorus Deficiency Discrimination Index
 *   **Novel Index**: `NPDefI = [(B4 - B5) / (B4 + B5)] - [(B12 - B11) / (B12 + B11)]`
 *   **Established Baselines**: `MCARI` (Modified Chlorophyll Absorption in Reflectance Index) or `REIP` (Red-Edge Inflection Point).
 
@@ -192,7 +108,7 @@ This enables variable-rate, nutrient-specific fertilizer prescriptions from orbi
 
 ---
 
-### <a id="fgdci"></a>7. FGDCI — Frozen Ground Dielectric Change Index
+### <a id="fgdci"></a>4. FGDCI — Frozen Ground Dielectric Change Index
 *   **Novel Index**: `FGDCI = (VV_dB - VH_dB) - seasonal_mean(VV_dB - VH_dB)`
 *   **Established Baselines**: `MODIS LST` (Land Surface Temperature).
 
@@ -212,7 +128,7 @@ FGDCI provides **cloud-independent, all-weather, physical soil phase state track
 
 ---
 
-### <a id="smpdi"></a>8. SMPDI — Sargassum vs. Microplastic Discrimination Index
+### <a id="smpdi"></a>5. SMPDI — Sargassum vs. Microplastic Discrimination Index
 *   **Novel Index**: `SMPDI = FAI - [(B8A - B11) / (B8A + B11)]`
 *   **Established Baselines**: `FAI` (Floating Algae Index) or `FDI` (Floating Debris Index).
 
@@ -242,7 +158,7 @@ SMPDI provides **automated, pixel-level discrimination** between ocean plastic a
 
 ---
 
-### <a id="amdphi"></a>9. AMDPHI — Acid Mine Drainage pH Proxy Index
+### <a id="amdphi"></a>6. AMDPHI — Acid Mine Drainage pH Proxy Index
 *   **Novel Index**: `AMDPHI = [(B4 - B3) / (B4 + B3)] / [(B2 - B3) / (B2 + B3 + 0.001)]`
 *   **Established Baselines**: Standard iron mineral indices (e.g., `B04 / B02` or `B11 / B08`).
 
@@ -261,7 +177,7 @@ AMDPHI acts as a **satellite-based pH sensor** for mining impact zones. It provi
 
 ---
 
-### <a id="lfgvi"></a>10. LFGVI — Landfill Gas Vegetation Intrusion Index
+### <a id="lfgvi"></a>7. LFGVI — Landfill Gas Vegetation Intrusion Index
 *   **Novel Index**: `LFGVI = red_edge_stress * moisture_loss * chlorosis_signal * ring_pattern_score`
 *   **Established Baselines**: Standard `NDVI` or crop stress indices.
 
@@ -286,7 +202,7 @@ LFGVI is highly specific, **isolating landfill gas root asphyxiation from all na
 
 ---
 
-### <a id="cbsdi"></a>11. CBSDI — Coral Bleaching Stage Discrimination Index
+### <a id="cbsdi"></a>8. CBSDI — Coral Bleaching Stage Discrimination Index
 *   **Novel Index**:
     *   `CBSDI_pale = (B3 - B4) / (B3 + B4)` (Stage 1 - Chlorosis)
     *   `CBSDI_full = B2 / (B3 + B4 + B1)` (Stage 2 - Fully Bleached)
@@ -307,7 +223,7 @@ CBSDI allows conservation groups to map the **exact degradation timeline and rec
 
 ---
 
-### <a id="reesai"></a>12. REESAI — Rare Earth Element Surface Anomaly Index
+### <a id="reesai"></a>9. REESAI — Rare Earth Element Surface Anomaly Index
 *   **Novel Index**: `REESAI = 1 - ρ(803nm) / [ρ(780nm) + (803 - 780) / (830 - 780) * (ρ(830nm) - ρ(780nm))]`
 *   **Established Baselines**: Standard ASTER or Landsat mineral indices (e.g., clay `B11 / B12` or carbonate ratios).
 
@@ -325,7 +241,7 @@ REESAI enables **satellite-first REE deposit prospecting** over remote mountain 
 
 ---
 
-### <a id="bsmti"></a>13. BSMTI — Burn Severity Mineralogy Transition Index
+### <a id="bsmti"></a>10. BSMTI — Burn Severity Mineralogy Transition Index
 *   **Novel Index**: `BSMTI = depth(535nm) / depth(486nm)` (using EMIT L2A Reflectance)
 *   **Established Baselines**: `dNBR` (Differenced Normalized Burn Ratio).
 
@@ -343,7 +259,7 @@ BSMTI maps **post-fire soil structural cohesion and landslide vulnerability** di
 
 ---
 
-### <a id="pwtdi"></a>14. PWTDI — Peatland Water Table Depth Index
+### <a id="pwtdi"></a>11. PWTDI — Peatland Water Table Depth Index
 *   **Novel Index**: `PWTDI = 0.65 * NDWI_1020 + 0.35 * (VV_dB - VH_dB)`
     *   Where: `NDWI_1020 = (B8A - B9) / (B8A + B9)` (the 970 nm Sphagnum water feature).
 *   **Established Baselines**: Standard `NDWI` or raw `SAR` backscatter.
@@ -364,7 +280,7 @@ PWTDI provides a **continuous, cloud-resilient orbital proxy for sub-surface wat
 
 ---
 
-### <a id="rdoci"></a>15. RDOCI — River Dissolved Organic Carbon Index
+### <a id="rdoci"></a>12. RDOCI — River Dissolved Organic Carbon Index
 *   **Novel Index**: `RDOCI = ln(ρ_320nm / ρ_412nm) / (412 - 320) * (-1)`
 *   **Established Baselines**: Ocean color `CDOM` (Colored Dissolved Organic Matter) algorithms (such as the Quasi-Analytical Algorithm, `QAA`).
 
@@ -382,7 +298,7 @@ RDOCI enables **global, automated riverine dissolved organic carbon flux mapping
 
 ---
 
-### <a id="tperi"></a>16. TPERI — Thermokarst Pond Expansion Rate Index
+### <a id="tperi"></a>13. TPERI — Thermokarst Pond Expansion Rate Index
 *   **Novel Index**: `TPERI = Δ(B11_t1 - B11_t2) / Δ(B3_t1 - B3_t2)` (bi-temporal Sentinel-2 green and SWIR ratio)
 *   **Established Baselines**: Bi-temporal water mask differences (`NDWI_t2 - NDWI_t1`).
 
@@ -400,7 +316,7 @@ TPERI calculates the **boundary expansion velocity of thermokarst ponds directly
 
 ---
 
-### <a id="mepsi"></a>17. MEPSI — CH4 Ebullition Pond Spectral Proxy Index
+### <a id="mepsi"></a>14. MEPSI — CH4 Ebullition Pond Spectral Proxy Index
 *   **Novel Index**: `MEPSI = (B08 / B02) - NDWI_local_mean`
 *   **Established Baselines**: Standard Arctic water bodies and lake masks.
 
@@ -418,7 +334,7 @@ MEPSI acts as a **satellite pre-screening tool for methane ebullition hotspots**
 
 ---
 
-### <a id="alsi"></a>18. ALSI — Active Layer Depth Thermal-Spectral Index
+### <a id="alsi"></a>15. ALSI — Active Layer Depth Thermal-Spectral Index
 *   **Novel Index**: `ALSI = 0.6 * (LST_anomaly / σ_LST) + 0.4 * [(B12 - B11) / (B12 + B11)]`
 *   **Established Baselines**: `MODIS LST` (Land Surface Temperature) or spatial interpolation of soil temperature grids.
 
@@ -436,7 +352,7 @@ ALSI provides a **scalable, high-density satellite proxy for active layer thickn
 
 ---
 
-### <a id="pshri"></a>19. PSHRI — Post-Fire Soil Hydrophobicity Risk Index
+### <a id="pshri"></a>16. PSHRI — Post-Fire Soil Hydrophobicity Risk Index
 *   **Novel Index**: `PSHRI = NDWI_post_rain - NDWI_pre_rain` (applied over a confirmed precipitation window)
 *   **Established Baselines**: `dNBR` (burn severity) or post-fire soil maps.
 
@@ -460,7 +376,7 @@ PSHRI is a **dynamic physical test of soil water repulsion** from space. Environ
 
 ---
 
-### <a id="ubcdi"></a>20. UBCDI — Understory vs. Canopy Burn Discrimination Index
+### <a id="ubcdi"></a>17. UBCDI — Understory vs. Canopy Burn Discrimination Index
 *   **Novel Index**: `UBCDI = (ΔB8 / B8_pre) / (ΔB4 / B4_pre)` (bi-temporal Sentinel-2 red-NIR change ratio)
 *   **Established Baselines**: Standard `NBR` (Normalized Burn Ratio) or `dNBR`.
 
@@ -478,7 +394,7 @@ UBCDI **detects and maps low-intensity understory forest fires beneath intact tr
 
 ---
 
-### <a id="issai"></a>21. ISSAI — ICESat-2 + Sentinel-1 Subsidence Attribution Index
+### <a id="issai"></a>18. ISSAI — ICESat-2 + Sentinel-1 Subsidence Attribution Index
 *   **Novel Index**: `ISSAI = (ICESat2_dZ / dt - InSAR_LOS_vertical) / ICESat2_dZ / dt`
 *   **Established Baselines**: Raw Sentinel-1 `InSAR` deformation velocity maps.
 
@@ -496,7 +412,7 @@ ISSAI **eliminates InSAR phase unwrapping errors**, providing an absolute, verif
 
 ---
 
-### <a id="geawsi"></a>22. GEAWSI — GRACE-FO + ECOSTRESS Agricultural Water Stress Index
+### <a id="geawsi"></a>19. GEAWSI — GRACE-FO + ECOSTRESS Agricultural Water Stress Index
 *   **Novel Index**: `GEAWSI = (ET_ecostress / PET_estimate) * TWS_anomaly_sign`
 *   **Established Baselines**: `NDVI`, standard Crop Water Indices, or simple NDWI anomalies.
 
@@ -514,7 +430,7 @@ GEAWSI **identifies agricultural zones where crop failure and aquifer depletion 
 
 ---
 
-### <a id="scfgosi"></a>23. SCFGOSI — Soil Carbon Functional Group Oxidation State Index
+### <a id="scfgosi"></a>20. SCFGOSI — Soil Carbon Functional Group Oxidation State Index
 *   **Novel Index**: `SCFGOSI = depth(1730nm) / (1 - mean_reflectance_400_2500nm)`
 *   **Established Baselines**: Standard multispectral Soil Organic Carbon (SOC) indices.
 
@@ -532,7 +448,7 @@ SCFGOSI **verifies soil carbon permanence and quality from orbit**. Carbon offse
 
 ---
 
-### <a id="afcdi"></a>24. AFCDI — Asbestos Fiber Chrysotile Detection Index
+### <a id="afcdi"></a>21. AFCDI — Asbestos Fiber Chrysotile Detection Index
 *   **Novel Index**: `AFCDI = depth(2317nm) / depth(2387nm)`
 *   **Established Baselines**: Standard multispectral mineral indices for clay or carbonate alteration.
 
@@ -550,7 +466,7 @@ AFCDI enables **automated, satellite-first natural asbestos hazard screening**. 
 
 ---
 
-### <a id="ccrbi"></a>25. CCRBI — Coal Combustion Residue Bioaccumulation Index
+### <a id="ccrbi"></a>22. CCRBI — Coal Combustion Residue Bioaccumulation Index
 *   **Novel Index**: `CCRBI = [(B4 - B8) / (B4 + B8)] * [B3 / (B11 + 0.01)]`
 *   **Established Baselines**: Standard vegetation stress indices (`NDVI`, `NDMI`).
 

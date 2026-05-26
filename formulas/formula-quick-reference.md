@@ -41,36 +41,21 @@ Every formula across all projects in one place. Grouped by domain. Formulas use 
 
 | Acronym | Formula Concept | Bands | Detection |
 |---------|----------------|-------|-----------|
-| **PWCI** | `NDSI^3 * HCAI * HMRI` (cubic three-gate AND) | B02–B12 | 81.5% |
-| **ASAI** | `max(NDSI_dry, NDWI_specular) * (1 - NDVI)` | B03, B11, B12 | 77.8% |
-| **LBI** | `NDSI * adj_NDWI * (1 - NDVI) * BSI` | B03, B08, B11, B12 | 63.0% |
-| **OBEC** | `optical_smoothness * NDOI * NDSI` | B02–B12 | 66.7% |
-| **FBC** | `AOI * NDSI * HMRI` (iron oxidation gate) | B02–B12 | 66.7% |
 
 ### Vegetation Stress
 
 | Acronym | Formula Concept | Bands | Detection |
 |---------|----------------|-------|-----------|
-| **VSI** | `(B8A - B07) / (B8A + B07) - (B07 - B05) / (B07 + B05)` | B05, B07, B8A, B11 | 74.1% |
-| **VCBI** | `NDSI * (1 - NDVI_normalized)` | B04, B08, B11, B12 | — |
-| **REAI** | `(B06 - B05) / (B06 + B05)` | B05, B06 | — |
 
 ### Forensic / Residue
 
 | Acronym | Formula Concept | Bands | Notes |
 |---------|----------------|-------|-------|
-| **TRI** | `NDSI * HMRI * AOI` (post-evaporation mineral scar) | B02–B12 | High specificity |
-| **CMA** | `(B12 - B11) / (B12 + B11) * NDSI` | B02, B04, B11, B12 | Survives months post-evaporation |
-| **HMI** | `HMRI * (B12 - B11) / (B12 + B11)` | B02, B03, B11, B12 | Ba/Sr precipitation |
-| **EHC** | False-color: NDOI→R, BSI→G, NDSI→B | B04, B11, B12 | Evaporite halo morphology |
 
 ### Pad-Level Signals
 
 | Acronym | Formula Concept | Bands |
 |---------|----------------|-------|
-| **BPI** | `BSI * HCAI * NDSI` | B04, B08, B11, B12 |
-| **PHI** | `HCAI * NDSI * (1 - NDWI)` | B11, B12 |
-| **SCRI** | `(VV - VH) / (VV + VH)` smooth salt surface | S1 VV, VH |
 
 ### Novel Sensor Extensions (Permian)
 

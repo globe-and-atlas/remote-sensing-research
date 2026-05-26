@@ -1,7 +1,7 @@
 # Awesome Spectral Indices Submission Directory
 ### Complete Registry of Novel Formulations Ready for Contribution
 
-*Generated: 2026-05-26 | Total: 46 proprietary indices citable under Daniel Bally / Globe & Atlas*
+*Generated: 2026-05-26 | Total: 25 proprietary indices citable under Daniel Bally / Globe & Atlas*
 
 This document maps every single multi-spectral, multi-temporal, and radar index originated or formalized in this repository to the standard GEE band notations required by the [Awesome Spectral Indices](https://github.com/awesome-spectral-indices/awesome-spectral-indices) guidelines.
 
@@ -26,199 +26,7 @@ You can copy and paste any index block directly into a new **'Submit a Spectral 
 
 ---
 
-## Index 1: PWCI (Produced Water Chemical Index)
-
-> **Description**: Detects produced water chemical mixture containing salts, hydrocarbons, and dissolved heavy metals.
-
-```yaml
-short_name: PWCI
-long_name: Produced Water Chemical Index
-formula: "(((N - S1) / (N + S1))**3) * ((S1 - S2) / (S1 + S2)) * ((G - B) / (G + B))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: soil
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 2: ASAI (Arid Salinity Anomaly Index)
-
-> **Description**: Continuous detection of dynamic salinity lifecycle (from liquid brine pool green specular reflectance to evaporated SWIR salt crust).
-
-```yaml
-short_name: ASAI
-long_name: Arid Salinity Anomaly Index
-formula: "max((S1 - S2) / (S1 + S2), G) * (1.0 - (N - R) / (N + R))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: soil
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 3: VSI (Vegetation Stress Index)
-
-> **Description**: Measures the narrow red-edge blue-shift to identify sub-lethal vegetation stress from osmotic brine shock before biomass decline occurs.
-
-```yaml
-short_name: VSI
-long_name: Vegetation Stress Index
-formula: "((RE4 - RE3) / (RE4 + RE3)) - ((RE3 - RE1) / (RE3 + RE1))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: vegetation
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 4: OBEC (Oil-Brine Emulsion Composite)
-
-> **Description**: Isolates mixed oil-brine emulsion signatures by combining surface oil slick (NDOI) and brine salinity ratios.
-
-```yaml
-short_name: OBEC
-long_name: Oil-Brine Emulsion Composite
-formula: "((G - S1) / (G + S1)) * ((N - S1) / (N + S1))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: water
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 5: FBC (Ferrugination-Brine Composite)
-
-> **Description**: Detects anoxic iron oxidation staining resulting from surfacing deep reservoir produced water carrying dissolved Fe.
-
-```yaml
-short_name: FBC
-long_name: Ferrugination-Brine Composite
-formula: "((R - B) / (R + B)) * ((N - S1) / (N + S1)) * ((G - B) / (G + B))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: soil
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 6: LBI (Liquid Brine Index)
-
-> **Description**: Four-factor proxy specifically isolating active, standing saline water pools from clean runoff in bare soil context.
-
-```yaml
-short_name: LBI
-long_name: Liquid Brine Index
-formula: "((N - S1) / (N + S1)) * ((G - S1) / (G + S1)) * (1.0 - (N - R) / (N + R)) * (((S1 + R) - (N + B)) / ((S1 + R) + (N + B)))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: soil
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 7: TRI (Toxic Residue Index)
-
-> **Description**: Forensic mineral scar detection targeting evaporated brine salt co-deposits, heavy metal hydroxides, and iron staining.
-
-```yaml
-short_name: TRI
-long_name: Toxic Residue Index
-formula: "((N - S1) / (N + S1)) * ((G - B) / (G + B)) * ((R - B) / (R + B))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: soil
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 8: BPI (Brine-Pavement Index)
-
-> **Description**: Identifies produced water and hydrocarbon leakage on highly compacted bare surfaces (such as well pads and roads).
-
-```yaml
-short_name: BPI
-long_name: Brine-Pavement Index
-formula: "(((S1 + R) - (N + B)) / ((S1 + R) + (N + B))) * ((S1 - S2) / (S1 + S2)) * ((N - S1) / (N + S1))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: urban
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 9: REAI (Red Edge Alteration Index)
-
-> **Description**: Measures red-edge slope alterations triggered by leaf deposition of heavy metal iron oxides from produced water aerosols.
-
-```yaml
-short_name: REAI
-long_name: Red Edge Alteration Index
-formula: "(RE2 - RE1) / (RE2 + RE1)"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: vegetation
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 10: VCBI (Vegetation-Confirmed Brine Index)
-
-> **Description**: Identifies active spill migration boundaries by coupling high surface salinity (NDSI) with active vegetation kill patterns.
-
-```yaml
-short_name: VCBI
-long_name: Vegetation-Confirmed Brine Index
-formula: "((N - S1) / (N + S1)) * (1.0 - (N - R) / (N + R))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: vegetation
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 11: PHI (Petro-Hydrocarbon Index)
-
-> **Description**: Isolates oily produced water hydrocarbons from clean water runoff using coupled SWIR2 hydrocarbon and SWIR1 salt gates.
-
-```yaml
-short_name: PHI
-long_name: Petro-Hydrocarbon Index
-formula: "((S1 - S2) / (S1 + S2)) * ((N - S1) / (N + S1)) * (1.0 - ((G - N) / (G + N)))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: soil
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 12: HMI (Heavy Metal Interaction)
-
-> **Description**: Flags soil chemical alterations resulting from barium and strontium chloride precipitation in evaporated brine zones.
-
-```yaml
-short_name: HMI
-long_name: Heavy Metal Interaction
-formula: "((G - B) / (G + B)) * ((N - S1) / (N + S1))"
-reference: "https://github.com/globe-and-atlas/remote-sensing-research"
-type: soil
-date_of_addition: "2026-05-26"
-contributor: "https://github.com/danielbally"
-```
-
----
-
-## Index 13: BH_DFSI (Burnt Hillside Debris-Flow Susceptibility Index)
+## Index 1: BH_DFSI (Burnt Hillside Debris-Flow Susceptibility Index)
 
 > **Description**: Pre-event mudslide and debris flow susceptibility hazard mapping by coupling severe burn severity, soil exposure, moisture, and terrain slopes.
 
@@ -234,7 +42,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 14: SF_EII (Wildfire Fuel Hazard & Canopy Dehydration Index)
+## Index 2: SF_EII (Wildfire Fuel Hazard & Canopy Dehydration Index)
 
 > **Description**: Pre-fire fuel stress assessment mapping bulk canopy water deficit and cell wall collapse from drought dehydration.
 
@@ -250,7 +58,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 15: LFMPI (Live Fuel Moisture Pre-Ignition Index)
+## Index 3: LFMPI (Live Fuel Moisture Pre-Ignition Index)
 
 > **Description**: Standardized live fuel moisture proxy tracking canopy water content and structural cell wall collapse prior to ignition.
 
@@ -266,7 +74,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 16: PSHRI (Post-Fire Soil Hydrophobicity Risk Index)
+## Index 4: PSHRI (Post-Fire Soil Hydrophobicity Risk Index)
 
 > **Description**: Measures soil physical water-repulsion response immediately post-precipitation using pre/post rain bi-temporal differentials.
 
@@ -282,7 +90,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 17: PETI (Phycocyanin Eutrophication Toxicity Index)
+## Index 5: PETI (Phycocyanin Eutrophication Toxicity Index)
 
 > **Description**: Flags virtual phycocyanin pigment absorption at 620 nm (between red and red-edge) for cyanobacterial bloom screening.
 
@@ -298,7 +106,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 18: CSRC (Cyanotoxin Scum Risk Composite)
+## Index 6: CSRC (Cyanotoxin Scum Risk Composite)
 
 > **Description**: Identifies dense floating cyanobacterial scum accumulations by coupling red-edge chlorophyll-a absorption with NIR cell scattering.
 
@@ -314,7 +122,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 19: HABSDI_cyano (HAB Species-Level Discrimination Index (Cyanobacteria))
+## Index 7: HABSDI_cyano (HAB Species-Level Discrimination Index (Cyanobacteria))
 
 > **Description**: Differentiates phycocyanin-dominant toxic cyanobacteria from fucoxanthin-dominant benign diatoms using hyperspectral slopes.
 
@@ -330,7 +138,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 20: SMPDI (Sargassum vs. Microplastic Discrimination Index)
+## Index 8: SMPDI (Sargassum vs. Microplastic Discrimination Index)
 
 > **Description**: Separates synthetic marine microplastic polymer rafts from living photosynthesizing Sargassum seaweed.
 
@@ -346,7 +154,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 21: KCDSI (Kelp Canopy Density and Stress Index)
+## Index 9: KCDSI (Kelp Canopy Density and Stress Index)
 
 > **Description**: Fuses kelp canopy leaf density and chlorophyll absorption using narrow red-edge and SWIR band fusions.
 
@@ -362,7 +170,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 22: OWSI (Oil Spill Weathering Stage Index)
+## Index 10: OWSI (Oil Spill Weathering Stage Index)
 
 > **Description**: Classifies marine crude oil spill weathering stages based on polymer volatility index division.
 
@@ -378,7 +186,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 23: CD_UAI (Coastal Dredging & Marine Siltation Plume Index)
+## Index 11: CD_UAI (Coastal Dredging & Marine Siltation Plume Index)
 
 > **Description**: Isolates dredge plumes and marine siltation from standard turbidity by mapping sediment green reflectance.
 
@@ -394,7 +202,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 24: MP_PDI (Marine Plastisphere & Polymer Differentiation Index)
+## Index 12: MP_PDI (Marine Plastisphere & Polymer Differentiation Index)
 
 > **Description**: Fuses Floating Debris Index NIR enhancements with active chlorophyll-a and sea foam rejection gates.
 
@@ -410,7 +218,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 25: RDOCI (River Dissolved Organic Carbon Index)
+## Index 13: RDOCI (River Dissolved Organic Carbon Index)
 
 > **Description**: Measures the steep exponential UV absorption slope of dissolved organic carbon using OCI deep UV bands.
 
@@ -426,7 +234,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 26: CTPSTI (Cyanobacterial Toxin Proxy Spectral Index)
+## Index 14: CTPSTI (Cyanobacterial Toxin Proxy Spectral Index)
 
 > **Description**: Hyperspectral proxy mapping cyanobacteria phycocyanin pigment absorption at 620 nm.
 
@@ -442,7 +250,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 27: NPDefI (Nitrogen vs. Phosphorus Deficiency Discrimination Index)
+## Index 15: NPDefI (Nitrogen vs. Phosphorus Deficiency Discrimination Index)
 
 > **Description**: Signed macro-nutrient deficiency discriminator: positive maps Nitrogen deficiency, negative maps Phosphorus deficiency.
 
@@ -458,7 +266,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 28: SCSPI (Soil Compaction Spectral Proxy Index)
+## Index 16: SCSPI (Soil Compaction Spectral Proxy Index)
 
 > **Description**: Flags structural compaction in bare agricultural soils based on SWIR mineral line deviations.
 
@@ -474,7 +282,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 29: PDSDI (Pesticide vs. Drought Stress Discrimination Index)
+## Index 17: PDSDI (Pesticide vs. Drought Stress Discrimination Index)
 
 > **Description**: Discriminates localized pesticide necrosis (high spatial variance) from uniform regional drought stress.
 
@@ -490,7 +298,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 30: AMDPHI (Acid Mine Drainage pH Proxy Index)
+## Index 18: AMDPHI (Acid Mine Drainage pH Proxy Index)
 
 > **Description**: Translates pH-dependent iron mineral precipitate assemblages (jarosite vs. goethite) to a pH acidity range.
 
@@ -506,7 +314,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 31: CCRBI (Coal Combustion Residue Bioaccumulation Index)
+## Index 19: CCRBI (Coal Combustion Residue Bioaccumulation Index)
 
 > **Description**: Detects heavy metal bioaccumulation (As/Se) stress in crop canopies over coal ash landfills.
 
@@ -522,7 +330,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 32: SPSRI (Solar Panel Soiling Remote Index)
+## Index 20: SPSRI (Solar Panel Soiling Remote Index)
 
 > **Description**: Utility-scale photovoltaic soiling assessment mapping dust deposition albedo decay.
 
@@ -538,7 +346,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 33: PCADI (Pavement Condition and Albedo Decay Index)
+## Index 21: PCADI (Pavement Condition and Albedo Decay Index)
 
 > **Description**: Maps urban asphalt albedo degradation and structural aging within road masks.
 
@@ -554,7 +362,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 34: TPERI (Thermokarst Pond Expansion Rate Index)
+## Index 22: TPERI (Thermokarst Pond Expansion Rate Index)
 
 > **Description**: Tracks the bi-temporal saturation and slumping transition slope of expanding thermokarst ponds.
 
@@ -570,7 +378,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 35: PCEI (Peat Carbon Exposure Index)
+## Index 23: PCEI (Peat Carbon Exposure Index)
 
 > **Description**: Isolates exposed dark peat soils lacking vegetation or water to feed carbon oxidation models.
 
@@ -586,7 +394,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 36: SABSI (Snow/Ice Algae Bloom Severity Index)
+## Index 24: SABSI (Snow/Ice Algae Bloom Severity Index)
 
 > **Description**: Maps severity and distribution of cryospheric algae blooms on glaciers and snowpacks.
 
@@ -602,7 +410,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 37: MEPSI (CH4 Ebullition Pond Spectral Proxy Index)
+## Index 25: MEPSI (CH4 Ebullition Pond Spectral Proxy Index)
 
 > **Description**: Identifies shallow, sediment-rich water columns prone to active benthic methane ebullition.
 
@@ -618,7 +426,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 38: ALSI (Active Layer Depth Thermal-Spectral Index)
+## Index 26: ALSI (Active Layer Depth Thermal-Spectral Index)
 
 > **Description**: Scalable satellite ALT proxy coupling summer thermal anomalies with SWIR frost-churning clay exposure.
 
@@ -634,7 +442,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 39: PDCSI (Pre-Deforestation Canopy Stress Index)
+## Index 27: PDCSI (Pre-Deforestation Canopy Stress Index)
 
 > **Description**: Detects early-stage tropical canopy thinning and stress months before clear-cutting occurs.
 
@@ -650,7 +458,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 40: LISI (Liana Infestation Structural Index)
+## Index 28: LISI (Liana Infestation Structural Index)
 
 > **Description**: Maps liana canopy infestation density using coupled structural and moisture indexes.
 
@@ -666,7 +474,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 41: UBCDI (Understory vs. Canopy Burn Discrimination Index)
+## Index 29: UBCDI (Understory vs. Canopy Burn Discrimination Index)
 
 > **Description**: Isolates tropical understory surface fires beneath intact green forest canopies.
 
@@ -682,7 +490,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 42: SLSDI (Selective Logging Scar Detection Index)
+## Index 30: SLSDI (Selective Logging Scar Detection Index)
 
 > **Description**: Maps small structural canopy gaps and bare soil exposure driven by selective logging.
 
@@ -698,7 +506,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 43: PWTDI (Peatland Water Table Depth Index)
+## Index 31: PWTDI (Peatland Water Table Depth Index)
 
 > **Description**: Fuses Sphagnum leaf tissue moisture (970 nm) with Sentinel-1 cross-polarization backscatter for sub-surface water table monitoring.
 
@@ -714,7 +522,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 44: TFIDI (Tidal Flat Inundation Dynamics Index)
+## Index 32: TFIDI (Tidal Flat Inundation Dynamics Index)
 
 > **Description**: Maps coastal tidal flat inundation ranges using temporal water index percentiles.
 
@@ -730,7 +538,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 45: WDPTZI (Wet-Dry Peatland Transition Zone Index)
+## Index 33: WDPTZI (Wet-Dry Peatland Transition Zone Index)
 
 > **Description**: Isolates the boundaries of peatland transition zones using SWIR/NIR spatial gradients.
 
@@ -746,7 +554,7 @@ contributor: "https://github.com/danielbally"
 
 ---
 
-## Index 46: IPVSI (Invasive Phragmites vs. Native Vegetation)
+## Index 34: IPVSI (Invasive Phragmites vs. Native Vegetation)
 
 > **Description**: Discriminates dense, structural invasive Phragmites monocultures from native marsh vegetation.
 
