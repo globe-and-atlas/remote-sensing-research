@@ -1,126 +1,127 @@
 # Remote Sensing Research
 
-Unified repository for spectral index discovery, band combination research, and novel index development across all projects. Aggregates work from **limn**, **civic-sentinel**, and **globe-and-atlas** into one organized reference.
+**Globe & Atlas** | Public-good spectral index research for environmental monitoring.
 
-**Total indices cataloged: ~164** across three projects and 12 environmental domains.
-
----
-
-## What's Here
-
-```
-remote-sensing-research/
-├── surveys/                    ← Deep research documents (the "why")
-│   ├── permian-basin-platform-survey.md    31-platform free satellite survey
-│   ├── global-novel-index-survey.md        74 novel unclaimed global indices
-│   └── global-public-good-atlas.md         Band combination public-good atlas
-│
-├── catalogs/                   ← Index lists (the "what")
-│   ├── limn-index-catalog.md               53-index limn catalog with validation rates
-│   ├── civic-sentinel-composite-slate.md   24-composite civic sentinel slate
-│   └── civic-sentinel-composite-atlas.md   18 ranked composites with full formulas
-│
-├── formulas/                   ← Quick reference
-│   └── formula-quick-reference.md          Every formula, all projects, one file
-│
-└── authorship/                 ← Claim language
-    └── (see civic-sentinel-composite-slate.md for claim rules)
-```
+This repository documents novel satellite band combinations that can be computed from free, open-access sensors — Sentinel-2, Sentinel-1, TROPOMI, EMIT, PACE, EnMAP, and others — and applied to environmental problems where satellite data can serve as an independent accountability layer.
 
 ---
 
-## Navigation by Question
+## The Atlas
 
-**"What can I actually claim as novel?"**
-→ [`surveys/global-novel-index-survey.md`](surveys/global-novel-index-survey.md) — 74 indices, ~42 Tier 1 (Genuinely Unclaimed)
-→ [`catalogs/civic-sentinel-composite-slate.md`](catalogs/civic-sentinel-composite-slate.md) — Claim language per composite
+**[`ATLAS.md`](ATLAS.md)** is the primary document — 116 named spectral indices across 13 environmental domains, each with:
 
-**"What does limn currently implement?"**
-→ [`catalogs/limn-index-catalog.md`](catalogs/limn-index-catalog.md) — all 53 indices with TRRC validation rates
+- Formula (ready to implement)
+- Spectral physics explanation
+- Public benefit
+- Novelty tier (T1 Unclaimed / T2 Underspecified / T3 Sensor-Enabled)
+- Validation status
 
-**"What formula does index X use?"**
-→ [`formulas/formula-quick-reference.md`](formulas/formula-quick-reference.md) — ~164 formulas, grouped by domain
-
-**"Which civic-sentinel composites are highest priority?"**
-→ [`catalogs/civic-sentinel-composite-atlas.md`](catalogs/civic-sentinel-composite-atlas.md) — ranked 1–18 with full formula detail
-
-**"What sensors beyond Sentinel-2 should I add?"**
-→ [`surveys/permian-basin-platform-survey.md`](surveys/permian-basin-platform-survey.md) — 31-platform ranked survey with integration roadmap
-
-**"What's the scientific basis for public-good band combinations?"**
-→ [`surveys/global-public-good-atlas.md`](surveys/global-public-good-atlas.md) — scholarly synthesis + claim status key
+This is a living reference. Indices marked *Validated* have been tested against ground-truth datasets. Indices marked *Proposed* are grounded in published spectral physics and awaiting field validation.
 
 ---
 
-## Index Count by Project
+## Domains Covered
 
-| Project | Index Count | Source |
-|---------|-------------|--------|
-| **limn** (Permian Basin) | 53 operational | CDSE WMS, S2 + S1 |
-| **civic-sentinel** | 24 composites (18 ranked with full formulas) | Sentinel-2 |
-| **global novel survey** | 74 proposed (42 Tier 1 unclaimed) | Multi-sensor |
-| **platform extensions** | ~20 additional | EMIT, TROPOMI, Landsat, S3, NISAR |
-
----
-
-## Index Count by Domain
-
-| Domain | Indices | Key Tools |
-|--------|---------|-----------|
-| Produced water / Permian Basin | 35+ | S2, S1, EMIT, TROPOMI |
-| Permafrost & Arctic | 6 | S2 bi-temporal, S1 SAR, ECOSTRESS |
-| Tropical Forest | 5 | S2 red-edge, Planet |
-| Marine & Coastal | 11 | S2, PACE OCI, EMIT |
-| Agriculture | 6 | S2, EnMAP, ECOSTRESS + ERA5 |
-| Mining & Industrial | 6+ | S2, EMIT, S1 InSAR |
-| Wildfire | 5 | S2, EMIT, TROPOMI, GOES |
-| Urban & Infrastructure | 4 | S2, ECOSTRESS, TROPOMI |
-| Water Quality & Freshwater | 4+ | PACE OCI, Landsat TIRS, S2 |
-| Dryland & Arid | 6 | EMIT, EnMAP, S2, SMAP |
-| Wetland & Peatland | 5 | S2 + S1 fusion |
-| Hyperspectral-only | 11 | EMIT, EnMAP, PRISMA, DESIS, PACE |
-| Cross-sensor fusion | 8 | TROPOMI+S2, GRACE+ECOSTRESS, NISAR+S2 |
+| Domain | Indices | Key Sensors |
+|--------|---------|-------------|
+| Oilfield & Produced Water | 25 | S2, S1, TROPOMI, EMIT, ECOSTRESS, GOES |
+| Wildfire & Post-Fire | 7 | S2, EMIT, TROPOMI, GOES |
+| Water Quality & Freshwater | 11 | S2, PACE OCI, Landsat TIRS |
+| Marine & Coastal | 10 | S2, EMIT, PACE OCI, DESIS |
+| Agriculture & Food Security | 7 | S2, EnMAP, ECOSTRESS, ERA5 |
+| Mining & Industrial | 8 | S2, S1, EnMAP, EMIT, Landsat |
+| Urban & Infrastructure | 8 | S2, TROPOMI, ECOSTRESS |
+| Permafrost & Arctic | 7 | S2, S1, ECOSTRESS |
+| Tropical Forest | 6 | S2, Planet |
+| Dryland & Arid | 6 | S2, EMIT, EnMAP, PRISMA |
+| Wetland & Peatland | 6 | S2, S1, TROPOMI |
+| Hyperspectral-Enabled | 8 | EMIT, EnMAP, PRISMA, PACE, DESIS |
+| Cross-Sensor Fusion | 7 | TROPOMI+S2, GRACE+ECOSTRESS, ICESat-2+S1, NISAR+S2 |
 
 ---
 
-## The Top 10 Priority Novel Indices
+## Top 10 Priority Novel Indices
 
-From [`surveys/global-novel-index-survey.md`](surveys/global-novel-index-survey.md):
+| Rank | Acronym | Name | Why It Matters |
+|------|---------|------|----------------|
+| 1 | TSEAI | TROPOMI–Sentinel-2 Emission Attribution Index | CH₄ source attribution at field scale — climate monitoring's most urgent gap |
+| 2 | HABSDI | HAB Species-Level Discrimination Index | Toxic vs. non-toxic cyanobacteria — PACE (2024) makes it globally possible |
+| 3 | NPDDI | N vs. P Deficiency Discrimination Index | Precision fertilizer prescription from orbit |
+| 4 | SMADI | Sargassum vs. Microplastic Discrimination Index | Both global crises; current indices conflate them |
+| 5 | FGDCI | Frozen Ground Dielectric Change Index | Pan-Arctic freeze/thaw from Sentinel-1 |
+| 6 | CBSDI | Coral Bleaching Stage Discrimination Index | Stages bleaching severity vs. binary detection |
+| 7 | REESAI | Rare Earth Element Surface Anomaly Index | EnMAP Nd detection — clean energy supply chain |
+| 8 | BSMTI | Burn Severity Mineralogy Transition Index | Post-fire debris flow risk via EMIT soil mineralogy |
+| 9 | PWTDI | Peatland Water Table Depth Index | Most important unmeasured variable in wetland carbon accounting |
+| 10 | RDOCI | River Dissolved Organic Carbon Index | PACE OCI UV channels (2024) make this orbital for the first time |
 
-| Rank | Acronym | Name | Why |
-|------|---------|------|-----|
-| 1 | TSEAI | TROPOMI–Sentinel-2 Emission Attribution | CH4 source attribution at field scale — climate monitoring's most urgent gap |
-| 2 | HABSDI | HAB Species-Level Discrimination | Toxic vs. non-toxic cyanobacteria — PACE (2024) makes it possible globally |
-| 3 | NPDDI | N vs. P Deficiency Discrimination | Precision fertilizer prescription from orbit |
-| 4 | SMADI | Sargassum vs. Microplastic Discrimination | Both global crises, current indices conflate them |
-| 5 | FGDCI | Frozen Ground Dielectric Change | Pan-Arctic freeze/thaw from Sentinel-1 |
-| 6 | CBSDI | Coral Bleaching Stage Discrimination | Stages bleaching vs. binary detection |
-| 7 | REESAI | Rare Earth Element Surface Anomaly | EnMAP Nd detection — clean energy supply chain |
-| 8 | BSMTI | Burn Severity Mineralogy Transition | Post-fire debris flow risk via EMIT soil mineralogy |
-| 9 | PWTDI | Peatland Water Table Depth | Most important unmeasured variable in wetland carbon accounting |
-| 10 | RDOCI | River Dissolved Organic Carbon | PACE OCI UV channels (2024) make this orbital for the first time |
+---
+
+## Validated Indices
+
+The following indices have been tested against the TRRC 27-site Permian Basin spill dataset (2026-03-28):
+
+| Index | Full Name | Detection Rate |
+|-------|-----------|----------------|
+| PWCI | Produced Water Chemical Index | **81.5%** |
+| ASAI | Arid Salinity Anomaly Index | **77.8%** |
+| VSI | Vegetation Stress Index | **74.1%** |
+| OBEC | Oil-Brine Emulsion Composite | **66.7%** |
+| FBC | Ferrugination-Brine Composite | **66.7%** |
+| LBI | Liquid Brine Index | **63.0%** |
+
+*TRRC = Texas Railroad Commission. Validation against confirmed spill sites, threshold=0.01.*
+
+---
+
+## Novelty Tiers
+
+| Tier | Meaning |
+|------|---------|
+| **T1 — Unclaimed** | No formula with this name or purpose exists in the Index DataBase or major review literature |
+| **T2 — Underspecified** | Detection approach described in literature; no standardized formula or acronym published |
+| **T3 — Sensor-Enabled** | Known spectral physics, newly actionable on sensors launched 2019–2024 |
+
+---
+
+## Supporting Documents
+
+| File | Contents |
+|------|----------|
+| [`surveys/global-novel-index-survey.md`](surveys/global-novel-index-survey.md) | Deep research document covering 74 global novel indices with citations |
+| [`surveys/permian-basin-platform-survey.md`](surveys/permian-basin-platform-survey.md) | 31-platform free satellite survey with integration roadmap |
+| [`surveys/global-public-good-atlas.md`](surveys/global-public-good-atlas.md) | Scholarly synthesis of public-good band combinations |
+| [`catalogs/limn-index-catalog.md`](catalogs/limn-index-catalog.md) | 53-index catalog with TRRC validation rates |
+| [`catalogs/civic-sentinel-composite-slate.md`](catalogs/civic-sentinel-composite-slate.md) | 24-composite civic sentinel slate |
+| [`catalogs/civic-sentinel-composite-atlas.md`](catalogs/civic-sentinel-composite-atlas.md) | 18 ranked composites with full formulas |
+| [`formulas/formula-quick-reference.md`](formulas/formula-quick-reference.md) | Every formula across all projects, one file |
 
 ---
 
 ## Claim Philosophy
 
-From [`catalogs/civic-sentinel-composite-slate.md`](catalogs/civic-sentinel-composite-slate.md):
+All indices in this atlas are built from published spectral physics. The defensible claim for each novel composite is:
 
-> The defensible claim for each index is: *a named, transparent, decision-ready composite built from established spectral mechanisms, domain gates, and confounder rejection — applied to a specific public-good screening workflow.*
+> *A named, transparent, decision-ready composite built from established spectral mechanisms, domain gates, and confounder rejection — applied to a specific public-good screening workflow.*
 
-**Claim:** the named workflow, the gate logic, the confounder rejection, the civic framing.
-**Don't claim:** invention of the underlying band physics, the individual ratios, or the environmental problem itself.
-
----
-
-## Source Projects
-
-| Project | Path | Role |
-|---------|------|------|
-| limn | `/Users/danielbally/Git/limn` | Permian Basin environmental monitoring tool |
-| civic-sentinel | `/Users/danielbally/Git/civic-sentinel` | Public-good composite index web app |
-| globe-and-atlas | `/Users/danielbally/Git/globe-and-atlas` | Research vault and content strategy |
+**Claim:** the named workflow, the gate logic, the confounder rejection, the civic framing.  
+**Do not claim:** invention of the underlying band physics, the individual ratios, or the environmental problem itself.
 
 ---
 
-*Last updated: 2026-05-25. Research spans sensors operational through Q1 2026.*
+## Citation & Reuse
+
+Formulas in this atlas are grounded in peer-reviewed spectral physics. They are released as public-good research. For validated indices (PWCI, ASAI, VSI, OBEC, FBC, LBI), cite the TRRC validation dataset and this repository. For proposed indices, cite the underlying spectral physics referenced in each entry.
+
+**Key sources:**
+
+- Kokaly et al. (2017). *USGS Spectral Library Version 7.*
+- Green et al. (2023). "Performance and early results from EMIT." *IEEE TGRS* 61.
+- Zhang et al. (2020). "Quantifying methane emissions from the Permian Basin from space." *Science Advances* 6(17).
+- Mielke et al. (2024). "Neodymium mineral detection at Mountain Pass using EnMAP." *Scientific Reports* 14(1):20413.
+- Pahlevan et al. (2026). "PACE OCI PFT retrieval." *Remote Sensing of Environment.*
+- Hugelius et al. (2020). "Permafrost carbon vulnerability." *PNAS* 117(34).
+
+---
+
+*Published by [Globe & Atlas](https://globeandatlas.substack.com) | Last updated: 2026-05-25*
