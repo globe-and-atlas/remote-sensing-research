@@ -2,9 +2,9 @@
 
 **Globe & Atlas** | Public-good spectral index research for environmental monitoring.
 
-This repository serves as the high-resolution, granular **Atlas** counterpart to the [Globe & Atlas](https://globeandatlas.substack.com) publication. While the *Globe* provides a high-altitude macro scope of where spatial value is shifting, this *Atlas* zooms all the way in to the micro scale: cataloging the electromagnetic physics, raw band formulas, and empirical calibrations that prove a spatial workflow actually works.
+This repository is the technical **Atlas** counterpart to the [Globe & Atlas](https://globeandatlas.substack.com) publication. It catalogs the electromagnetic physics, raw band formulas, confounder gates, and validation status behind public-good satellite screening workflows.
 
-Here, we document novel satellite band combinations that can be computed from free, open-access sensors — Sentinel-2, Sentinel-1, TROPOMI, EMIT, PACE, EnMAP, and others — and applied to environmental problems where satellite data can serve as an independent accountability layer.
+The focus is novel, newly formalized, or newly sensor-enabled satellite band combinations that can be computed from free, open-access sensors such as Sentinel-2, Sentinel-1, TROPOMI, EMIT, PACE, EnMAP, and Landsat. The goal is to make environmental monitoring formulas inspectable, reusable, and honest about their limits.
 
 ---
 
@@ -24,7 +24,11 @@ Here, we document novel satellite band combinations that can be computed from fr
 
 ## 🧭 Novelty & Contribution Tiers
 
-The tier labels describe the specific contribution made here. They do not claim invention of the underlying electromagnetic physics, individual spectral bands, or environmental phenomena.
+The tier labels describe the specific contribution made here. They do not claim invention of the underlying electromagnetic physics, individual spectral bands, satellite sensors, or environmental phenomena.
+
+- **T1 entries are original Globe & Atlas formulations**: named indices with formulas and workflows originated here.
+- **T2 entries are formalization contributions**: the concept existed, but this atlas turns it into a named, reproducible formula.
+- **T3 entries are sensor-enabled operationalizations**: the physics or approach may have been written about before, but newer open sensors make the workflow practical from orbit.
 
 | Tier | What it means | Daniel Bally / Globe & Atlas contribution |
 |------|---------------|----------------------------|
@@ -64,37 +68,37 @@ This priority list is a qualitative triage, not a validation leaderboard.
 
 | Rank | Acronym | Name | Operational Significance |
 |------|---------|------|--------------------------|
-| 1 | **TSEAI** | TROPOMI–Sentinel-2 Emission Attribution Index | CH₄ source attribution at field scale — climate monitoring's most urgent gap |
-| 2 | **HABSDI** | HAB Species-Level Discrimination Index | Toxic vs. non-toxic cyanobacteria — PACE OCI UV bands make this globally possible |
-| 3 | **NPDDI** | N vs. P Deficiency Discrimination Index | Precision fertilizer prescription and runoff management from orbit |
-| 4 | **SMADI** | Sargassum vs. Microplastic Discrimination Index | Disentangles global marine debris crises; current indices conflate them |
-| 5 | **FGDCI** | Frozen Ground Dielectric Change Index | Pan-Arctic freeze/thaw dynamics from Sentinel-1 SAR |
-| 6 | **CBSDI** | Coral Bleaching Stage Discrimination Index | Classifies bleaching severity stages vs. binary surface detection |
-| 7 | **REESAI** | Rare Earth Element Surface Anomaly Index | EnMAP bastnäsite/monazite Nd detection for clean energy supply chains |
-| 8 | **BSMTI** | Burn Severity Mineralogy Transition Index | Post-fire debris flow risk via EMIT soil mineralogy changes |
-| 9 | **PWTDI** | Peatland Water Table Depth Index | Critical unmeasured variable in wetland carbon accounting |
-| 10 | **RDOCI** | River Dissolved Organic Carbon Index | PACE OCI UV channels make this orbital for the first time |
-| 11 | **AMDPHI** | Acid Mine Drainage pH Proxy Index | Mine-drainage acidity triage from open optical and hyperspectral data |
-| 12 | **TPERI** | Thermokarst Pond Expansion Rate Index | Permafrost pond expansion velocity for carbon-release risk models |
-| 13 | **MEPSI** | CH₄ Ebullition Pond Spectral Proxy | Screens thaw ponds for methane ebullition risk where field flux data is sparse |
-| 14 | **ALSI** | Active Layer Depth Thermal-Spectral Index | Active-layer depth proxy for Arctic infrastructure and carbon vulnerability |
-| 15 | **PSHRI** | Post-Fire Soil Hydrophobicity Risk Index | Post-rain hydrophobic soil screening for debris-flow and runoff hazards |
-| 16 | **UBCDI** | Understory vs. Canopy Burn Discrimination Index | Separates hidden understory burns from canopy-level fire damage |
-| 17 | **ISSAI** | ICESat-2 + Sentinel-1 Subsidence Attribution Index | Cross-checks lidar and InSAR deformation for infrastructure risk triage |
-| 18 | **GEAWSI** | GRACE-FO + ECOSTRESS Agricultural Water Stress Index | Links basin groundwater depletion to crop water stress and food-security alerts |
-| 19 | **SCFGOSI** | Soil Carbon Functional Group Oxidation State Index | Hyperspectral soil-carbon quality proxy for degradation and accounting workflows |
-| 20 | **AFCDI** | Asbestos Fiber Chrysotile Detection Index | Public-health mineral hazard screening using diagnostic SWIR absorptions |
-| 21 | **CCRBI** | Coal Combustion Residue Bioaccumulation Index | Coal ash exposure screening for wetlands, rivers, and nearby communities |
-| 22 | **SPSRI** | Solar Panel Soiling Remote Index | Utility-scale solar soiling triage for clean-energy operations |
-| 23 | **SBCI** | Sabkha Brine Chemistry Index | Hyperspectral arid-brine chemistry mapping in salt-flat environments |
-| 24 | **CSCAI** | Caliche Surface Carbonate Accumulation Index | Dryland carbonate accumulation proxy for soil, water, and restoration planning |
-| 25 | **DLPEHI** | Desert Locust Pre-Emergence Habitat Index | Early-warning habitat screen for locust emergence and food-security response |
+| 1 | **[TSEAI](ATLAS.md#tseai)** | TROPOMI–Sentinel-2 Emission Attribution Index | CH₄ source attribution at field scale — climate monitoring's most urgent gap |
+| 2 | **[HABSDI](ATLAS.md#habsdi)** | HAB Species-Level Discrimination Index | Toxic vs. non-toxic cyanobacteria — PACE OCI UV bands make this globally possible |
+| 3 | **[NPDDI](ATLAS.md#npddi)** | N vs. P Deficiency Discrimination Index | Precision fertilizer prescription and runoff management from orbit |
+| 4 | **[SMADI](ATLAS.md#smadi)** | Sargassum vs. Microplastic Discrimination Index | Disentangles global marine debris crises; current indices conflate them |
+| 5 | **[FGDCI](ATLAS.md#fgdci)** | Frozen Ground Dielectric Change Index | Pan-Arctic freeze/thaw dynamics from Sentinel-1 SAR |
+| 6 | **[CBSDI](ATLAS.md#cbsdi)** | Coral Bleaching Stage Discrimination Index | Classifies bleaching severity stages vs. binary surface detection |
+| 7 | **[REESAI](ATLAS.md#reesai)** | Rare Earth Element Surface Anomaly Index | EnMAP bastnäsite/monazite Nd detection for clean energy supply chains |
+| 8 | **[BSMTI](ATLAS.md#bsmti)** | Burn Severity Mineralogy Transition Index | Post-fire debris flow risk via EMIT soil mineralogy changes |
+| 9 | **[PWTDI](ATLAS.md#pwtdi)** | Peatland Water Table Depth Index | Critical unmeasured variable in wetland carbon accounting |
+| 10 | **[RDOCI](ATLAS.md#rdoci)** | River Dissolved Organic Carbon Index | PACE OCI UV channels make this orbital for the first time |
+| 11 | **[AMDPHI](ATLAS.md#amdphi)** | Acid Mine Drainage pH Proxy Index | Mine-drainage acidity triage from open optical and hyperspectral data |
+| 12 | **[TPERI](ATLAS.md#tperi)** | Thermokarst Pond Expansion Rate Index | Permafrost pond expansion velocity for carbon-release risk models |
+| 13 | **[MEPSI](ATLAS.md#mepsi)** | CH₄ Ebullition Pond Spectral Proxy | Screens thaw ponds for methane ebullition risk where field flux data is sparse |
+| 14 | **[ALSI](ATLAS.md#alsi)** | Active Layer Depth Thermal-Spectral Index | Active-layer depth proxy for Arctic infrastructure and carbon vulnerability |
+| 15 | **[PSHRI](ATLAS.md#pshri)** | Post-Fire Soil Hydrophobicity Risk Index | Post-rain hydrophobic soil screening for debris-flow and runoff hazards |
+| 16 | **[UBCDI](ATLAS.md#ubcdi)** | Understory vs. Canopy Burn Discrimination Index | Separates hidden understory burns from canopy-level fire damage |
+| 17 | **[ISSAI](ATLAS.md#issai)** | ICESat-2 + Sentinel-1 Subsidence Attribution Index | Cross-checks lidar and InSAR deformation for infrastructure risk triage |
+| 18 | **[GEAWSI](ATLAS.md#geawsi)** | GRACE-FO + ECOSTRESS Agricultural Water Stress Index | Links basin groundwater depletion to crop water stress and food-security alerts |
+| 19 | **[SCFGOSI](ATLAS.md#scfgosi)** | Soil Carbon Functional Group Oxidation State Index | Hyperspectral soil-carbon quality proxy for degradation and accounting workflows |
+| 20 | **[AFCDI](ATLAS.md#afcdi)** | Asbestos Fiber Chrysotile Detection Index | Public-health mineral hazard screening using diagnostic SWIR absorptions |
+| 21 | **[CCRBI](ATLAS.md#ccrbi)** | Coal Combustion Residue Bioaccumulation Index | Coal ash exposure screening for wetlands, rivers, and nearby communities |
+| 22 | **[SPSRI](ATLAS.md#spsri)** | Solar Panel Soiling Remote Index | Utility-scale solar soiling triage for clean-energy operations |
+| 23 | **[SBCI](ATLAS.md#sbci)** | Sabkha Brine Chemistry Index | Hyperspectral arid-brine chemistry mapping in salt-flat environments |
+| 24 | **[CSCAI](ATLAS.md#cscai)** | Caliche Surface Carbonate Accumulation Index | Dryland carbonate accumulation proxy for soil, water, and restoration planning |
+| 25 | **[DLPEHI](ATLAS.md#dlpehi)** | Desert Locust Pre-Emergence Habitat Index | Early-warning habitat screen for locust emergence and food-security response |
 
 ---
 
 ## 🧪 Ground-Truth Validation
 
-The following indices have been tested against the Texas Railroad Commission (TRRC) 27-site Permian Basin produced water spill dataset:
+This section is separate from the priority list above: these are the indices already tested against a specific ground-truth dataset. The following indices have been tested against the Texas Railroad Commission (TRRC) 27-site Permian Basin produced water spill dataset:
 
 | Index | Full Name | Detection Rate |
 |-------|-----------|----------------|
@@ -127,16 +131,19 @@ The former `surveys/` and `catalogs/` documents have been consolidated into the 
 | Resource | Contents |
 |----------|----------|
 | [Master Index Catalog](registry/master_index_catalog.md) | Unified 116-index registry with formulas, physics, novelty tiers, and claim posture. |
+| [Spectral Index Comparative Analysis](registry/comparative_analysis.md) | Detailed technical comparison and scientific rationale of novel indices vs established baselines. |
 | [Sensor Platforms Reference](registry/sensor_platforms.md) | Consolidated 31-platform open-sensor guide with public-benefit rankings and integration notes. |
 | [Remote Sensing Science & Policy Guide](registry/scholarly_synthesis.md) | Scholarly synthesis, prior-art posture, ethical safeguards, and validation roadmap. |
 | [Formula Quick Reference](formulas/formula-quick-reference.md) | Every formula across all projects, consolidated into a single file. |
+
 
 ---
 
 ## 🎓 Citation & Reuse
 
-Formulas in this atlas are released as public-good research. 
-- **For validated indices** (PWCI, ASAI, VSI, OBEC, FBC, LBI), please cite the TRRC validation dataset and this repository. 
+Formulas in this atlas are released as public-good research.
+
+- **For validated indices** (PWCI, ASAI, VSI, OBEC, FBC, LBI), please cite the TRRC validation dataset and this repository.
 - **For proposed indices**, please cite the underlying spectral physics referenced in each entry.
 
 **Key Scholarly Sources:**
