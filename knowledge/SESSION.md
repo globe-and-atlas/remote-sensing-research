@@ -24,3 +24,5 @@
 
 ## Checkpoint Log
 - None. Ready for next session.
+- 2026-05-26 14:17 — commit: docs: add Zenodo update guide to procedural knowledge and promote SESSION.md | knowledge/INDEX.md,knowledge/SESSION.md,knowledge/procedural/zenodo_update.md
+- 2026-05-26 14:33 — commit: docs: align domain counts in ATLAS.md and preprint to exactly Twelve Domains | ATLAS.md,preprint/gsia_preprint_v1.md,registry/master_index_catalog.md
