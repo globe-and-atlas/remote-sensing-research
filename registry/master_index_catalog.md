@@ -1,6 +1,9 @@
 # Global Spectral Index Atlas
 ### A Public-Good Reference for Novel Satellite Band Combinations
 
+> [!WARNING]
+> **Historical version 1 document.** This file retains the superseded May 2026 T1/T2/T3 taxonomy and claim language. Do not use it for current novelty, implementation, or validation statements. The authoritative release table is the [GSIA v2 CSV](../preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv), with all 91 records rendered in the [human-readable v2 formula catalog](../formulas/gsia-v2-formula-catalog.md).
+
 *Version 1.0 — May 2026 | 91 novel indices across 12 domains*
 
 Free satellite data covers the planet. The physics to read environmental signals from it is well-documented in peer-reviewed literature. What has been missing is one organized place that names the formulas, explains the spectral reasoning, and states the public benefit clearly.

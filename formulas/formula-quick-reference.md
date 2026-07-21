@@ -7,6 +7,9 @@ sources: [limn, civic-sentinel, permian-basin-survey, global-novel-survey]
 
 # Formula Quick Reference
 
+> [!WARNING]
+> **Historical cross-project reference.** This file predates the GSIA version 2 reconciliation, mixes multiple projects, and includes formulas outside the Atlas publication scope. It is not the current 91-record preprint supplement. Use the [GSIA v2 Formula Catalog](gsia-v2-formula-catalog.md) and [governed CSV](../preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv) for the current Atlas formulas and scientific status.
+
 Every formula across all projects in one place. Grouped by domain. Formulas use Sentinel-2 band notation unless noted.
 
 **Band key (Sentinel-2):** B01=443 nm, B02=490 nm, B03=560 nm, B04=665 nm, B05=705 nm, B06=740 nm, B07=783 nm, B08=842 nm, B8A=865 nm, B09=945 nm, B11=1610 nm, B12=2190 nm
