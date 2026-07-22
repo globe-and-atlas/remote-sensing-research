@@ -1,142 +1,121 @@
 # Remote Sensing Research
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20400744.svg)](https://doi.org/10.5281/zenodo.20400744)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20400743.svg)](https://doi.org/10.5281/zenodo.20400743)
 
-**Globe & Atlas** | Public-good spectral index research for environmental monitoring.
+**Globe & Atlas** | Open, inspectable environmental remote-sensing research.
 
-This repository is the technical **Atlas** counterpart to the [Globe & Atlas](https://globeandatlas.substack.com) publication. It catalogs the electromagnetic physics, raw band formulas, confounder gates, and validation status behind public-good satellite screening workflows.
+This repository is the technical Atlas counterpart to the [Globe & Atlas](https://globeandatlas.substack.com) publication. It documents proposed formulas, implemented screening proxies, required inputs, physical rationales, confounders, maturity, and validation limits.
 
-The focus is novel, newly formalized, or newly sensor-enabled satellite band combinations that can be computed from free, open-access sensors such as Sentinel-2, Sentinel-1, TROPOMI, EMIT, PACE, EnMAP, and Landsat. The goal is to make environmental monitoring formulas inspectable, reusable, and honest about their limits.
+The Global Spectral Index Atlas version 2 is a registry of **91 proposed specifications across 12 domains and 24 capability families**. It is not a collection of 91 validated detectors, and it does not assert that all 91 formulas are scientifically unprecedented.
 
----
+## Start here
 
-## 🗺️ The Atlas Index
+| Resource | Purpose |
+|---|---|
+| **[GSIA v2 Formula Catalog](formulas/gsia-v2-formula-catalog.md)** | Human-readable reference for all 91 proposed and implemented formulas, organized by capability family |
+| **[Machine-readable supplement](preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv)** | Authoritative 91-record release table with formula, role, maturity, inputs, operators, limits, and audit metadata |
+| **[Version 2 preprint PDF](preprint/gsia_preprint_v2_submission_2026-07-21.pdf)** | Submission manuscript |
+| **[Version 2 manuscript source](preprint/gsia_preprint_v2_submission_manuscript_2026-07-21.md)** | Editable preprint source |
+| **[Submission manifest](preprint/gsia_preprint_v2_submission_manifest_2026-07-21.md)** | Frozen inventory, verification results, and checksums |
+| **[Audited Limn Atlas source](https://github.com/globe-and-atlas/limn/commit/e50c2eda5cf405c7693e5210e04894c691e5f2eb)** | Exact application snapshot used for the version 2 release audit |
 
-**[`ATLAS.md`](ATLAS.md)** is the primary reference database — containing 91 named spectral indices across 12 environmental domains. Each entry is documented with:
+The CSV is the governed source for the readable formula catalog. Regenerate the catalog with:
 
-- **Formula**: Ready to implement in JavaScript, Python, or database engines.
-- **Spectral Physics**: Physical explanation of the surface interactions and band mechanics.
-- **Confounder Rejection**: Domain gates and masks used to isolate clean anomalies.
-- **Validation Status**: Empirically verified metrics against confirmed ground-truth events.
-- **Novelty Tier**: Contribution category based on the literature gap and what Globe & Atlas adds (T1 Original Formula / T2 Standardized Formula / T3 Sensor-Enabled Formula).
+```bash
+python3 scripts/generate_gsia_v2_formula_catalog.py \
+  preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv \
+  formulas/gsia-v2-formula-catalog.md
+```
 
-*This is a living, public-good reference. Validated indices have been run against regional ground truth; proposed indices are grounded in published physics and awaiting field verification.*
+## Release status
 
----
+| Dimension | Version 2 distribution |
+|---|---|
+| Registry | 91 records; 12 domains; 24 capability families |
+| Maturity | 37 M3 live screening proxies; 16 M2 executable non-live formulas; 38 M1 specified concepts or retired formulas |
+| Method roles | 15 primary; 10 variant; 12 component; 1 reference; 51 research-model; 2 retired |
+| Contribution classes | 68 C1; 22 C2; 1 C3, all provisional pending entry-level prior-art review |
+| Independent evaluation | 0 V1; 0 V2 |
 
-## 🧭 Novelty & Contribution Tiers
+The software release audit found that all 37 renderable evalscripts passed band-declaration and output-shape checks. A fresh WMS audit returned a nonblank display for all 37 under the recorded settings, and 42 of 42 live/demo evidence packs met the repository's source-coverage rule. These are software, display, and provenance results—not environmental accuracy results.
 
-The tier labels describe the specific contribution made here. They do not claim invention of the underlying electromagnetic physics, individual spectral bands, satellite sensors, or environmental phenomena.
+## Status vocabulary
 
-- **T1 entries are original Globe & Atlas formulations**: named indices with formulas and workflows originated here.
-- **T2 entries are formalization contributions**: the concept existed, but this atlas turns it into a named, reproducible formula.
-- **T3 entries are sensor-enabled operationalizations**: the physics or approach may have been written about before, but newer open sensors make the workflow practical from orbit.
+### Maturity
 
-| Tier | What it means | Daniel Bally / Globe & Atlas contribution |
-|------|---------------|----------------------------|
-| **T1 — Original Formula** | No equivalent named, standardized formula for this screening purpose was found in the surveyed literature. | Originated the index name, wrote the formula, defined the workflow, and documented the public-good use case. |
-| **T2 — Standardized Formula** | The detection concept exists in papers, reports, or practice, but remains qualitative, fragmented, unnamed, or lacking a clear reproducible formula. | Formalized the concept into a named index with explicit inputs, formula logic, gates, limitations, and decision context. |
-| **T3 — Sensor-Enabled Formula** | The physics or analytic approach has been written about before, but it was not previously practical as an open, operational satellite index until newer sensors made the needed bands, cadence, or resolution available. | Translates the known physics into a computable open-sensor workflow and names the operational formula. |
+- **M1 - Formula specified:** inputs and an equation or workflow are documented.
+- **M2 - Executable:** entry-specific code exists but is not a live Atlas layer.
+- **M3 - Demonstrated:** a reviewed Atlas rendering exists with event or domain context.
+- **V1 - Independently evaluated:** a locked method has labeled positives, hard negatives, held-out geography or time, uncertainty, and task-appropriate metrics.
+- **V2 - Externally replicated:** an independent dataset, analyst, or team reproduces useful performance.
 
-In short: **T1 is original formulation, T2 is formalization, and T3 is operationalization made possible by new sensor capability.**
+M3 does not imply accuracy. No current GSIA record reaches V1.
 
----
+### Method roles
 
-## 📡 Domains Covered
+- **Primary:** clearest current representative of a capability family; not a validated winner.
+- **Variant:** alternate formulation or interpretation in the same family.
+- **Component:** useful input or context feature that is weaker as a standalone decision product.
+- **Reference:** established sensor product retained for interpretation.
+- **Research model:** future retrieval, calibration, temporal, spatial, or cross-sensor workflow.
+- **Retired:** legacy formula retained for traceability but removed from live scientific use.
 
-| Domain | Indices | Key Earth Observation Sensors |
-|--------|---------|-----------------------------|
-| Wildfire & Post-Fire | 7 | S2, EMIT, TROPOMI, GOES |
-| Water Quality & Freshwater | 11 | S2, PACE OCI, Landsat TIRS |
-| Marine & Coastal | 10 | S2, EMIT, PACE OCI, DESIS |
-| Agriculture & Food Security | 7 | S2, EnMAP, ECOSTRESS, ERA5 |
-| Mining & Industrial | 8 | S2, S1, EnMAP, EMIT, Landsat |
-| Urban & Infrastructure | 8 | S2, TROPOMI, ECOSTRESS |
-| Permafrost & Arctic | 7 | S2, S1, ECOSTRESS |
-| Tropical Forest | 6 | S2, Planet |
-| Dryland & Arid | 6 | S2, EMIT, EnMAP, PRISMA |
-| Wetland & Peatland | 6 | S2, S1, TROPOMI |
-| Hyperspectral-Enabled | 8 | EMIT, EnMAP, PRISMA, PACE, DESIS |
-| Cross-Sensor Fusion | 7 | TROPOMI+S2, GRACE+ECOSTRESS, ICESat-2+S1, NISAR+S2 |
+### Contribution classes
 
----
+- **C1 - Proposed formulation**
+- **C2 - Adapted formalization**
+- **C3 - Sensor-enabled implementation concept**
 
-## 🏆 Top 25 Priority Novel Indices
+These classes are provisional organizational metadata. They do not establish priority, patentability, novelty, or performance.
 
-This priority list is a qualitative triage, not a validation leaderboard.
+## Domains
 
-**Selection criteria:** the ordering favors indices that combine four traits: likely unclaimed or under-formalized novelty, global applicability, policy-actionable output, and feasibility on currently available open sensors. In practice, the highest-priority indices are the ones that could turn existing satellite physics into a named, replicable public-good workflow with near-term operational value.
+| Domain | Records |
+|---|---:|
+| Wildfire and post-fire | 7 |
+| Water quality and freshwater | 11 |
+| Marine and coastal | 10 |
+| Agriculture and food | 7 |
+| Mining and industrial | 8 |
+| Urban and infrastructure | 8 |
+| Permafrost and Arctic | 7 |
+| Tropical forest | 6 |
+| Dryland and arid | 6 |
+| Wetland and peatland | 6 |
+| Hyperspectral-enabled | 8 |
+| Cross-sensor fusion | 7 |
+| **Total** | **91** |
 
-| Rank | Acronym | Name | Operational Significance |
-|------|---------|------|--------------------------|
-| 1 | **[TSEAI](ATLAS.md#tseai)** | TROPOMI–Sentinel-2 Emission Attribution Index | CH₄ source attribution at field scale — climate monitoring's most urgent gap |
-| 2 | **[HABSDI](ATLAS.md#habsdi)** | HAB Species-Level Discrimination Index | Toxic vs. non-toxic cyanobacteria — PACE OCI UV bands make this globally possible |
-| 3 | **[NPDefI](ATLAS.md#npdefi)** | N vs. P Deficiency Discrimination Index | Precision fertilizer prescription and runoff management from orbit |
-| 4 | **[SMPDI](ATLAS.md#smpdi)** | Sargassum vs. Microplastic Discrimination Index | Disentangles global marine debris crises; current indices conflate them |
-| 5 | **[FGDCI](ATLAS.md#fgdci)** | Frozen Ground Dielectric Change Index | Pan-Arctic freeze/thaw dynamics from Sentinel-1 SAR |
-| 6 | **[CBSDI](ATLAS.md#cbsdi)** | Coral Bleaching Stage Discrimination Index | Classifies bleaching severity stages vs. binary surface detection |
-| 7 | **[REESAI](ATLAS.md#reesai)** | Rare Earth Element Surface Anomaly Index | EnMAP bastnäsite/monazite Nd detection for clean energy supply chains |
-| 8 | **[BSMTI](ATLAS.md#bsmti)** | Burn Severity Mineralogy Transition Index | Post-fire debris flow risk via EMIT soil mineralogy changes |
-| 9 | **[PWTDI](ATLAS.md#pwtdi)** | Peatland Water Table Depth Index | Critical unmeasured variable in wetland carbon accounting |
-| 10 | **[RDOCI](ATLAS.md#rdoci)** | River Dissolved Organic Carbon Index | PACE OCI UV channels make this orbital for the first time |
-| 11 | **[AMDPHI](ATLAS.md#amdphi)** | Acid Mine Drainage pH Proxy Index | Mine-drainage acidity triage from open optical and hyperspectral data |
-| 12 | **[TPERI](ATLAS.md#tperi)** | Thermokarst Pond Expansion Rate Index | Permafrost pond expansion velocity for carbon-release risk models |
-| 13 | **[MEPSI](ATLAS.md#mepsi)** | CH₄ Ebullition Pond Spectral Proxy | Screens thaw ponds for methane ebullition risk where field flux data is sparse |
-| 14 | **[ALSI](ATLAS.md#alsi)** | Active Layer Depth Thermal-Spectral Index | Active-layer depth proxy for Arctic infrastructure and carbon vulnerability |
-| 15 | **[PSHRI](ATLAS.md#pshri)** | Post-Fire Soil Hydrophobicity Risk Index | Post-rain hydrophobic soil screening for debris-flow and runoff hazards |
-| 16 | **[UBCDI](ATLAS.md#ubcdi)** | Understory vs. Canopy Burn Discrimination Index | Separates hidden understory burns from canopy-level fire damage |
-| 17 | **[ISSAI](ATLAS.md#issai)** | ICESat-2 + Sentinel-1 Subsidence Attribution Index | Cross-checks lidar and InSAR deformation for infrastructure risk triage |
-| 18 | **[GEAWSI](ATLAS.md#geawsi)** | GRACE-FO + ECOSTRESS Agricultural Water Stress Index | Links basin groundwater depletion to crop water stress and food-security alerts |
-| 19 | **[SCFGOSI](ATLAS.md#scfgosi)** | Soil Carbon Functional Group Oxidation State Index | Hyperspectral soil-carbon quality proxy for degradation and accounting workflows |
-| 20 | **[AFCDI](ATLAS.md#afcdi)** | Asbestos Fiber Chrysotile Detection Index | Public-health mineral hazard screening using diagnostic SWIR absorptions |
-| 21 | **[CCRBI](ATLAS.md#ccrbi)** | Coal Combustion Residue Bioaccumulation Index | Coal ash exposure screening for wetlands, rivers, and nearby communities |
-| 22 | **[SPSRI](ATLAS.md#spsri)** | Solar Panel Soiling Remote Index | Utility-scale solar soiling triage for clean-energy operations |
-| 23 | **[SBCI](ATLAS.md#sbci)** | Sabkha Brine Chemistry Index | Hyperspectral arid-brine chemistry mapping in salt-flat environments |
-| 24 | **[CSCAI](ATLAS.md#cscai)** | Caliche Surface Carbonate Accumulation Index | Dryland carbonate accumulation proxy for soil, water, and restoration planning |
-| 25 | **[DLPEHI](ATLAS.md#dlpehi)** | Desert Locust Pre-Emergence Habitat Index | Early-warning habitat screen for locust emergence and food-security response |
+## Scientific boundaries
 
----
+- A formula is not equivalent to the environmental conclusion named in a use case.
+- Event documentation and bookmarked views are provenance, not target labels or matched controls.
+- Display quality is not sensitivity, specificity, calibration, transferability, or causal attribution.
+- Some proposed workflows require atmospheric correction, temporal comparison, spatial operators, inversion, field calibration, or ancillary data not present in a current live script.
+- High-consequence decisions require field evidence, domain review, uncertainty analysis, and independent evaluation.
 
-## 🛡️ Claim Philosophy
+This Atlas publication scope is separate from the original Limn produced-water investigation. Produced-water formulas, evidence, results, and case studies are not part of the 91-record GSIA release or its preprint.
 
-All indices in this atlas are built from published spectral physics. The contribution is the named formula, the multi-gate workflow, the confounder rejection, and the public-good decision framing. To establish defensive prior art for the community and protect these composites from predatory patenting, the claim for each novel composite is structured as:
+## Historical version 1 documents
 
-> *A named, transparent, decision-ready composite built from established spectral mechanisms, domain gates, and confounder rejection — applied to a specific public-good screening workflow.*
+The following files are preserved for provenance but use the superseded May 2026 T1/T2/T3 framing and should not be cited as the current scientific status:
 
-- **We Claim**: The index name, formula/workflow, multi-gate logic, confounder rejection, limitations, and civic framing described for each T1/T2/T3 contribution.
-- **We Do Not Claim**: Invention of the underlying band physics, individual spectral ratios, satellite sensors, or environmental problem itself.
+- [`ATLAS.md`](ATLAS.md)
+- [`registry/master_index_catalog.md`](registry/master_index_catalog.md)
+- [`formulas/formula-quick-reference.md`](formulas/formula-quick-reference.md)
+- [`preprint/gsia_preprint_v1.md`](preprint/gsia_preprint_v1.md)
+- [`preprint/gsia_preprint_v1.pdf`](preprint/gsia_preprint_v1.pdf)
 
----
+Use the v2 formula catalog and governed CSV for current formulas, maturity, contribution, and validation statements.
 
-## 📚 Registry & Reference Files
+## Citation and reuse
 
-The former `surveys/` and `catalogs/` documents have been consolidated into the current `registry/` files below.
+Please cite both the Atlas release and the underlying scientific sources identified for the method being used. Reuse of a proposed formula does not convert it into a validated detector; document the exact version, preprocessing, thresholds, calibration data, and domain of applicability.
 
-| Resource | Contents |
-|----------|----------|
-| [Master Index Catalog](registry/master_index_catalog.md) | Unified 91-index registry with formulas, physics, novelty tiers, and claim posture. |
-| [Spectral Index Comparative Analysis](registry/comparative_analysis.md) | Detailed technical comparison and scientific rationale of novel indices vs established baselines. |
-| [Sensor Platforms Reference](registry/sensor_platforms.md) | Consolidated 31-platform open-sensor guide with public-benefit rankings and integration notes. |
-| [Remote Sensing Science & Policy Guide](registry/scholarly_synthesis.md) | Scholarly synthesis, prior-art posture, ethical safeguards, and validation roadmap. |
-| [Formula Quick Reference](formulas/formula-quick-reference.md) | Every formula across all projects, consolidated into a single file. |
+**Suggested citation:** Bally, D. (2026). *The Global Spectral Index Atlas: An Open Catalog of Proposed Environmental Remote-Sensing Index Specifications Across Twelve Domains*. ESS Open Archive preprint, version 2.
 
+Repository code and third-party data products retain their respective licenses. The manuscript and Atlas documentation are released under CC BY 4.0 unless otherwise noted.
 
 ---
 
-## 🎓 Citation & Reuse
-
-Formulas in this atlas are released as public-good research.
-
-- **For all indices**, please cite the underlying spectral physics referenced in each entry and this repository.
-
-**Key Scholarly Sources:**
-- Kokaly et al. (2017). *USGS Spectral Library Version 7.*
-- Green et al. (2023). "Performance and early results from EMIT." *IEEE TGRS* 61.
-- Mielke et al. (2024). "Neodymium mineral detection at Mountain Pass using EnMAP." *Scientific Reports* 14(1):20413.
-- Pahlevan et al. (2026). "PACE OCI PFT retrieval." *Remote Sensing of Environment.*
-- Hugelius et al. (2020). "Permafrost carbon vulnerability." *PNAS* 117(34).
-
-
----
-
-*Published by [Globe & Atlas](https://globeandatlas.substack.com) | Last updated: May 2026*
+*Published by [Globe & Atlas](https://globeandatlas.substack.com) | Version 2 documentation updated July 2026*

@@ -10,7 +10,7 @@ Correspondence: dbally@gmail.com
 
 ## Abstract
 
-The proliferation of free, high-resolution satellite data — led by the Sentinel constellation, EMIT, PACE OCI, and a wave of 2019–2024 sensor launches — has created an untapped detection opportunity: the spectral physics to identify environmental hazards from orbit is documented in the literature, but no organized, named index registry exists beyond vegetation and general water-body estimation. We introduce the Global Spectral Index Atlas (GSIA), a systematic compilation of 91 novel spectral indices spanning 12 environmental domains: wildfire, freshwater quality, marine and coastal systems, agriculture, mining, urban infrastructure, permafrost, tropical forest, dryland, wetland, hyperspectral-enabled detection, and cross-sensor fusion. Indices are classified under a three-tier novelty taxonomy distinguishing (T1) first-formula proposals — detection problems with no equivalent standardized formula in the published literature — from (T2) first standardized formulations of qualitatively described concepts, and (T3) newly computable indices enabled by sensors operational since 2019. The atlas is publicly available at https://github.com/globe-and-atlas/remote-sensing-research under an open license and is intended as a community resource for triage-level environmental screening, not as a substitute for field measurement or regulatory certification.
+The proliferation of free, high-resolution satellite data — led by the Sentinel constellation, EMIT, PACE OCI, and a wave of 2019–2024 sensor launches — has created an untapped detection opportunity: the spectral physics to identify environmental hazards from orbit is documented in the literature, but no organized, named index registry exists beyond vegetation and general water-body estimation. We introduce the Global Spectral Index Atlas (GSIA), a systematic compilation of 91 novel spectral indices spanning 12 environmental domains: wildfire, freshwater quality, marine and coastal systems, agriculture, mining, urban infrastructure, permafrost, tropical forest, dryland, wetland, hyperspectral-enabled detection, and cross-sensor fusion. Indices are classified under a three-tier novelty taxonomy distinguishing (T1) first-formula proposals — detection problems with no equivalent standardized formula in the published literature — from (T2) first standardized formulations of qualitatively described concepts, and (T3) newly computable indices enabled by sensors operational since 2019. The atlas is publicly available at [doi.org/10.5281/zenodo.20400743](https://doi.org/10.5281/zenodo.20400743) under an open license and is intended as a community resource for triage-level environmental screening, not as a substitute for field measurement or regulatory certification.
 
 
 ---
@@ -124,13 +124,13 @@ The Global Spectral Index Atlas v1.0 introduces 91 novel spectral indices across
 
 The atlas is a starting point, not a finished product. The primary contribution is the naming and formulating of detection problems for which the spectral physics exists but a standardized formula did not. Independent validation, threshold calibration, and cross-regional testing are needed before operational deployment of any index in a regulatory context.
 
-The atlas is publicly available at https://github.com/globe-and-atlas/remote-sensing-research under an open license. Contributions, validations, corrections, and additions are welcomed. For indices that have passed independent validation, submission to the Awesome Spectral Indices registry (Montero et al., 2023) is encouraged to accelerate community adoption.
+The atlas is publicly available at [doi.org/10.5281/zenodo.20400743](https://doi.org/10.5281/zenodo.20400743) under an open license. Contributions, validations, corrections, and additions are welcomed. For indices that have passed independent validation, submission to the Awesome Spectral Indices registry (Montero et al., 2023) is encouraged to accelerate community adoption.
 
 ---
 
 ## Data Availability
 
-All index formulas, physical descriptions, and limit clauses are available in the project repository at https://github.com/globe-and-atlas/remote-sensing-research, archived under DOI: [10.5281/zenodo.20400744](https://doi.org/10.5281/zenodo.20400744). Sentinel-2 data was accessed through the Copernicus Open Access Hub (https://scihub.copernicus.eu). EMIT data can be accessed through the NASA DAAC at https://lpdaac.usgs.gov.
+All index formulas, physical descriptions, and limit clauses are available at [doi.org/10.5281/zenodo.20400743](https://doi.org/10.5281/zenodo.20400743). Sentinel-2 data was accessed through the [Copernicus Open Access Hub](https://scihub.copernicus.eu). EMIT data can be accessed through the [NASA DAAC](https://lpdaac.usgs.gov).
 
 
 ---
