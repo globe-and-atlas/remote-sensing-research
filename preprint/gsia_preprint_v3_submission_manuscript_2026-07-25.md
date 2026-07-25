@@ -336,7 +336,9 @@ The audit reported in Sections 4.2 and 4.3 used the public Web Map Service path,
 which applies this harmonization by default, so **no result reported in version 2
 depended on the affected path**. The correction matters prospectively: any
 entry-level validation study that renders through the affected provider must use the
-corrected conversion, and absolute thresholds fitted before it should be refitted.
+corrected conversion, and any absolute threshold fitted on that path before the
+correction should be refitted. Thresholds fitted through the harmonized Statistics
+API path are unaffected and were confirmed so by inspection.
 
 **Internal consistency.** The bare-soil index had three incompatible definitions
 across evalscripts; one record substituted a green band for the blue band used
