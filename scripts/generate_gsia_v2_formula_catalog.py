@@ -85,7 +85,8 @@ def main() -> int:
         f"- **Release audit:** {audit_date}",
         "- **Records:** 91 across 12 domains and 24 capability families",
         "- **Formula schema:** 2.0",
-        f"**Audited Atlas source:** [`{commit}`](https://github.com/globe-and-atlas/limn/commit/{commit})",
+        f"**Audited Atlas source:** commit `{commit}`, since made private; the public Atlas viewer is now maintained at "
+        "[globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas)",
         "",
         "This is the human-readable companion to the machine-readable "
         "[`gsia_preprint_v2_status_supplement_2026-07-21.csv`](../preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv). "

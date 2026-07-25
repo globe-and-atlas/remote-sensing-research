@@ -17,7 +17,7 @@ The Global Spectral Index Atlas version 2 is a registry of **91 proposed specifi
 | **[Version 2 preprint PDF](preprint/gsia_preprint_v2_submission_2026-07-21.pdf)** | Submission manuscript |
 | **[Version 2 manuscript source](preprint/gsia_preprint_v2_submission_manuscript_2026-07-21.md)** | Editable preprint source |
 | **[Submission manifest](preprint/gsia_preprint_v2_submission_manifest_2026-07-21.md)** | Frozen inventory, verification results, and checksums |
-| **[Audited Limn Atlas source](https://github.com/globe-and-atlas/limn/commit/e50c2eda5cf405c7693e5210e04894c691e5f2eb)** | Exact application snapshot used for the version 2 release audit |
+| **Audited Atlas source** | Commit `e50c2eda5cf405c7693e5210e04894c691e5f2eb`, since made private; the public Atlas viewer is now maintained at [globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas) |
 
 The CSV is the governed source for the readable formula catalog. Regenerate the catalog with:
 

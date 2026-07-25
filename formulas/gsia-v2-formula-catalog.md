@@ -3,7 +3,7 @@
 - **Release audit:** 2026-07-21
 - **Records:** 91 across 12 domains and 24 capability families
 - **Formula schema:** 2.0
-**Audited Atlas source:** [`e50c2eda5cf405c7693e5210e04894c691e5f2eb`](https://github.com/globe-and-atlas/limn/commit/e50c2eda5cf405c7693e5210e04894c691e5f2eb)
+**Audited Atlas source:** commit `e50c2eda5cf405c7693e5210e04894c691e5f2eb`, since made private; the public Atlas viewer is now maintained at [globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas)
 
 This is the human-readable companion to the machine-readable [`gsia_preprint_v2_status_supplement_2026-07-21.csv`](../preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv). The CSV is authoritative. This file is generated from it so the formulas, maturity states, method roles, and limits remain synchronized.
 

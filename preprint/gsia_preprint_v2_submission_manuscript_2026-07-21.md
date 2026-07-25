@@ -427,7 +427,7 @@ The versioned resources for this manuscript are:
 - registry source: [https://github.com/globe-and-atlas/remote-sensing-research](https://github.com/globe-and-atlas/remote-sensing-research);
 - human-readable catalog of all 91 formulas: [GSIA v2 Formula Catalog](https://github.com/globe-and-atlas/remote-sensing-research/blob/main/formulas/gsia-v2-formula-catalog.md);
 - machine-readable 91-record supplement: [GSIA v2 status supplement](https://github.com/globe-and-atlas/remote-sensing-research/blob/main/preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv); and
-- Limn Atlas implementation and audited commit: [e50c2eda5cf405c7693e5210e04894c691e5f2eb](https://github.com/globe-and-atlas/limn/commit/e50c2eda5cf405c7693e5210e04894c691e5f2eb).
+- Limn Atlas implementation, audited commit `e50c2eda5cf405c7693e5210e04894c691e5f2eb` (since made private): public viewer now maintained at [globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas).
 
 The human-readable catalog presents the proposed and implemented formula fields for every record, organized by capability family. The accompanying CSV contains the same governed records together with formula version, method role, contribution class, maturity, implementation state, calibration and validation status, bookmark-date semantics, display-QC metadata, and source snapshot.
 
