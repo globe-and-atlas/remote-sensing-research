@@ -15,7 +15,7 @@ Correspondence: dbally@gmail.com
 
 ## Abstract
 
-Open Earth-observation missions have expanded the spectral, spatial, and temporal information available for environmental screening, but candidate remote-sensing methods remain dispersed across application domains and vary widely in implementation and validation maturity. We present the Global Spectral Index Atlas (GSIA), an open catalog of 91 proposed environmental remote-sensing index specifications spanning twelve domains and organized into 24 capability families. Each record documents an intended observable, proposed and implemented formulas where applicable, required sensors and operators, physical rationale, anticipated confounders, contribution class, method role, maturity, and an explicit inference limit. The version 2 registry contains 37 live M3 screening proxies, 16 M2 executable but non-live formulas, and 38 M1 specified concepts or retired formulas. Method roles identify 15 primary representatives, 10 variants, 12 components, one reference product, 51 research models, and two retired records; these roles organize the catalog and do not establish novelty or performance. All 37 renderable evalscripts passed static band and output checks. A public-service display audit returned nonblank overlays for all 37; the one record whose script was subsequently corrected was re-audited and retained its verdict. All 42 evidence packs associated with the 37 live records and five separate Sentinel-1 or Sentinel-5P demonstrations met the registry's source-coverage rule. These are software, display, and provenance results, not measurements of environmental detection performance. No catalog entry has completed the independent, held-out accuracy assessment defined in this paper. Targeted prior-art review identified related methods in several showcased domains, so catalog-wide priority and "first formula" claims are not made. GSIA is therefore presented as a transparent hypothesis and specification registry rather than a collection of validated detectors. Version 3 additionally reports a structured review that found seven records overstating their required sensors, four whose implemented formula did not match their executing code, one incorrect physical rationale, and a radiometric offset defect in one rendering path; all are corrected and documented here as a demonstration of the registry's intended correction pathway. We define a validation protocol using explicit labels, hard negative controls, locked formulas, geographic and temporal holdouts, established baselines, uncertainty estimates, and external replication. The catalog is intended to make environmental remote-sensing hypotheses inspectable, testable, and correctable, not to replace field measurement or regulatory assessment.
+Open Earth-observation missions have expanded the spectral, spatial, and temporal information available for environmental screening, but candidate remote-sensing methods remain dispersed across application domains and vary widely in implementation and validation maturity. We present the Global Spectral Index Atlas (GSIA), an open catalog of 91 proposed environmental remote-sensing index specifications spanning twelve domains and organized into 24 capability families. Each record documents an intended observable, proposed and implemented formulas where applicable, required sensors and operators, physical rationale, anticipated confounders, contribution class, method role, maturity, and an explicit inference limit. The version 2 registry contains 37 live M3 screening proxies, 16 M2 executable but non-live formulas, and 38 M1 specified concepts or retired formulas. Method roles identify 15 primary representatives, 10 variants, 12 components, one reference product, 51 research models, and two retired records; these roles organize the catalog and do not establish novelty or performance. All 37 renderable evalscripts passed static band and output checks. A public-service display audit returned nonblank overlays for all 37; the one record whose script was subsequently corrected was re-audited and retained its verdict. All 42 evidence packs associated with the 37 live records and five separate Sentinel-1 or Sentinel-5P demonstrations met the registry's source-coverage rule. These are software, display, and provenance results, not measurements of environmental detection performance. No catalog entry has completed the independent, held-out accuracy assessment defined in this paper. Targeted prior-art review identified related methods in several showcased domains, so catalog-wide priority and "first formula" claims are not made. GSIA is therefore presented as a transparent hypothesis and specification registry rather than a collection of validated detectors. Version 3 additionally reports a structured review that found seven records overstating their required sensors, four whose implemented formula did not match their executing code, one incorrect physical rationale, and a scene-dependent radiometric offset defect in one rendering path; all are corrected and documented here as a demonstration of the registry's intended correction pathway. We define a validation protocol using explicit labels, hard negative controls, locked formulas, geographic and temporal holdouts, established baselines, uncertainty estimates, and external replication. The catalog is intended to make environmental remote-sensing hypotheses inspectable, testable, and correctable, not to replace field measurement or regulatory assessment.
 
 **Keywords:** spectral index; Earth observation; environmental monitoring; Sentinel; imaging spectroscopy; hypothesis registry; validation; open science
 
@@ -140,7 +140,7 @@ Formula schema version 2.0 further separates the proposed formula from the imple
 
 ### 3.1 Audit scope and snapshot
 
-The release audit used the Atlas registry, Limn Atlas deployment, renderable evalscripts, automated test suite, event-source links, reviewed bookmarks, and associated public research documentation as reconciled on 21 July 2026. The Atlas source snapshot is commit `e50c2eda5cf405c7693e5210e04894c691e5f2eb`. Counts are properties of that versioned snapshot, not permanent properties of the project. The complete entry-level inventory is supplied with this preprint.
+The release audit used the Atlas registry, Limn Atlas deployment, renderable evalscripts, automated test suite, event-source links, reviewed bookmarks, and associated public research documentation as reconciled on 21 July 2026. The version 2 audit ran against source snapshot `e50c2eda5cf405c7693e5210e04894c691e5f2eb`. The version 3 corrections in Section 4.6 were applied and re-verified against snapshot `fd00b890c16105d2e011f85d9e182ec5b709ab57`, tagged `gsia-v3-audit`, which is the snapshot this version describes. Counts are properties of those versioned snapshots, not permanent properties of the project. The complete entry-level inventory is supplied with this preprint.
 
 The audit addressed five questions:
 
@@ -321,24 +321,46 @@ to canopy water and dry-matter absorption. The nitrogen-versus-phosphorus separa
 is therefore hypothesized rather than mechanistically supported, and the record is
 renamed accordingly.
 
-**One rendering path was radiometrically incorrect.** The Cloud-Optimized GeoTIFF
-provider converted digital numbers to reflectance by dividing by the quantification
-value alone. Since ESA processing baseline 04.00, operational 25 January 2022,
-Sentinel-2 L2A carries an additive offset of -1000 that the archive serving those
-assets does not apply. Every reflectance that path produced for a scene acquired
-after that date was therefore 0.1 too high. Because an additive offset does not
-cancel in a normalized difference, the error propagated to every ratio, not only to
-records using absolute thresholds. The offset is now resolved per scene from archive
-metadata, preferring an explicit offset-applied flag, then the processing baseline,
-then acquisition date, and is covered by a regression test.
+**One rendering path was radiometrically incorrect, intermittently.** The
+Cloud-Optimized GeoTIFF provider converted digital numbers to reflectance by
+dividing by the quantification value alone. Since ESA processing baseline 04.00,
+operational 25 January 2022, Sentinel-2 L2A carries an additive offset of -1000.
+
+The archive serving those assets applies that offset to most, but not all, of its
+baseline 04.00 and later items, and publishes a per-item flag recording which. A
+survey of the project's test area on 25 July 2026 found 38 of 589 items, or 6.5%,
+carrying the offset unapplied, concentrated in 2022 and 2025 with none in 2023 or
+2024. Reflectance for those scenes was 0.1 too high while neighbouring scenes were
+correct, and because an additive offset does not cancel in a normalized difference
+the error propagated to ratios as well as absolute thresholds.
+
+The scene-dependent character is more consequential than the magnitude. A uniform
+bias is at least internally consistent; an intermittent one makes two observations
+of the same location differ by 0.1 reflectance with nothing in the output to
+indicate which convention applied, which silently invalidates multi-date
+comparison. No acquisition-date rule can resolve it. The offset is now read per
+item from the archive flag, falling back to the processing baseline and then to
+acquisition date, and is covered by a regression test.
+
+This is a general hazard rather than a project-specific slip. Any catalog that
+renders Sentinel-2 from a public cloud-optimized archive inherits the same
+ambiguity, and a per-item check is the only reliable resolution.
 
 The audit reported in Sections 4.2 and 4.3 used the public Web Map Service path,
 which applies this harmonization by default, so **no result reported in version 2
-depended on the affected path**. The correction matters prospectively: any
-entry-level validation study that renders through the affected provider must use the
-corrected conversion, and any absolute threshold fitted on that path before the
-correction should be refitted. Thresholds fitted through the harmonized Statistics
-API path are unaffected and were confirmed so by inspection.
+depended on the affected path**. Threshold work carried out elsewhere in the project
+draws its band statistics from a harmonized statistics service and was confirmed
+unaffected by inspection, and a re-run of the affected renderer over the project's
+own reviewed locations resolved an offset of zero for every tile, reproducing the
+prior qualitative result.
+
+The defect therefore did not reach a reported result. It is documented because it
+would have corrupted any future multi-date product rendered through that path, and
+because a latent defect found and closed before it propagates is the outcome the
+correction pathway in Section 7.4 is intended to produce. The correction matters
+prospectively: any entry-level validation study that renders from a cloud-optimized
+archive must resolve the offset per item, and any absolute threshold fitted on that
+path beforehand should be refitted.
 
 **Internal consistency.** The bare-soil index had three incompatible definitions
 across evalscripts; one record substituted a green band for the blue band used
@@ -544,7 +566,7 @@ The versioned resources for this manuscript are:
 - superseded version 2 supplement, retained for comparison: [GSIA v2 status supplement](https://github.com/globe-and-atlas/remote-sensing-research/blob/main/preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv);
 - version 2 to version 3 erratum: [GSIA v2 erratum](https://github.com/globe-and-atlas/remote-sensing-research/blob/main/preprint/gsia_preprint_v2_erratum_2026-07-25.md);
 - version 2 audited commit: [e50c2eda5cf405c7693e5210e04894c691e5f2eb](https://github.com/globe-and-atlas/limn/commit/e50c2eda5cf405c7693e5210e04894c691e5f2eb); and
-- Limn Atlas implementation and version 3 corrected commit: `<FILL AT RELEASE: commit hash containing the Section 4.6 corrections>`.
+- Limn Atlas implementation and version 3 audited commit, tagged `gsia-v3-audit`: [fd00b890c16105d2e011f85d9e182ec5b709ab57](https://github.com/globe-and-atlas/limn/commit/fd00b890c16105d2e011f85d9e182ec5b709ab57).
 
 The human-readable catalog presents the proposed and implemented formula fields for every record, organized by capability family. The accompanying CSV contains the same governed records together with formula version, method role, contribution class, maturity, implementation state, calibration and validation status, bookmark-date semantics, display-QC metadata, and source snapshot.
 

@@ -50,19 +50,50 @@ The corrections are to record *descriptions*, not to the registry's structure.
 `sentinel-2-l2a` digital numbers to reflectance with a bare `DN / 10000`. Since
 ESA processing baseline 04.00 (operational 2022-01-25), L2A carries
 `BOA_ADD_OFFSET = -1000`, so physical reflectance is `(DN - 1000) / 10000`.
-Earth Search serves unharmonized ESA DN.
 
-**Consequence.** Every COG-path reflectance for a post-2022-01-25 scene read
-**0.1 too high**. Because an additive offset does not cancel in `(a-b)/(a+b)`,
-this biased *all* normalized ratios toward zero, not only the twelve live records
-that use absolute reflectance thresholds. A worked case: NDVI computed from
-DN 3000/1500 returns 0.33 uncorrected versus 0.60 corrected — a 0.27 error.
+**Consequence — narrower and stranger than a uniform bias.** Earth Search exposes
+`earthsearch:boa_offset_applied`. For most items it is `true`: the archive has
+already spent the offset, and `DN / 10000` is correct. The defect is the subset
+where it is `false` on a baseline >= 04.00 item. Measured over the Permian test
+area on 2026-07-25, that subset is **38 of 589 items (6.5%)**, concentrated in
+2022 and 2025 with none in 2023 or 2024.
 
-**Scope.** The COG path is the configured default provider. The Sentinel Hub WMS
-path was never affected (`harmonizeValues` defaults to true). The Google Earth
-Engine path was never affected (`COPERNICUS/S2_SR_HARMONIZED` is pre-harmonized).
-The v2 display audit used the public WMS path, so **the "nonblank overlay for all
-37" result is not invalidated.**
+Those scenes read **0.1 reflectance too high** while their neighbours read
+correctly. Because an additive offset does not cancel in `(a-b)/(a+b)`, the error
+propagates to normalized ratios as well as absolute thresholds: NDVI computed
+from DN 3000/1500 returns 0.33 uncorrected versus 0.60 corrected, a 0.27 error.
+
+The scene-dependent character is the substantive problem. A uniform bias would at
+least be internally consistent; this makes two dates of the same site differ by
+0.1 reflectance with nothing in the rendered output to indicate which convention
+applied, so any multi-date comparison built on the raw expression is silently
+inconsistent. A date rule cannot fix it — the flag must be read per item.
+
+**Scope.** The COG path is the configured default for map rendering. The Sentinel
+Hub WMS path was never affected (`harmonizeValues` defaults to true). The Google
+Earth Engine path was never affected (`COPERNICUS/S2_SR_HARMONIZED` is
+pre-harmonized). The v2 display audit used the public WMS path, so **the "nonblank
+overlay for all 37" result is not invalidated.**
+
+The produced-water threshold work is also unaffected: `fetch_spill_bands.py` and
+`sample_background.py` obtain band means through the Sentinel Hub Statistics API,
+so the 150 background controls, the 32-record TRRC benchmark, the
+1,224-combination sweep, and the fitted thresholds were all computed on correctly
+scaled reflectance despite every one of their dates falling after the baseline
+change.
+
+Nor is the 2026-07-23 COG visual QC pass affected. Re-running it through the new
+`execution/qc_spill_cog_render.py` resolved an offset of zero for all 56 tiles:
+every scene those bookmarks retrieve already carried the offset applied. The
+qualitative result is reproduced — Matador Desoto and Lake Boehmer respond most
+strongly, most other sites are near-blank — although absolute percentages differ
+from the ad-hoc pass. That difference is attributable to parameters the original
+pass did not record, not to the offset.
+
+**Net position.** The defect is real and would have silently corrupted any future
+multi-date product rendered through this path, but it did not reach a published or
+recorded result. It is reported here as a latent defect found and closed, which is
+the outcome the registry's correction pathway is meant to produce.
 
 **Correction.** Offset now resolved per scene, preferring
 `earthsearch:boa_offset_applied` (guards against double-correction), then
