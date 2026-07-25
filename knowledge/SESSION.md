@@ -26,3 +26,6 @@
 - None. Ready for next session.
 - 2026-05-26 14:17 — commit: docs: add Zenodo update guide to procedural knowledge and promote SESSION.md | knowledge/INDEX.md,knowledge/SESSION.md,knowledge/procedural/zenodo_update.md
 - 2026-05-26 14:33 — commit: docs: align domain counts in ATLAS.md and preprint to exactly Twelve Domains | ATLAS.md,preprint/gsia_preprint_v1.md,registry/master_index_catalog.md
+- 2026-06-24 14:33 — commit: docs: update Zenodo DOI references in preprint and prune Spectral Index registry submission directory | knowledge/SESSION.md,preprint/gsia_preprint_v1.md,preprint/gsia_preprint_v1.pdf,registry/Awesome_EE_Spectral_Indices_Contribution.md
+- 2026-07-21 18:44 — commit: publish GSIA v2 formula catalog | .gitignore,ATLAS.md,README.md,formulas/formula-quick-reference.md,formulas/gsia-v2-formula-catalog.md
+- 2026-07-25 — GSIA v3 prepared: erratum for the published v2, regenerated 91-record status supplement (0 drift vs live registry), and v3 manuscript adding Section 4.6 'Corrections since version 2' plus six Table 4 rows. All v2 counts hold (91; 37/16/38; roles; 24 families); corrections are to per-record descriptions and one rendering path. Source defects and fixes live in the limn repo (branch fix/scientific-review-corrections-2026-07-25). Outstanding before posting: fill the release commit hash placeholder in the v3 availability list.
