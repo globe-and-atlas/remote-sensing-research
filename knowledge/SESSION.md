@@ -34,3 +34,4 @@
 - 2026-07-25 14:53 — commit: docs: narrow the radiometric finding and cite the v3 audited snapshot | preprint/gsia_preprint_v2_erratum_2026-07-25.md,preprint/gsia_preprint_v3_submission_manuscript_2026-07-25.md
 - 2026-07-25 14:56 — commit: docs: point the v3 supplement source_commit at the gsia-v3-audit tag | preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv
 - 2026-07-25 14:58 — commit: docs: pin v3 repository citations to an immutable tag | preprint/gsia_preprint_v3_submission_manuscript_2026-07-25.md
+- 2026-07-25 16:35 — commit: docs: repoint Atlas citations at the public limn-atlas repository | README.md,formulas/gsia-v2-formula-catalog.md,preprint/gsia_preprint_v2_submission_manuscript_2026-07-21.md,preprint/gsia_preprint_v3_submission_manuscript_2026-07-25.md,scripts/generate_gsia_v2_formula_catalog.py
