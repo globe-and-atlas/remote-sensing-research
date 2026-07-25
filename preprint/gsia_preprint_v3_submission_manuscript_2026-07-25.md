@@ -561,14 +561,14 @@ The versioned resources for this manuscript are:
 - archival Atlas concept record: [https://doi.org/10.5281/zenodo.20400743](https://doi.org/10.5281/zenodo.20400743);
 - version 1 Zenodo record: [https://doi.org/10.5281/zenodo.20400744](https://doi.org/10.5281/zenodo.20400744);
 - registry source: [https://github.com/globe-and-atlas/remote-sensing-research](https://github.com/globe-and-atlas/remote-sensing-research);
-- human-readable catalog of all 91 formulas: [GSIA v2 Formula Catalog](https://github.com/globe-and-atlas/remote-sensing-research/blob/main/formulas/gsia-v2-formula-catalog.md);
-- machine-readable 91-record supplement (version 3): [GSIA v3 status supplement](https://github.com/globe-and-atlas/remote-sensing-research/blob/main/preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv);
-- superseded version 2 supplement, retained for comparison: [GSIA v2 status supplement](https://github.com/globe-and-atlas/remote-sensing-research/blob/main/preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv);
-- version 2 to version 3 erratum: [GSIA v2 erratum](https://github.com/globe-and-atlas/remote-sensing-research/blob/main/preprint/gsia_preprint_v2_erratum_2026-07-25.md);
+- human-readable catalog of all 91 formulas: [GSIA v2 Formula Catalog](https://github.com/globe-and-atlas/remote-sensing-research/blob/gsia-v3-preprint/formulas/gsia-v2-formula-catalog.md);
+- machine-readable 91-record supplement (version 3): [GSIA v3 status supplement](https://github.com/globe-and-atlas/remote-sensing-research/blob/gsia-v3-preprint/preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv);
+- superseded version 2 supplement, retained for comparison: [GSIA v2 status supplement](https://github.com/globe-and-atlas/remote-sensing-research/blob/gsia-v3-preprint/preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv);
+- version 2 to version 3 erratum: [GSIA v2 erratum](https://github.com/globe-and-atlas/remote-sensing-research/blob/gsia-v3-preprint/preprint/gsia_preprint_v2_erratum_2026-07-25.md);
 - version 2 audited commit: [e50c2eda5cf405c7693e5210e04894c691e5f2eb](https://github.com/globe-and-atlas/limn/commit/e50c2eda5cf405c7693e5210e04894c691e5f2eb); and
 - Limn Atlas implementation and version 3 audited commit, tagged `gsia-v3-audit`: [fd00b890c16105d2e011f85d9e182ec5b709ab57](https://github.com/globe-and-atlas/limn/commit/fd00b890c16105d2e011f85d9e182ec5b709ab57).
 
-The human-readable catalog presents the proposed and implemented formula fields for every record, organized by capability family. The accompanying CSV contains the same governed records together with formula version, method role, contribution class, maturity, implementation state, calibration and validation status, bookmark-date semantics, display-QC metadata, and source snapshot.
+Repository links above are pinned to the immutable tag `gsia-v3-preprint` rather than to a branch, so they resolve to the exact files described here even after later development. The human-readable catalog presents the proposed and implemented formula fields for every record, organized by capability family. The accompanying CSV contains the same governed records together with formula version, method role, contribution class, maturity, implementation state, calibration and validation status, bookmark-date semantics, display-QC metadata, and source snapshot.
 
 Sentinel data are available through the [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/). PACE and other NASA mission data are available through [NASA Earthdata](https://www.earthdata.nasa.gov/). EMIT products are distributed through the NASA Land Processes Distributed Active Archive Center.
 
