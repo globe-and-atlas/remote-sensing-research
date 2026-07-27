@@ -1,11 +1,11 @@
-# Global Spectral Index Atlas v2 Formula Catalog
+# Global Spectral Index Atlas Formula Catalog (schema v2.0)
 
-- **Release audit:** 2026-07-21
+- **Release audit:** 2026-07-25
 - **Records:** 91 across 12 domains and 24 capability families
 - **Formula schema:** 2.0
-**Audited Atlas source:** commit `e50c2eda5cf405c7693e5210e04894c691e5f2eb`, since made private; the public Atlas viewer is now maintained at [globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas)
+**Audited Atlas source:** commit `fd00b890c16105d2e011f85d9e182ec5b709ab57`, since made private; the public Atlas viewer is now maintained at [globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas)
 
-This is the human-readable companion to the machine-readable [`gsia_preprint_v2_status_supplement_2026-07-21.csv`](../preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv). The CSV is authoritative. This file is generated from it so the formulas, maturity states, method roles, and limits remain synchronized.
+This is the human-readable companion to the machine-readable [`gsia_preprint_v3_status_supplement_2026-07-25.csv`](../preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv). The CSV is authoritative. This file is generated from it so the formulas, maturity states, method roles, and limits remain synchronized.
 
 GSIA is a registry of proposed environmental remote-sensing specifications, not a collection of 91 validated detectors. A formula can be useful as a screening feature or research hypothesis without establishing target specificity, causal attribution, concentration, risk, or regulatory status.
 
@@ -53,13 +53,13 @@ GSIA is a registry of proposed environmental remote-sensing specifications, not 
 | 20 | [SMPDI](#smpdi) - Floating-Material Spectral Contrast | Floating & Surface Material | primary | M3 | Live screening proxy |
 | 21 | [CBSDI](#cbsdi) - Coral Brightness Context Proxy | Coastal Habitat Condition | primary | M3 | Live screening proxy |
 | 22 | [KCDSI](#kcdsi) - Floating or Shallow-Water Vegetation Context | Floating & Surface Material | variant | M3 | Live screening proxy |
-| 23 | [OWSI](#owsi) - Oil Spill Weathering Stage Index | Floating & Surface Material | variant | M3 | Live screening proxy |
+| 23 | [OWSI](#owsi) - Oil-Related Surface Contrast Proxy | Floating & Surface Material | variant | M3 | Live screening proxy |
 | 24 | [MDSPI](#mdspi) - Mangrove Dieback Spatial Pattern Index | Coastal Habitat Condition | research-model | M2 | Executable but non-live |
 | 25 | [SGDCI](#sgdci) - Submarine Groundwater Discharge Chemistry Index | Water Condition & Plumes | research-model | M1 | Formula specified; not implemented in Atlas |
 | 26 | [SPEI](#spei) - Seagrass Photosynthetic Efficiency Index | Coastal Habitat Condition | research-model | M2 | Executable but non-live |
 | 27 | [CD-UAI](#cd-uai) - Coastal Water Turbidity Context | Water Condition & Plumes | variant | M3 | Live screening proxy |
 | 28 | [MP-PDI](#mp-pdi) - Floating-Debris Candidate Feature | Floating & Surface Material | variant | M3 | Live screening proxy |
-| 29 | [NPDefI](#npdefi) - Nitrogen vs. Phosphorus Deficiency Discrimination Index | Crop & Soil Stress | primary | M3 | Live screening proxy |
+| 29 | [NPDefI](#npdefi) - Red-Edge and SWIR Crop Contrast Proxy | Crop & Soil Stress | primary | M3 | Live screening proxy |
 | 30 | [SCSPI](#scspi) - Soil Compaction Spectral Proxy Index | Crop & Soil Stress | research-model | M2 | Executable but non-live |
 | 31 | [APRI](#apri) - Aflatoxin Pre-Harvest Risk Index | Crop & Soil Stress | research-model | M1 | Formula specified; not implemented in Atlas |
 | 32 | [PDSDI](#pdsdi) - Crop Red-Edge and Dryness Context | Crop & Soil Stress | variant | M3 | Live screening proxy |
@@ -74,7 +74,7 @@ GSIA is a registry of proposed environmental remote-sensing specifications, not 
 | 41 | [CCRBI](#ccrbi) - Coal Combustion Residue Bioaccumulation Index | Mining Surfaces & Risk | research-model | M2 | Executable but non-live |
 | 42 | [HLPII](#hlpii) - Heap Leach Pad Integrity Index | Mining Surfaces & Risk | research-model | M1 | Formula specified; not implemented in Atlas |
 | 43 | [IERPI](#ierpi) - Industrial Effluent River Plume Index | Water Condition & Plumes | research-model | M2 | Executable but non-live |
-| 44 | [EC-ACI](#ec-aci) - Evapotranspirative Canopy & Asphalt Contrast Index | Urban Surface Condition | primary | M3 | Live screening proxy |
+| 44 | [EC-ACI](#ec-aci) - Urban Canopy-Loss & Dry-Surface Context Index | Urban Surface Condition | primary | M3 | Live screening proxy |
 | 45 | [HSAI](#hsai) - Low-Vegetation Bare-Surface Context | Urban Surface Condition | component | M3 | Live screening proxy |
 | 46 | [SPSRI](#spsri) - Solar Panel Soiling Remote Index | Urban Surface Condition | research-model | M2 | Executable but non-live |
 | 47 | [UCIEI](#uciei) - Urban Cool Infrastructure Effectiveness Index | Urban Surface Condition | research-model | M1 | Formula specified; not implemented in Atlas |
@@ -87,10 +87,10 @@ GSIA is a registry of proposed environmental remote-sensing specifications, not 
 | 54 | [PCEI](#pcei) - Peat Carbon Exposure Index | Permafrost & Peat Change | primary | M3 | Live screening proxy |
 | 55 | [SABSI](#sabsi) - Bright-Snow Red-Green Context | Snow Pigment Context | primary | M3 | Live screening proxy |
 | 56 | [FGDCI](#fgdci) - Frozen Ground Dielectric Change Index | Permafrost & Peat Change | research-model | M2 | Executable but non-live |
-| 57 | [MEPSI](#mepsi) - CH₄ Ebullition Pond Spectral Proxy | Wetland Gas Surface Context | component | M3 | Live screening proxy |
+| 57 | [MEPSI](#mepsi) - Open Shallow-Water Pond Context | Wetland Gas Surface Context | component | M3 | Live screening proxy |
 | 58 | [ALSI](#alsi) - Active Layer Depth Thermal-Spectral Composite | Permafrost & Peat Change | research-model | M1 | Formula specified; not implemented in Atlas |
 | 59 | [PDCSI](#pdcsi) - Pre-Deforestation Canopy Stress Index | Forest Canopy Condition | primary | M3 | Live screening proxy |
-| 60 | [LISI](#lisi) - Liana Infestation Structural Index | Forest Canopy Condition | variant | M3 | Live screening proxy |
+| 60 | [LISI](#lisi) - Canopy NIR/SWIR Structural Contrast | Forest Canopy Condition | variant | M3 | Live screening proxy |
 | 61 | [UBCDI](#ubcdi) - Understory vs. Canopy Burn Discrimination Index | Fire Effects & Recovery | research-model | M2 | Executable but non-live |
 | 62 | [FEDGI](#fedgi) - Forest Edge Degradation Gradient Index | Forest Disturbance & Carbon | research-model | M2 | Executable but non-live |
 | 63 | [SLSDI](#slsdi) - Selective Logging Scar Detection Index | Forest Disturbance & Carbon | research-model | M2 | Executable but non-live |
@@ -99,14 +99,14 @@ GSIA is a registry of proposed environmental remote-sensing specifications, not 
 | 66 | [SBCI](#sbci) - Sabkha Brine Chemistry Index | Dryland Surface Processes | research-model | M1 | Formula specified; not implemented in Atlas |
 | 67 | [CSCAI](#cscai) - Caliche Surface Carbonate Accumulation Index | Dryland Surface Processes | research-model | M1 | Formula specified; not implemented in Atlas |
 | 68 | [DEFPI](#defpi) - Dust Emission Flux Proxy Index | Dryland Surface Processes | research-model | M1 | Formula specified; not implemented in Atlas |
-| 69 | [DLPEHI](#dlpehi) - Desert Locust Pre-Emergence Habitat Index | Dryland Surface Processes | component | M3 | Live screening proxy |
+| 69 | [DLPEHI](#dlpehi) - Sparse-Vegetation and Bare-Soil Dryland Context | Dryland Surface Processes | component | M3 | Live screening proxy |
 | 70 | [AIBEAI](#aibeai) - Arroyo Incision and Bank Erosion Activity Index | Dryland Surface Processes | research-model | M2 | Executable but non-live |
 | 71 | [PWTDI](#pwtdi) - Peatland Water-Table Calibration Model | Wetland Hydrology | research-model | M2 | Field calibration required |
 | 72 | [MHSSP](#mhssp) - Open Anoxic-Surface Context Proxy | Wetland Gas Surface Context | component | M3 | Live screening proxy |
 | 73 | [TFIDI](#tfidi) - Single-Date Tidal-Zone Wetness Context | Wetland Hydrology | component | M3 | Live screening proxy |
 | 74 | [WDPTZI](#wdptzi) - Peat Moisture Transition Proxy | Wetland Hydrology | component | M3 | Live screening proxy |
-| 75 | [IPVSI](#ipvsi) - Invasive Phragmites vs. Native Vegetation Discrimination | Wetland Vegetation Structure | primary | M3 | Live screening proxy |
-| 76 | [WVTDI](#wvtdi) - Wetland Vegetation Type Discrimination Index | Wetland Vegetation Structure | variant | M3 | Live screening proxy |
+| 75 | [IPVSI](#ipvsi) - Dense-Canopy Red-Edge Ratio Context | Wetland Vegetation Structure | primary | M3 | Live screening proxy |
+| 76 | [WVTDI](#wvtdi) - Wetland Vegetation-Water Balance Context | Wetland Vegetation Structure | variant | M3 | Live screening proxy |
 | 77 | [CMSTI](#cmsti) - Clay-Mineral Absorption-Position Model | Hyperspectral Materials | research-model | M1 | Spectral fitting required |
 | 78 | [MPSSFI](#mpssfi) - Methane Matched-Filter Research Specification | Atmospheric Methane & Carbon | research-model | M1 | Atmospheric retrieval required |
 | 79 | [AFCDI](#afcdi) - Asbestos Fiber Chrysotile Detection Index | Hyperspectral Materials | research-model | M1 | Formula specified; not implemented in Atlas |
@@ -172,7 +172,7 @@ max(0, 0.15 − NBR) × max(0, BSI + 0.1) × max(0, 0.35 − NDVI)
 - **Domain:** Wildfire & Post-Fire (`wildfire`)
 - **Capability role:** research-model in Fire Effects & Recovery
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** S2+ERA5
 - **Formula version:** 2.0
@@ -210,7 +210,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Wildfire & Post-Fire (`wildfire`)
 - **Capability role:** research-model in Fire Effects & Recovery
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** EMIT
 - **Formula version:** 2.0
@@ -248,7 +248,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Tropical Forest (`tropicalforest`)
 - **Capability role:** research-model in Fire Effects & Recovery
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 context; proof target pending
 - **Formula version:** 2.0
@@ -292,7 +292,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Wildfire & Post-Fire (`wildfire`)
 - **Capability role:** retired in Fuel Moisture Context
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Retired record; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Rebuild required
 - **Required inputs:** Sentinel-2 L2A | seasonal reference distribution | field LFMC for stronger inference
 - **Formula version:** 2.0
@@ -412,7 +412,7 @@ clip(AER_AI_340_380 / 3.5, 0, 1)
 - **Domain:** Wildfire & Post-Fire (`wildfire`)
 - **Capability role:** research-model in Smoke & Extreme Fire Behavior
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** GOES+TROPOMI
 - **Formula version:** 2.0
@@ -532,7 +532,7 @@ WaterGate × max(0, NDCI + NIRScumBoost) × (1 − TurbidityReject)
 - **Domain:** Water Quality & Freshwater (`waterquality`)
 - **Capability role:** component in Aquatic Blooms & Pigments
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** PACE / DESIS
 - **Formula version:** 2.0
@@ -570,7 +570,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Marine & Coastal (`marine`)
 - **Capability role:** research-model in Aquatic Blooms & Pigments
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** PACE / DESIS
 - **Formula version:** 2.0
@@ -608,7 +608,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Hyperspectral-Enabled (`hyperspectral`)
 - **Capability role:** research-model in Aquatic Blooms & Pigments
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** DESIS + PACE
 - **Formula version:** 2.0
@@ -646,7 +646,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Hyperspectral-Enabled (`hyperspectral`)
 - **Capability role:** research-model in Aquatic Blooms & Pigments
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** PACE OCI
 - **Formula version:** 2.0
@@ -690,7 +690,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Water Quality & Freshwater (`waterquality`)
 - **Capability role:** research-model in Water Condition & Plumes
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 context; proof target pending
 - **Formula version:** 2.0
@@ -728,7 +728,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Water Quality & Freshwater (`waterquality`)
 - **Capability role:** research-model in Water Condition & Plumes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 context; proof target pending
 - **Formula version:** 2.0
@@ -804,7 +804,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Water Quality & Freshwater (`waterquality`)
 - **Capability role:** research-model in Water Condition & Plumes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Retrieval workflow required
 - **Required inputs:** PACE OCI water-leaving reflectance | atmospheric correction | in-water absorption | field DOC/CDOM
 - **Formula version:** 2.0
@@ -842,7 +842,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Water Quality & Freshwater (`waterquality`)
 - **Capability role:** research-model in Water Condition & Plumes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** Landsat TIRS
 - **Formula version:** 2.0
@@ -880,7 +880,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Water Quality & Freshwater (`waterquality`)
 - **Capability role:** research-model in Water Condition & Plumes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 + PACE
 - **Formula version:** 2.0
@@ -918,7 +918,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Marine & Coastal (`marine`)
 - **Capability role:** research-model in Water Condition & Plumes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** PACE + ECOSTRESS
 - **Formula version:** 2.0
@@ -994,7 +994,7 @@ max(0, RedGreenContrast + 0.05) × WaterGate × 6
 - **Domain:** Mining & Industrial (`mining`)
 - **Capability role:** research-model in Water Condition & Plumes
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 context; proof target pending
 - **Formula version:** 2.0
@@ -1032,7 +1032,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Mining & Industrial (`mining`)
 - **Capability role:** research-model in Water Condition & Plumes
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Landsat-family/Sentinel-2 context
 - **Formula version:** 2.0
@@ -1198,19 +1198,19 @@ max(0, NDCI) × max(0, −NDWI) × OrganicSurfaceHeuristic × 10
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
 - **Maturity:** M3 - Live catalog visualization
 - **Formula status:** Live screening proxy
-- **Required inputs:** Sentinel-2 + EMIT
+- **Required inputs:** Sentinel-2 L2A
 - **Formula version:** 2.0
 
 **Proposed formula or workflow**
 
 ```text
-WaterGate × LandReject × [FAI − ((B8A−B11)/(B8A+B11))]
+Polymer-versus-biomass discrimination using imaging spectroscopy (e.g. EMIT) with labeled floating-material references
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-WaterGate × LandReject × [FAI − ((B8A−B11)/(B8A+B11))]
+WaterGate × LandReject × [FAI_B12baseline − ((B8A−B11)/(B8A+B11))]
 ```
 
 - **Temporal operator:** Single-scene
@@ -1218,9 +1218,9 @@ WaterGate × LandReject × [FAI − ((B8A−B11)/(B8A+B11))]
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** The live feature combines a floating-algae-style baseline residual with NIR/SWIR contrast and water/land gates. Sargassum-versus-plastic discrimination has not been independently evaluated.
+**Physical rationale.** The live feature combines a floating-algae-style baseline residual with NIR/SWIR contrast and water/land gates. The baseline is interpolated B04→B12 rather than the B04→B11 pairing used in common Sentinel-2 FAI implementations, so it is an FAI variant and not the canonical index. Sargassum-versus-plastic discrimination has not been independently evaluated, and the live layer uses no EMIT data.
 
-**Intended use and inference limit.** Candidate feature for labeled floating-material classification against established FDI baselines.
+**Intended use and inference limit.** Candidate feature for labeled floating-material classification against established FDI baselines (Biermann et al., 2020).
 
 **Evidence and validation.** Reviewed event context; not performance evidence. Not independently evaluated (below V1).
 
@@ -1267,26 +1267,26 @@ max(0, NDVI) × I[B11<0.04 and B03<0.16]
 ---
 
 <a id="owsi"></a>
-### OWSI - Oil Spill Weathering Stage Index
+### OWSI - Oil-Related Surface Contrast Proxy
 
 - **Domain:** Marine & Coastal (`marine`)
 - **Capability role:** variant in Floating & Surface Material
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
 - **Maturity:** M3 - Live catalog visualization
 - **Formula status:** Live screening proxy
-- **Required inputs:** EMIT + Sentinel-2
+- **Required inputs:** Sentinel-2 L2A
 - **Formula version:** 2.0
 
 **Proposed formula or workflow**
 
 ```text
-NDOI × (B11/B12) weathering ratio
+Weathering-stage classification from imaging spectroscopy (e.g. EMIT) with sampled oil-age references
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-NDOI × (B11/B12) weathering ratio
+max(0, (B02−B12)/(B02+B12)) × max(0, B11/B12 − 0.8) × 2
 ```
 
 - **Temporal operator:** Single-scene
@@ -1294,9 +1294,9 @@ NDOI × (B11/B12) weathering ratio
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** Fresh crude: high SWIR absorption. Weathered oil: oxidized surface changes B11/B12 ratio. Combining NDOI with SWIR slope tracks oil age from fresh (days) to emulsified (weeks).
+**Physical rationale.** The live layer is a blue/SWIR2 contrast scaled by a SWIR1:SWIR2 ratio. "NDOI" is a legacy broad-band contrast name, not a hydrocarbon retrieval, and the ratio term is not a calibrated weathering clock. The live layer uses no EMIT data.
 
-**Intended use and inference limit.** Real-time spill response prioritization — fresh vs. weathered oil requires different cleanup methods.
+**Intended use and inference limit.** Surface-contrast context over water for selecting oil-incident scenes for review; it does not establish oil presence, thickness, or age.
 
 **Evidence and validation.** Reviewed event context; not performance evidence. Not independently evaluated (below V1).
 
@@ -1392,7 +1392,7 @@ I[(B03−B04)/(B03+B04) < 0.05 and B02 > 0.06] × (0.5 + 3B02)
 - **Domain:** Marine & Coastal (`marine`)
 - **Capability role:** research-model in Coastal Habitat Condition
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 + S1; proof target pending
 - **Formula version:** 2.0
@@ -1430,7 +1430,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Marine & Coastal (`marine`)
 - **Capability role:** research-model in Coastal Habitat Condition
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 + DESIS
 - **Formula version:** 2.0
@@ -1469,26 +1469,26 @@ Not implemented in the current Atlas release.
 - **Records:** 4 (1 primary; 2 research-model; 1 variant)
 
 <a id="npdefi"></a>
-### NPDefI - Nitrogen vs. Phosphorus Deficiency Discrimination Index
+### NPDefI - Red-Edge and SWIR Crop Contrast Proxy
 
 - **Domain:** Agriculture & Food (`agriculture`)
 - **Capability role:** primary in Crop & Soil Stress
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
 - **Maturity:** M3 - Live catalog visualization
 - **Formula status:** Live screening proxy
-- **Required inputs:** Sentinel-2 + EnMAP
+- **Required inputs:** Sentinel-2 L2A
 - **Formula version:** 2.0
 
 **Proposed formula or workflow**
 
 ```text
-[(B04−B05)/(B04+B05)] − [(B12−B11)/(B12+B11)]
+Nitrogen-versus-phosphorus discrimination calibrated to measured tissue nutrient concentrations, with crop, cultivar, phenology, and soil-background strata
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-[(B04−B05)/(B04+B05)] − [(B12−B11)/(B12+B11)]
+I[NDVI>0.2] × clip({[(B04−B05)/(B04+B05)] − [(B12−B11)/(B12+B11)]} + 0.5, 0, 1)
 ```
 
 - **Temporal operator:** Single-scene
@@ -1496,9 +1496,9 @@ Not implemented in the current Atlas release.
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** N deficiency → chlorophyll degradation → red-edge shift (B05/B04 signal). P deficiency → anthocyanin → SWIR2 (B12). Subtraction yields a signed nutrient discriminator.
+**Physical rationale.** The live layer differences a red/red-edge contrast against a SWIR2/SWIR1 contrast over vegetated pixels. The red-edge term responds to chlorophyll status, but the SWIR term tracks canopy water and dry-matter (cellulose/lignin) absorption — it is not an anthocyanin signal, because anthocyanins absorb near 500–550 nm and have no SWIR2 feature. The separation of nitrogen from phosphorus limitation is therefore hypothesized, not demonstrated, and the live layer uses no EnMAP data.
 
-**Intended use and inference limit.** Precision nutrient prescription from orbit — reduces fertilizer over-application and nutrient runoff.
+**Intended use and inference limit.** Candidate crop-stress contrast for experiments with measured nutrient data; it does not identify which nutrient is limiting.
 
 **Evidence and validation.** Reviewed event context; not performance evidence. Not independently evaluated (below V1).
 
@@ -1512,7 +1512,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Agriculture & Food (`agriculture`)
 - **Capability role:** research-model in Crop & Soil Stress
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 context; proof target pending
 - **Formula version:** 2.0
@@ -1550,7 +1550,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Agriculture & Food (`agriculture`)
 - **Capability role:** research-model in Crop & Soil Stress
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** ECOSTRESS + S2 + ERA5
 - **Formula version:** 2.0
@@ -1670,7 +1670,7 @@ NDVI_cover_green × (1−soil_tillage_signal)
 - **Domain:** Agriculture & Food (`agriculture`)
 - **Capability role:** research-model in Agricultural Management
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** ECOSTRESS + S1
 - **Formula version:** 2.0
@@ -1752,7 +1752,7 @@ max(0, RedBlueContrast−0.05) × max(0, B11/B12−1) × 3
 - **Domain:** Mining & Industrial (`mining`)
 - **Capability role:** retired in Mining Surfaces & Risk
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Retired record; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Rebuild required
 - **Required inputs:** surface reflectance | field pH | XRD/mineralogy | spectral library | held-out sites
 - **Formula version:** 2.0
@@ -1790,7 +1790,7 @@ Legacy visible ratio-of-ratios retired from live display because its denominator
 - **Domain:** Mining & Industrial (`mining`)
 - **Capability role:** research-model in Mining Surfaces & Risk
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Calibrated model required
 - **Required inputs:** S2 + S1 InSAR
 - **Formula version:** 2.0
@@ -1828,7 +1828,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Mining & Industrial (`mining`)
 - **Capability role:** research-model in Mining Surfaces & Risk
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** EnMAP + EMIT
 - **Formula version:** 2.0
@@ -1866,7 +1866,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Mining & Industrial (`mining`)
 - **Capability role:** research-model in Mining Surfaces & Risk
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 context; proof target pending
 - **Formula version:** 2.0
@@ -1904,7 +1904,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Mining & Industrial (`mining`)
 - **Capability role:** research-model in Mining Surfaces & Risk
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** S2 + EMIT
 - **Formula version:** 2.0
@@ -1943,26 +1943,26 @@ Not implemented in the current Atlas release.
 - **Records:** 6 (1 primary; 2 component; 3 research-model)
 
 <a id="ec-aci"></a>
-### EC-ACI - Evapotranspirative Canopy & Asphalt Contrast Index
+### EC-ACI - Urban Canopy-Loss & Dry-Surface Context Index
 
 - **Domain:** Urban & Infrastructure (`urban`)
 - **Capability role:** primary in Urban Surface Condition
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
 - **Maturity:** M3 - Live catalog visualization
 - **Formula status:** Live screening proxy
-- **Required inputs:** Sentinel-2 + ECOSTRESS
+- **Required inputs:** Sentinel-2 L2A
 - **Formula version:** 2.0
 
 **Proposed formula or workflow**
 
 ```text
-(1−NDVI) × low_moisture_proxy
+LST-based heat-island model = f(ECOSTRESS/thermal LST, NDVI, surface moisture, urban morphology, time-of-day)
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-(1−NDVI) × low_moisture_proxy
+max(0, 0.4 − NDVI) × max(0, MSI − 0.8) × 3
 ```
 
 - **Temporal operator:** Single-scene
@@ -1970,9 +1970,9 @@ Not implemented in the current Atlas release.
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** Urban heat islands form where high-albedo vegetation is replaced by low-albedo asphalt. S2 NDVI loss combined with MSI moisture stress proxies urban heat island formation without thermal data.
+**Physical rationale.** The live layer combines an NDVI deficit with a SWIR/NIR moisture-stress ratio (MSI = B11/B08) over Sentinel-2 optical bands only. It does not read ECOSTRESS or any thermal data, and the output is not a land-surface-temperature or heat-island-intensity measurement.
 
-**Intended use and inference limit.** Maps urban heat island intensity at neighborhood scale — guides heat-resilience infrastructure investment.
+**Intended use and inference limit.** Screens neighborhoods for low-canopy, dry-surface context associated with urban heat exposure. Measuring heat-island intensity itself requires thermal/LST data this layer does not use.
 
 **Evidence and validation.** Reviewed event context; not performance evidence. Not independently evaluated (below V1).
 
@@ -2024,7 +2024,7 @@ max(0, 0.3−NDVI) × max(0, BSI+0.05) × 6
 - **Domain:** Urban & Infrastructure (`urban`)
 - **Capability role:** research-model in Urban Surface Condition
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 + Planet
 - **Formula version:** 2.0
@@ -2062,7 +2062,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Urban & Infrastructure (`urban`)
 - **Capability role:** research-model in Urban Surface Condition
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** S2 + ECOSTRESS
 - **Formula version:** 2.0
@@ -2138,7 +2138,7 @@ I[B02,B03,B04<0.15 and NDVI<0.05] × (1−8×mean(B02,B03,B04))
 - **Domain:** Urban & Infrastructure (`urban`)
 - **Capability role:** research-model in Urban Surface Condition
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** TROPOMI + GIS
 - **Formula version:** 2.0
@@ -2378,7 +2378,7 @@ I[B12>0.08 and −0.2<NDWI<0.4] × max(0,NDWI+0.2) × 3
 - **Domain:** Permafrost & Arctic (`permafrost`)
 - **Capability role:** research-model in Permafrost & Peat Change
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-1 SAR proof target pending
 - **Formula version:** 2.0
@@ -2416,7 +2416,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Permafrost & Arctic (`permafrost`)
 - **Capability role:** research-model in Permafrost & Peat Change
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** ECOSTRESS + Sentinel-2
 - **Formula version:** 2.0
@@ -2462,13 +2462,13 @@ Not implemented in the current Atlas release.
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
 - **Maturity:** M3 - Live catalog visualization
 - **Formula status:** Live screening proxy
-- **Required inputs:** Sentinel-2 + Planet
+- **Required inputs:** Sentinel-2 L2A
 - **Formula version:** 2.0
 
 **Proposed formula or workflow**
 
 ```text
-SnowMask × pigment model calibrated to algae abundance and impurities
+SnowMask × pigment model calibrated to algae abundance and impurities, with higher-cadence imagery (e.g. Planet) for bloom timing
 ```
 
 **Implemented or retained legacy formula**
@@ -2482,7 +2482,7 @@ I[B02>0.4 and B03>0.4] × max[0, (B04−B03)/(B04+B03)+0.05] × 10
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** The live code uses visible-band brightness rather than NDSI and cannot uniquely attribute red snow to algae.
+**Physical rationale.** The live code uses visible-band brightness rather than NDSI and cannot uniquely attribute red snow to algae. The absolute brightness gates (B02, B03 > 0.4) assume offset-corrected surface reflectance. The live layer uses no Planet data.
 
 **Intended use and inference limit.** Red/green spectral context over bright snow for field-reviewed algae studies.
 
@@ -2499,26 +2499,26 @@ I[B02>0.4 and B03>0.4] × max[0, (B04−B03)/(B04+B03)+0.05] × 10
 - **Records:** 2 (2 component)
 
 <a id="mepsi"></a>
-### MEPSI - CH₄ Ebullition Pond Spectral Proxy
+### MEPSI - Open Shallow-Water Pond Context
 
 - **Domain:** Permafrost & Arctic (`permafrost`)
 - **Capability role:** component in Wetland Gas Surface Context
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
 - **Maturity:** M3 - Live catalog visualization
 - **Formula status:** Live screening proxy
-- **Required inputs:** Sentinel-2 + Planet
+- **Required inputs:** Sentinel-2 L2A
 - **Formula version:** 2.0
 
 **Proposed formula or workflow**
 
 ```text
-high_NDWI × low_NDVI × low_macrophyte_index
+Ebullition-pond identification calibrated to measured methane flux, with higher-cadence imagery (e.g. Planet) for pond dynamics
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-high_NDWI × low_NDVI × low_macrophyte_index
+I[NDWI>0.1 and NDVI<0.15 and NDCI<0.05] × max(0, NDWI) × 3
 ```
 
 - **Temporal operator:** Single-scene
@@ -2526,9 +2526,9 @@ high_NDWI × low_NDVI × low_macrophyte_index
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** Active ebullition ponds are open sediment-covered shallow water: high NDWI (water), low NDVI (no aquatic vegetation), and low chlorophyll index (bare water surface).
+**Physical rationale.** The live layer gates on open water with low vegetation and low red-edge chlorophyll contrast. The third term is NDCI, a chlorophyll-a water index, used here as a bare-water proxy rather than a macrophyte measurement. Ebullition is not observed, and the live layer uses no Planet data.
 
-**Intended use and inference limit.** Maps active methane-ebullition ponds — the largest unmonitored non-CO₂ greenhouse gas source in Arctic.
+**Intended use and inference limit.** Selects open, low-productivity ponds as candidate sites for flux measurement.
 
 **Evidence and validation.** Reviewed event context; not performance evidence. Not independently evaluated (below V1).
 
@@ -2544,19 +2544,19 @@ high_NDWI × low_NDVI × low_macrophyte_index
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
 - **Maturity:** M3 - Live catalog visualization
 - **Formula status:** Live screening proxy
-- **Required inputs:** Sentinel-2 + TROPOMI
+- **Required inputs:** Sentinel-2 L2A
 - **Formula version:** 2.0
 
 **Proposed formula or workflow**
 
 ```text
-NDWI × (1−NDVI) × (1−CI_rededge/local_max)
+Surface-context features combined with an atmospheric methane retrieval (e.g. TROPOMI) and plume-transport modelling
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-NDWI × (1−NDVI) × (1−CI_rededge/local_max)
+max(0,NDWI) × max(0, 0.3−NDVI) × max(0, 0.1−(B05−B04)/(B05+B04)) × 20
 ```
 
 - **Temporal operator:** Single-scene
@@ -2564,7 +2564,7 @@ NDWI × (1−NDVI) × (1−CI_rededge/local_max)
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** The live formula identifies wet, low-vegetation, low-red-edge surfaces. It does not measure methane flux or identify emission hotspots.
+**Physical rationale.** The live formula identifies wet, low-vegetation, low-red-edge surfaces. The red-edge term is a fixed threshold, not the advertised normalization against a local maximum. It does not measure methane flux or identify emission hotspots, and the live layer uses no TROPOMI data.
 
 **Intended use and inference limit.** Candidate surface-context feature for studies with chamber, tower, or atmospheric methane measurements.
 
@@ -2619,7 +2619,7 @@ NDWI × (1−NDVI) × (1−CI_rededge/local_max)
 ---
 
 <a id="lisi"></a>
-### LISI - Liana Infestation Structural Index
+### LISI - Canopy NIR/SWIR Structural Contrast
 
 - **Domain:** Tropical Forest (`tropicalforest`)
 - **Capability role:** variant in Forest Canopy Condition
@@ -2632,13 +2632,13 @@ NDWI × (1−NDVI) × (1−CI_rededge/local_max)
 **Proposed formula or workflow**
 
 ```text
-2.5×[(B08−B11)/(B08+6B04−7.5B02+1)] × (B08/B11)
+Liana-infestation mapping calibrated to crown-level infestation labels with geographically blocked evaluation
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-2.5×[(B08−B11)/(B08+6B04−7.5B02+1)] × (B08/B11)
+2.5 × [(B08−B11)/(B08+B11+6B04−7.5B02+1)] × (B08/B11)
 ```
 
 - **Temporal operator:** Single-scene
@@ -2646,9 +2646,9 @@ NDWI × (1−NDVI) × (1−CI_rededge/local_max)
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** Lianas have higher SWIR1 absorption than tree canopies due to different leaf water content and structure. EVI-like combination × SWIR ratio discriminates vine-dominated from tree canopy.
+**Physical rationale.** The live layer scales a NIR/SWIR difference by an EVI-style denominator and a NIR:SWIR1 ratio. The denominator includes a B11 term that earlier documentation omitted, so it is not the EVI denominator despite the similar shape; the expression is an EVI-inspired structural contrast rather than EVI applied to lianas. Liana-versus-tree separation is hypothesized, not demonstrated.
 
-**Intended use and inference limit.** Maps liana infestation extent — lianas suppress forest carbon storage by 20–30%.
+**Intended use and inference limit.** Low-cost canopy-structure contrast to be evaluated against crown-level liana labels and prior UAV/airborne work (Waite et al., 2019; Chandler et al., 2021).
 
 **Evidence and validation.** Reviewed event context; not performance evidence. Not independently evaluated (below V1).
 
@@ -2662,7 +2662,7 @@ NDWI × (1−NDVI) × (1−CI_rededge/local_max)
 - **Domain:** Tropical Forest (`tropicalforest`)
 - **Capability role:** research-model in Forest Canopy Condition
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** Planet + Sentinel-2
 - **Formula version:** 2.0
@@ -2706,7 +2706,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Tropical Forest (`tropicalforest`)
 - **Capability role:** research-model in Forest Disturbance & Carbon
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 context; proof target pending
 - **Formula version:** 2.0
@@ -2744,7 +2744,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Tropical Forest (`tropicalforest`)
 - **Capability role:** research-model in Forest Disturbance & Carbon
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 + Planet
 - **Formula version:** 2.0
@@ -2782,7 +2782,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Cross-Sensor Fusion (`crosssensor`)
 - **Capability role:** research-model in Forest Disturbance & Carbon
 - **Contribution:** C3 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Field calibration required
 - **Required inputs:** NISAR L-band products | Sentinel-2 canopy features | topography | biomass plots | allometry
 - **Formula version:** 2.0
@@ -2826,7 +2826,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Dryland & Arid (`dryland`)
 - **Capability role:** research-model in Dryland Surface Processes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** PRISMA / DESIS
 - **Formula version:** 2.0
@@ -2864,7 +2864,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Dryland & Arid (`dryland`)
 - **Capability role:** research-model in Dryland Surface Processes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** EMIT
 - **Formula version:** 2.0
@@ -2902,7 +2902,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Dryland & Arid (`dryland`)
 - **Capability role:** research-model in Dryland Surface Processes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** EnMAP
 - **Formula version:** 2.0
@@ -2940,7 +2940,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Dryland & Arid (`dryland`)
 - **Capability role:** research-model in Dryland Surface Processes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** EMIT + S2 + SMAP
 - **Formula version:** 2.0
@@ -2973,26 +2973,26 @@ Not implemented in the current Atlas release.
 ---
 
 <a id="dlpehi"></a>
-### DLPEHI - Desert Locust Pre-Emergence Habitat Index
+### DLPEHI - Sparse-Vegetation and Bare-Soil Dryland Context
 
 - **Domain:** Dryland & Arid (`dryland`)
 - **Capability role:** component in Dryland Surface Processes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
 - **Maturity:** M3 - Live catalog visualization
 - **Formula status:** Live screening proxy
-- **Required inputs:** Sentinel-2 + GPM
+- **Required inputs:** Sentinel-2 L2A
 - **Formula version:** 2.0
 
 **Proposed formula or workflow**
 
 ```text
-NDWI × (0.1<NDVI<0.3) × (NDTI>−0.2) — without rainfall gate
+Oviposition-habitat model combining soil moisture, sparse-vegetation cover, and soil texture with a rainfall gate (e.g. GPM) and validated against ground locust survey records
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-NDWI × (0.1<NDVI<0.3) × (NDTI>−0.2) — without rainfall gate
+I[0.05<NDVI<0.35] × I[−0.3<NDWI<0.1] × max(0, BSI + 0.1) × 5
 ```
 
 - **Temporal operator:** Single-scene
@@ -3000,9 +3000,9 @@ NDWI × (0.1<NDVI<0.3) × (NDTI>−0.2) — without rainfall gate
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** Oviposition habitat requires moist sandy soil + sparse vegetation + sandy loam texture. S2 approximation without rainfall gate; GPM data adds rainfall confirmation in operational use.
+**Physical rationale.** The live layer gates on a sparse-vegetation NDVI window and an intermediate NDWI window, then scales a standard bare-soil index. The advertised NDTI texture term is NOT implemented — NDTI requires B12, which this script does not load — and a BSI bare-soil contrast stands in for it. The NDVI window is 0.05–0.35 as coded, not the 0.1–0.3 previously advertised, and NDWI acts as a gate rather than a multiplicative factor. There is no rainfall input, so no GPM data is used.
 
-**Intended use and inference limit.** 2–4 week earlier warning of locust outbreak habitat — enables preventive treatment before swarm formation.
+**Intended use and inference limit.** Dryland surface-context screening. Locust habitat or outbreak warning requires rainfall history, soil texture, and ground survey confirmation.
 
 **Evidence and validation.** Reviewed event context; not performance evidence. Not independently evaluated (below V1).
 
@@ -3016,7 +3016,7 @@ NDWI × (0.1<NDVI<0.3) × (NDTI>−0.2) — without rainfall gate
 - **Domain:** Dryland & Arid (`dryland`)
 - **Capability role:** research-model in Dryland Surface Processes
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Executable but non-live
 - **Required inputs:** Sentinel-2 + Planet
 - **Formula version:** 2.0
@@ -3060,7 +3060,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Wetland & Peatland (`wetland`)
 - **Capability role:** research-model in Wetland Hydrology
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
-- **Maturity:** M2 - Executable formula; not live
+- **Maturity:** M2 - Non-live executable formula
 - **Formula status:** Field calibration required
 - **Required inputs:** Sentinel-1 GRD | Sentinel-2 L2A | water-table loggers | vegetation and seasonal covariates
 - **Formula version:** 2.0
@@ -3175,7 +3175,7 @@ I[0.05<|(B11−B8A)/(B11+B8A)|<0.3] × |NDWI| × 3
 - **Records:** 2 (1 primary; 1 variant)
 
 <a id="ipvsi"></a>
-### IPVSI - Invasive Phragmites vs. Native Vegetation Discrimination
+### IPVSI - Dense-Canopy Red-Edge Ratio Context
 
 - **Domain:** Wetland & Peatland (`wetland`)
 - **Capability role:** primary in Wetland Vegetation Structure
@@ -3188,23 +3188,23 @@ I[0.05<|(B11−B8A)/(B11+B8A)|<0.3] × |NDWI| × 3
 **Proposed formula or workflow**
 
 ```text
-Red-edge structural proxy for dense monoculture vs. diverse native marsh
+Seasonal multi-date Phragmites discrimination calibrated to mapped stands of invasive and native marsh vegetation
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-Red-edge structural proxy for dense monoculture vs. diverse native marsh
+I[NDVI>0.6 and NDRE>0.3] × max(0, NDRE/NDVI − 0.5) × 3
 ```
 
-- **Temporal operator:** Single-scene
+- **Temporal operator:** Single-scene; proposed workflow requires a seasonal series
 - **Spatial operator:** Per-pixel
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** Invasive Phragmites forms dense monocultures with distinctive high NIR and low red-edge separation. Native wetland diversity creates more spectrally heterogeneous signals.
+**Physical rationale.** The live layer is single-date, not seasonal. It gates on dense green canopy and displays the red-edge-to-NDVI ratio above a fixed offset. Dense monoculture and species-diverse marsh are not separated by this expression alone; the ratio responds to canopy density and chlorophyll, which many wetland species share.
 
-**Intended use and inference limit.** Maps invasive Phragmites extent — guides targeted herbicide treatment to restore native wetlands.
+**Intended use and inference limit.** Selects dense-canopy wetland patches for field or multi-date review; it does not identify Phragmites or any other species.
 
 **Evidence and validation.** Reviewed event context; not performance evidence. Not independently evaluated (below V1).
 
@@ -3213,7 +3213,7 @@ Red-edge structural proxy for dense monoculture vs. diverse native marsh
 ---
 
 <a id="wvtdi"></a>
-### WVTDI - Wetland Vegetation Type Discrimination Index
+### WVTDI - Wetland Vegetation-Water Balance Context
 
 - **Domain:** Wetland & Peatland (`wetland`)
 - **Capability role:** variant in Wetland Vegetation Structure
@@ -3226,23 +3226,23 @@ Red-edge structural proxy for dense monoculture vs. diverse native marsh
 **Proposed formula or workflow**
 
 ```text
-NDWI + NDVI composite for vegetation-water ratio classification
+Multi-date wetland vegetation-type classification calibrated to surveyed sedge, rush, forb, and reed communities
 ```
 
 **Implemented or retained legacy formula**
 
 ```text
-NDWI + NDVI composite for vegetation-water ratio classification
+I[NDWI>−0.2 and NDVI>0.2] × [0.6 × NDVI + 0.4 × max(0, NDWI + 0.2)]
 ```
 
-- **Temporal operator:** Single-scene
+- **Temporal operator:** Single-scene; proposed workflow requires a multi-date series
 - **Spatial operator:** Per-pixel
 - **Units:** Uncalibrated dimensionless screening score
 - **Calibration:** Uncalibrated
 
-**Physical rationale.** Different wetland vegetation types (sedge, rush, forb, reed) have distinct NDWI/NDVI combinations reflecting moisture holding and canopy structure. Single-date approximation shows dominant type.
+**Physical rationale.** The live layer is a single-date weighted sum of greenness and wetness inside a wet-vegetation gate. It produces a continuous vegetation-water balance score, not a vegetation-type class, and the weights are unfitted design choices rather than calibrated coefficients.
 
-**Intended use and inference limit.** Baseline wetland vegetation mapping — essential for carbon stock estimation and restoration planning.
+**Intended use and inference limit.** Continuous wetland vegetation-water context for stratifying field survey effort.
 
 **Evidence and validation.** Reviewed event context; not performance evidence. Not independently evaluated (below V1).
 
@@ -3262,7 +3262,7 @@ NDWI + NDVI composite for vegetation-water ratio classification
 - **Domain:** Hyperspectral-Enabled (`hyperspectral`)
 - **Capability role:** research-model in Hyperspectral Materials
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Spectral fitting required
 - **Required inputs:** EMIT
 - **Formula version:** 2.0
@@ -3300,7 +3300,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Hyperspectral-Enabled (`hyperspectral`)
 - **Capability role:** research-model in Hyperspectral Materials
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** EMIT + PRISMA
 - **Formula version:** 2.0
@@ -3338,7 +3338,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Hyperspectral-Enabled (`hyperspectral`)
 - **Capability role:** research-model in Hyperspectral Materials
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** EMIT + EnMAP
 - **Formula version:** 2.0
@@ -3376,7 +3376,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Hyperspectral-Enabled (`hyperspectral`)
 - **Capability role:** research-model in Hyperspectral Materials
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Continuum-removal specification
 - **Required inputs:** EnMAP
 - **Formula version:** 2.0
@@ -3414,7 +3414,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Hyperspectral-Enabled (`hyperspectral`)
 - **Capability role:** research-model in Hyperspectral Materials
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** EnMAP
 - **Formula version:** 2.0
@@ -3458,7 +3458,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Hyperspectral-Enabled (`hyperspectral`)
 - **Capability role:** research-model in Atmospheric Methane & Carbon
 - **Contribution:** C2 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Atmospheric retrieval required
 - **Required inputs:** EMIT
 - **Formula version:** 2.0
@@ -3496,7 +3496,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Cross-Sensor Fusion (`crosssensor`)
 - **Capability role:** research-model in Atmospheric Methane & Carbon
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Transport inversion required
 - **Required inputs:** S5P TROPOMI + S2
 - **Formula version:** 2.0
@@ -3540,7 +3540,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Cross-Sensor Fusion (`crosssensor`)
 - **Capability role:** research-model in Cross-Sensor Decision Models
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** ICESat-2 + S1 + S2
 - **Formula version:** 2.0
@@ -3578,7 +3578,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Cross-Sensor Fusion (`crosssensor`)
 - **Capability role:** research-model in Cross-Sensor Decision Models
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** GRACE-FO + ECOSTRESS
 - **Formula version:** 2.0
@@ -3616,7 +3616,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Cross-Sensor Fusion (`crosssensor`)
 - **Capability role:** research-model in Cross-Sensor Decision Models
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** EMIT + S1
 - **Formula version:** 2.0
@@ -3654,7 +3654,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Cross-Sensor Fusion (`crosssensor`)
 - **Capability role:** research-model in Cross-Sensor Decision Models
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Formula specified; not implemented in Atlas
 - **Required inputs:** TROPOMI + S2 + ERA5
 - **Formula version:** 2.0
@@ -3692,7 +3692,7 @@ Not implemented in the current Atlas release.
 - **Domain:** Cross-Sensor Fusion (`crosssensor`)
 - **Capability role:** research-model in Cross-Sensor Decision Models
 - **Contribution:** C1 - Provisional; entry-level prior-art review pending
-- **Maturity:** M1 - Specified research concept; not live
+- **Maturity:** M1 - Specified concept or retired formula
 - **Formula status:** Carbon-budget model required
 - **Required inputs:** PACE OCI + ECOSTRESS
 - **Formula version:** 2.0
@@ -3730,7 +3730,7 @@ Regenerate this document from the governed supplement:
 
 ```bash
 python3 scripts/generate_gsia_v2_formula_catalog.py \
-  preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv \
+  preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv \
   formulas/gsia-v2-formula-catalog.md
 ```
 
