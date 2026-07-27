@@ -41,3 +41,4 @@
 - 2026-07-26 23:04 — commit: docs: append v3 publication checkpoint | knowledge/SESSION.md
 - 2026-07-27 07:27 — commit: clarify GSIA v3 registry claims | ATLAS.md,README.md,formulas/formula-quick-reference.md,formulas/gsia-v2-formula-catalog.md,preprint/README.md
 - 2026-07-27 08:20 — commit: tighten GSIA v3 schema and citation accuracy | README.md,preprint/gsia_preprint_v3_submission_2026-07-26.pdf,preprint/gsia_preprint_v3_submission_manifest_2026-07-26.md,preprint/gsia_preprint_v3_submission_manuscript_2026-07-25.md
+- 2026-07-27 08:47 — commit: tighten GSIA v3 final accuracy | preprint/gsia_preprint_v2_erratum_2026-07-25.md,preprint/gsia_preprint_v3_submission_2026-07-26.pdf,preprint/gsia_preprint_v3_submission_manifest_2026-07-26.md,preprint/gsia_preprint_v3_submission_manuscript_2026-07-25.md,scripts/render_gsia_preprint.py
