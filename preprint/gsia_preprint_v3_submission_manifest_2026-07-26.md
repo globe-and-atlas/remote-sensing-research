@@ -10,8 +10,8 @@
 
 | File | Purpose | SHA-256 |
 |---|---|---|
-| `gsia_preprint_v3_submission_2026-07-26.pdf` | Rendered pre-submission manuscript | `9b94622a990bf68349d88df4173591b534a3fb4bd97b2566d6658e3ef56226d2` |
-| `gsia_preprint_v3_submission_manuscript_2026-07-25.md` | Editable manuscript source | `b8f63574e03a5636ce8c66c219b3af82fc91b07cf3d9ae3b4b71e076795c9f9a` |
+| `gsia_preprint_v3_submission_2026-07-26.pdf` | Rendered pre-submission manuscript | `b55e62ae68dac0d8e0804cb277e2220036269a6810cef5cca01bdd2245b63856` |
+| `gsia_preprint_v3_submission_manuscript_2026-07-25.md` | Editable manuscript source | `adf48174747142cb80bf56abe6d7d1e0d82e4a8090d3c789c1a60b54aefe4aa3` |
 | `gsia_preprint_v3_status_supplement_2026-07-25.csv` | Machine-readable 91-record status supplement | `250ca9a220a8b577e78731c372cc5e55882eab9a520e10a520a38eae73ff10e5` |
 | `../formulas/gsia-v2-formula-catalog.md` | Human-readable formula-schema v2.0 catalog generated from the version 3 supplement | `974bfc731b80c347921c6580f63a08c6b01d559689ea9b7aa391986a539536ea` |
 | `../scripts/audit_band_algebra.py` | Reproducible structural-audit script | `2ad849e723233c3e4b8814bf496d78ee36a81f2b9f3682e5b022dfca5c01dd59` |
@@ -40,6 +40,7 @@
 
 - Seven structural-audit unit tests passed.
 - The formula catalog regenerated successfully from the version 3 supplement: 91 records in 24 capability families.
+- All 91 records contain an intended-use/inference-limit field, but its specificity varies; confounders are addressed mainly at domain and study-design levels rather than through a dedicated field for every record.
 - The candidate table contains 19,824 data rows, the established-index crosswalk 71 data rows, the GSIA applicability table 91 data rows, and the status supplement 91 data rows.
 - Crossref metadata was checked for all 20 DOI-bearing bibliography entries; the two Zenodo records were checked through DataCite and the Zenodo API.
 - PDF text extraction contains the version 3 citation, structural counts, applicability findings, and new references, with no template or tool tokens.

@@ -4,7 +4,7 @@
 
 **Globe & Atlas** | Open, inspectable environmental remote-sensing research.
 
-This repository is the technical Atlas counterpart to the [Globe & Atlas](https://globeandatlas.substack.com) publication. It documents proposed formulas, implemented screening proxies, required inputs, physical rationales, confounders, maturity, and validation limits.
+This repository is the technical Atlas counterpart to the [Globe & Atlas](https://globeandatlas.substack.com) publication. It documents proposed formulas, implemented screening proxies, required inputs, physical rationales, implementation maturity, calibration and validation status, and intended-use/inference-limit statements. Confounders are addressed mainly at the domain and study-design levels rather than exhaustively itemized for every record.
 
 The Global Spectral Index Atlas version 3 is a registry of **24 capability families comprising 91 governed method-specification records across 12 domains**. The record count is an inventory measure, not a claim of 91 unique band combinations, scientifically unprecedented equations, or validated detectors.
 
