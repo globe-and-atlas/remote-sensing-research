@@ -75,25 +75,10 @@ Earth Engine path was never affected (`COPERNICUS/S2_SR_HARMONIZED` is
 pre-harmonized). The v2 display audit used the public WMS path, so **the "nonblank
 overlay for all 37" result is not invalidated.**
 
-The produced-water threshold work is also unaffected: `fetch_spill_bands.py` and
-`sample_background.py` obtain band means through the Sentinel Hub Statistics API,
-so the 150 background controls, the 32-record TRRC benchmark, the
-1,224-combination sweep, and the fitted thresholds were all computed on correctly
-scaled reflectance despite every one of their dates falling after the baseline
-change.
-
-Nor is the 2026-07-23 COG visual QC pass affected. Re-running it through the new
-`execution/qc_spill_cog_render.py` resolved an offset of zero for all 56 tiles:
-every scene those bookmarks retrieve already carried the offset applied. The
-qualitative result is reproduced — Matador Desoto and Lake Boehmer respond most
-strongly, most other sites are near-blank — although absolute percentages differ
-from the ad-hoc pass. That difference is attributable to parameters the original
-pass did not record, not to the offset.
-
 **Net position.** The defect is real and would have silently corrupted any future
 multi-date product rendered through this path, but it did not reach a published or
-recorded result. It is reported here as a latent defect found and closed, which is
-the outcome the registry's correction pathway is meant to produce.
+recorded GSIA result. It is reported here as a latent defect found and closed,
+which is the outcome the registry's correction pathway is meant to produce.
 
 **Correction.** Offset now resolved per scene, preferring
 `earthsearch:boa_offset_applied` (guards against double-correction), then
@@ -131,7 +116,7 @@ current live layer. SACI is unaffected — it genuinely renders a TROPOMI produc
 
 ## 4. Implemented formulas that did not match the executing code
 
-The v2 schema separates proposed from implemented formulas. Three records had an
+The v2 schema separates proposed from implemented formulas. Four records had an
 `implemented_formula` that did not describe what the code computes.
 
 **LISI.** Published denominator `B08 + 6B04 − 7.5B02 + 1`; the code computes
@@ -199,13 +184,6 @@ The verdict is unchanged, so the v3 supplement carries a display verdict for all
 live records. A `--keys` filter was added to `execution/qc_atlas_bookmarks.py` so a
 targeted re-audit writes to a `-partial` file and cannot overwrite the full-catalog
 report.
-
-**MVPI** carried an authorship claim of strength "Very High" for methane
-super-emitter screening. This contradicted the project's own recorded negative
-result (a 1,224-combination threshold sweep found no useful separation at the
-tested support) and Varon et al. (2021) as established prior art, cited in §5.12.
-Downgraded to a superseded claim, retained for traceability per §6.6. MVPI is a
-Limn legacy record and is not among the 91.
 
 ---
 

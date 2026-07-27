@@ -15,7 +15,7 @@ Correspondence: dbally@gmail.com
 
 ## Abstract
 
-Open Earth-observation missions have expanded the spectral, spatial, and temporal information available for environmental screening, but candidate remote-sensing methods remain dispersed across application domains and vary widely in implementation and validation maturity. We present the Global Spectral Index Atlas (GSIA), an open registry organized into 24 capability families containing 91 governed environmental remote-sensing method-specification records across twelve domains. The record count is an inventory measure, not a claim of 91 unique band combinations, scientifically unprecedented equations, or validated detectors. Each record documents an intended screening use, proposed and implemented formulas where applicable, required sensors and operators, physical rationale, contribution class, method role, maturity, calibration and validation status, and an intended-use/inference-limit field whose specificity varies by record. Confounders are addressed mainly at the domain and study-design levels rather than exhaustively itemized for every record. The version 3 registry snapshot contains 37 live M3 screening proxies, 16 M2 executable but non-live formulas, and 38 M1 specified concepts or retired formulas. Method roles identify 15 primary representatives, 10 variants, 12 components, one reference product, 51 research models, and two retired records; these roles organize the registry and do not establish novelty or performance. All 37 renderable evalscripts passed static band and output checks. A public-service display audit returned nonblank overlays for all 37; the one record whose script was subsequently corrected was re-audited and retained its verdict. All 42 evidence packs associated with the 37 live records and five separate Sentinel-1 or Sentinel-5P demonstrations met the registry's source-coverage rule. These are software, display, and provenance results, not measurements of environmental detection performance. No registry record has completed the independent, held-out accuracy assessment defined in this paper. Targeted prior-art review identified related methods in several showcased domains, so catalog-wide priority and "first formula" claims are not made. GSIA is therefore presented as a transparent hypothesis and method-specification registry rather than a collection of validated detectors. Version 3 additionally reports a structured review that found seven records overstating their required sensors, four whose implemented formula did not match their executing code, one incorrect physical rationale, and a scene-dependent radiometric offset defect in one rendering path; all are corrected and documented here as a demonstration of the registry's intended correction pathway. A separate structural audit enumerated six bounded formula families over Sentinel-2 MSI: the full 13-band instrument produced 15,054 role-specific expressions from 1,079 unordered two- to four-band sets, while a ten-band reflected-surface core produced 4,770 expressions from 375 sets. Symmetry and monotonic-equivalence rules reduced the surface-core result to 2,340 information classes. Exact comparison with a pinned established-index catalog found 71 named matches representing 48 distinct equations. The structural audit measures formula-space organization and prior documented use, not environmental usefulness, novelty, or accuracy. We define a validation protocol using explicit labels, hard negative controls, locked formulas, geographic and temporal holdouts, established baselines, uncertainty estimates, and external replication. The registry is intended to make environmental remote-sensing hypotheses inspectable, testable, and correctable, not to replace field measurement or regulatory assessment.
+Open Earth-observation missions have expanded the spectral, spatial, and temporal information available for environmental screening, but candidate remote-sensing methods remain dispersed across application domains and vary widely in implementation and validation maturity. We present the Global Spectral Index Atlas (GSIA), an open registry organized into 24 capability families containing 91 governed environmental remote-sensing method-specification records across twelve domains. The record count is an inventory measure, not a claim of 91 unique band combinations, scientifically unprecedented equations, or validated detectors. Each record documents an intended screening use, proposed and implemented formulas where applicable, required sensors and operators, physical rationale, contribution class, method role, maturity, calibration and validation status, and an intended-use/inference-limit field whose specificity varies by record. Confounders are addressed mainly at the domain and study-design levels rather than exhaustively itemized for every record. The version 3 registry snapshot contains 37 live M3 screening proxies, 16 M2 executable but non-live formulas, and 38 M1 specified concepts or retired formulas. Method roles identify 15 primary representatives, 10 variants, 12 components, one reference product, 51 research models, and two retired records; these roles organize the registry and do not establish novelty or performance. All 37 renderable evalscripts passed static band and output checks. A public-service display audit returned nonblank overlays for all 37; the one record whose script was subsequently corrected was re-audited and retained its verdict. All 42 evidence packs associated with the 37 live records and five separate Sentinel-1 or Sentinel-5P demonstrations met the registry's source-coverage rule. These are software, display, and provenance results, not measurements of environmental detection performance. No registry record has completed the independent, held-out accuracy assessment defined in this paper. Targeted prior-art review identified related methods in several showcased domains, so catalog-wide priority and "first formula" claims are not made. GSIA is therefore presented as a transparent hypothesis and method-specification registry rather than a collection of validated detectors. Version 3 additionally reports a structured review that found seven records overstating their required sensors, four whose implemented formula did not match their executing code, one mechanistically incorrect physical rationale plus three additional rationale or implementation-description errors, and a scene-dependent radiometric offset defect in one rendering path; all are corrected and documented here as a demonstration of the registry's intended correction pathway. A separate structural audit enumerated six bounded formula families over Sentinel-2 MSI: the full 13-band instrument produced 15,054 role-specific expressions from 1,079 unordered two- to four-band sets, while a ten-band reflected-surface core produced 4,770 expressions from 375 sets. Symmetry and monotonic-equivalence rules reduced the surface-core result to 2,340 information classes. Exact comparison with a pinned established-index catalog found 71 named matches representing 48 distinct equations. The structural audit measures formula-space organization and prior documented use, not environmental usefulness, novelty, or accuracy. We define a validation protocol using explicit labels, hard negative controls, locked formulas, geographic and temporal holdouts, established baselines, uncertainty estimates, and external replication. The registry is intended to make environmental remote-sensing hypotheses inspectable, testable, and correctable, not to replace field measurement or regulatory assessment.
 
 **Keywords:** spectral index; Earth observation; environmental monitoring; Sentinel; imaging spectroscopy; hypothesis registry; validation; open science
 
@@ -344,6 +344,21 @@ to canopy water and dry-matter absorption. The nitrogen-versus-phosphorus separa
 is therefore hypothesized rather than mechanistically supported, and the record is
 renamed accordingly.
 
+**Three additional rationale or implementation descriptions were inaccurate.**
+SMPDI's baseline residual is an FAI variant rather than the canonical Sentinel-2
+FAI; MEPSI's third term is NDCI, a chlorophyll-a water index used as a bare-water
+proxy, rather than a macrophyte index; and MHSSP applies a fixed red-edge threshold
+rather than normalization against a local maximum. Their registry descriptions now
+state those distinctions.
+
+**One earlier live-layer description correction is also carried into version 3.**
+EC-ACI was corrected in the deployment on 23 July 2026, before this structured
+review. Its live Sentinel-2 expression measures low-canopy, dry-surface context; it
+does not sample ECOSTRESS or measure land-surface temperature or heat-island
+intensity. Together with the ten records identified by the 25 July correspondence
+review, this makes eleven substantively corrected records between the published
+version 2 supplement and the version 3 supplement.
+
 **One rendering path was radiometrically incorrect, intermittently.** The
 Cloud-Optimized GeoTIFF provider converted digital numbers to reflectance by
 dividing by the quantification value alone. Since ESA processing baseline 04.00,
@@ -352,10 +367,10 @@ operational 25 January 2022, Sentinel-2 L2A carries an additive offset of -1000.
 The archive serving those assets applies that offset to most, but not all, of its
 baseline 04.00 and later items, and publishes a per-item flag recording which. A
 survey of the project's test area on 25 July 2026 found 38 of 589 items, or 6.5%,
-carrying the offset unapplied, concentrated in 2022 and 2025 with none in 2023 or
-2024. Reflectance for those scenes was 0.1 too high while neighbouring scenes were
-correct, and because an additive offset does not cancel in a normalized difference
-the error propagated to ratios as well as absolute thresholds.
+carrying the offset unapplied, concentrated in 2022 and 2025, with no such items in
+2023 or 2024. Reflectance for those scenes was 0.1 too high while neighbouring
+scenes were correct, and because an additive offset does not cancel in a normalized
+difference the error propagated to ratios as well as absolute thresholds.
 
 The scene-dependent character is more consequential than the magnitude. A uniform
 bias is at least internally consistent; an intermittent one makes two observations
@@ -371,11 +386,7 @@ ambiguity, and a per-item check is the only reliable resolution.
 
 The audit reported in Sections 4.2 and 4.3 used the public Web Map Service path,
 which applies this harmonization by default, so **no result reported in version 2
-depended on the affected path**. Threshold work carried out elsewhere in the project
-draws its band statistics from a harmonized statistics service and was confirmed
-unaffected by inspection, and a re-run of the affected renderer over the project's
-own reviewed locations resolved an offset of zero for every tile, reproducing the
-prior qualitative result.
+depended on the affected path**.
 
 The defect therefore did not reach a reported result. It is documented because it
 would have corrupted any future multi-date product rendered through that path, and
@@ -597,7 +608,7 @@ The evalscript audit covered the 37 renderable records. It did not execute every
 
 The interactive deployment will change. Link availability, public data services, code, and catalog state should be versioned and re-audited for each archival release. Counts and test results in this paper apply to the 21 July 2026 release audit of the cited source snapshot, as corrected on 25 July 2026 (Section 4.6).
 
-The corrections in Section 4.6 also bound what the version 2 audit established. Schema completeness was verified; correspondence between declaration and executing code was not, and when it was tested ten of the 91 records required correction. Readers should assume that any registry field not covered by an explicit check in Section 3.3 remains unverified, and that further correspondence checks may find further defects.
+The corrections in Section 4.6 also bound what the version 2 audit established. Schema completeness was verified; correspondence between declaration and executing code was not. The 25 July review identified ten records requiring correction, and an earlier correction to EC-ACI makes eleven substantively corrected records between the published version 2 supplement and the version 3 supplement. Readers should assume that any registry field not covered by an explicit check in Section 3.3 remains unverified, and that further correspondence checks may find further defects.
 
 The structural audit has additional limits. Its six formula families are intentionally incomplete and do not cover the full literature of coefficients, constants, derivatives, spatial filters, time series, fitted models, or physically based retrievals. The ten-band reflected-surface core is a defensible screening universe, not a universal rule for Sentinel-2 analysis. The Awesome Spectral Indices snapshot is broad but not exhaustive, and numerical fingerprinting is not a complete symbolic prior-art search. Most importantly, no labeled imagery was used, so the counts and crosswalks establish neither environmental performance nor scientific novelty. The automated discovery studies cited here likewise address specific targets and datasets; their reported performance should not be generalized to GSIA records.
 
@@ -638,7 +649,7 @@ The versioned resources for this manuscript are:
 - reference analysis environment: [`analysis/band-algebra/requirements.txt`](../analysis/band-algebra/requirements.txt);
 - version 2 audited commit: `e50c2eda5cf405c7693e5210e04894c691e5f2eb`, in the original Limn implementation repository, since made private;
 - version 3 audited commit, tagged `gsia-v3-audit`: `fd00b890c16105d2e011f85d9e182ec5b709ab57`, in the same now-private repository; and
-- public, independently verifiable copy of that snapshot: [globe-and-atlas/limn-atlas, tag `gsia-v3-audit`](https://github.com/globe-and-atlas/limn-atlas/tree/gsia-v3-audit) (commit `dd12f3c8e2e987480e2811599da0a11e6a23ec24`). Every file this paper's audit covers — the 91-record registry, evalscripts, authorship claims, event references, and the audit scripts in Section 3.3 — was confirmed identical between the two repositories before the tag was cut. The public repository is the citation target for independent verification; the private repository remains the source of truth for produced-water development, which is out of scope for this paper (Scope boundary, page 1).
+- public Atlas-only copy of that snapshot: [globe-and-atlas/limn-atlas, tag `gsia-v3-audit`](https://github.com/globe-and-atlas/limn-atlas/tree/gsia-v3-audit) (commit `dd12f3c8e2e987480e2811599da0a11e6a23ec24`). Twenty-one relevant files covering the 91-record registry, evalscripts, authorship claims, event references, Atlas audit scripts, and associated tests were confirmed byte-identical between the private source snapshot and public tag. The private COG renderer and its offset regression test are not present in the public copy because that renderer also contains produced-water formulas outside this paper's publication boundary. The public tag therefore supports independent verification of the Atlas registry, evalscript, evidence-pack, and schema claims, but not independent reproduction of the COG offset survey or correction. The private repository remains the source of truth for produced-water development, which is out of scope for this paper (Scope boundary, page 1).
 
 The registry-release links above are pinned to the immutable tag `gsia-v3-preprint`. The structural-audit paths were added during this pre-submission revision and must be included in the final immutable version 3 submission tag before archival upload. The human-readable catalog presents the proposed and implemented formula fields for every record, organized by capability family. The accompanying CSV contains the same governed records together with formula version, method role, contribution class, maturity, implementation state, calibration and validation status, bookmark-date semantics, display-QC metadata, and source snapshot.
 
@@ -666,7 +677,7 @@ The author acknowledges the scientists, mission teams, open-data providers, and 
 
 Biermann, L., Clewley, D., Martinez-Vicente, V., and Topouzelis, K. (2020). Finding plastic patches in coastal waters using optical satellite data. *Scientific Reports*, 10, 5364. [https://doi.org/10.1038/s41598-020-62298-z](https://doi.org/10.1038/s41598-020-62298-z)
 
-Chandler, C. J., et al. (2021). Remote sensing liana infestation in an aseasonal tropical forest: addressing mismatch in spatial units of analyses. *Remote Sensing in Ecology and Conservation*, 7. [https://doi.org/10.1002/rse2.197](https://doi.org/10.1002/rse2.197)
+Chandler, C. J., et al. (2021). Remote sensing liana infestation in an aseasonal tropical forest: addressing mismatch in spatial units of analyses. *Remote Sensing in Ecology and Conservation*, 7, 397-410. [https://doi.org/10.1002/rse2.197](https://doi.org/10.1002/rse2.197)
 
 Chrysostomou, C., Neophytides, S. P., Mavrovouniotis, M., and Hadjimitsis, D. G. (2026). Optimized spectral indices for global vegetation and water mapping using Sentinel-2. *Scientific Reports*, 16, 4491. [https://doi.org/10.1038/s41598-025-34720-x](https://doi.org/10.1038/s41598-025-34720-x)
 
@@ -698,7 +709,7 @@ Tucker, C. J. (1979). Red and photographic infrared linear combinations for moni
 
 Varon, D. J., Jervis, D., McKeever, J., Spence, I., Gains, D., and Jacob, D. J. (2021). High-frequency monitoring of anomalous methane point sources with multispectral Sentinel-2 satellite observations. *Atmospheric Measurement Techniques*, 14, 2771-2785. [https://doi.org/10.5194/amt-14-2771-2021](https://doi.org/10.5194/amt-14-2771-2021)
 
-Waite, C. E., et al. (2019). A view from above: Unmanned aerial vehicles provide a new tool for assessing liana infestation in tropical forest canopies. *Journal of Applied Ecology*, 56. [https://doi.org/10.1111/1365-2664.13318](https://doi.org/10.1111/1365-2664.13318)
+Waite, C. E., et al. (2019). A view from above: Unmanned aerial vehicles provide a new tool for assessing liana infestation in tropical forest canopies. *Journal of Applied Ecology*, 56, 902-912. [https://doi.org/10.1111/1365-2664.13318](https://doi.org/10.1111/1365-2664.13318)
 
 Werdell, P. J., et al. (2019). The Plankton, Aerosol, Cloud, Ocean Ecosystem mission: Status, science, advances. *Bulletin of the American Meteorological Society*, 100, 1775-1794. [https://doi.org/10.1175/BAMS-D-18-0056.1](https://doi.org/10.1175/BAMS-D-18-0056.1)
 

@@ -346,7 +346,7 @@ def markdown_story(source: Path, available: float):
                 ListFlowable(
                     items,
                     bulletType="1" if ordered else "bullet",
-                    start="1",
+                    start="1" if ordered else "\u2022",
                     leftIndent=18,
                     bulletFontName=FONT,
                     bulletFontSize=8,
