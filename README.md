@@ -19,7 +19,7 @@ The Global Spectral Index Atlas version 3 is a registry of **24 capability famil
 | **[GSIA method-specification catalog](formulas/gsia-v2-formula-catalog.md)** | Human-readable reference for all 91 proposed methods and their implementation status, organized by capability family |
 | **[Structural band-algebra audit](analysis/band-algebra/audit_report.md)** | Reproducible Sentinel-2 formula-space counts, established-index crosswalk, GSIA applicability, and claim limits |
 | **[Version 2 to version 3 erratum](preprint/gsia_preprint_v2_erratum_2026-07-25.md)** | Corrections to declared sensors, formulas, rationale, radiometry, and provenance |
-| **Audited Atlas source** | Version 3 commit `fd00b890c16105d2e011f85d9e182ec5b709ab57`, since made private; a file-identical public copy is tagged [`gsia-v3-audit`](https://github.com/globe-and-atlas/limn-atlas/tree/gsia-v3-audit) at commit `dd12f3c8e2e987480e2811599da0a11e6a23ec24` |
+| **Audited Atlas source** | Version 3 commit `fd00b890c16105d2e011f85d9e182ec5b709ab57`, since made private; a byte-identical public Atlas-only copy of 21 relevant registry, evalscript, evidence, audit, and test files is tagged [`gsia-v3-audit`](https://github.com/globe-and-atlas/limn-atlas/tree/gsia-v3-audit) at commit `dd12f3c8e2e987480e2811599da0a11e6a23ec24` |
 
 The CSV is the governed source for the readable formula catalog. Regenerate the catalog with:
 

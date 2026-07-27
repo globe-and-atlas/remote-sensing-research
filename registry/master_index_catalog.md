@@ -1278,7 +1278,10 @@ These established indices are used as inputs to the novel composites above.
 
 ---
 
-## Authorship Summary
+## Historical Authorship Summary (Superseded)
+
+> [!CAUTION]
+> The contribution and validation statements below are preserved only as a version 1 claim record. They are superseded and must not be used as current claims. Use the governed version 3 CSV and method-specification catalog linked at the top of this file.
 
 **All novel indices below were originated, named, and formulated by Daniel Bally (Globe & Atlas), May 2026.**
 
@@ -1291,7 +1294,7 @@ These established indices are used as inputs to the novel composites above.
 
 ---
 
-## Publication-Ready Claim Language
+## Historical Claim Language (Superseded; Do Not Use)
 
 For any index when publishing or presenting, substitute the correct tier phrase:
 
@@ -1311,7 +1314,7 @@ For any index when publishing or presenting, substitute the correct tier phrase:
 
 ---
 
-*PRIVATE — GITIGNORED — Last updated: 2026-05-25*
+*HISTORICAL VERSION 1 DOCUMENT — SUPERSEDED — Last updated: 2026-05-25*
 *Author: Daniel Bally · Globe & Atlas · <dbally@gmail.com>*
 *Cross-reference public ATLAS.md for formulas, physics, and public benefit language.*
 *Cross-reference civic-sentinel/src/authorshipClaims.js for verbatim civic-sentinel claim language.*

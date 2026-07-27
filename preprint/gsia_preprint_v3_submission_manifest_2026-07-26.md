@@ -10,8 +10,8 @@
 
 | File | Purpose | SHA-256 |
 |---|---|---|
-| `gsia_preprint_v3_submission_2026-07-26.pdf` | Rendered pre-submission manuscript | `98d42716d210f7c338e8697f6a0a22ead564e5a96a23107f313ff07f0f5a02e0` |
-| `gsia_preprint_v3_submission_manuscript_2026-07-25.md` | Editable manuscript source | `04199f3ca0c25521cbb93dccd9d411f3f5bb646f307c4408a24ac741d2a1b524` |
+| `gsia_preprint_v3_submission_2026-07-26.pdf` | Rendered pre-submission manuscript | `388c2a918997fb654833ce03d8d4a4a49b07ce5e220e53c41472a0ecbaf3e2b8` |
+| `gsia_preprint_v3_submission_manuscript_2026-07-25.md` | Editable manuscript source | `3b063fd854dc175d989ca42d2c0e9cd9353aee4dc0b1b4c7042ed6fd88c34832` |
 | `gsia_preprint_v3_status_supplement_2026-07-25.csv` | Machine-readable 91-record status supplement | `250ca9a220a8b577e78731c372cc5e55882eab9a520e10a520a38eae73ff10e5` |
 | `gsia_preprint_v2_erratum_2026-07-25.md` | Version 2 correction ledger carried into version 3 | `aeceeec7634a42a0387d44e6c72ba0ac5b74ed306914f2dd45d9f56ef0179471` |
 | `../formulas/gsia-v2-formula-catalog.md` | Human-readable formula-schema v2.0 catalog generated from the version 3 supplement | `974bfc731b80c347921c6580f63a08c6b01d559689ea9b7aa391986a539536ea` |
