@@ -1,0 +1,72 @@
+known_index,known_name,application_domain,known_formula,known_bands,candidate_family,candidate_expression,candidate_signed_key,reference
+BI,Bare Soil Index,soil,((S1 + R) - (N + B))/((S1 + R) + (N + B)),S1|R|N|B,four-band-balance,(B04 + B11 - B02 - B08) / (B04 + B11 + B02 + B08),four-band-balance:B04+B11-B02+B08,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.465.8749&rep=rep1&type=pdf
+BNDVI,Blue Normalized Difference Vegetation Index,vegetation,(N - B)/(N + B),N|B,normalized-difference,(B08 - B02) / (B08 + B02),normalized-difference:B08-B02,https://doi.org/10.1016/S1672-6308(07)60027-4
+BRBA,Band Ratio for Built-up Area,urban,R/S1,R|S1,ratio,B04 / B11,ratio:B04/B11,https://www.omicsonline.org/scientific-reports/JGRS-SR136.pdf
+CSI,Char Soil Index,burn,N/S2,N|S2,ratio,B08 / B12,ratio:B08/B12,https://doi.org/10.1016/j.rse.2005.04.014
+DBSI,Dry Bareness Index,soil,((S1 - G)/(S1 + G)) - ((N - R)/(N + R)),S1|G|N|R,difference-of-contrasts,((B04 - B08) / (B04 + B08)) - ((B03 - B11) / (B03 + B11)),double-nd:B04-B08|B03-B11,https://doi.org/10.3390/land7030081
+DSI,Drought Stress Index,vegetation,S1/N,S1|N,ratio,B11 / B08,ratio:B11/B08,https://www.asprs.org/wp-content/uploads/pers/1999journal/apr/1999_apr_495-501.pdf
+DSWI1,Disease-Water Stress Index 1,vegetation,N/S1,N|S1,ratio,B08 / B11,ratio:B08/B11,https://doi.org/10.1080/01431160310001618031
+DSWI2,Disease-Water Stress Index 2,vegetation,S1/G,S1|G,ratio,B11 / B03,ratio:B11/B03,https://doi.org/10.1080/01431160310001618031
+DSWI3,Disease-Water Stress Index 3,vegetation,S1/R,S1|R,ratio,B11 / B04,ratio:B11/B04,https://doi.org/10.1080/01431160310001618031
+DSWI4,Disease-Water Stress Index 4,vegetation,G/R,G|R,ratio,B03 / B04,ratio:B03/B04,https://doi.org/10.1080/01431160310001618031
+DVI,Difference Vegetation Index,vegetation,N - R,N|R,difference,B08 - B04,difference:B08-B04,https://doi.org/10.1016/0034-4257(94)00114-3
+GM1,Gitelson and Merzlyak Index 1,vegetation,RE2/G,RE2|G,ratio,B06 / B03,ratio:B06/B03,https://doi.org/10.1016/S0176-1617(96)80284-7
+GM2,Gitelson and Merzlyak Index 2,vegetation,RE2/RE1,RE2|RE1,ratio,B06 / B05,ratio:B06/B05,https://doi.org/10.1016/S0176-1617(96)80284-7
+GNDVI,Green Normalized Difference Vegetation Index,vegetation,(N - G)/(N + G),N|G,normalized-difference,(B08 - B03) / (B08 + B03),normalized-difference:B08-B03,https://doi.org/10.1016/S0034-4257(96)00072-7
+GRVI,Green Ratio Vegetation Index,vegetation,N/G,N|G,ratio,B08 / B03,ratio:B08/B03,https://doi.org/10.2134/agronj2004.0314
+IKAW,Kawashima Index,vegetation,(R - B)/(R + B),R|B,normalized-difference,(B04 - B02) / (B04 + B02),normalized-difference:B04-B02,https://doi.org/10.1006/anbo.1997.0544
+LSWI,Land Surface Water Index,water,(N - S1)/(N + S1),N|S1,normalized-difference,(B08 - B11) / (B08 + B11),normalized-difference:B08-B11,https://doi.org/10.1016/j.rse.2003.11.008
+MNDVI,Modified Normalized Difference Vegetation Index,vegetation,(N - S2)/(N + S2),N|S2,normalized-difference,(B08 - B12) / (B08 + B12),normalized-difference:B08-B12,https://doi.org/10.1080/014311697216810
+MNDWI,Modified Normalized Difference Water Index,water,(G - S1) / (G + S1),G|S1,normalized-difference,(B03 - B11) / (B03 + B11),normalized-difference:B03-B11,https://doi.org/10.1080/01431160600589179
+MSI,Moisture Stress Index,vegetation,S1/N,S1|N,ratio,B11 / B08,ratio:B11/B08,https://doi.org/10.1016/0034-4257(89)90046-1
+NBR,Normalized Burn Ratio,burn,(N - S2) / (N + S2),N|S2,normalized-difference,(B08 - B12) / (B08 + B12),normalized-difference:B08-B12,https://doi.org/10.3133/ofr0211
+NBR2,Normalized Burn Ratio 2,burn,(S1 - S2) / (S1 + S2),S1|S2,normalized-difference,(B11 - B12) / (B11 + B12),normalized-difference:B11-B12,https://www.usgs.gov/core-science-systems/nli/landsat/landsat-normalized-burn-ratio-2
+ND705,Normalized Difference (705 and 750 nm),vegetation,(RE2 - RE1)/(RE2 + RE1),RE2|RE1,normalized-difference,(B06 - B05) / (B06 + B05),normalized-difference:B06-B05,https://doi.org/10.1016/S0034-4257(02)00010-X
+NDBI,Normalized Difference Built-Up Index,urban,(S1 - N) / (S1 + N),S1|N,normalized-difference,(B11 - B08) / (B11 + B08),normalized-difference:B11-B08,http://dx.doi.org/10.1080/01431160304987
+NDCI,Normalized Difference Chlorophyll Index,water,(RE1 - R)/(RE1 + R),RE1|R,normalized-difference,(B05 - B04) / (B05 + B04),normalized-difference:B05-B04,https://doi.org/10.1016/j.rse.2011.10.016
+NDGlaI,Normalized Difference Glacier Index,snow,(G - R)/(G + R),G|R,normalized-difference,(B03 - B04) / (B03 + B04),normalized-difference:B03-B04,https://doi.org/10.1080/01431160802385459
+NDII,Normalized Difference Infrared Index,vegetation,(N - S1)/(N + S1),N|S1,normalized-difference,(B08 - B11) / (B08 + B11),normalized-difference:B08-B11,https://www.asprs.org/wp-content/uploads/pers/1983journal/jan/1983_jan_77-83.pdf
+NDMI,Normalized Difference Moisture Index,vegetation,(N - S1)/(N + S1),N|S1,normalized-difference,(B08 - B11) / (B08 + B11),normalized-difference:B08-B11,https://doi.org/10.1016/S0034-4257(01)00318-2
+NDPonI,Normalized Difference Pond Index,water,(S1-G)/(S1+G),S1|G,normalized-difference,(B11 - B03) / (B11 + B03),normalized-difference:B11-B03,https://doi.org/10.1016/j.rse.2006.07.012
+NDREI,Normalized Difference Red Edge Index,vegetation,(N - RE1) / (N + RE1),N|RE1,normalized-difference,(B08 - B05) / (B08 + B05),normalized-difference:B08-B05,https://doi.org/10.1016/1011-1344(93)06963-4
+NDSI,Normalized Difference Snow Index,snow,(G - S1) / (G + S1),G|S1,normalized-difference,(B03 - B11) / (B03 + B11),normalized-difference:B03-B11,https://doi.org/10.1109/IGARSS.1994.399618
+NDSII,Normalized Difference Snow Ice Index,snow,(G - N)/(G + N),G|N,normalized-difference,(B03 - B08) / (B03 + B08),normalized-difference:B03-B08,https://doi.org/10.1080/01431160802385459
+NDSIITM,Normalized Difference Snow/Ice Index for Landsat TM,snow,(R - S1)/(R + S1),R|S1,normalized-difference,(B04 - B11) / (B04 + B11),normalized-difference:B04-B11,https://doi.org/10.1080/01431160119766
+NDSWIR,Normalized Difference SWIR,burn,(N - S1)/(N + S1),N|S1,normalized-difference,(B08 - B11) / (B08 + B11),normalized-difference:B08-B11,https://doi.org/10.1109/TGRS.2003.819190
+NDSaII,Normalized Difference Snow and Ice Index,snow,(R - S1) / (R + S1),R|S1,normalized-difference,(B04 - B11) / (B04 + B11),normalized-difference:B04-B11,https://doi.org/10.1080/01431160119766
+NDSoI,Normalized Difference Soil Index,soil,(S2 - G)/(S2 + G),S2|G,normalized-difference,(B12 - B03) / (B12 + B03),normalized-difference:B12-B03,https://doi.org/10.1016/j.jag.2015.02.010
+NDTI,Normalized Difference Turbidity Index,water,(R-G)/(R+G),R|G,normalized-difference,(B04 - B03) / (B04 + B03),normalized-difference:B04-B03,https://doi.org/10.1016/j.rse.2006.07.012
+NDTillI,Normalized Difference Tillage Index,vegetation,(S1 - S2)/(S1 + S2),S1|S2,normalized-difference,(B11 - B12) / (B11 + B12),normalized-difference:B11-B12,https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf
+NDVI,Normalized Difference Vegetation Index,vegetation,(N - R)/(N + R),N|R,normalized-difference,(B08 - B04) / (B08 + B04),normalized-difference:B08-B04,https://ntrs.nasa.gov/citations/19740022614
+NDVI705,Normalized Difference Vegetation Index (705 and 750 nm),vegetation,(RE2 - RE1) / (RE2 + RE1),RE2|RE1,normalized-difference,(B06 - B05) / (B06 + B05),normalized-difference:B06-B05,https://doi.org/10.1016/S0176-1617(11)81633-0
+NDVIMNDWI,NDVI-MNDWI Model,water,((N - R)/(N + R)) - ((G - S1)/(G + S1)),N|R|G|S1,difference-of-contrasts,((B08 - B04) / (B08 + B04)) - ((B03 - B11) / (B03 + B11)),double-nd:B08-B04|B03-B11,https://doi.org/10.1007/978-3-662-45737-5_51
+NDWI,Normalized Difference Water Index,water,(G - N) / (G + N),G|N,normalized-difference,(B03 - B08) / (B03 + B08),normalized-difference:B03-B08,https://doi.org/10.1080/01431169608948714
+NDYI,Normalized Difference Yellowness Index,vegetation,(G - B) / (G + B),G|B,normalized-difference,(B03 - B02) / (B03 + B02),normalized-difference:B03-B02,https://doi.org/10.1016/j.rse.2016.06.016
+NGRDI,Normalized Green Red Difference Index,vegetation,(G - R) / (G + R),G|R,normalized-difference,(B03 - B04) / (B03 + B04),normalized-difference:B03-B04,https://doi.org/10.1016/0034-4257(79)90013-0
+NHFD,Non-Homogeneous Feature Difference,urban,(RE1 - A) / (RE1 + A),RE1|A,normalized-difference,(B05 - B01) / (B05 + B01),normalized-difference:B05-B01,https://www.semanticscholar.org/paper/Using-WorldView-2-Vis-NIR-MSI-Imagery-to-Support-Wolf/5e5063ccc4ee76b56b721c866e871d47a77f9fb4
+NPCI,Normalized Pigments Chlorophyll Ratio Index,vegetation,(R - A) / (R + A),R|A,normalized-difference,(B04 - B01) / (B04 + B01),normalized-difference:B04-B01,https://doi.org/10.1016/0034-4257(94)90136-8
+NRFIg,Normalized Rapeseed Flowering Index Green,vegetation,(G - S2) / (G + S2),G|S2,normalized-difference,(B03 - B12) / (B03 + B12),normalized-difference:B03-B12,https://doi.org/10.3390/rs13010105
+NRFIr,Normalized Rapeseed Flowering Index Red,vegetation,(R - S2) / (R + S2),R|S2,normalized-difference,(B04 - B12) / (B04 + B12),normalized-difference:B04-B12,https://doi.org/10.3390/rs13010105
+NSDS,Normalized Shortwave Infrared Difference Soil-Moisture,soil,(S1 - S2)/(S1 + S2),S1|S2,normalized-difference,(B11 - B12) / (B11 + B12),normalized-difference:B11-B12,https://doi.org/10.3390/land10030231
+NSDSI3,Normalized Shortwave-Infrared Difference Bare Soil Moisture Index 3,soil,(S1-S2)/(S1+S2),S1|S2,normalized-difference,(B11 - B12) / (B11 + B12),normalized-difference:B11-B12,https://doi.org/10.1016/j.isprsjprs.2019.06.012
+RENDVI,Red Edge Normalized Difference Vegetation Index,vegetation,(RE2 - RE1)/(RE2 + RE1),RE2|RE1,normalized-difference,(B06 - B05) / (B06 + B05),normalized-difference:B06-B05,https://doi.org/10.1016/S0176-1617(11)81633-0
+RGRI,Red-Green Ratio Index,vegetation,R/G,R|G,ratio,B04 / B03,ratio:B04/B03,https://doi.org/10.1016/j.jag.2014.03.018
+RI,Redness Index,vegetation,(R - G)/(R + G),R|G,normalized-difference,(B04 - B03) / (B04 + B03),normalized-difference:B04-B03,https://www.documentation.ird.fr/hor/fdi:34390
+RNDVI,Reversed Normalized Difference Vegetation Index,water,(R - N)/(R + N),R|N,normalized-difference,(B04 - B08) / (B04 + B08),normalized-difference:B04-B08,https://doi.org/10.3390/rs12162648
+RVI,Ratio Vegetation Index,vegetation,RE2 / R,RE2|R,ratio,B06 / B04,ratio:B06/B04,https://doi.org/10.2134/agronj1968.00021962006000060016x
+S2WI,Sentinel-2 Water Index,water,(RE1 - S2)/(RE1 + S2),RE1|S2,normalized-difference,(B05 - B12) / (B05 + B12),normalized-difference:B05-B12,https://doi.org/10.3390/w13121647
+SR,Simple Ratio,vegetation,N/R,N|R,ratio,B08 / B04,ratio:B08/B04,https://doi.org/10.2307/1936256
+SR2,Simple Ratio (800 and 550 nm),vegetation,N/G,N|G,ratio,B08 / B03,ratio:B08/B03,https://doi.org/10.1080/01431169308904370
+SR555,Simple Ratio (555 and 750 nm),vegetation,RE2 / G,RE2|G,ratio,B06 / B03,ratio:B06/B03,https://doi.org/10.1016/S0176-1617(11)81633-0
+SR705,Simple Ratio (705 and 750 nm),vegetation,RE2 / RE1,RE2|RE1,ratio,B06 / B05,ratio:B06/B05,https://doi.org/10.1016/S0176-1617(11)81633-0
+SRWI,Symbolic Regression Water Index,water,((G + B) - (N + S1)) / ((G + B) + (N + S1)),G|B|N|S1,four-band-balance,(B02 + B03 - B08 - B11) / (B02 + B03 + B08 + B11),four-band-balance:B02+B03-B08+B11,https://doi.org/10.1038/s41598-025-34720-x
+STI,Simple Tillage Index,vegetation,S1 / S2,S1|S2,ratio,B11 / B12,ratio:B11/B12,https://www.asprs.org/wp-content/uploads/pers/1997journal/jan/1997_jan_87-93.pdf
+SeLI,Sentinel-2 LAI Green Index,vegetation,(N2 - RE1) / (N2 + RE1),N2|RE1,normalized-difference,(B8A - B05) / (B8A + B05),normalized-difference:B8A-B05,https://doi.org/10.3390/s19040904
+UI,Urban Index,urban,(S2 - N)/(S2 + N),S2|N,normalized-difference,(B12 - B08) / (B12 + B08),normalized-difference:B12-B08,https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf
+VI700,Vegetation Index (700 nm),vegetation,(RE1 - R) / (RE1 + R),RE1|R,normalized-difference,(B05 - B04) / (B05 + B04),normalized-difference:B05-B04,https://doi.org/10.1016/S0034-4257(01)00289-9
+VIG,Vegetation Index Green,vegetation,(G - R) / (G + R),G|R,normalized-difference,(B03 - B04) / (B03 + B04),normalized-difference:B03-B04,https://doi.org/10.1016/S0034-4257(01)00289-9
+VgNIRBI,Visible Green-Based Built-Up Index,urban,(G - N)/(G + N),G|N,normalized-difference,(B03 - B08) / (B03 + B08),normalized-difference:B03-B08,https://doi.org/10.1016/j.ecolind.2015.03.037
+VrNIRBI,Visible Red-Based Built-Up Index,urban,(R - N)/(R + N),R|N,normalized-difference,(B04 - B08) / (B04 + B08),normalized-difference:B04-B08,https://doi.org/10.1016/j.ecolind.2015.03.037
+WI1,Water Index 1,water,(G - S2) / (G + S2),G|S2,normalized-difference,(B03 - B12) / (B03 + B12),normalized-difference:B03-B12,https://doi.org/10.3390/rs11182186
+WI2,Water Index 2,water,(B - S2) / (B + S2),B|S2,normalized-difference,(B02 - B12) / (B02 + B12),normalized-difference:B02-B12,https://doi.org/10.3390/rs11182186
+mSR705,Modified Simple Ratio (705 and 445 nm),vegetation,(RE2 - A)/(RE2 + A),RE2|A,normalized-difference,(B06 - B01) / (B06 + B01),normalized-difference:B06-B01,https://doi.org/10.1016/S0034-4257(02)00010-X

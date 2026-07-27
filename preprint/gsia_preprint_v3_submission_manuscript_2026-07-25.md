@@ -7,7 +7,7 @@ Correspondence: dbally@gmail.com
 **ESS Open Archive preprint, version 3 - July 2026**  
 **Not peer reviewed**
 
-*Version 3 supersedes version 2 (posted 21 July 2026). It corrects errors found in a 2026-07-25 review of the implementation and its Sentinel processing chain. No reported count, class, or audit outcome from version 2 changed; the corrections affect per-record descriptions and one rendering path. See Section 4.6 and the accompanying erratum.*
+*Version 3 supersedes version 2 (posted 21 July 2026). It corrects errors found in a 2026-07-25 review of the implementation and its Sentinel processing chain and adds a reproducible structural audit of bounded Sentinel-2 band algebra. No reported registry count, class, or release-audit outcome from version 2 changed; the corrections affect per-record descriptions and one rendering path, while the new analysis characterizes formula-space redundancy and its limited applicability to the 91-record registry. See Sections 4.6 and 4.7 and the accompanying erratum and audit files.*
 
 **ESS Open Archive record:** [https://essopenarchive.org/doc/007f7377-d063-474f-9ba0-d776c927729e](https://essopenarchive.org/doc/007f7377-d063-474f-9ba0-d776c927729e)
 
@@ -15,7 +15,7 @@ Correspondence: dbally@gmail.com
 
 ## Abstract
 
-Open Earth-observation missions have expanded the spectral, spatial, and temporal information available for environmental screening, but candidate remote-sensing methods remain dispersed across application domains and vary widely in implementation and validation maturity. We present the Global Spectral Index Atlas (GSIA), an open catalog of 91 proposed environmental remote-sensing index specifications spanning twelve domains and organized into 24 capability families. Each record documents an intended observable, proposed and implemented formulas where applicable, required sensors and operators, physical rationale, anticipated confounders, contribution class, method role, maturity, and an explicit inference limit. The version 2 registry contains 37 live M3 screening proxies, 16 M2 executable but non-live formulas, and 38 M1 specified concepts or retired formulas. Method roles identify 15 primary representatives, 10 variants, 12 components, one reference product, 51 research models, and two retired records; these roles organize the catalog and do not establish novelty or performance. All 37 renderable evalscripts passed static band and output checks. A public-service display audit returned nonblank overlays for all 37; the one record whose script was subsequently corrected was re-audited and retained its verdict. All 42 evidence packs associated with the 37 live records and five separate Sentinel-1 or Sentinel-5P demonstrations met the registry's source-coverage rule. These are software, display, and provenance results, not measurements of environmental detection performance. No catalog entry has completed the independent, held-out accuracy assessment defined in this paper. Targeted prior-art review identified related methods in several showcased domains, so catalog-wide priority and "first formula" claims are not made. GSIA is therefore presented as a transparent hypothesis and specification registry rather than a collection of validated detectors. Version 3 additionally reports a structured review that found seven records overstating their required sensors, four whose implemented formula did not match their executing code, one incorrect physical rationale, and a scene-dependent radiometric offset defect in one rendering path; all are corrected and documented here as a demonstration of the registry's intended correction pathway. We define a validation protocol using explicit labels, hard negative controls, locked formulas, geographic and temporal holdouts, established baselines, uncertainty estimates, and external replication. The catalog is intended to make environmental remote-sensing hypotheses inspectable, testable, and correctable, not to replace field measurement or regulatory assessment.
+Open Earth-observation missions have expanded the spectral, spatial, and temporal information available for environmental screening, but candidate remote-sensing methods remain dispersed across application domains and vary widely in implementation and validation maturity. We present the Global Spectral Index Atlas (GSIA), an open catalog of 91 proposed environmental remote-sensing index specifications spanning twelve domains and organized into 24 capability families. Each record documents an intended observable, proposed and implemented formulas where applicable, required sensors and operators, physical rationale, anticipated confounders, contribution class, method role, maturity, and an explicit inference limit. The version 3 registry snapshot contains 37 live M3 screening proxies, 16 M2 executable but non-live formulas, and 38 M1 specified concepts or retired formulas. Method roles identify 15 primary representatives, 10 variants, 12 components, one reference product, 51 research models, and two retired records; these roles organize the catalog and do not establish novelty or performance. All 37 renderable evalscripts passed static band and output checks. A public-service display audit returned nonblank overlays for all 37; the one record whose script was subsequently corrected was re-audited and retained its verdict. All 42 evidence packs associated with the 37 live records and five separate Sentinel-1 or Sentinel-5P demonstrations met the registry's source-coverage rule. These are software, display, and provenance results, not measurements of environmental detection performance. No catalog entry has completed the independent, held-out accuracy assessment defined in this paper. Targeted prior-art review identified related methods in several showcased domains, so catalog-wide priority and "first formula" claims are not made. GSIA is therefore presented as a transparent hypothesis and specification registry rather than a collection of validated detectors. Version 3 additionally reports a structured review that found seven records overstating their required sensors, four whose implemented formula did not match their executing code, one incorrect physical rationale, and a scene-dependent radiometric offset defect in one rendering path; all are corrected and documented here as a demonstration of the registry's intended correction pathway. A separate structural audit enumerated six bounded formula families over Sentinel-2 MSI: the full 13-band instrument produced 15,054 role-specific expressions from 1,079 unordered two- to four-band sets, while a ten-band reflected-surface core produced 4,770 expressions from 375 sets. Symmetry and monotonic-equivalence rules reduced the surface-core result to 2,340 information classes. Exact comparison with a pinned established-index catalog found 71 named matches representing 48 distinct equations. The structural audit measures formula-space organization and prior documented use, not environmental usefulness, novelty, or accuracy. We define a validation protocol using explicit labels, hard negative controls, locked formulas, geographic and temporal holdouts, established baselines, uncertainty estimates, and external replication. The catalog is intended to make environmental remote-sensing hypotheses inspectable, testable, and correctable, not to replace field measurement or regulatory assessment.
 
 **Keywords:** spectral index; Earth observation; environmental monitoring; Sentinel; imaging spectroscopy; hypothesis registry; validation; open science
 
@@ -24,6 +24,8 @@ Open Earth-observation missions have expanded the spectral, spatial, and tempora
 Open Earth-observation missions now provide complementary optical, radar, thermal, atmospheric, and imaging-spectroscopy observations. Their spatial resolution, revisit interval, coverage, processing level, and uncertainty vary substantially by sensor, latitude, acquisition plan, cloud conditions, and product. These observations create opportunities for environmental screening, but the existence of a potentially informative band or physical relationship does not by itself establish a target-specific detector.
 
 Spectral-index research is extensive. Normalized band combinations have been used for vegetation monitoring since at least Tucker (1979), and community resources such as the Awesome Spectral Indices catalog provide a structured vocabulary and machine-readable registry for established indices (Montero et al., 2023). Domain literatures also contain retrieval algorithms, threshold rules, classifiers, time-series methods, and data-fusion workflows for water quality, fire, minerals, methane, wetlands, marine debris, and other applications. However, candidate methods are not always documented in a common form that distinguishes their intended observable, formula, prerequisites, implementation state, confounders, and validation evidence.
+
+Automated index search also predates this work and extends beyond manual enumeration. Graham et al. (2022) searched wavelength-pair contrast ratios for moisture sensing under variable illumination. Chrysostomou et al. (2026) used symbolic regression to optimize Sentinel-2 vegetation and water indices and evaluated them at geographically separate sites. Lotfi et al. (2026) used an interpretable machine-learning procedure to derive compact vegetation indices from a ratio-based feature space under spatial, temporal, and spatiotemporal holdouts. These studies demonstrate that equation generation becomes scientifically informative only when joined to labels, an objective function, baselines, and out-of-sample evaluation.
 
 The Global Spectral Index Atlas (GSIA) was created to address that documentation problem. It assembles 91 proposed environmental remote-sensing index specifications across twelve domains in a single open registry. The Atlas is deliberately broader than a catalog of established normalized differences. Entries may be simple ratios, gated rules, temporal-change measures, multi-sensor combinations, or research specifications for newer imaging-spectroscopy missions. The common unit is therefore an **index specification**: a documented and testable mapping from declared observations and preprocessing to an output intended for a stated screening purpose.
 
@@ -36,9 +38,9 @@ Version 1 of this preprint described all 91 entries as novel spectral indices an
 
 Version 2 corrected that category error. It reported the Atlas as a catalog and hypothesis-registry contribution, not as evidence that 91 target-specific detectors have been discovered or validated. It also treated the current interactive deployment as an auditable research interface rather than an accuracy study.
 
-Version 3 retains that framing unchanged and adds a second class of correction. The version 2 audit verified that each record was internally complete and that each live script declared the bands it referenced. It did not verify that a record's stated sensor requirements matched the sensors its code actually samples, that its implemented formula matched the expression the code evaluates, or that the reflectance conversion feeding those expressions was radiometrically correct. A review on 25 July 2026 tested all three and found failures in each. Section 4.6 reports them in full.
+Version 3 retains that framing unchanged and adds two forms of scrutiny. First, the version 2 audit verified that each record was internally complete and that each live script declared the bands it referenced, but it did not verify that a record's stated sensor requirements matched the sensors its code actually samples, that its implemented formula matched the expression the code evaluates, or that the reflectance conversion feeding those expressions was radiometrically correct. A review on 25 July 2026 tested all three and found failures in each. Section 4.6 reports them in full. Second, a structural band-algebra audit enumerated a bounded Sentinel-2 formula space, canonicalized redundant expressions, compared exact equations with a pinned established-index catalog, and classified how that exercise applies to each GSIA record. Section 4.7 reports that analysis without treating enumeration as discovery or validation.
 
-This paper has four objectives. First, it defines the scope and record structure of GSIA. Second, it reports a reproducible July 2026 inventory and software/provenance audit. Third, it replaces priority tiers with independent contribution and maturity dimensions. Fourth, it defines the evidence required to promote a proposal from an executable visualization to an independently evaluated method.
+This paper has five objectives. First, it defines the scope and record structure of GSIA. Second, it reports a reproducible July 2026 inventory and software/provenance audit. Third, it replaces priority tiers with independent contribution and maturity dimensions. Fourth, it characterizes bounded Sentinel-2 band algebra and its limited record-level applicability. Fifth, it defines the evidence required to promote a proposal from an executable visualization to an independently evaluated method.
 
 ## 2. Atlas design and scope
 
@@ -46,7 +48,7 @@ This paper has four objectives. First, it defines the scope and record structure
 
 GSIA contains 91 records grouped into twelve environmental domains (Table 1). Long-established general-purpose indices such as NDVI, NDWI, NBR, and NDSI are excluded as standalone entries, although proposed records may use them as components. The five established Sentinel-1 and Sentinel-5P demonstrations in the Limn interface are also excluded from the count of 91 because their purpose is to demonstrate sensor access and rendering, not to claim new formulations.
 
-**Table 1. Domain coverage in GSIA version 2. Counts sum to 91.**
+**Table 1. Domain coverage in the GSIA version 3 registry snapshot. Counts sum to 91.**
 
 | Domain | Count | Typical observation families |
 |---|---:|---|
@@ -64,7 +66,7 @@ GSIA contains 91 records grouped into twelve environmental domains (Table 1). Lo
 | Cross-sensor fusion | 7 | Radar-optical, atmospheric-surface, thermal-optical combinations |
 | **Total** | **91** | |
 
-Each version 2 registry record contains or explicitly statuses the following fields:
+Each record in the version 3 registry snapshot contains or explicitly statuses the following fields:
 
 - identifier and full name;
 - environmental domain and intended screening use;
@@ -142,13 +144,14 @@ Formula schema version 2.0 further separates the proposed formula from the imple
 
 The release audit used the Atlas registry, Limn Atlas deployment, renderable evalscripts, automated test suite, event-source links, reviewed bookmarks, and associated public research documentation as reconciled on 21 July 2026. The version 2 audit ran against source snapshot `e50c2eda5cf405c7693e5210e04894c691e5f2eb`. The version 3 corrections in Section 4.6 were applied and re-verified against snapshot `fd00b890c16105d2e011f85d9e182ec5b709ab57`, tagged `gsia-v3-audit`, which is the snapshot this version describes. That implementation repository has since been made private; an independently verifiable copy of every Atlas-relevant file at that exact snapshot is public at the `gsia-v3-audit` tag in [globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas/tree/gsia-v3-audit), confirmed file-for-file identical before that tag was created (see the availability list). Counts are properties of those versioned snapshots, not permanent properties of the project. The complete entry-level inventory is supplied with this preprint.
 
-The audit addressed five questions:
+The audit addressed six questions:
 
 1. How many records are live M3 visualizations, M2 executable formulas, or M1 specified concepts and retirements?
 2. Do live scripts declare the bands they use and return the expected output structure?
 3. Does every record have a capability family, method role, contribution class, maturity state, and formula version?
 4. What do the evidence links and bookmarked examples actually establish?
 5. Do representative priority claims survive targeted search for closely related methods?
+6. How large is a bounded Sentinel-2 band-algebra space after symmetry and monotonic equivalence are considered, how much of it has exact precedent in a pinned established-index catalog, and where is such a comparison applicable to the 91 GSIA records?
 
 ### 3.2 Deployment classification
 
@@ -201,6 +204,25 @@ For this paper, a method reaches V1 only when an entry-specific evaluation inclu
 - explicit failure cases and a documented domain of applicability.
 
 For continuous variables, validation should report calibration and residual statistics such as bias, MAE or RMSE, uncertainty intervals, and stratified performance. For detection or classification, it should report a confusion matrix, precision, recall, specificity, and precision-recall behavior at declared operating points. Area estimates should use probability-based sampling and good-practice accuracy-adjustment methods where relevant (Olofsson et al., 2014). Spatially clustered observations require blocked or environmental cross-validation rather than random pixel splits (Roberts et al., 2017).
+
+### 3.7 Structural band-algebra audit
+
+A separate audit characterized equation structure without using environmental labels or claiming index performance. Two Sentinel-2 MSI universes were defined. The **full-instrument universe** contains all 13 bands and therefore `C(13,2) + C(13,3) + C(13,4) = 1,079` unique unordered two- to four-band sets. The **reflected-surface core** contains B02, B03, B04, B05, B06, B07, B08, B8A, B11, and B12, producing 375 such sets. B01, B09, and B10 were excluded from the core because they are designed primarily for aerosol, water-vapor, and cirrus characterization rather than as general reflected-surface channels. Their retention in the full-instrument universe allows instrument-level counting; their exclusion from the core is a search-design judgment, not a claim that they are never scientifically useful.
+
+Six deliberately bounded formula families were enumerated:
+
+1. signed difference, `A - B`;
+2. simple ratio, `A / B`;
+3. normalized difference, `(A - B) / (A + B)`;
+4. three-band correction, `(A - B) / (A + B + C)`;
+5. four-band balance, `(A + B - C - D) / (A + B + C + D)`; and
+6. difference of normalized contrasts, `(A - B) / (A + B) - (C - D) / (C + D)`.
+
+Three counts were retained because they answer different questions. A **role-specific expression** preserves numerator, denominator, positive, and negative assignments. A **direction-neutral structural class** identifies sign-reversed expressions and, for simple ratios, reciprocal band directions. An **information class** additionally merges the simple ratio and normalized difference for the same unordered positive-reflectance pair because `ND = (R - 1) / (R + 1)` is a monotonic transformation of `R = A / B` for positive reflectance. This equivalence does not imply identical scale, noise propagation, thresholds, or operational behavior.
+
+Exact-equation precedent was checked against the Awesome Spectral Indices machine-readable catalog (Montero et al., 2023) pinned at commit `18147d1726ecfa28fa02510d6f655ae5e6a19ac5` and source SHA-256 `82876d1a8dfabb6d876d714aed499d2998fbd09a1e67fca448c43472729bf026`. Sentinel-2 entries using two to four mapped reflectance bands and no external parameters were evaluated over 64 deterministic positive-reflectance vectors generated with fixed seed `20260726`. Rounded output vectors were hashed and matched to the enumerated candidates. This numerical fingerprint is an exact-equation screen under the tested domain, not a complete symbolic-equivalence proof.
+
+Finally, each of the 91 GSIA records was classified as a direct six-family match, a direct formula outside the six families, a component or ablation comparison, a manual-review case, or not directly applicable because it lacked an implemented formula or required another sensor or non-per-pixel workflow. The script, tests, generated candidate table, established-index crosswalk, GSIA applicability table, summary, and report are supplied with this preprint.
 
 ## 4. Audit results
 
@@ -279,6 +301,8 @@ The targeted review found sufficient related work to invalidate the catalog-wide
 3. states the substantive difference;
 4. distinguishes scientific contribution from naming, packaging, or software formalization; and
 5. is reviewed by a domain specialist.
+
+The structural audit strengthens this conclusion without replacing a literature review. Automated wavelength-pair search, symbolic regression, and interpretable machine-learning derivation have already been used to identify compact spectral indices under defined objectives (Graham et al., 2022; Chrysostomou et al., 2026; Lotfi et al., 2026). GSIA's enumeration is therefore not presented as a new index-discovery method. Its purpose is narrower: to expose structural redundancy, identify exact documented precedents, and route records toward direct baseline comparison, component ablation, or a different evaluation design.
 
 The remaining original contribution is substantial but different: GSIA is a cross-domain, open, inspectable architecture for turning environmental remote-sensing ideas into versioned specifications with visible limits and maturity. The 24-family structure and explicit method roles make redundancy inspectable by separating a family's primary representative from variants, components, references, research models, and retired records.
 
@@ -396,6 +420,38 @@ compared declarations against executing code. The lesson for other catalogs is t
 completeness checks and correspondence checks are different instruments, and only the
 second constrains what a record may claim.
 
+### 4.7 Structural band-algebra result
+
+The 1,079 full-instrument band sets do not correspond to 1,079 unique indices. Assigning band roles across the six bounded formula families produced 15,054 role-specific expressions. Collapsing sign-reversed forms and reciprocal ratio directions reduced this to 7,527 structural classes, and merging ratio and normalized-difference transforms for the same positive-reflectance band pair reduced it further to 7,449 information classes. The ten-band reflected-surface core produced 4,770 role-specific expressions, 2,385 direction-neutral classes, and 2,340 information classes (Table 5).
+
+**Table 5. Bounded Sentinel-2 band-algebra search spaces.**
+
+| Search universe | Unordered two- to four-band sets | Role-specific expressions | Direction-neutral classes | Information classes |
+|---|---:|---:|---:|---:|
+| Full 13-band MSI | 1,079 | 15,054 | 7,527 | 7,449 |
+| Ten-band reflected-surface core | 375 | 4,770 | 2,385 | 2,340 |
+
+Family-level expression counts were 156 differences, 156 ratios, 156 normalized differences, 1,716 three-band corrections, 4,290 four-band balances, and 8,580 differences of contrasts for the full instrument. The corresponding surface-core counts were 90, 90, 90, 720, 1,260, and 2,520. These are deterministic combinatorial results under the six stated templates, not estimates of how many expressions are physically sensible or environmentally useful.
+
+The pinned Awesome Spectral Indices snapshot contained 280 records. Of these, 185 Sentinel-2 entries used only two to four mapped reflectance bands and no external parameter and were eligible for the exact-equation screen. Seventy-one named entries matched one of the six families, but they resolved to 48 distinct signed equations because different application traditions sometimes assign different names or purposes to the same band algebra. An unmatched candidate is not thereby novel: the catalog is not exhaustive, the numerical screen does not capture every algebraic or monotonic relation, and many published methods contain constants, fitted coefficients, masks, temporal operators, or other structures outside the six families.
+
+The registry crosswalk also shows why exhaustive permutation analysis does not evaluate the Atlas as a whole (Table 6). Only PDCSI was a direct exact member of the six families. LISI was a direct two-band expression outside them because its weighted denominator and multiplier introduce additional structure. Thirty-three records could use the enumerated expressions as component baselines or ablations. One required manual interpretation, and 55 were not directly applicable because they lacked an implemented formula, used another sensor, or required temporal or spatial operators.
+
+**Table 6. Applicability of the bounded band-algebra audit to the 91 GSIA records.**
+
+| Applicability class | Records |
+|---|---:|
+| Direct exact six-family match | 1 |
+| Direct formula outside the six families | 1 |
+| Component or ablation comparison | 33 |
+| Manual review | 1 |
+| No implemented formula | 52 |
+| Other-sensor formula | 2 |
+| Non-per-pixel temporal or spatial workflow | 1 |
+| **Total** | **91** |
+
+Seven unit tests reproduce the band-set and expression counts, check duplicate handling for the four-band contrast family, and verify normalization of Unicode operators and implicit coefficients in GSIA formulas. The result is a reproducible structural baseline. It does not rank candidates, measure environmental signal, establish scientific priority, or promote any record toward V1.
+
 
 ## 5. Domain survey and research priorities
 
@@ -498,6 +554,8 @@ Every proposed index should be compared with:
 
 This design reveals whether added complexity produces real out-of-sample information rather than more visually compelling maps.
 
+The structural crosswalk makes this requirement operational. PDCSI should be compared directly with its exact six-family baseline; LISI should be tested against its simpler NIR/SWIR components and standard moisture or structural indices; and the 33 component-comparison records should report whether each gate, ratio, or contrast adds held-out information. The 4,770 surface-core expressions are a baseline universe, not a recommended brute-force experiment. Candidate screening should be target-specific, preregistered where feasible, and nested inside held-out evaluation to prevent selection leakage.
+
 ### 6.6 Report uncertainty and failure
 
 Validation reports should include calibration plots, confusion matrices or residual distributions, threshold sensitivity, geographic and environmental stratification, missing-data behavior, and representative false positives and false negatives. A result is more useful when it defines where the method fails. Entries that do not outperform a baseline should remain in the registry with a negative or superseded status rather than disappear.
@@ -510,14 +568,15 @@ Promotion to V2 should require reproduction by an independent analyst, dataset, 
 
 ### 7.1 What remains novel, unique, and useful
 
-The revised claim is narrower than version 1 and more defensible. GSIA's principal contribution is not the assertion that every formula has scientific priority. It is the integration of six practices that are rarely combined across many environmental domains:
+The revised claim is narrower than version 1 and more defensible. GSIA's principal contribution is not the assertion that every formula has scientific priority. It is the integration of seven practices that are rarely combined across many environmental domains:
 
 1. a single open registry for 91 environmental screening hypotheses;
 2. a 24-family organization with explicit primary, variant, component, reference, research-model, and retired roles;
 3. separate proposed and implemented formulas tied to declared sensor products and formula versions;
 4. observable and inference-limit clauses that constrain interpretation;
 5. public implementation and event-context surfaces that can be inspected; and
-6. independent contribution and maturity states that allow proposals, executable code, demonstrations, evaluations, negative results, retirements, and replications to coexist without being confused.
+6. independent contribution and maturity states that allow proposals, executable code, demonstrations, evaluations, negative results, retirements, and replications to coexist without being confused; and
+7. a reproducible structural-audit layer that separates band sets, role-specific equations, symmetry classes, information-equivalent transforms, exact catalog matches, and record-level applicability.
 
 That architecture is useful even when individual proposals are later modified or rejected. It converts informal ideas into falsifiable objects, makes hidden dependencies visible, and gives domain experts a concrete target for correction. Cross-domain breadth also exposes recurring methodological problems - background confusion, temporal mismatch, causal attribution, scale mismatch, and the difference between rendering and retrieval - that can be obscured within domain-specific silos.
 
@@ -529,6 +588,8 @@ GSIA is not a catalog of 91 validated environmental detectors. It is not evidenc
 
 The catalog is also not a substitute for established retrieval algorithms. Some environmental variables are inverse problems requiring radiative transfer, plume transport, allometry, or site-specific calibration. A compact index may be useful as a feature, screen, or hypothesis even when it cannot carry the final inference.
 
+Nor is formula enumeration an index-discovery claim. The structural audit has no target labels, objective function, empirical ranking, or held-out result. It cannot say which candidate is useful. At most, it identifies a bounded comparison space and reveals where equations are redundant or already documented.
+
 ### 7.3 Limitations of this study
 
 This version reports an internal audit performed by the Atlas author with tool-assisted review. It is not an independent peer review. The prior-art assessment was targeted toward representative high-claim entries, not a systematic search for all 91 records. Entry-level contribution classes in the supplement are therefore provisional and do not establish priority.
@@ -539,17 +600,21 @@ The interactive deployment will change. Link availability, public data services,
 
 The corrections in Section 4.6 also bound what the version 2 audit established. Schema completeness was verified; correspondence between declaration and executing code was not, and when it was tested ten of the 91 records required correction. Readers should assume that any registry field not covered by an explicit check in Section 3.3 remains unverified, and that further correspondence checks may find further defects.
 
+The structural audit has additional limits. Its six formula families are intentionally incomplete and do not cover the full literature of coefficients, constants, derivatives, spatial filters, time series, fitted models, or physically based retrievals. The ten-band reflected-surface core is a defensible screening universe, not a universal rule for Sentinel-2 analysis. The Awesome Spectral Indices snapshot is broad but not exhaustive, and numerical fingerprinting is not a complete symbolic prior-art search. Most importantly, no labeled imagery was used, so the counts and crosswalks establish neither environmental performance nor scientific novelty. The automated discovery studies cited here likewise address specific targets and datasets; their reported performance should not be generalized to GSIA records.
+
 ### 7.4 Research governance
 
-Each future release should publish a change log for formulas, labels, limits, and maturity. Evidence terminology should be mechanically constrained: event sources cannot populate validation fields, display-QC cannot generate accuracy labels, and M3 cannot be promoted to V1 without a result package containing labels, controls, metrics, and a held-out design.
+Each future release should publish a change log for formulas, labels, limits, maturity, structural matches, and comparison status. Evidence terminology should be mechanically constrained: event sources cannot populate validation fields, display-QC cannot generate accuracy labels, structural matches cannot populate performance or novelty fields, and M3 cannot be promoted to V1 without a result package containing labels, controls, metrics, and a held-out design.
 
 Entries should be correctable without implying failure of the project. A healthy registry records correction, negative evidence, and retirement. Proposed priority should remain "not established" until reviewed. High-consequence claims should receive domain-specialist review before prominent public display.
 
 ## 8. Conclusion
 
-The Global Spectral Index Atlas version 2 catalogs 91 proposed environmental remote-sensing index specifications across twelve domains. Its contribution is an open structure for documenting intended observables, formulas, sensor requirements, implementation maturity, event context, confounders, and validation status.
+The Global Spectral Index Atlas version 3 catalogs 91 proposed environmental remote-sensing index specifications across twelve domains. Its contribution is an open structure for documenting intended observables, formulas, sensor requirements, implementation maturity, event context, confounders, structural comparisons, and validation status.
 
 A July 2026 release audit, with corrections applied on 25 July 2026, found 37 live M3 screening proxies, 16 executable but non-live M2 formulas, and 38 M1 specified concepts or retired formulas, plus five established sensor demonstrations maintained outside the 91. The 91 records are organized into 24 capability families and explicit method roles so variants, components, future workflows, and retirements are not mistaken for independent validated inventions. Software-level checks support the internal consistency of the 37 renderable scripts and current display path, while the absence of labeled controls and held-out evaluation prevents catalog-wide accuracy, specificity, transferability, or causal claims. Targeted prior-art findings also prevent a defensible catalog-wide claim of 91 scientifically novel formulas.
+
+A bounded Sentinel-2 structural audit further showed that 1,079 unordered two- to four-band sets expand to 15,054 role-specific expressions across six formula families, while a ten-band reflected-surface core yields 4,770 expressions and 2,340 information classes. Seventy-one established-index names matched 48 distinct equations in a pinned catalog snapshot. Only one GSIA record was a direct exact member of the bounded families; 33 were more appropriately routed to component or ablation comparison. These results make redundancy and prior documented use more inspectable, but they do not identify a useful new index.
 
 GSIA should therefore be used as a hypothesis and specification registry from which smaller, coherent index families can be selected for preregistered validation. Its public-good value lies in making environmental remote-sensing hypotheses inspectable, falsifiable, comparable, and correctable. Field measurement, domain expertise, uncertainty analysis, and independent replication remain the route from a promising Atlas entry to a trusted environmental method.
 
@@ -565,11 +630,18 @@ The versioned resources for this manuscript are:
 - machine-readable 91-record supplement (version 3): [GSIA v3 status supplement](https://github.com/globe-and-atlas/remote-sensing-research/blob/gsia-v3-preprint/preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv);
 - superseded version 2 supplement, retained for comparison: [GSIA v2 status supplement](https://github.com/globe-and-atlas/remote-sensing-research/blob/gsia-v3-preprint/preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv);
 - version 2 to version 3 erratum: [GSIA v2 erratum](https://github.com/globe-and-atlas/remote-sensing-research/blob/gsia-v3-preprint/preprint/gsia_preprint_v2_erratum_2026-07-25.md);
+- structural-audit methods and interpretation: [`analysis/band-algebra/audit_report.md`](../analysis/band-algebra/audit_report.md);
+- machine-readable structural summary: [`analysis/band-algebra/audit_summary.json`](../analysis/band-algebra/audit_summary.json);
+- enumerated formula space: [`analysis/band-algebra/candidate_formula_space.csv`](../analysis/band-algebra/candidate_formula_space.csv);
+- exact established-index crosswalk: [`analysis/band-algebra/known_index_crosswalk.csv`](../analysis/band-algebra/known_index_crosswalk.csv);
+- 91-record applicability crosswalk: [`analysis/band-algebra/gsia_registry_applicability.csv`](../analysis/band-algebra/gsia_registry_applicability.csv);
+- executable audit and regression tests: [`scripts/audit_band_algebra.py`](../scripts/audit_band_algebra.py) and [`tests/test_band_algebra_audit.py`](../tests/test_band_algebra_audit.py);
+- reference analysis environment: [`analysis/band-algebra/requirements.txt`](../analysis/band-algebra/requirements.txt);
 - version 2 audited commit: `e50c2eda5cf405c7693e5210e04894c691e5f2eb`, in the original Limn implementation repository, since made private;
 - version 3 audited commit, tagged `gsia-v3-audit`: `fd00b890c16105d2e011f85d9e182ec5b709ab57`, in the same now-private repository; and
 - public, independently verifiable copy of that snapshot: [globe-and-atlas/limn-atlas, tag `gsia-v3-audit`](https://github.com/globe-and-atlas/limn-atlas/tree/gsia-v3-audit) (commit `dd12f3c8e2e987480e2811599da0a11e6a23ec24`). Every file this paper's audit covers — the 91-record registry, evalscripts, authorship claims, event references, and the audit scripts in Section 3.3 — was confirmed identical between the two repositories before the tag was cut. The public repository is the citation target for independent verification; the private repository remains the source of truth for produced-water development, which is out of scope for this paper (Scope boundary, page 1).
 
-Repository links above are pinned to the immutable tag `gsia-v3-preprint` rather than to a branch, so they resolve to the exact files described here even after later development. The human-readable catalog presents the proposed and implemented formula fields for every record, organized by capability family. The accompanying CSV contains the same governed records together with formula version, method role, contribution class, maturity, implementation state, calibration and validation status, bookmark-date semantics, display-QC metadata, and source snapshot.
+The registry-release links above are pinned to the immutable tag `gsia-v3-preprint`. The structural-audit paths were added during this pre-submission revision and must be included in the final immutable version 3 submission tag before archival upload. The human-readable catalog presents the proposed and implemented formula fields for every record, organized by capability family. The accompanying CSV contains the same governed records together with formula version, method role, contribution class, maturity, implementation state, calibration and validation status, bookmark-date semantics, display-QC metadata, and source snapshot.
 
 Sentinel data are available through the [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/). PACE and other NASA mission data are available through [NASA Earthdata](https://www.earthdata.nasa.gov/). EMIT products are distributed through the NASA Land Processes Distributed Active Archive Center.
 
@@ -577,7 +649,7 @@ Repository code and third-party data products retain their respective licenses. 
 
 ## Author contributions
 
-D.B. conceived the Atlas and registry structure, authored the proposed specifications, implemented or assembled the public catalog, conducted the July 2026 audit, and wrote and revised the manuscript.
+D.B. conceived the Atlas and registry structure, authored the proposed specifications, implemented or assembled the public catalog, designed and conducted the July 2026 release and structural audits, interpreted the results, and wrote and revised the manuscript.
 
 ## Competing interests
 
@@ -597,11 +669,17 @@ Biermann, L., Clewley, D., Martinez-Vicente, V., and Topouzelis, K. (2020). Find
 
 Chandler, C. J., et al. (2021). Remote sensing liana infestation in an aseasonal tropical forest: addressing mismatch in spatial units of analyses. *Remote Sensing in Ecology and Conservation*, 7. [https://doi.org/10.1002/rse2.197](https://doi.org/10.1002/rse2.197)
 
+Chrysostomou, C., Neophytides, S. P., Mavrovouniotis, M., and Hadjimitsis, D. G. (2026). Optimized spectral indices for global vegetation and water mapping using Sentinel-2. *Scientific Reports*, 16, 4491. [https://doi.org/10.1038/s41598-025-34720-x](https://doi.org/10.1038/s41598-025-34720-x)
+
 Drusch, M., et al. (2012). Sentinel-2: ESA's optical high-resolution mission for GMES operational services. *Remote Sensing of Environment*, 120, 25-36. [https://doi.org/10.1016/j.rse.2011.11.026](https://doi.org/10.1016/j.rse.2011.11.026)
+
+Graham, C., Girkin, J., and Bourgenot, C. (2022). Spectral index selection method for remote moisture sensing under challenging illumination conditions. *Scientific Reports*, 12, 14555. [https://doi.org/10.1038/s41598-022-18801-9](https://doi.org/10.1038/s41598-022-18801-9)
 
 Hedley, J., Roelfsema, C., Koetz, B., and Phinn, S. (2012). Capability of the Sentinel 2 mission for tropical coral reef mapping and coral bleaching detection. *Remote Sensing of Environment*, 120, 145-155. [https://doi.org/10.1016/j.rse.2011.06.028](https://doi.org/10.1016/j.rse.2011.06.028)
 
 Jones, H. K., and Elgy, J. (1994). Remote sensing to assess landfill gas migration. *Waste Management & Research*, 12, 327-337. [https://doi.org/10.1177/0734242X9401200405](https://doi.org/10.1177/0734242X9401200405)
+
+Lotfi, A., Carter, A., Ha, T., Meysami, M., Nketia, K., and Shirtliffe, S. (2026). Interpretable machine learning-derived spectral indices for vegetation monitoring. *Machine Learning with Applications*, 24, 100914. [https://doi.org/10.1016/j.mlwa.2026.100914](https://doi.org/10.1016/j.mlwa.2026.100914)
 
 Montero, D., Aybar, C., Mahecha, M. D., Martinuzzi, F., Sochting, M., and Wieneke, S. (2023). A standardized catalogue of spectral indices to advance the use of remote sensing in Earth system research. *Scientific Data*, 10, 197. [https://doi.org/10.1038/s41597-023-02096-0](https://doi.org/10.1038/s41597-023-02096-0)
 
@@ -631,6 +709,6 @@ Zabcic, N., Rivard, B., Ong, C., and Muller, A. (2014). Using airborne hyperspec
 
 ---
 
-**Version note.** This version supersedes the scientific framing of version 1. It corrects the marine-domain count from 12 to 10, replaces the T1/T2/T3 priority taxonomy, corrects the NISAR launch year, distinguishes deployment from validation, organizes the 91 records into 24 capability families and method roles, retires SF-EII and AMDPHI from live scientific use, replaces the prior LFMPI interpretation with a normalized NDMI-deficit proxy, reports the 21 July 2026 release audit, and narrows representative environmental claims to their current observables and evidence.
+**Version note.** This version supersedes the scientific framing of version 1 and the version 2 manuscript. It corrects the marine-domain count from 12 to 10, replaces the T1/T2/T3 priority taxonomy, corrects the NISAR launch year, distinguishes deployment from validation, organizes the 91 records into 24 capability families and method roles, retires SF-EII and AMDPHI from live scientific use, replaces the prior LFMPI interpretation with a normalized NDMI-deficit proxy, reports the 21 July 2026 release audit and 25 July implementation corrections, adds a reproducible bounded Sentinel-2 band-algebra audit and established-index crosswalk, and narrows representative environmental claims to their current observables and evidence.
 
-**Suggested citation:** Bally, D. (2026). The Global Spectral Index Atlas: An Open Catalog of Proposed Environmental Remote-Sensing Index Specifications Across Twelve Domains. ESS Open Archive preprint, version 2.
+**Suggested citation:** Bally, D. (2026). The Global Spectral Index Atlas: An Open Catalog of Proposed Environmental Remote-Sensing Index Specifications Across Twelve Domains. ESS Open Archive preprint, version 3.

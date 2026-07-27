@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the readable GSIA v2 formula catalog from the governed CSV."""
+"""Generate the readable GSIA formula-schema v2 catalog from a governed CSV."""
 
 from __future__ import annotations
 
@@ -80,7 +80,7 @@ def main() -> int:
     audit_date = next(iter(audit_dates))
 
     lines = [
-        "# Global Spectral Index Atlas v2 Formula Catalog",
+        "# Global Spectral Index Atlas Formula Catalog (schema v2.0)",
         "",
         f"- **Release audit:** {audit_date}",
         "- **Records:** 91 across 12 domains and 24 capability families",
@@ -89,7 +89,7 @@ def main() -> int:
         "[globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas)",
         "",
         "This is the human-readable companion to the machine-readable "
-        "[`gsia_preprint_v2_status_supplement_2026-07-21.csv`](../preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv). "
+        f"[`{source.name}`](../preprint/{source.name}). "
         "The CSV is authoritative. This file is generated from it so the formulas, maturity states, method roles, and limits remain synchronized.",
         "",
         "GSIA is a registry of proposed environmental remote-sensing specifications, not a collection of 91 validated detectors. "
@@ -186,7 +186,7 @@ def main() -> int:
             "",
             "```bash",
             "python3 scripts/generate_gsia_v2_formula_catalog.py \\",
-            "  preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv \\",
+            f"  preprint/{source.name} \\",
             "  formulas/gsia-v2-formula-catalog.md",
             "```",
             "",
