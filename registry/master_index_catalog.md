@@ -2,7 +2,7 @@
 ### A Public-Good Reference for Novel Satellite Band Combinations
 
 > [!WARNING]
-> **Historical version 1 document.** This file retains the superseded May 2026 T1/T2/T3 taxonomy and claim language. Do not use it for current novelty, implementation, or validation statements. The authoritative release table is the [GSIA v2 CSV](../preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv), with all 91 records rendered in the [human-readable v2 formula catalog](../formulas/gsia-v2-formula-catalog.md).
+> **Historical version 1 document.** This file retains the superseded May 2026 T1/T2/T3 taxonomy and claim language. Do not use it for current novelty, implementation, or validation statements. The authoritative release table is the [GSIA version 3 CSV](../preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv), with all 91 records rendered in the [human-readable method-specification catalog](../formulas/gsia-v2-formula-catalog.md).
 
 *Version 1.0 — May 2026 | 91 novel indices across 12 domains*
 

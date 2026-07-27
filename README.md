@@ -6,7 +6,7 @@
 
 This repository is the technical Atlas counterpart to the [Globe & Atlas](https://globeandatlas.substack.com) publication. It documents proposed formulas, implemented screening proxies, required inputs, physical rationales, confounders, maturity, and validation limits.
 
-The Global Spectral Index Atlas version 3 is a registry of **91 proposed specifications across 12 domains and 24 capability families**. It is not a collection of 91 validated detectors, and it does not assert that all 91 formulas are scientifically unprecedented.
+The Global Spectral Index Atlas version 3 is a registry of **24 capability families comprising 91 governed method-specification records across 12 domains**. The record count is an inventory measure, not a claim of 91 unique band combinations, scientifically unprecedented equations, or validated detectors.
 
 ## Start here
 
@@ -16,10 +16,10 @@ The Global Spectral Index Atlas version 3 is a registry of **91 proposed specifi
 | **[Version 3 manuscript source](preprint/gsia_preprint_v3_submission_manuscript_2026-07-25.md)** | Current pre-submission manuscript, including implementation corrections and the structural band-algebra audit |
 | **[Version 3 submission manifest](preprint/gsia_preprint_v3_submission_manifest_2026-07-26.md)** | Package checksums, completed verification, claim limits, and final upload actions |
 | **[Version 3 machine-readable supplement](preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv)** | Authoritative 91-record table with formula, role, maturity, inputs, operators, limits, and audit metadata |
-| **[GSIA Formula Catalog](formulas/gsia-v2-formula-catalog.md)** | Human-readable reference for all 91 proposed and implemented formulas, organized by capability family |
+| **[GSIA method-specification catalog](formulas/gsia-v2-formula-catalog.md)** | Human-readable reference for all 91 proposed methods and their implementation status, organized by capability family |
 | **[Structural band-algebra audit](analysis/band-algebra/audit_report.md)** | Reproducible Sentinel-2 formula-space counts, established-index crosswalk, GSIA applicability, and claim limits |
 | **[Version 2 to version 3 erratum](preprint/gsia_preprint_v2_erratum_2026-07-25.md)** | Corrections to declared sensors, formulas, rationale, radiometry, and provenance |
-| **Audited Atlas source** | Commit `e50c2eda5cf405c7693e5210e04894c691e5f2eb`, since made private; the public Atlas viewer is now maintained at [globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas) |
+| **Audited Atlas source** | Version 3 commit `fd00b890c16105d2e011f85d9e182ec5b709ab57`, since made private; a file-identical public copy is tagged [`gsia-v3-audit`](https://github.com/globe-and-atlas/limn-atlas/tree/gsia-v3-audit) at commit `dd12f3c8e2e987480e2811599da0a11e6a23ec24` |
 
 The CSV is the governed source for the readable formula catalog. Regenerate the catalog with:
 
@@ -101,6 +101,7 @@ These classes are provisional organizational metadata. They do not establish pri
 ## Scientific boundaries
 
 - A formula is not equivalent to the environmental conclusion named in a use case.
+- The 91-record count is registry inventory, not a count of unique band sets, unique equations, or established inventions.
 - Event documentation and bookmarked views are provenance, not target labels or matched controls.
 - Display quality is not sensitivity, specificity, calibration, transferability, or causal attribution.
 - Some proposed workflows require atmospheric correction, temporal comparison, spatial operators, inversion, field calibration, or ancillary data not present in a current live script.
@@ -114,6 +115,7 @@ The following files are preserved for provenance but use the superseded May 2026
 
 - [`ATLAS.md`](ATLAS.md)
 - [`registry/master_index_catalog.md`](registry/master_index_catalog.md)
+- [`registry/comparative_analysis.md`](registry/comparative_analysis.md)
 - [`formulas/formula-quick-reference.md`](formulas/formula-quick-reference.md)
 - [`preprint/gsia_preprint_v1.md`](preprint/gsia_preprint_v1.md)
 - [`preprint/gsia_preprint_v1.pdf`](preprint/gsia_preprint_v1.pdf)
@@ -124,7 +126,7 @@ Use the current v3 status supplement and governed formula catalog for formulas, 
 
 Please cite both the Atlas release and the underlying scientific sources identified for the method being used. Reuse of a proposed formula does not convert it into a validated detector; document the exact version, preprocessing, thresholds, calibration data, and domain of applicability.
 
-**Suggested citation:** Bally, D. (2026). *The Global Spectral Index Atlas: An Open Catalog of Proposed Environmental Remote-Sensing Index Specifications Across Twelve Domains*. ESS Open Archive preprint, version 3.
+**Suggested citation:** Bally, D. (2026). *The Global Spectral Index Atlas: An Open Registry of Environmental Remote-Sensing Method Specifications Across Twelve Domains*. ESS Open Archive preprint, version 3.
 
 Repository code and third-party data products retain their respective licenses. The manuscript and Atlas documentation are released under CC BY 4.0 unless otherwise noted.
 

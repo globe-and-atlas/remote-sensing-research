@@ -59,11 +59,11 @@ To preserve scientific integrity and prevent overclaiming, all Remote Sensing Re
 
 ### The Defensive Claim Rule
 **NEVER make "first-in-history" or "invented" claims for basic physics or established spectral bands.**
-The defensible claim for any novel index is:
+The defensible claim for a candidate method specification is:
 > *A named, transparent, decision-ready composite built from established spectral mechanisms, domain gates, and confounder rejection — applied to a specific public-good screening workflow.*
 
 ### The Authorship Boundary
-*   **What you DO claim**: The unique formulation (recipes), the multi-gate composite logic, the public-good decision framing, target benchmark curation, and active web-app implementation.
+*   **What you DO claim**: The documented formulation or workflow, the multi-gate composite logic where present, the public-good decision framing, target benchmark curation, and active web-app implementation.
 *   **What you DO NOT claim**: Invention of the underlying band physics, the individual spectral ratios (NDVI, NDWI) used as inputs, or the existence of the environmental hazard itself.
 
 ### Claim Classification System

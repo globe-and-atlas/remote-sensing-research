@@ -1,5 +1,8 @@
-# Spectral Index Comparative Analysis Guide
-### Scientific Advances, Confounder Rejection, and Operational Benefits of the Top 25 Priority Novel Composites
+# Historical Spectral-Method Comparative Analysis
+### Superseded version 1 claims for 25 candidate composites
+
+> [!WARNING]
+> **Historical version 1 analysis.** This guide preserves superseded novelty, superiority, and operational-benefit claims for provenance. It is not the current scientific status of the 91-record registry and should not be cited as evidence that these methods are unique, superior, or validated. Use the [version 3 status supplement](../preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv), [method-specification catalog](../formulas/gsia-v2-formula-catalog.md), and [version 3 manuscript](../preprint/gsia_preprint_v3_submission_manuscript_2026-07-25.md).
 
 This guide provides the technical and scientific comparison between the novel spectral indices formulated in this atlas and the commonly established baselines traditionally used in remote sensing. It documents exactly what these new indices add, why standard baselines fail in specific environmental contexts, and the physical, chemical, or physiological mechanisms that make these new formulations superior.
 

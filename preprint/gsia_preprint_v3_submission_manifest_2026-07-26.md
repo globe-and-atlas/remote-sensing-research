@@ -1,6 +1,6 @@
 # GSIA preprint version 3 submission manifest
 
-**Prepared:** 26 July 2026  
+**Prepared:** 27 July 2026<br>
 **Status:** Pre-submission package; final immutable repository tag not yet created  
 **Publication boundary:** Global Spectral Index Atlas only. Produced-water Limn formulas, gates, evidence, results, and case studies are excluded.  
 **Audited Atlas source:** `fd00b890c16105d2e011f85d9e182ec5b709ab57`, tagged `gsia-v3-audit` in the implementation repository  
@@ -10,12 +10,12 @@
 
 | File | Purpose | SHA-256 |
 |---|---|---|
-| `gsia_preprint_v3_submission_2026-07-26.pdf` | Rendered pre-submission manuscript | `9834d690b7f6c620e72cab8758487fb2e31aae2784db753d7d0f63a28c33486a` |
-| `gsia_preprint_v3_submission_manuscript_2026-07-25.md` | Editable manuscript source | `05e5f1bad62f8c5a249a6941e807bfcee5ba36999add2bfd0d8d7c22f43de18b` |
+| `gsia_preprint_v3_submission_2026-07-26.pdf` | Rendered pre-submission manuscript | `9b94622a990bf68349d88df4173591b534a3fb4bd97b2566d6658e3ef56226d2` |
+| `gsia_preprint_v3_submission_manuscript_2026-07-25.md` | Editable manuscript source | `b8f63574e03a5636ce8c66c219b3af82fc91b07cf3d9ae3b4b71e076795c9f9a` |
 | `gsia_preprint_v3_status_supplement_2026-07-25.csv` | Machine-readable 91-record status supplement | `250ca9a220a8b577e78731c372cc5e55882eab9a520e10a520a38eae73ff10e5` |
-| `../formulas/gsia-v2-formula-catalog.md` | Human-readable formula-schema v2.0 catalog generated from the version 3 supplement | `8cc75ed1b94c22ed9ac54851ab6fe3de55482641518784d14b35be150209c9c5` |
+| `../formulas/gsia-v2-formula-catalog.md` | Human-readable formula-schema v2.0 catalog generated from the version 3 supplement | `974bfc731b80c347921c6580f63a08c6b01d559689ea9b7aa391986a539536ea` |
 | `../scripts/audit_band_algebra.py` | Reproducible structural-audit script | `2ad849e723233c3e4b8814bf496d78ee36a81f2b9f3682e5b022dfca5c01dd59` |
-| `../scripts/render_gsia_preprint.py` | Reproducible Markdown-to-PDF renderer | `af2eb9b263e66ba3fab10896c579dbef80d277964c4d3c0e4e46251ea83b0272` |
+| `../scripts/render_gsia_preprint.py` | Reproducible Markdown-to-PDF renderer | `40af4dd8b165c59755811623c03cb7f56f21b5e18b42e350dfba866dd2c074b0` |
 | `../tests/test_band_algebra_audit.py` | Seven structural-audit regression tests | `d5944e52eb7a1c9277bef1095bdb90eff4b999ade859a6b74a899669d4778eef` |
 | `../analysis/band-algebra/audit_report.md` | Human-readable structural methods, results, and limits | `314fad8cb8a6cbc65d63e9440cb0751d4ac5c230963c556e020957278dbeef3c` |
 | `../analysis/band-algebra/audit_summary.json` | Machine-readable counts, environment, and pinned-source metadata | `c7bd179f668714ac5b29de3230c98dafdff2e6a5263c42bd148ad7f1e68dd622` |
@@ -26,7 +26,7 @@
 
 ## Frozen scientific inventory
 
-- 91 unique registry records across 12 domains and 24 capability families.
+- 24 capability families comprising 91 governed method-specification records across 12 domains.
 - Maturity: 37 M3 live screening proxies, 16 M2 executable non-live formulas, and 38 M1 specified concepts or retired formulas.
 - Method roles: 15 primary, 10 variant, 12 component, 1 reference, 51 research-model, and 2 retired.
 - Provisional contribution classes: 68 C1, 22 C2, and 1 C3.
@@ -41,7 +41,7 @@
 - Seven structural-audit unit tests passed.
 - The formula catalog regenerated successfully from the version 3 supplement: 91 records in 24 capability families.
 - The candidate table contains 19,824 data rows, the established-index crosswalk 71 data rows, the GSIA applicability table 91 data rows, and the status supplement 91 data rows.
-- Crossref metadata was checked for the three added automated-index-search references.
+- Crossref metadata was checked for all 20 DOI-bearing bibliography entries; the two Zenodo records were checked through DataCite and the Zenodo API.
 - PDF text extraction contains the version 3 citation, structural counts, applicability findings, and new references, with no template or tool tokens.
 - The 19-page letter-size PDF was rendered to PNG and visually inspected across complete and focused review passes. No clipping, overlap, broken tables, missing pages, or unreadable references were observed.
 - PDF metadata identifies version 3 and Daniel Bally.
@@ -49,6 +49,7 @@
 ## Interpretation limits preserved
 
 - Enumeration and exact-equation matching do not establish environmental usefulness, scientific novelty, or performance.
+- The 91-record count is registry inventory, not a count of unique band sets, unique equations, or established inventions.
 - The six formula families are deliberately bounded and do not represent all spectral-index algebra.
 - The Awesome Spectral Indices snapshot is pinned but not exhaustive; absence of a match is not evidence of novelty.
 - Ratio and normalized-difference information classes share monotonic information for positive reflectance but do not have interchangeable scales, noise behavior, or thresholds.

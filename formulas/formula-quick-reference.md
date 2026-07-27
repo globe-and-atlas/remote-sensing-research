@@ -8,7 +8,7 @@ sources: [limn, civic-sentinel, permian-basin-survey, global-novel-survey]
 # Formula Quick Reference
 
 > [!WARNING]
-> **Historical cross-project reference.** This file predates the GSIA version 2 reconciliation, mixes multiple projects, and includes formulas outside the Atlas publication scope. It is not the current 91-record preprint supplement. Use the [GSIA v2 Formula Catalog](gsia-v2-formula-catalog.md) and [governed CSV](../preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv) for the current Atlas formulas and scientific status.
+> **Historical cross-project reference.** This file predates the GSIA version 3 reconciliation, mixes multiple projects, and includes formulas outside the Atlas publication scope. It is not the current 91-record preprint supplement. Use the [GSIA method-specification catalog](gsia-v2-formula-catalog.md) and [governed version 3 CSV](../preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv) for the current Atlas records and scientific status.
 
 Every formula across all projects in one place. Grouped by domain. Formulas use Sentinel-2 band notation unless noted.
 
@@ -89,7 +89,7 @@ Every formula across all projects in one place. Grouped by domain. Formulas use 
 
 ## 3. Civic Sentinel — Environmental / Civic Atlas
 
-Full formulas in [`civic-sentinel-composite-atlas.md`](../catalogs/civic-sentinel-composite-atlas.md). Quick reference:
+The original Civic Sentinel source catalog is not included in this repository. Historical quick reference:
 
 | Acronym | Key Components | Ranked Score |
 |---------|---------------|-------------|

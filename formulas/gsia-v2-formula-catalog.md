@@ -1,13 +1,13 @@
-# Global Spectral Index Atlas Formula Catalog (schema v2.0)
+# Global Spectral Index Atlas Method-Specification Catalog (schema v2.0)
 
 - **Release audit:** 2026-07-25
-- **Records:** 91 across 12 domains and 24 capability families
+- **Registry:** 24 capability families comprising 91 governed method specifications across 12 domains
 - **Formula schema:** 2.0
 **Audited Atlas source:** commit `fd00b890c16105d2e011f85d9e182ec5b709ab57`, since made private; the public Atlas viewer is now maintained at [globe-and-atlas/limn-atlas](https://github.com/globe-and-atlas/limn-atlas)
 
 This is the human-readable companion to the machine-readable [`gsia_preprint_v3_status_supplement_2026-07-25.csv`](../preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv). The CSV is authoritative. This file is generated from it so the formulas, maturity states, method roles, and limits remain synchronized.
 
-GSIA is a registry of proposed environmental remote-sensing specifications, not a collection of 91 validated detectors. A formula can be useful as a screening feature or research hypothesis without establishing target specificity, causal attribution, concentration, risk, or regulatory status.
+GSIA is a registry of governed environmental remote-sensing method specifications. The 91-record count is inventory, not a claim of 91 unique band combinations, scientifically unprecedented equations, or validated detectors. A formula can be useful as a screening feature or research hypothesis without establishing target specificity, causal attribution, concentration, risk, or regulatory status.
 
 ## How to read the records
 
@@ -27,7 +27,7 @@ GSIA is a registry of proposed environmental remote-sensing specifications, not 
 | Contribution classes | 68 C1; 22 C2; 1 C3, all provisional |
 | Independent validation | 0 V1; 0 V2 |
 
-## Formula index
+## Record index
 
 | # | Record | Capability family | Role | Maturity | Formula status |
 |---:|---|---|---|---|---|

@@ -2,7 +2,7 @@
 ### A Public-Good Reference for Novel Satellite Band Combinations
 
 > [!WARNING]
-> **Historical version 1 document.** This May 2026 catalog preserves the original T1/T2/T3 framing for provenance. Those priority labels, names, formulas, and validation descriptions are not the current scientific status. Use the [GSIA v2 Formula Catalog](formulas/gsia-v2-formula-catalog.md) and its [governed 91-record CSV](preprint/gsia_preprint_v2_status_supplement_2026-07-21.csv) for current formulas, capability families, method roles, maturity, contribution, retirements, and inference limits.
+> **Historical version 1 document.** This May 2026 catalog preserves the original T1/T2/T3 framing for provenance. Those priority labels, names, formulas, and validation descriptions are not the current scientific status. Use the [GSIA method-specification catalog](formulas/gsia-v2-formula-catalog.md) and its [governed version 3 CSV](preprint/gsia_preprint_v3_status_supplement_2026-07-25.csv) for current records, capability families, method roles, maturity, contribution, retirements, and inference limits.
 
 *Version 1.0 — May 2026 | 91 novel indices across 12 domains*
 

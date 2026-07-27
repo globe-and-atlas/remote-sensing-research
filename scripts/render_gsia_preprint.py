@@ -382,7 +382,7 @@ def markdown_story(source: Path, available: float):
 class GSIAProfile:
     title = "The Global Spectral Index Atlas - Version 3"
     author = "Daniel Bally"
-    subject = "Open catalog and structural audit of environmental remote-sensing index specifications"
+    subject = "Open registry and structural audit of environmental remote-sensing method specifications"
     keywords = "remote sensing, spectral index, Sentinel-2, band algebra, validation, open science"
 
 
