@@ -40,3 +40,4 @@
 - 2026-07-26 23:04 — commit: update v3 with structural band-algebra research | README.md,analysis/band-algebra/MASTERS_BRIEF.md,analysis/band-algebra/audit_report.md,analysis/band-algebra/audit_summary.json,analysis/band-algebra/candidate_formula_space.csv
 - 2026-07-26 23:04 — commit: docs: append v3 publication checkpoint | knowledge/SESSION.md
 - 2026-07-27 07:27 — commit: clarify GSIA v3 registry claims | ATLAS.md,README.md,formulas/formula-quick-reference.md,formulas/gsia-v2-formula-catalog.md,preprint/README.md
+- 2026-07-27 08:20 — commit: tighten GSIA v3 schema and citation accuracy | README.md,preprint/gsia_preprint_v3_submission_2026-07-26.pdf,preprint/gsia_preprint_v3_submission_manifest_2026-07-26.md,preprint/gsia_preprint_v3_submission_manuscript_2026-07-25.md
