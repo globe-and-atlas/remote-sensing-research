@@ -1,7 +1,7 @@
 # GSIA preprint version 3 submission manifest
 
-**Prepared:** 27 July 2026<br>
-**Status:** Pre-submission package; final immutable repository tag not yet created  
+**Prepared:** 27 July 2026; links repointed and PDF re-rendered 28 July 2026<br>
+**Status:** Submission package; pinned to immutable repository tag `gsia-v3-submission`  
 **Publication boundary:** Global Spectral Index Atlas only. Produced-water Limn formulas, gates, evidence, results, and case studies are excluded.  
 **Audited Atlas source:** `fd00b890c16105d2e011f85d9e182ec5b709ab57`, tagged `gsia-v3-audit` in the implementation repository  
 **Public audited-source copy:** `dd12f3c8e2e987480e2811599da0a11e6a23ec24`, tag `gsia-v3-audit`, in `globe-and-atlas/limn-atlas`
@@ -10,8 +10,8 @@
 
 | File | Purpose | SHA-256 |
 |---|---|---|
-| `gsia_preprint_v3_submission_2026-07-26.pdf` | Rendered pre-submission manuscript | `388c2a918997fb654833ce03d8d4a4a49b07ce5e220e53c41472a0ecbaf3e2b8` |
-| `gsia_preprint_v3_submission_manuscript_2026-07-25.md` | Editable manuscript source | `3b063fd854dc175d989ca42d2c0e9cd9353aee4dc0b1b4c7042ed6fd88c34832` |
+| `gsia_preprint_v3_submission_2026-07-26.pdf` | Rendered submission manuscript | `55ef17b79b6562b5decdf65ee0eaaf7dea45c6665781511ccb122a3eb3a94a2d` |
+| `gsia_preprint_v3_submission_manuscript_2026-07-25.md` | Editable manuscript source | `0449996ef6117c03fdf75d241891204c3ddec8d07d178e9d4ef63b46ac582312` |
 | `gsia_preprint_v3_status_supplement_2026-07-25.csv` | Machine-readable 91-record status supplement | `250ca9a220a8b577e78731c372cc5e55882eab9a520e10a520a38eae73ff10e5` |
 | `gsia_preprint_v2_erratum_2026-07-25.md` | Version 2 correction ledger carried into version 3 | `aeceeec7634a42a0387d44e6c72ba0ac5b74ed306914f2dd45d9f56ef0179471` |
 | `../formulas/gsia-v2-formula-catalog.md` | Human-readable formula-schema v2.0 catalog generated from the version 3 supplement | `974bfc731b80c347921c6580f63a08c6b01d559689ea9b7aa391986a539536ea` |
@@ -59,11 +59,16 @@
 - The ten-band reflected-surface core is a search-design choice, not a universal exclusion rule for B01, B09, or B10.
 - Formula, schema, rendering, display, and link checks remain software, structural, or provenance results rather than environmental accuracy results.
 
-## Final pre-upload actions
+## Pre-upload actions completed 28 July 2026
+
+- All twelve registry and structural-audit links in Data and code availability were repointed from the mutable `main` branch and from PDF-unusable relative paths to the immutable tag `gsia-v3-submission`. The earlier `gsia-v3-preprint` tag was left unmoved.
+- The PDF was re-rendered from the repointed manuscript: 19 pages, no `blob/main` reference remaining, metadata identifying version 3 and Daniel Bally.
+- The seven structural-audit regression tests passed against the repointed package.
+- The manuscript and PDF hashes above were recomputed. All other hashed files are unchanged and were reverified as matching.
+
+## Remaining actions
 
 - Review the author name, affiliation, correspondence address, license, competing-interest statement, and AI-assistance disclosure.
-- Commit the complete version 3 package and create a new immutable submission tag; do not move or overwrite the earlier `gsia-v3-preprint` tag.
-- Update the pre-submission structural-audit links to the new immutable tag and confirm each resolves publicly.
-- Recompute this manifest if any hashed file changes.
-- Upload the PDF, 91-record supplement, audit summary, formula-space table, established-index crosswalk, and GSIA applicability table together.
+- Confirm each pinned link resolves publicly after the tag is pushed.
+- Upload the PDF, 91-record supplement, erratum, audit summary, formula-space table, established-index crosswalk, and GSIA applicability table together.
 - Confirm that ESS Open Archive displays the revision as version 3.

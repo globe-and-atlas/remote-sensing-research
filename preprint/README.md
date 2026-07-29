@@ -16,7 +16,7 @@
 | [`../analysis/band-algebra/gsia_registry_applicability.csv`](../analysis/band-algebra/gsia_registry_applicability.csv) | Record-level applicability classification |
 | [`../formulas/gsia-v2-formula-catalog.md`](../formulas/gsia-v2-formula-catalog.md) | Human-readable method-specification presentation of the same 91 governed records |
 
-The version 3 PDF has been rendered and visually verified. The immutable submission tag has not yet been created. Before archival upload, create that tag from the final reviewed commit and confirm every package link resolves through it. The PDF, 91-record CSV, audit summary, formula-space table, established-index crosswalk, and GSIA applicability table should be archived together.
+The version 3 PDF has been rendered and visually verified, and every registry and structural-audit link in the manuscript is pinned to the immutable tag `gsia-v3-submission`. The earlier `gsia-v3-preprint` tag predates corrections to the formula catalog and erratum and is retained unmoved for provenance only. The PDF, 91-record CSV, erratum, audit summary, formula-space table, established-index crosswalk, and GSIA applicability table should be archived together.
 
 ## Superseded version 2 package
 
