@@ -58,9 +58,21 @@ Zenodo mints two types of DOIs for every repository:
 1.  **Concept DOI**: A persistent identifier that represents the *entire* software project across all of its versions.
 2.  **Version DOI**: A unique identifier tied strictly to a *specific* release (e.g., one for `v1.0.0` and a new one for `v1.0.1`).
 
+For this repository:
+
+* **Concept DOI:** `10.5281/zenodo.20400743` — cite this for the current edition.
+* **Version DOI (v1.0.0):** `10.5281/zenodo.20400744` — permanent pointer to v1.0.0 only.
+
+Verify which is which at any time via DataCite; a version record declares
+`IsVersionOf` against the concept DOI:
+
+```bash
+curl -s "https://api.datacite.org/dois/10.5281/zenodo.20400744" | python3 -m json.tool
+```
+
 > [!IMPORTANT]
 > **No Badge Updates Needed!**
-> The Zenodo badge in the public [README.md](../../README.md) is configured to use the **Concept DOI** (`10.5281/zenodo.20400744`). Since the Concept DOI automatically routes users to the *latest* versioned release, **you do not need to edit or change the DOI badge in the README or manuscript files when publishing new versions**. It stays valid forever.
+> The Zenodo badge in the public [README.md](../../README.md) is configured to use the **Concept DOI** (`10.5281/zenodo.20400743`). Since the Concept DOI automatically routes users to the *latest* versioned release, **you do not need to edit or change the DOI badge in the README or manuscript files when publishing new versions**. It stays valid forever.
 
 ---
 
