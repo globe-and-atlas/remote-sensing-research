@@ -17,3 +17,49 @@
 - [x] Classify all 91 GSIA records by direct, component, manual, or non-applicable permutation scope
 - [x] Generate a technical report, full candidate table, GSIA applicability table, known-index crosswalk, G&A article draft, LinkedIn draft, and publication graphic
 - [ ] Run a target-specific empirical benchmark with independent labels, hard negatives, and geographic or temporal holdouts
+
+## GSIA v3 Submission and Closeout
+
+Package frozen at tag `gsia-v3-submission` (commit `0d79cd1`). Checksums in
+`preprint/gsia_preprint_v3_submission_manifest_2026-07-26.md`.
+
+### Completed 2026-07-30
+
+- [x] Repository carries a LICENSE file detectable by GitHub
+- [x] Content is licensed CC BY 4.0
+- [x] First-party code is licensed MIT in LICENSE-CODE
+- [x] The v1.0.1 draft release is removed from GitHub
+- [x] The tag `v1.0.1` remains present on the public remote
+- [x] A GitHub release exists on tag `gsia-v3-submission`
+- [x] Zenodo concept DOI `10.5281/zenodo.20400743` resolves to the v3 snapshot
+- [x] The Zenodo update guide names `...20400743` as the concept DOI
+
+### Phase B — ESS Open Archive v3 (manual, essopenarchive.org)
+
+- [ ] The submission is filed as a revision to record `007f7377-d063-474f-9ba0-d776c927729e`
+- [ ] `gsia_preprint_v3_submission_2026-07-26.pdf` is uploaded
+- [ ] `gsia_preprint_v3_status_supplement_2026-07-25.csv` is uploaded
+- [ ] `gsia_preprint_v2_erratum_2026-07-25.md` is uploaded
+- [ ] `analysis/band-algebra/audit_summary.json` is uploaded
+- [ ] `analysis/band-algebra/candidate_formula_space.csv` is uploaded
+- [ ] `analysis/band-algebra/known_index_crosswalk.csv` is uploaded
+- [ ] `analysis/band-algebra/gsia_registry_applicability.csv` is uploaded
+- [ ] The license field is set to CC BY 4.0
+- [ ] The author name is reviewed
+- [ ] The affiliation is reviewed
+- [ ] The correspondence address is reviewed
+- [ ] The competing-interest statement is reviewed
+- [ ] The AI-assistance disclosure is reviewed
+- [ ] The record displays as version 3
+
+### Phase C — Closeout (after v3 is live)
+
+- [ ] `preprint/README.md` states the v3 record is deposited
+- [ ] `preprint/README.md` carries the live v3 record link
+- [ ] `knowledge/SESSION.md` records the v3 submission checkpoint
+- [ ] `knowledge/DECISIONS.md` records the dual-license decision
+- [ ] `python3 /Users/danielbally/Git/.agent/scripts/session_capture.py` has been run
+- [ ] The submission manifest is left unmodified
+
+**Do not amend the manifest.** It is the frozen checksummed record of what was
+submitted; correcting it after the fact defeats its purpose.
