@@ -56,6 +56,8 @@ Package frozen at tag `gsia-v3-submission` (commit `0d79cd1`). Checksums in
 
 - [ ] `preprint/README.md` states the v3 record is deposited
 - [ ] `preprint/README.md` carries the live v3 record link
+- [ ] `README.md` persistent-identifier table lists the v3 preprint DOI
+- [ ] The GitHub homepage field points at the v3 preprint DOI
 - [ ] `knowledge/SESSION.md` records the v3 submission checkpoint
 - [ ] `knowledge/DECISIONS.md` records the dual-license decision
 - [ ] `python3 /Users/danielbally/Git/.agent/scripts/session_capture.py` has been run

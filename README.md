@@ -128,6 +128,21 @@ Please cite both the Atlas release and the underlying scientific sources identif
 
 **Suggested citation:** Bally, D. (2026). *The Global Spectral Index Atlas: An Open Registry of Environmental Remote-Sensing Method Specifications Across Twelve Domains*. ESS Open Archive preprint, version 3.
 
+### Persistent identifiers
+
+| Resource | Identifier |
+|---|---|
+| Preprint, version 2 (current published) | [10.22541/essoar.15004217/v2](https://doi.org/10.22541/essoar.15004217/v2) |
+| Preprint, version 1 | [10.22541/essoar.15004217/v1](https://doi.org/10.22541/essoar.15004217/v1) |
+| Archived code and registry (current edition) | [10.5281/zenodo.20400743](https://doi.org/10.5281/zenodo.20400743) |
+| Archived code, version 1.0.0 | [10.5281/zenodo.20400744](https://doi.org/10.5281/zenodo.20400744) |
+| Archived code, version 1.0.1 | [10.5281/zenodo.20401605](https://doi.org/10.5281/zenodo.20401605) |
+
+Cite the DOIs rather than `essopenarchive.org/doc/...` URLs, which are working
+links that change between revisions. Each preprint version carries its own DOI;
+there is no version-agnostic preprint DOI. The Zenodo concept DOI
+`10.5281/zenodo.20400743` always resolves to the current archived edition.
+
 ## License
 
 This repository is dual-licensed:
