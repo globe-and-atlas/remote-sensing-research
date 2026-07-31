@@ -59,6 +59,28 @@ Cite the concept DOI for the current archived edition. Confirm which is which
 through DataCite; a version record declares `IsVersionOf` against the concept
 DOI. See [procedural/zenodo_update.md](../procedural/zenodo_update.md).
 
+## GitHub blob links and large files
+
+A `blob/` link to a file above GitHub's preview limit still returns HTTP 200,
+but the page renders "Sorry about that, but we can't show files that are this
+big right now" instead of the file. The link is not broken; only the preview is
+suppressed. Verified 2026-07-31 for the 4.2 MB
+`analysis/band-algebra/candidate_formula_space.csv`, which returned 200 in 0.88s
+while serving GitHub's size-limit page. Neighbouring files render normally.
+
+An HTTP status check therefore does **not** prove a `blob/` link is readable.
+For files over roughly 1 MB, either cite the raw form, which serves the bytes
+directly:
+
+```text
+https://raw.githubusercontent.com/<owner>/<repo>/<tag>/<path>
+```
+
+or rely on the archive copy. The same CSV is attached to the version 3 ESS Open
+Archive record as a supplement, so a reader blocked by the preview limit can
+download it from the record instead. Attaching supporting files to the deposit
+is what makes the GitHub preview limit harmless.
+
 ## Rules for the next edition
 
 1. Cite versioned ESSOAr DOIs, never `doc/` URLs, and never the base DOI.
@@ -66,6 +88,8 @@ DOI. See [procedural/zenodo_update.md](../procedural/zenodo_update.md).
 3. Do not state a posting date in the manuscript until confirmed via Crossref.
 4. Update the title field on every submission.
 5. Set the license explicitly on every deposit.
-6. Freeze and tag only after 1–5 are satisfied. Once a Zenodo release is
+6. Cite files over roughly 1 MB by raw URL, not `blob/`, and attach them to the
+   deposit as well.
+7. Freeze and tag only after 1–6 are satisfied. Once a Zenodo release is
    published against a tag, re-rendering the PDF invalidates the manifest
    checksums and desyncs the archive, so late corrections are expensive.
