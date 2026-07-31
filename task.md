@@ -36,21 +36,22 @@ Package frozen at tag `gsia-v3-submission` (commit `0d79cd1`). Checksums in
 
 ### Phase B — ESS Open Archive v3 (manual, essopenarchive.org)
 
-- [ ] The submission is filed as a revision to record `007f7377-d063-474f-9ba0-d776c927729e`
-- [ ] `gsia_preprint_v3_submission_2026-07-26.pdf` is uploaded
-- [ ] `gsia_preprint_v3_status_supplement_2026-07-25.csv` is uploaded
-- [ ] `gsia_preprint_v2_erratum_2026-07-25.md` is uploaded
-- [ ] `analysis/band-algebra/audit_summary.json` is uploaded
-- [ ] `analysis/band-algebra/candidate_formula_space.csv` is uploaded
-- [ ] `analysis/band-algebra/known_index_crosswalk.csv` is uploaded
-- [ ] `analysis/band-algebra/gsia_registry_applicability.csv` is uploaded
-- [ ] The license field is set to CC BY 4.0
-- [ ] The author name is reviewed
-- [ ] The affiliation is reviewed
-- [ ] The correspondence address is reviewed
-- [ ] The competing-interest statement is reviewed
-- [ ] The AI-assistance disclosure is reviewed
-- [ ] The record displays as version 3
+- [x] The submission is filed as a revision to record `007f7377-d063-474f-9ba0-d776c927729e`
+- [x] `gsia_preprint_v3_submission_2026-07-26.pdf` is uploaded
+- [x] `gsia_preprint_v3_status_supplement_2026-07-25.csv` is uploaded
+- [x] `gsia_preprint_v2_erratum_2026-07-25.md` is uploaded
+- [x] `analysis/band-algebra/audit_summary.json` is uploaded
+- [x] `analysis/band-algebra/candidate_formula_space.csv` is uploaded
+- [x] `analysis/band-algebra/known_index_crosswalk.csv` is uploaded
+- [x] `analysis/band-algebra/gsia_registry_applicability.csv` is uploaded
+- [x] The license field is set to CC BY 4.0
+- [x] The author name is reviewed
+- [x] The affiliation is reviewed
+- [x] The correspondence address is reviewed
+- [x] The competing-interest statement is reviewed
+- [x] The AI-assistance disclosure is reviewed
+- [x] Submitted 2026-07-31; in moderation. Preprint DOI `10.22541/essoar.15004217/v3` minted
+- [ ] The record displays as version 3 once moderation clears
 
 ### Phase C — Closeout (after v3 is live)
 

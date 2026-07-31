@@ -40,3 +40,21 @@ This document records key structural, governance, and mathematical decisions mad
 * **Date**: May 26, 2026
 * **Rationale**: Although unicode looks cleaner in visual documents, it crashes typical programmatic Earth Engine and Python parsers. In addition, regex formatting pipelines often misinterpret exponents if they are not explicitly represented in standard programming notation.
 
+
+---
+
+## 5. Dual License: CC BY 4.0 for Content, MIT for Code
+* **Decision**: Add `LICENSE` (CC BY 4.0) covering the manuscript, ATLAS catalog, registry, formula catalog, and documentation, and `LICENSE-CODE` (MIT) covering first-party code in `scripts/` and `tests/`. Deposit version 3 to ESS Open Archive under Attribution (CC-BY 4.0).
+* **Date**: July 31, 2026
+* **Rationale**: The repository had no `LICENSE` file, so GitHub reported no license and the default was all rights reserved — contradicting the open-registry framing and the README's own claim that documentation was CC BY 4.0. Crossref recorded no license for preprint v1 or v2. The gap blocked both the ESS Open Archive license field and the Zenodo deposit.
+* **Alternatives considered**: Apache-2.0 for code, rejected because its express patent grant would extend to code published here while patent threads remain open elsewhere in the workshop; CC BY 4.0 for the whole repository, rejected because Creative Commons advises against CC licenses for software.
+* **Impact**: GitHub now detects `cc-by-4.0`. Version 3 is the first edition of the preprint deposited under an explicit license. MIT grants no express patent license.
+
+---
+
+## 6. Accept Two Frozen Defects in the Version 3 PDF
+* **Decision**: Submit version 3 without re-rendering the PDF, despite two known defects in it: the text states version 2 was "posted 21 July 2026" when Crossref records 30 July (21 July was the submission date), and it cites the working URL `essopenarchive.org/doc/007f7377-...` rather than the DOI.
+* **Date**: July 31, 2026
+* **Rationale**: The Zenodo release is already published against tag `gsia-v3-submission`. Re-rendering changes the PDF hash, invalidates the frozen submission manifest, and desyncs the archive, or forces a duplicate v3 tag and deposit. Neither defect affects a result, count, class, or conclusion. The doc URL is a self-reference, so a reader holding the PDF has already reached the record; every outward-facing identifier in the paper is stable.
+* **Mitigations applied**: The ESS Open Archive version note states the correct posting date. The record's Data Availability Statement was rebuilt from the version 3 manuscript, replacing the doc URL with the DOI and repointing all repository links from the mutable `main` branch to the immutable tag.
+* **Impact**: Both are recorded in `knowledge/domain/persistent_identifiers.md` as rules for the next edition rather than corrected in place.
