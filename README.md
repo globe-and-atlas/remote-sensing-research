@@ -128,8 +128,21 @@ Please cite both the Atlas release and the underlying scientific sources identif
 
 **Suggested citation:** Bally, D. (2026). *The Global Spectral Index Atlas: An Open Registry of Environmental Remote-Sensing Method Specifications Across Twelve Domains*. ESS Open Archive preprint, version 3.
 
-Repository code and third-party data products retain their respective licenses. The manuscript and Atlas documentation are released under CC BY 4.0 unless otherwise noted.
+## License
+
+This repository is dual-licensed:
+
+| Material | License | File |
+|---|---|---|
+| Manuscript, ATLAS catalog, registry, formula catalog, and documentation | CC BY 4.0 | [`LICENSE`](LICENSE) |
+| First-party source code, including `scripts/` and `tests/` | MIT | [`LICENSE-CODE`](LICENSE-CODE) |
+
+Both require attribution. Third-party data products, satellite imagery, and
+referenced catalogs retain their own licenses and are not relicensed here.
+
+Reuse of a proposed formula does not convert it into a validated detector. No
+record in this registry has completed independent held-out accuracy assessment.
 
 ---
 
-*Published by [Globe & Atlas](https://globeandatlas.substack.com) | Version 3 pre-submission documentation updated July 2026*
+*Published by [Globe & Atlas](https://globeandatlas.substack.com) | Version 3 submission documentation updated July 2026*
