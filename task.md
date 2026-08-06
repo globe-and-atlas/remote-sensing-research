@@ -51,18 +51,18 @@ Package frozen at tag `gsia-v3-submission` (commit `0d79cd1`). Checksums in
 - [x] The competing-interest statement is reviewed
 - [x] The AI-assistance disclosure is reviewed
 - [x] Submitted 2026-07-31; in moderation. Preprint DOI `10.22541/essoar.15004217/v3` minted
-- [ ] The record displays as version 3 once moderation clears
+- [x] The record displays as version 3 once moderation clears — confirmed live 2026-08-05, posted date "5 August 2026"
 
 ### Phase C — Closeout (after v3 is live)
 
-- [ ] `preprint/README.md` states the v3 record is deposited
-- [ ] `preprint/README.md` carries the live v3 record link
-- [ ] `README.md` persistent-identifier table lists the v3 preprint DOI
-- [ ] The GitHub homepage field points at the v3 preprint DOI
-- [ ] `knowledge/SESSION.md` records the v3 submission checkpoint
-- [ ] `knowledge/DECISIONS.md` records the dual-license decision
-- [ ] `python3 /Users/danielbally/Git/.agent/scripts/session_capture.py` has been run
-- [ ] The submission manifest is left unmodified
+- [x] `preprint/README.md` states the v3 record is deposited
+- [x] `preprint/README.md` carries the live v3 record link
+- [x] `README.md` persistent-identifier table lists the v3 preprint DOI
+- [x] The GitHub homepage field points at the v3 preprint DOI
+- [x] `knowledge/SESSION.md` records the v3 submission checkpoint
+- [x] `knowledge/DECISIONS.md` records the dual-license decision
+- [x] `python3 /Users/danielbally/Git/.agent/scripts/session_capture.py` has been run
+- [x] The submission manifest is left unmodified
 
 **Do not amend the manifest.** It is the frozen checksummed record of what was
 submitted; correcting it after the fact defeats its purpose.

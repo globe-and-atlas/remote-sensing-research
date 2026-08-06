@@ -132,7 +132,8 @@ Please cite both the Atlas release and the underlying scientific sources identif
 
 | Resource | Identifier |
 |---|---|
-| Preprint, version 2 (current published) | [10.22541/essoar.15004217/v2](https://doi.org/10.22541/essoar.15004217/v2) |
+| Preprint, version 3 (current published) | [10.22541/essoar.15004217/v3](https://doi.org/10.22541/essoar.15004217/v3) |
+| Preprint, version 2 | [10.22541/essoar.15004217/v2](https://doi.org/10.22541/essoar.15004217/v2) |
 | Preprint, version 1 | [10.22541/essoar.15004217/v1](https://doi.org/10.22541/essoar.15004217/v1) |
 | Archived code and registry (current edition) | [10.5281/zenodo.20400743](https://doi.org/10.5281/zenodo.20400743) |
 | Archived code, version 1.0.0 | [10.5281/zenodo.20400744](https://doi.org/10.5281/zenodo.20400744) |

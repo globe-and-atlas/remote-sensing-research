@@ -30,6 +30,9 @@ submission manifest.
 
 The version 3 PDF has been rendered and visually verified. Every registry and structural-audit link in the manuscript is pinned to the immutable tag `gsia-v3-submission`, and all twelve resolve. The earlier `gsia-v3-preprint` tag predates corrections to the formula catalog and erratum and is retained unmoved for provenance only.
 
+Version 3 is deposited and live on ESS Open Archive as of 5 August 2026:
+[10.22541/essoar.15004217/v3](https://doi.org/10.22541/essoar.15004217/v3).
+
 ## Archival record and citation
 
 Cite the archived code and registry through the Zenodo concept DOI
